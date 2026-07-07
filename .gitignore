@@ -1,0 +1,8 @@
+# 项目内部/敏感/大文件，不推到 GitHub Pages 仓库
+.workbuddy/
+data/
+docs/
+__pycache__/
+*.tar.gz
+*-today.json
+archive/.window.json
