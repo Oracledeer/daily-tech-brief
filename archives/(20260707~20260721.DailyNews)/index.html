@@ -16,16 +16,16 @@
   <header class="site-header">
     <div class="layout-wide header-inner">
       <div class="brand">
-        <div class="brand-icon">📡</div>
+        <div class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20v-6M9 20V9M14 20V4M19 20v-8"/></svg></div>
         <div class="brand-text">
           <h1>每日科技简报</h1>
           <span class="brand-sub">Tech Briefing · 自动聚合</span>
         </div>
       </div>
       <nav class="channel-tabs" id="channelTabs">
-        <button class="tab-l1 active" data-channel="display">📺 面板显示</button>
-        <button class="tab-l1" data-channel="semicon">🔬 半导体技术</button>
-        <button class="tab-l1" data-channel="ai">🤖 AI 动态</button>
+        <button class="tab-l1 active" data-channel="display">面板显示</button>
+        <button class="tab-l1" data-channel="semicon">半导体技术</button>
+        <button class="tab-l1" data-channel="ai">AI 动态</button>
       </nav>
       <div class="header-right">
         <a class="github-link" href="https://github.com/Oracledeer/daily-tech-brief" target="_blank" rel="noopener">
@@ -215,9 +215,10 @@
         // Summary as context line
       }
       if (data.highlights && data.highlights.length) {
-        html += `<div style="background:rgba(255,255,255,0.6);backdrop-filter:blur(12px);border-radius:var(--radius);padding:16px 20px;margin-bottom:24px;border:1px solid var(--border-glass);font-size:13px;color:var(--text-secondary);line-height:1.6">`;
-        html += `<span style="font-weight:700;color:var(--text)">💡 本期概述：</span> ${esc(data.summary || "")}`;
-        if (data.focus) html += `<br><span style="font-weight:700;color:var(--accent);font-size:12px">🎯 ${esc(data.focus)}</span>`;
+        html += `<div class="overview-box">`;
+        html += `<span class="overview-title">本期概述</span>`;
+        html += `<p class="overview-text">${esc(data.summary || "")}</p>`;
+        if (data.focus) html += `<span class="overview-focus">${esc(data.focus)}</span>`;
         html += `</div>`;
       }
       html += `</div>`;
@@ -226,7 +227,7 @@
     // ---- Featured (hero cards) ----
     if (fNews.length) {
       html += `<div class="hero-section">`;
-      html += `<span class="section-label">📌 重点关注</span>`;
+      html += `<span class="section-label">重点关注</span>`;
       html += `<div class="featured-grid">`;
       fNews.forEach(n => {
         const img = n.image
@@ -251,7 +252,7 @@
     // ---- Secondary (glassmorphism grid) ----
     if (sNews.length) {
       html += `<div class="secondary-section">`;
-      html += `<span class="section-label">📋 深度速读</span>`;
+      html += `<span class="section-label">深度速读</span>`;
       html += `<div class="secondary-grid">`;
       sNews.forEach((n, i) => {
         // No featured-wide anymore — keep 2-column grid (2-3 rows)
@@ -269,7 +270,7 @@
               <h3>${esc(n.title)}</h3>
               <p class="sec-summary">${esc(n.content || n.event || n.reason || "")}</p>
               <div class="sec-meta">
-                <span>📰 ${esc(n.source || "")}</span>
+                <span>${esc(n.source || "")}</span>
                 ${n.url ? `<a class="sec-link" href="${esc(n.url)}" target="_blank" rel="noopener">阅读 →</a>` : ""}
               </div>
             </div>
@@ -281,7 +282,7 @@
     // ---- Flash (compact list) ----
     if (flNews.length) {
       html += `<div class="flash-section">`;
-      html += `<span class="section-label">⚡ 快讯速览</span>`;
+      html += `<span class="section-label">快讯速览</span>`;
       html += `<div class="flash-list">`;
       flNews.forEach((n, i) => {
         const tag = n.tech || n.route || n.category || "";
@@ -292,7 +293,7 @@
               <div class="flash-title">${esc(n.title)}</div>
               <p class="flash-summary">${esc(n.content || n.event || n.reason || "")}</p>
               <div class="flash-meta">
-                <span class="flash-source">📰 ${esc(n.source || n.date || "")}</span>
+                <span class="flash-source">${esc(n.source || n.date || "")}</span>
                 ${tag ? `<span class="flash-tag">${esc(tag)}</span>` : ""}
               </div>
             </div>
@@ -315,10 +316,10 @@
 
     // Summary header
     if (data.summary || data.highlights) {
-      html += `<div style="background:rgba(255,255,255,0.6);backdrop-filter:blur(12px);border-radius:var(--radius);padding:16px 20px;margin-bottom:24px;border:1px solid var(--border-glass)">`;
-      html += `<span style="font-weight:700;color:var(--text);font-size:14px">📚 本期论文概述</span>`;
-      if (data.summary) html += `<p style="font-size:13px;color:var(--text-secondary);margin:6px 0 0;line-height:1.6">${esc(data.summary)}</p>`;
-      if (data.focus) html += `<p style="font-size:12px;color:var(--accent);margin:4px 0 0;font-weight:600">🎯 ${esc(data.focus)}</p>`;
+      html += `<div class="overview-box">`;
+      html += `<span class="overview-title">本期论文概述</span>`;
+      if (data.summary) html += `<p class="overview-text">${esc(data.summary)}</p>`;
+      if (data.focus) html += `<span class="overview-focus">${esc(data.focus)}</span>`;
       html += `</div>`;
     }
 
@@ -327,7 +328,7 @@
 
       const img = p.image
         ? `<img class="paper-header-img" src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy" onerror="this.remove()" />`
-        : `<div class="paper-header-fallback">📄</div>`;
+        : `<div class="paper-header-fallback"></div>`;
 
       const tags = [
         p.paperType ? `<span class="paper-meta-tag type">${esc(p.paperType)}</span>` : "",
@@ -352,7 +353,7 @@
 
       const attachments = (p.attachments || []).map(a => {
         const isLocal = a.cached || a.url.startsWith("./");
-        return `<a class="attach-pill${isLocal ? " local" : ""}" href="${esc(a.url)}" target="${isLocal ? "_self" : "_blank"}" rel="noopener">${isLocal ? "⬇️" : "🔗"} ${esc(a.label || a.name || "PDF")}</a>`;
+        return `<a class="attach-pill${isLocal ? " local" : ""}" href="${esc(a.url)}" target="${isLocal ? "_self" : "_blank"}" rel="noopener">${esc(a.label || a.name || "PDF")}</a>`;
       }).join("");
 
       html += `
@@ -361,31 +362,31 @@
           <div class="paper-body">
             <div class="paper-meta-tags">${tags}</div>
             <h1 class="paper-title">${esc(p.title)}</h1>
-            ${p.authors ? `<div class="paper-authors">👥 ${esc(p.authors)}</div>` : ""}
-            ${p.oneLiner ? `<div class="paper-oneliner">💡 ${esc(p.oneLiner)}</div>` : ""}
+            ${p.authors ? `<div class="paper-authors">${esc(p.authors)}</div>` : ""}
+            ${p.oneLiner ? `<div class="paper-oneliner">${esc(p.oneLiner)}</div>` : ""}
             ${tagCloud}
             ${metricsHtml}
 
             <div class="paper-section-block">
-              <span class="paper-section-label">📋 摘要</span>
+              <span class="paper-section-label">摘要</span>
               <p>${esc(p.abstract || p.content || "")}</p>
             </div>
 
             <div class="paper-section-block">
-              <span class="paper-section-label">🔬 技术解读</span>
+              <span class="paper-section-label">技术解读</span>
               <p>${esc(p.content || p.techIntro || p.abstract || "")}</p>
             </div>
 
             ${p.techIntro ? `
             <div class="paper-section-block">
-              <span class="paper-section-label">📖 背景知识</span>
+              <span class="paper-section-label">背景知识</span>
               <p>${esc(p.techIntro)}</p>
             </div>` : ""}
 
             ${attachments ? `<div class="paper-attachments">${attachments}</div>` : ""}
 
             <div class="paper-footer">
-              <span class="paper-source">📚 ${esc(p.source || "")}</span>
+              <span class="paper-source">${esc(p.source || "")}</span>
               <span>${esc(p.date || data.date || "")}</span>
             </div>
             ${p.url ? `<a class="paper-link" href="${esc(p.url)}" target="_blank" rel="noopener">查看原文 →</a>` : ""}
@@ -408,7 +409,7 @@
     // 概览标题条
     html += `
       <div class="skills-head">
-        <span class="section-label">🧩 每日 Skill 推荐</span>
+        <span class="section-label">每日 Skill 推荐</span>
         <p class="skills-sub">每天精选 <strong>${established} 个老牌高星</strong> + <strong>${rising} 个上升迅猛</strong> 的 Agent Skill，一句话看懂它是做什么的。</p>
       </div>`;
 
@@ -419,15 +420,15 @@
       const span = spans[i % spans.length];
       const isRising = s.tier === "rising";
       const badge = isRising
-        ? `<span class="sk-badge sk-rising">🔥 上升迅猛</span>`
-        : `<span class="sk-badge sk-estab">🏆 老牌高星</span>`;
+        ? `<span class="sk-badge sk-rising">上升迅猛</span>`
+        : `<span class="sk-badge sk-estab">老牌高星</span>`;
       const tags = (s.tags || []).map(t => `<span class="chip">${esc(t)}</span>`).join("");
-      const author = s.author ? `<span class="sk-fact"><span class="sk-fact-k">👤 作者</span><span class="sk-fact-v">${esc(s.author)}</span></span>` : "";
-      const repo = s.repo ? `<span class="sk-fact"><span class="sk-fact-k">📦 仓库</span><span class="sk-fact-v sk-mono">${esc(s.repo)}</span></span>` : "";
+      const author = s.author ? `<span class="sk-fact"><span class="sk-fact-k">作者</span><span class="sk-fact-v">${esc(s.author)}</span></span>` : "";
+      const repo = s.repo ? `<span class="sk-fact"><span class="sk-fact-k">仓库</span><span class="sk-fact-v sk-mono">${esc(s.repo)}</span></span>` : "";
       html += `
         <article class="skill-card sk-span-${span}${isRising ? " sk-card-rising" : ""}">
           <div class="sk-head">
-            <span class="sk-icon">${esc(s.icon || "🧩")}</span>
+            <span class="sk-icon">${esc(s.name ? s.name.trim().charAt(0).toUpperCase() : "")}</span>
             <div class="sk-head-main">
               <h3 class="sk-name">${esc(s.name || "")}</h3>
               ${badge}
@@ -435,7 +436,7 @@
           </div>
           <div class="sk-spec">
             <span class="sk-fact sk-stars-fact">
-              <span class="sk-fact-k">⭐ Stars</span>
+              <span class="sk-fact-k">Stars</span>
               <span class="sk-fact-v sk-stars-v">${esc(s.stars || "—")}</span>
             </span>
             ${author}
@@ -518,6 +519,50 @@
   // ========== INIT ==========
   fillDateSelect();
   render();
+
+  // ========== SCROLL REVEAL — Apple-style fade-up ==========
+  (function initScrollReveal() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // Stagger delay based on element index within viewport
+          requestAnimationFrame(() => {
+            entry.target.classList.add('visible');
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.01,
+      rootMargin: '0px 0px -20px 0px'
+    });
+
+    function revealContent() {
+      const sections = document.querySelectorAll(
+        '.hero-section, .secondary-section, .flash-section, .paper-section, .skills-wrap'
+      );
+      sections.forEach((el, idx) => {
+        if (!el.classList.contains('reveal')) {
+          el.classList.add('reveal');
+          if (idx % 3 === 1) el.classList.add('reveal-delay-1');
+          else if (idx % 3 === 2) el.classList.add('reveal-delay-2');
+          observer.observe(el);
+        }
+      });
+    }
+
+    // Initial + re-run on render
+    revealContent();
+
+    // Also observe after dynamic renders
+    const origRender = render;
+    // Re-observe whenever content changes
+    const watchContent = new MutationObserver(() => {
+      requestAnimationFrame(revealContent);
+    });
+    const app = document.getElementById('app');
+    if (app) watchContent.observe(app, { childList: true, subtree: true });
+  })();
   </script>
 </body>
 </html>
