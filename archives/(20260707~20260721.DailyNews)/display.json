@@ -1,0 +1,266 @@
+{
+  "2026-07-07": {
+    "schema": "display-news-daily/v1",
+    "date": "2026-07-07",
+    "weekday": "周二",
+    "summary": "TrendForce发布7月电视面板全线下跌预测（65吋↓3美元），OLED笔电面板Q2出货同比暴增69%（Sigmaintell），三星显示A4线$2.5B扩产细节曝光，苹果折叠iPhone备货700-800万台（郭明錤），海信/TCL 2026电视上市搭载RGB-miniLED/SQD-miniLED，LORDIN公开ZETPLEX蓝色磷光掺杂剂分子结构。",
+    "focus": "电视面板价格7月承压转跌，OLED笔电需求持续高增，折叠屏供应链博弈加剧",
+    "news": [
+      {
+        "id": "disp-001",
+        "title": "TrendForce：7月电视面板价格全线转跌，65吋降3美元至174美元",
+        "keywords": [
+          "面板价格",
+          "TrendForce",
+          "LCD",
+          "电视面板"
+        ],
+        "tech": "LCD面板价格",
+        "route": "面板价格周期",
+        "routeStatus": "↓受阻",
+        "content": "据TrendForce集邦咨询《2026面板价格预测月度报告》最新数据，7月电视面板价格整体转跌：65吋均价174美元（↓3美元/-1.7%），55吋均价124美元（↓2美元/-1.6%），43吋均价64美元（↓2美元/-3.0%），32吋均价36美元（↓1美元/-2.7%）。显示器面板（27吋IPS均价63.6美元）和笔电面板各尺寸则预期持平。TrendForce未明确说明下跌原因，但此前Omdia在6月中旬报告显示2026年全球面板需求下调，单位需求预计同比下降6%。",
+        "reason": "逐月追踪面板价格的权威数据更新，反应LCD TV面板供需关系的转折信号",
+        "source": "TrendForce集邦咨询",
+        "url": "https://www.eet-china.com/mp/a507727.html",
+        "image": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "电视面板生产线（示意）",
+        "date": "2026-07-06",
+        "priority": "featured"
+      },
+      {
+        "id": "disp-002",
+        "title": "Sigmaintell：Q2 OLED笔电面板出货达420万片同比增69%，2030年市占率预计达19%",
+        "keywords": [
+          "OLED笔电",
+          "Sigmaintell",
+          "笔记本电脑",
+          "面板出货"
+        ],
+        "tech": "OLED笔电面板",
+        "route": "OLED笔电渗透率",
+        "routeStatus": "↑突破",
+        "content": "据Sigmaintell数据，2026年Q1全球OLED笔电面板出货达360万片（同比+69%），Q2继续攀升至420万片。中国游戏本市场需求尽管整体下滑，但OLED游戏本面板出货却在加速增长。Sigmaintell认为OLED笔电面板需求并非短期趋势，将持续增长，预计2030年市占率将达19%。",
+        "reason": "OLED在笔电市场的渗透加速是面板行业中期重要趋势",
+        "source": "OLED-Info / Sigmaintell",
+        "url": "https://www.oled-info.com/sigmaintell-demand-oled-laptop-panels-increasing-sharply-market-share-reach-19",
+        "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "OLED 笔记本电脑",
+        "date": "2026-07-06",
+        "priority": "featured"
+      },
+      {
+        "id": "disp-003",
+        "title": "三星显示A4线$2.5B扩产柔性OLED详细计划曝光，月产能15K",
+        "keywords": [
+          "三星显示",
+          "柔性OLED",
+          "A4线",
+          "产能扩张"
+        ],
+        "tech": "柔性OLED",
+        "route": "柔性OLED产能",
+        "routeStatus": "→稳定",
+        "content": "三星显示已正式确认在韩国牙山扩产柔性OLED产线（A4线），投资约25亿美元，月产能规划15K片。该计划是韩国政府建设下一代显示与半导体生产集群的一部分。扩产重点针对折叠手机用的柔性OLED面板，预计主要供应三星电子及潜在外部客户。",
+        "reason": "显示面板行业领先投资动向，影响柔性OLED供需格局",
+        "source": "OLED-Info / 韩国媒体",
+        "url": "https://www.oled-info.com/more-details-emerge-sdcs-25-billion-flexible-oled-expansion-plan-asan",
+        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "柔性OLED生产车间（示意）",
+        "date": "2026-07-02",
+        "priority": "secondary"
+      },
+      {
+        "id": "disp-004",
+        "title": "LORDIN公开ZETPLEX蓝色磷光Pt掺杂剂分子结构，已开始送样",
+        "keywords": [
+          "LORDIN",
+          "ZETPLEX",
+          "磷光材料",
+          "蓝色OLED",
+          "Pt掺杂剂"
+        ],
+        "tech": "OLED磷光材料",
+        "route": "蓝色磷光材料",
+        "routeStatus": "↑突破",
+        "content": "LORDIN首次公开其ZETPLEX铂（Pt）掺杂剂的分子结构，相关成果发表在同行评审期刊。该公司表示该材料结构可简化蒸镀工艺并提升器件寿命。ZETPLEX已开始向客户发送评估样品。蓝色磷光材料的突破是OLED行业长期关注的重点方向。",
+        "reason": "蓝色磷光材料是OLED效率与寿命的关键瓶颈，该进展有产业价值",
+        "source": "OLED-Info / LORDIN",
+        "url": "https://www.oled-info.com/lordin-discloses-molecular-structure-its-zetplex-blue-phosphorescent-pt-dopant",
+        "image": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "OLED材料分子结构（示意）",
+        "date": "2026-07-03",
+        "priority": "secondary"
+      },
+      {
+        "id": "disp-005",
+        "title": "郭明錤：苹果折叠iPhone备货700-800万台，或步iPhone X后尘同期发布延迟发售",
+        "keywords": [
+          "苹果",
+          "折叠iPhone",
+          "郭明錤",
+          "备货量",
+          "供应"
+        ],
+        "tech": "可折叠OLED",
+        "route": "折叠屏iPhone",
+        "routeStatus": "→稳定",
+        "content": "天风国际分析师郭明錤指出，苹果折叠iPhone可能面临与2017年iPhone X类似的市场策略——与其他机型同步发布但延迟开售，初期供应紧张或将持续至年末。产业调研预计2026年下半年备货700万至800万台。面板供应商方面，据此前韩媒报道，三星显示和LG Display已启动iPhone 18 Pro系列及折叠iPhone面板量产，京东方未获得此次订单。",
+        "reason": "苹果首款折叠屏是2026年消费电子最大期待之一，供应链格局直接影响面板厂",
+        "source": "ITBear / 郭明錤",
+        "url": "https://www.itbear.com.cn/html/2026-07/1429447.html",
+        "image": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "折叠屏手机（示意）",
+        "date": "2026-07-07",
+        "priority": "secondary"
+      },
+      {
+        "id": "disp-006",
+        "title": "海信2026电视上市：RGB-miniLED技术主打性价比",
+        "keywords": [
+          "海信",
+          "RGB-miniLED",
+          "电视",
+          "2026"
+        ],
+        "tech": "RGB-miniLED",
+        "route": "miniLED背光技术",
+        "routeStatus": "→稳定",
+        "content": "海信2026款电视现已上市，主打RGB-miniLED技术，定位价格实惠的LCD电视。RGB-miniLED相比传统miniLED可提高色彩表现和亮度效率，是LCD电视在OLED竞争中的关键技术路线。旗舰型号UR9S和UR8S均采用RGB-miniLED背光，分区数量决定画质；尺寸覆盖55-100吋。",
+        "reason": "RGB-miniLED是LCD电视对抗OLED的重要技术路线，主流品牌齐推",
+        "source": "FlatpanelsHD / DisplaySpecifications",
+        "url": "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1783312512",
+        "image": "https://www.displayspecifications.com/images/news/48b8f03/main.jpg",
+        "imageCaption": "Hisense UR9S RGB-miniLED TV",
+        "date": "2026-07-06",
+        "priority": "secondary"
+      },
+      {
+        "id": "disp-007",
+        "title": "TCL 2026电视发布：SQD-miniLED和RGB LED双线并进",
+        "keywords": [
+          "TCL",
+          "SQD-miniLED",
+          "RGB LED",
+          "miniLED",
+          "电视"
+        ],
+        "tech": "miniLED/量子点",
+        "route": "miniLED背光技术",
+        "routeStatus": "→稳定",
+        "content": "TCL推出2026款电视系列，包含SQD-miniLED和RGB LED两个技术路线，均搭载Google TV，主打更便宜的miniLED LCD电视。SQD-miniLED推测为结合量子点技术的miniLED方案，进一步拉低miniLED电视价格门槛。旗舰X11L采用SQD-miniLED，RM9L和RM7L采用RGB LED。",
+        "reason": "TCL和海信同步发力miniLED路线，反映LCD电视阵营的技术竞争策略",
+        "source": "FlatpanelsHD",
+        "url": "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1783070544",
+        "image": "https://images.unsplash.com/photo-1593359846649-85caa73a8ed0?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "MiniLED 电视产品（示意）",
+        "date": "2026-07-03",
+        "priority": "secondary"
+      },
+      {
+        "id": "disp-008",
+        "title": "苹果计划下一代OLED产品采用BT.2020色域标准",
+        "keywords": [
+          "苹果",
+          "BT.2020",
+          "色域",
+          "OLED"
+        ],
+        "tech": "OLED色域",
+        "route": "广色域技术",
+        "routeStatus": "↑突破",
+        "content": "据FlatpanelsHD报道，苹果计划在下一代OLED产品中采用BT.2020色域标准，以获得更丰富的色彩表现。BT.2020是当前最广的色域标准之一，覆盖范围远超DCI-P3。实现BT.2020覆盖率对OLED材料体系和光学设计提出了更高要求。",
+        "reason": "色域标准的提升将推动OLED材料与光学设计创新",
+        "source": "FlatpanelsHD",
+        "url": "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1782901458",
+        "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "OLED显示色彩示意",
+        "date": "2026-07-01",
+        "priority": "flash"
+      },
+      {
+        "id": "disp-009",
+        "title": "LG G6/C6/B6 OLED电视广泛上市，C6搭载串联OLED面板",
+        "keywords": [
+          "LG",
+          "OLED电视",
+          "G6",
+          "C6",
+          "串联OLED"
+        ],
+        "tech": "串联OLED / WOLED",
+        "route": "OLED电视产品",
+        "routeStatus": "→稳定",
+        "content": "LG 2026款OLED电视G6、C6、B6现已广泛上市。其中C6在部分尺寸上搭载了串联OLED（Tandem OLED）面板，该技术此前主要用于高端型号，下放至C系列可提升亮度和寿命。据Omdia此前报告，LG显示的WOLED产能利用率在2026年有所回升。",
+        "reason": "串联OLED技术向中端型号下放，标志技术成熟度提升",
+        "source": "FlatpanelsHD",
+        "url": "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1782898865",
+        "image": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "LG OLED TV 客厅（示意）",
+        "date": "2026-07-01",
+        "priority": "flash"
+      },
+      {
+        "id": "disp-010",
+        "title": "KFC南非旗舰店测试大型透明OLED自助点餐屏",
+        "keywords": [
+          "KFC",
+          "透明OLED",
+          "商用显示"
+        ],
+        "tech": "透明OLED",
+        "route": "透明显示应用",
+        "routeStatus": "→稳定",
+        "content": "KFC在南非约翰内斯堡机场附近新旗舰店测试新技术，其中包括大型（据推测55英寸）透明触摸OLED自助点餐屏。此外还配备LED外立面等显示技术。",
+        "reason": "透明OLED在商用场景的落地案例增加，拓展OLED应用边界",
+        "source": "OLED-Info",
+        "url": "https://www.oled-info.com/kfc-testing-use-transparent-oleds-south-africa",
+        "image": "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "透明OLED应用场景（示意）",
+        "date": "2026-07-04",
+        "priority": "flash"
+      },
+      {
+        "id": "disp-011",
+        "title": "ETRI开发单基板QD-OLED沉积新工艺，有望降本提分辨率",
+        "keywords": [
+          "ETRI",
+          "QD-OLED",
+          "单基板",
+          "沉积工艺"
+        ],
+        "tech": "QD-OLED工艺",
+        "route": "QD-OLED制造",
+        "routeStatus": "↑突破",
+        "content": "韩国电子通信研究院（ETRI）研发出单基板QD-OLED沉积工艺，可在单一基板上完成量子点和OLED发光层的沉积，相比传统QD-OLED（需独立QD彩色滤光片基板+OLED基板贴合）可简化制程、降低成本，同时有利于提升分辨率。",
+        "reason": "QD-OLED制造工艺的潜在突破路径",
+        "source": "OLED-Info / ETRI",
+        "url": "https://www.oled-info.com/etri-researchers-develop-single-substrate-qd-oled-deposition-process",
+        "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "QD-OLED工艺示意",
+        "date": "2026-07-02",
+        "priority": "flash"
+      },
+      {
+        "id": "disp-012",
+        "title": "夏普推出平价Google TV，支持HDMI 2.1和144Hz",
+        "keywords": [
+          "夏普",
+          "Google TV",
+          "HDMI 2.1",
+          "144Hz"
+        ],
+        "tech": "LCD电视",
+        "route": "LCD电视产品",
+        "routeStatus": "→稳定",
+        "content": "夏普推出多款价格实惠的Google TV，尺寸覆盖43至65英寸，支持HDMI 2.1和144Hz刷新率。",
+        "reason": "主流品牌HDMI 2.1和144Hz向下渗透至平价机型",
+        "source": "FlatpanelsHD",
+        "url": "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1783070080",
+        "image": "https://images.unsplash.com/photo-1461151304267-38535e780c79?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "夏普电视产品（示意）",
+        "date": "2026-07-03",
+        "priority": "flash"
+      }
+    ]
+  }
+}

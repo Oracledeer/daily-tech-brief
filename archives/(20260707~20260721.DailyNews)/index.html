@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>每日科技简报 · Tech Briefing</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- GitHub link: repo -->
+</head>
+<body>
+
+  <!-- ===== HEADER: Liquid Glass Nav ===== -->
+  <header class="site-header">
+    <div class="layout-wide header-inner">
+      <div class="brand">
+        <div class="brand-icon">📡</div>
+        <div class="brand-text">
+          <h1>每日科技简报</h1>
+          <span class="brand-sub">Tech Briefing · 自动聚合</span>
+        </div>
+      </div>
+      <nav class="channel-tabs" id="channelTabs">
+        <button class="tab-l1 active" data-channel="display">📺 面板显示</button>
+        <button class="tab-l1" data-channel="semicon">🔬 半导体技术</button>
+        <button class="tab-l1" data-channel="ai">🤖 AI 动态</button>
+      </nav>
+      <div class="header-right">
+        <a class="github-link" href="https://github.com/Oracledeer/daily-tech-brief" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <div class="layout-wide" id="app">
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <div class="date-picker">
+            <label for="dateSelect">日期</label>
+            <select id="dateSelect"></select>
+            <span class="date-tag" id="dateTag"></span>
+          </div>
+          <div class="sub-tabs" id="subTabs"></div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <article id="content" class="content">
+        <div class="loading">正在加载…</div>
+      </article>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="layout-wide">
+      <p>每日科技简报 · 由 WorkBuddy 自动聚合更新 · 数据保留 14 天</p>
+      <div class="footer-links">
+        <a href="https://github.com/Oracledeer/daily-tech-brief" target="_blank" rel="noopener">GitHub</a>
+        <span>·</span>
+        <a href="#" onclick="window.location.reload()">刷新</a>
+        <span>·</span>
+        <span>面板显示 · 半导体技术 · AI 动态</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // ========== DATA (injected by update_site.py) ==========
+  const AI_DATA = {"2026-07-07": {"schema": "ai-news-daily/v1", "date": "2026-07-07", "weekday": "周二", "summary": "xAI正式更名为SpaceXAI并发布新Logo，同日SpaceX以约600亿美元全股票收购Cursor（Anysphere）；Anthropic以965亿美元估值完成H轮融资，Claude Code年化收入达25亿美元，美国商务部解除Claude Fable 5出口管制；OpenAI GPT-5.6三兄弟（Sol/Terra/Luna）低调内测，上下文扩展至150万token；DeepSeek V4正式版7月中旬发布；Kimi K3参数规模2.5万亿本月发布。", "focus": "AI编程赛道成主战场（Claude Code 42-54%市场份额 × SpaceX 600亿收购Cursor），中美模型+出口管制博弈加剧", "skills": [{"name": "Superpowers", "repo": "obra/superpowers", "url": "https://github.com/obra/superpowers", "stars": "228,740", "tier": "established", "icon": "🦸", "desc": "不只是技能集合，而是一整套围绕 Agent 开发的方法论框架——把编码智能体从「急于炫技的代码打字员」变成严谨规范的工程师。长期霸榜 Claude Skill 榜首。", "tags": ["方法论框架", "全能", "Claude Code"], "author": "obra"}, {"name": "Anthropic Skills", "repo": "anthropics/skills", "url": "https://github.com/anthropics/skills", "stars": "151,088", "tier": "established", "icon": "📘", "desc": "Anthropic 官方公开的 Agent Skills 仓库，权威基准。想从零了解 Skill 长什么样、怎么写、怎么装，从这一个仓库入手就够了。", "tags": ["官方出品", "权威基准", "入门首选"], "author": "anthropics"}, {"name": "女娲 Nuwa", "repo": "alchaincyf/nuwa-skill", "url": "https://github.com/alchaincyf/nuwa-skill", "stars": "国产新锐", "tier": "rising", "icon": "🧬", "desc": "蒸馏任何公开人物的思维方式——心智模型、决策启发式、表达 DNA，生成可直接运行的「视角 Skill」，让乔布斯、马斯克、芒格、费曼都给你打工。2026-04 发布，3 个月已蒸馏 14+ 人物。", "tags": ["思维蒸馏", "国产原创", "视角切换"], "author": "alchaincyf"}, {"name": "taste-skill", "repo": "Leonxlnx/taste-skill", "url": "https://github.com/Leonxlnx/taste-skill", "stars": "44,469", "tier": "rising", "icon": "🎯", "desc": "专治 Agent 默认往「中位数、最保险」平庸答案靠拢的倾向。用显式的品味规则把智能体推向更有判断力的方向——啃的是框架不愿碰的硬骨头。", "tags": ["品味规则", "反平庸", "判断力"], "author": "Leonxlnx"}, {"name": "last30days", "repo": "mvanhorn/last30days-skill", "url": "https://github.com/mvanhorn/last30days-skill", "stars": "42,815", "tier": "rising", "icon": "📡", "desc": "给 Agent 接上实时信息源——跨 Reddit、X、YouTube、Hacker News 和全网做「最近 30 天发生了什么」的趋势调研，弥补训练数据滞后于当下的盲区。", "tags": ["实时趋势", "全网调研", "补足时效"], "author": "mvanhorn"}], "news": [{"id": "ai-001", "title": "xAI更名SpaceXAI发布新Logo，同日SpaceX 600亿美元收购Cursor", "event": "xAI正式更名为SpaceXAI，发布新品牌Logo。同时SpaceX宣布以约600亿美元全股票方式收购Anysphere（Cursor AI编辑器母公司）。Grok 4.5（1.5万亿参数V9基础模型）将整合Cursor的编程数据，Cursor工程师团队参与模型研发。Musk宣布2026年剩余时间每月发布一个新训练的模型。", "highlight": "垂直整合：从模型层到AI编程工具入口全面控制", "reason": "AI编程赛道格局被重新定义——Anthropic控制Claude Code（42-54%份额），SpaceX控制Cursor（最受欢迎的AI IDE），两强对峙", "category": "AI编程 / 企业动态", "source": "AI Release Tracker / iaipie / Techmeme", "url": "https://iaipie.com/ai%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95%E6%B7%B1%E5%BA%A6%E7%9B%98%E7%82%B9%EF%BC%882026%E5%B9%B47%E6%9C%88%E7%AF%87%EF%BC%89%EF%BC%9Agpt-5-6%E5%86%85%E6%B5%8B%E3%80%81anthro/", "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&auto=format&fit=crop", "imageCaption": "AI 编程场景", "date": "2026-07-07", "priority": "featured", "skills": []}, {"id": "ai-002", "title": "Anthropic估值965亿美元登顶全球AI第一，Claude Code年化收入25亿美元", "event": "Anthropic以965亿美元估值完成650亿美元H轮融资，超越OpenAI成为全球估值最高的AI公司。Claude Code自发布不到一年年化收入达25亿美元（占总ARR 300亿美元的约8%）。公司从90亿美元ARR跃升至300亿美元仅用四个月。美国商务部解除对Claude Fable 5和Mythos 5的出口管制，7月1日起恢复全球访问。", "highlight": "人类商业史上营收增速最快的AI公司，出口管制出现政策裂缝", "reason": "Anthropic的IPO准备和估值飙升标志着AI产业进入资本退出通道", "category": "企业动态 / 政策", "source": "iaipie / Wikipedia-like sources", "url": "https://iaipie.com/ai%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95%E6%B7%B1%E5%BA%A6%E7%9B%98%E7%82%B9%EF%BC%882026%E5%B9%B47%E6%9C%88%E7%AF%87%EF%BC%89%EF%BC%9Agpt-5-6%E5%86%85%E6%B5%8B%E3%80%81anthro/", "image": "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1200&q=80&auto=format&fit=crop", "imageCaption": "AI 投资与企业融资", "date": "2026-07-01", "priority": "featured", "skills": [1]}, {"id": "ai-003", "title": "OpenAI GPT-5.6三兄弟低调内测：Sol/Terra/Luna，150万token上下文", "event": "OpenAI于6月25-28日向20家合作伙伴发布GPT-5.6系列。旗舰版Sol在SVG/3D SVG生成击败Fable 5；Terra日用版面向日常任务；Luna经济版低门槛。核心升级：150万token上下文窗口、可变速度推理模式、增强Agentic自主多步任务规划。定价持平GPT-5.5。据早期测试者反馈，推理和理解能力超越GPT-5.5 Pro。公开上线预期7月内完成。OpenAI已秘密提交S-1，目标估值万亿美元级。", "highlight": "上下文窗口飙至150万token + 能力大幅提升但价格不变", "reason": "GPT-5.6发布节奏和上下文扩展趋势影响整个LLM行业定价和产品策略", "category": "模型发布", "source": "AI Release Tracker / iaipie", "url": "https://aireleasetracker.com/model/openai/gpt-5.6-sol", "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80&auto=format&fit=crop", "imageCaption": "OpenAI 模型发布", "date": "2026-06-26", "priority": "secondary", "skills": [4]}, {"id": "ai-004", "title": "DeepSeek V4正式版7月中旬发布，峰谷定价引争议", "event": "DeepSeek V4正式版计划7月中旬发布，核心参数：100万token上下文窗口，推理算力消耗仅为V3.2的约27%。Pro版旗舰定位，Flash版轻量低价。Agent功能、世界知识和推理能力在国内/开源模型中位列顶尖。争议点：高峰时段（9:00-12:00、14:00-18:00）API价格翻倍。V4-Flash高峰输入2元/百万token、输出4元/百万token。Reasonix持续走高，缓存命中率99.82%，编码成本降低80%。", "highlight": "推理效率碾压 + 峰谷定价策略 - 中美AI定价模式的碰撞", "reason": "DeepSeek V4是国内最强开源/商用模型之一，正式版上线和定价策略影响开发者生态", "category": "模型发布", "source": "iaipie / 社区报道", "url": "https://iaipie.com/ai%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95%E6%B7%B1%E5%BA%A6%E7%9B%98%E7%82%B9%EF%BC%882026%E5%B9%B47%E6%9C%88%E7%AF%87%EF%BC%89%EF%BC%9Agpt-5-6%E5%86%85%E6%B5%8B%E3%80%81anthro/", "image": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200&q=80&auto=format&fit=crop", "imageCaption": "DeepSeek 模型推理", "date": "2026-07-01", "priority": "secondary", "skills": [3]}, {"id": "ai-005", "title": "6月全球AI回顾：ChatGPT市场份额首度跌破50%", "event": "据'感应塔'数据分析公司6月16日发布的《2026年AI行业报告》，ChatGPT在全球AI助手市场份额首次跌破50%。全球多家企业密集发布新模型。中国稀宇科技（MiniMax）发布开源旗舰M3，智谱GLM-5.2在Code Arena盲测取得全球可用模型第一。美国商务部针对Anthropic两款模型发布出口管制指令引发加拿大和法国宣布加快AI自主建设。", "highlight": "ChatGPT不再是'垄断者'，多极竞争格局正式形成", "reason": "市场格局变化直接影响用户选择和企业AI策略", "category": "产业趋势", "source": "新华财经 / 经济参考报", "url": "https://finance.sina.com.cn/jjxw/2026-07-06/doc-inifvkkf8831708.shtml", "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop", "imageCaption": "AI 产业格局", "date": "2026-07-06", "priority": "secondary", "skills": []}, {"id": "ai-006", "title": "微软Build 2026发布7款自研MAI模型，明确'Agent优先'战略", "event": "微软在Build 2026大会发布7款自研MAI模型：MAI-Thinking-1推理模型、MAI-Code-1代码专用模型、Scout Agent和Solara Platform Agent开发平台、Phi-4系列多模态变体。微软明确'Agent优先'战略，降低对OpenAI模型的依赖。MAI-Code-1-Flash编码模型有助于节省开发者使用成本。据The Decoder/iaipie报道。", "highlight": "微软从OpenAI的最大客户变成竞争对手", "reason": "微软自研模型+Agent平台战略代表大型云厂商的AI垂直整合趋势", "category": "企业动态", "source": "iaipie / The Decoder", "url": "https://iaipie.com/ai%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95%E6%B7%B1%E5%BA%A6%E7%9B%98%E7%82%B9%EF%BC%882026%E5%B9%B47%E6%9C%88%E7%AF%87%EF%BC%89%EF%BC%9Agpt-5-6%E5%86%85%E6%B5%8B%E3%80%81anthro/", "image": "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?w=1200&q=80&auto=format&fit=crop", "imageCaption": "微软 Build 大会", "date": "2026-06-16", "priority": "secondary", "skills": []}, {"id": "ai-007", "title": "月之暗面Kimi K3确认本月发布，参数规模2.5万亿", "event": "月之暗面确认新一代大模型Kimi K3将于7月内发布。据内部人士透露参数规模高达2.5万亿，大幅超越DeepSeek V4 Pro。K2.7 Code已实现token消耗降低30%、性能提升31.5%。月之暗面完成20亿美元新一轮融资，估值超200亿美元。K2系列API已正式退役。", "highlight": "2.5万亿参数——Kimi K3可能是2026年最大规模的单一模型", "reason": "国产大模型参数竞赛持续升温", "category": "模型发布", "source": "站长之家", "url": "https://www.chinaz.com/ainews/29318.shtml", "image": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1200&q=80&auto=format&fit=crop", "imageCaption": "Kimi 模型", "date": "2026-07-07", "priority": "flash", "skills": []}, {"id": "ai-008", "title": "Cloudflare推出AI Bot精细控制：搜索/训练/Agent三类机器人分别管控", "event": "Cloudflare向所有用户推出AI Bot精细管控功能，网站所有者可分别管理Search Bot（搜索爬虫）、Training Bot（训练爬虫）和Agent Bot（代理爬虫）的访问权限，而非一刀切屏蔽。自2026年9月15日起将默认屏蔽所有AI Bot。", "highlight": "AI时代的'机器人管理'从粗放走向精细化", "reason": "AI训练数据的访问控制正在成为标准化的网站基础设施", "category": "工具/平台", "source": "The Decoder", "url": "https://www.llm-stats.com/ai-news", "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80&auto=format&fit=crop", "imageCaption": "网络爬虫与安全", "date": "2026-07-06", "priority": "flash", "skills": []}, {"id": "ai-009", "title": "快手可灵AI 30亿美元外部融资落地，估值150亿美元", "event": "快手公告旗下AI视频模型可灵AI完成30亿美元外部融资，投资者已同意注入约27.95亿美元（折合190.471亿元），腾讯、阿里云、百度参投，剩余份额仍向投资者开放。可灵AI独立估值约150亿美元。", "highlight": "AI视频赛道估值标杆——可灵AI 150亿美元", "reason": "AI视频生成赛道资本持续涌入", "category": "企业动态", "source": "财新网", "url": "https://www.caixin.com/2026-07-03/102460178.html", "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&q=80&auto=format&fit=crop", "imageCaption": "AI 视频生成", "date": "2026-07-03", "priority": "flash", "skills": []}, {"id": "ai-010", "title": "Google Gemini 3.5 Pro再次延期至7月，Veo 3.1升级4K", "event": "Google原计划6月发布的Gemini 3.5 Pro再次延期至7月。CEO Sundar Pichai此前公开承诺6月交付，工程团队需优化token消耗效率和稳定Agent基础平台。这是该模型第二次延期。同时Veo 3.1持续升级，现已支持4K分辨率和原生竖版视频输出。", "highlight": "Gemini 3.5 Pro第二次跳票，社区耐心被考验", "reason": "Google在LLM竞赛中面临追赶压力和交付节奏挑战", "category": "模型发布", "source": "iaipie", "url": "https://iaipie.com/ai%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95%E6%B7%B1%E5%BA%A6%E7%9B%98%E7%82%B9%EF%BC%882026%E5%B9%B47%E6%9C%88%E7%AF%87%EF%BC%89%EF%BC%9Agpt-5-6%E5%86%85%E6%B5%8B%E3%80%81anthro/", "image": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&q=80&auto=format&fit=crop", "imageCaption": "Google AI 视频", "date": "2026-07-01", "priority": "flash", "skills": []}]}};
+  const DISPLAY_DATA = {"2026-07-07": {"schema": "display-news-daily/v1", "date": "2026-07-07", "weekday": "周二", "summary": "TrendForce发布7月电视面板全线下跌预测（65吋↓3美元），OLED笔电面板Q2出货同比暴增69%（Sigmaintell），三星显示A4线$2.5B扩产细节曝光，苹果折叠iPhone备货700-800万台（郭明錤），海信/TCL 2026电视上市搭载RGB-miniLED/SQD-miniLED，LORDIN公开ZETPLEX蓝色磷光掺杂剂分子结构。", "focus": "电视面板价格7月承压转跌，OLED笔电需求持续高增，折叠屏供应链博弈加剧", "news": [{"id": "disp-001", "title": "TrendForce：7月电视面板价格全线转跌，65吋降3美元至174美元", "keywords": ["面板价格", "TrendForce", "LCD", "电视面板"], "tech": "LCD面板价格", "route": "面板价格周期", "routeStatus": "↓受阻", "content": "据TrendForce集邦咨询《2026面板价格预测月度报告》最新数据，7月电视面板价格整体转跌：65吋均价174美元（↓3美元/-1.7%），55吋均价124美元（↓2美元/-1.6%），43吋均价64美元（↓2美元/-3.0%），32吋均价36美元（↓1美元/-2.7%）。显示器面板（27吋IPS均价63.6美元）和笔电面板各尺寸则预期持平。TrendForce未明确说明下跌原因，但此前Omdia在6月中旬报告显示2026年全球面板需求下调，单位需求预计同比下降6%。", "reason": "逐月追踪面板价格的权威数据更新，反应LCD TV面板供需关系的转折信号", "source": "TrendForce集邦咨询", "url": "https://www.eet-china.com/mp/a507727.html", "image": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=1200&q=80&auto=format&fit=crop", "imageCaption": "电视面板生产线（示意）", "date": "2026-07-06", "priority": "featured"}, {"id": "disp-002", "title": "Sigmaintell：Q2 OLED笔电面板出货达420万片同比增69%，2030年市占率预计达19%", "keywords": ["OLED笔电", "Sigmaintell", "笔记本电脑", "面板出货"], "tech": "OLED笔电面板", "route": "OLED笔电渗透率", "routeStatus": "↑突破", "content": "据Sigmaintell数据，2026年Q1全球OLED笔电面板出货达360万片（同比+69%），Q2继续攀升至420万片。中国游戏本市场需求尽管整体下滑，但OLED游戏本面板出货却在加速增长。Sigmaintell认为OLED笔电面板需求并非短期趋势，将持续增长，预计2030年市占率将达19%。", "reason": "OLED在笔电市场的渗透加速是面板行业中期重要趋势", "source": "OLED-Info / Sigmaintell", "url": "https://www.oled-info.com/sigmaintell-demand-oled-laptop-panels-increasing-sharply-market-share-reach-19", "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1200&q=80&auto=format&fit=crop", "imageCaption": "OLED 笔记本电脑", "date": "2026-07-06", "priority": "featured"}, {"id": "disp-003", "title": "三星显示A4线$2.5B扩产柔性OLED详细计划曝光，月产能15K", "keywords": ["三星显示", "柔性OLED", "A4线", "产能扩张"], "tech": "柔性OLED", "route": "柔性OLED产能", "routeStatus": "→稳定", "content": "三星显示已正式确认在韩国牙山扩产柔性OLED产线（A4线），投资约25亿美元，月产能规划15K片。该计划是韩国政府建设下一代显示与半导体生产集群的一部分。扩产重点针对折叠手机用的柔性OLED面板，预计主要供应三星电子及潜在外部客户。", "reason": "显示面板行业领先投资动向，影响柔性OLED供需格局", "source": "OLED-Info / 韩国媒体", "url": "https://www.oled-info.com/more-details-emerge-sdcs-25-billion-flexible-oled-expansion-plan-asan", "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80&auto=format&fit=crop", "imageCaption": "柔性OLED生产车间（示意）", "date": "2026-07-02", "priority": "secondary"}, {"id": "disp-004", "title": "LORDIN公开ZETPLEX蓝色磷光Pt掺杂剂分子结构，已开始送样", "keywords": ["LORDIN", "ZETPLEX", "磷光材料", "蓝色OLED", "Pt掺杂剂"], "tech": "OLED磷光材料", "route": "蓝色磷光材料", "routeStatus": "↑突破", "content": "LORDIN首次公开其ZETPLEX铂（Pt）掺杂剂的分子结构，相关成果发表在同行评审期刊。该公司表示该材料结构可简化蒸镀工艺并提升器件寿命。ZETPLEX已开始向客户发送评估样品。蓝色磷光材料的突破是OLED行业长期关注的重点方向。", "reason": "蓝色磷光材料是OLED效率与寿命的关键瓶颈，该进展有产业价值", "source": "OLED-Info / LORDIN", "url": "https://www.oled-info.com/lordin-discloses-molecular-structure-its-zetplex-blue-phosphorescent-pt-dopant", "image": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200&q=80&auto=format&fit=crop", "imageCaption": "OLED材料分子结构（示意）", "date": "2026-07-03", "priority": "secondary"}, {"id": "disp-005", "title": "郭明錤：苹果折叠iPhone备货700-800万台，或步iPhone X后尘同期发布延迟发售", "keywords": ["苹果", "折叠iPhone", "郭明錤", "备货量", "供应"], "tech": "可折叠OLED", "route": "折叠屏iPhone", "routeStatus": "→稳定", "content": "天风国际分析师郭明錤指出，苹果折叠iPhone可能面临与2017年iPhone X类似的市场策略——与其他机型同步发布但延迟开售，初期供应紧张或将持续至年末。产业调研预计2026年下半年备货700万至800万台。面板供应商方面，据此前韩媒报道，三星显示和LG Display已启动iPhone 18 Pro系列及折叠iPhone面板量产，京东方未获得此次订单。", "reason": "苹果首款折叠屏是2026年消费电子最大期待之一，供应链格局直接影响面板厂", "source": "ITBear / 郭明錤", "url": "https://www.itbear.com.cn/html/2026-07/1429447.html", "image": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80&auto=format&fit=crop", "imageCaption": "折叠屏手机（示意）", "date": "2026-07-07", "priority": "secondary"}, {"id": "disp-006", "title": "海信2026电视上市：RGB-miniLED技术主打性价比", "keywords": ["海信", "RGB-miniLED", "电视", "2026"], "tech": "RGB-miniLED", "route": "miniLED背光技术", "routeStatus": "→稳定", "content": "海信2026款电视现已上市，主打RGB-miniLED技术，定位价格实惠的LCD电视。RGB-miniLED相比传统miniLED可提高色彩表现和亮度效率，是LCD电视在OLED竞争中的关键技术路线。旗舰型号UR9S和UR8S均采用RGB-miniLED背光，分区数量决定画质；尺寸覆盖55-100吋。", "reason": "RGB-miniLED是LCD电视对抗OLED的重要技术路线，主流品牌齐推", "source": "FlatpanelsHD / DisplaySpecifications", "url": "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1783312512", "image": "https://www.displayspecifications.com/images/news/48b8f03/main.jpg", "imageCaption": "Hisense UR9S RGB-miniLED TV", "date": "2026-07-06", "priority": "secondary"}, {"id": "disp-007", "title": "TCL 2026电视发布：SQD-miniLED和RGB LED双线并进", "keywords": ["TCL", "SQD-miniLED", "RGB LED", "miniLED", "电视"], "tech": "miniLED/量子点", "route": "miniLED背光技术", "routeStatus": "→稳定", "content": "TCL推出2026款电视系列，包含SQD-miniLED和RGB LED两个技术路线，均搭载Google TV，主打更便宜的miniLED LCD电视。SQD-miniLED推测为结合量子点技术的miniLED方案，进一步拉低miniLED电视价格门槛。旗舰X11L采用SQD-miniLED，RM9L和RM7L采用RGB LED。", "reason": "TCL和海信同步发力miniLED路线，反映LCD电视阵营的技术竞争策略", "source": "FlatpanelsHD", "url": "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1783070544", "image": "https://images.unsplash.com/photo-1593359846649-85caa73a8ed0?w=1200&q=80&auto=format&fit=crop", "imageCaption": "MiniLED 电视产品（示意）", "date": "2026-07-03", "priority": "secondary"}, {"id": "disp-008", "title": "苹果计划下一代OLED产品采用BT.2020色域标准", "keywords": ["苹果", "BT.2020", "色域", "OLED"], "tech": "OLED色域", "route": "广色域技术", "routeStatus": "↑突破", "content": "据FlatpanelsHD报道，苹果计划在下一代OLED产品中采用BT.2020色域标准，以获得更丰富的色彩表现。BT.2020是当前最广的色域标准之一，覆盖范围远超DCI-P3。实现BT.2020覆盖率对OLED材料体系和光学设计提出了更高要求。", "reason": "色域标准的提升将推动OLED材料与光学设计创新", "source": "FlatpanelsHD", "url": "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1782901458", "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=1200&q=80&auto=format&fit=crop", "imageCaption": "OLED显示色彩示意", "date": "2026-07-01", "priority": "flash"}, {"id": "disp-009", "title": "LG G6/C6/B6 OLED电视广泛上市，C6搭载串联OLED面板", "keywords": ["LG", "OLED电视", "G6", "C6", "串联OLED"], "tech": "串联OLED / WOLED", "route": "OLED电视产品", "routeStatus": "→稳定", "content": "LG 2026款OLED电视G6、C6、B6现已广泛上市。其中C6在部分尺寸上搭载了串联OLED（Tandem OLED）面板，该技术此前主要用于高端型号，下放至C系列可提升亮度和寿命。据Omdia此前报告，LG显示的WOLED产能利用率在2026年有所回升。", "reason": "串联OLED技术向中端型号下放，标志技术成熟度提升", "source": "FlatpanelsHD", "url": "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1782898865", "image": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=1200&q=80&auto=format&fit=crop", "imageCaption": "LG OLED TV 客厅（示意）", "date": "2026-07-01", "priority": "flash"}, {"id": "disp-010", "title": "KFC南非旗舰店测试大型透明OLED自助点餐屏", "keywords": ["KFC", "透明OLED", "商用显示"], "tech": "透明OLED", "route": "透明显示应用", "routeStatus": "→稳定", "content": "KFC在南非约翰内斯堡机场附近新旗舰店测试新技术，其中包括大型（据推测55英寸）透明触摸OLED自助点餐屏。此外还配备LED外立面等显示技术。", "reason": "透明OLED在商用场景的落地案例增加，拓展OLED应用边界", "source": "OLED-Info", "url": "https://www.oled-info.com/kfc-testing-use-transparent-oleds-south-africa", "image": "https://images.unsplash.com/photo-1567521464027-f127ff144326?w=1200&q=80&auto=format&fit=crop", "imageCaption": "透明OLED应用场景（示意）", "date": "2026-07-04", "priority": "flash"}, {"id": "disp-011", "title": "ETRI开发单基板QD-OLED沉积新工艺，有望降本提分辨率", "keywords": ["ETRI", "QD-OLED", "单基板", "沉积工艺"], "tech": "QD-OLED工艺", "route": "QD-OLED制造", "routeStatus": "↑突破", "content": "韩国电子通信研究院（ETRI）研发出单基板QD-OLED沉积工艺，可在单一基板上完成量子点和OLED发光层的沉积，相比传统QD-OLED（需独立QD彩色滤光片基板+OLED基板贴合）可简化制程、降低成本，同时有利于提升分辨率。", "reason": "QD-OLED制造工艺的潜在突破路径", "source": "OLED-Info / ETRI", "url": "https://www.oled-info.com/etri-researchers-develop-single-substrate-qd-oled-deposition-process", "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80&auto=format&fit=crop", "imageCaption": "QD-OLED工艺示意", "date": "2026-07-02", "priority": "flash"}, {"id": "disp-012", "title": "夏普推出平价Google TV，支持HDMI 2.1和144Hz", "keywords": ["夏普", "Google TV", "HDMI 2.1", "144Hz"], "tech": "LCD电视", "route": "LCD电视产品", "routeStatus": "→稳定", "content": "夏普推出多款价格实惠的Google TV，尺寸覆盖43至65英寸，支持HDMI 2.1和144Hz刷新率。", "reason": "主流品牌HDMI 2.1和144Hz向下渗透至平价机型", "source": "FlatpanelsHD", "url": "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1783070080", "image": "https://images.unsplash.com/photo-1461151304267-38535e780c79?w=1200&q=80&auto=format&fit=crop", "imageCaption": "夏普电视产品（示意）", "date": "2026-07-03", "priority": "flash"}]}};
+  const PAPER_DATA = {"2026-07-07": {"schema": "display-paper-daily/v1", "date": "2026-07-07", "weekday": "周二", "summary": "本周三篇面板显示领域重要论文：京东方提出AI替代几何光学仿真模型（1000%速度提升，>99%精度），Sony推出Isolated Pixel新像素结构实现0.44英寸4980ppi微显示，ETH Zurich开发双向傅里叶像素实现光控制与分析合一。", "focus": "AI深度融入显示设计流程、超高分辨率微显示结构创新、像素功能从单向发光走向双向光控", "highlights": ["AI替代传统光学仿真的工业级验证——1000倍加速意味着设计周期从天级缩至分钟级", "Sony 4980ppi新像素结构采用光刻+干法刻蚀隔离像素，消除子像素间漏光", "ETH Fourier像素将显示与传感合二为一，为下一代交互显示奠基"], "papers": [{"id": "paper-001", "title": "Enabling Next-Generation OLEDs: A Revolutionary AI-Driven Model for Geometric Optical Design", "authors": "Bo Shi, Yinglong Huang, Jianji Fu, Yuanhao Tan, Yang Su, Zhiqing Li, Rong Zhang, Senbao Jiang, Xiuwen Shi, Xiaojun Tang, Kening Zheng, Guoqiang Tang, Haijun Qiu (BOE OLED Division R&D Center)", "field": "面板显示", "paperType": "期刊论文", "venue": "Journal of the Society for Information Display, Vol 34, Issue 5, pp. 309-320, May 2026", "oneLiner": "京东方提出AI替代传统几何光学仿真模型，实现>1000%速度提升同时保持>99%预测精度", "abstract": "OLED面板设计严重依赖几何光学仿真来指导设计选择和预测光学行为。本研究提出一种变革性的AI模型作为传统几何光学仿真的替代（surrogate）。该模型在保持>99%预测精度的同时实现超过1000%的评估速度提升，从而能够近乎实时地进行性能评估。这一突破使得大规模设计空间的快速探索成为可能，大幅加速OLED技术创新。数据可从通信作者索取。", "content": "本文核心贡献是训练了一个深度学习代理模型（surrogate model），用于替代传统的基于光线追踪的几何光学仿真。传统仿真每一次设计迭代可能需要数小时到数天，而AI模型可以在毫秒级输出结果。团队来自京东方OLED研发中心，验证了模型在多种OLED器件结构（包括顶发射、底发射、微腔结构）上的泛化能力。模型预测精度>99%意味着可直接用于设计空间的初筛和趋势判断，大幅缩短开发周期。这是SID JSID期刊2026年5月发表的工作。", "techIntro": "OLED面板的光学设计通常涉及多层薄膜干涉效应的精确模拟，需要综合考虑有机发光层各层厚度、折射率分布、微腔效应、出光耦合等复杂因素。传统方法使用光线追踪或传输矩阵法求解麦克斯韦方程组，虽然精度高但计算量巨大，每次参数调整都需要重新计算。AI代理模型通过学习大量仿真数据的输入-输出映射关系，可以在不牺牲精度的情况下实现近乎即时的预测。这项工作的意义在于首次在工业级OLED设计中验证了AI代理模型的实用性。", "techTags": ["OLED光学设计", "AI代理模型", "几何光学仿真", "深度学习", "BOE", "微腔效应"], "metrics": [{"name": "模型评估速度提升", "value": ">1000", "unit": "%", "note": "相比传统几何光学仿真"}, {"name": "预测精度", "value": ">99", "unit": "%", "note": "AI模型 vs 传统仿真结果"}, {"name": "期刊卷期", "value": "Vol 34, Issue 5", "unit": "", "note": "2026年5月"}, {"name": "页码范围", "value": "309-320", "unit": "页", "note": ""}], "attachments": [{"name": "论文原文", "url": "https://sid.onlinelibrary.wiley.com/doi/10.1002/jsid.70062", "label": "JSID全文", "cached": false}], "source": "Journal of the SID", "url": "https://sid.onlinelibrary.wiley.com/doi/10.1002/jsid.70062", "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485-e363dbe005cb?w=1200&q=80&auto=format&fit=crop", "imageCaption": "AI + OLED 光学设计示意", "date": "2026-05-01"}, {"id": "paper-002", "title": "A New Pixel Structure for High-Resolution OLED Microdisplays, Enhancing Efficiency and Color Gamut Using Patterned OLEDs and Aligned Light Guides", "authors": "Masaya Ogura, Naoya Kasahara, Jun Yoshida, Naohiro Kadoguchi, Naoto Oda, Toshiaki Shiraiwa, Kosuke Homma, Takayoshi Kato, Tomoaki Sawabe, Kenichi Aoyagi (Sony Semiconductor Solutions)", "field": "面板显示", "paperType": "期刊论文", "venue": "Journal of the Society for Information Display, Vol 34, Issue 5, pp. 247-253, May 2026", "oneLiner": "Sony提出'Isolated Pixel'新结构，通过光刻+干法刻蚀隔离像素，实现0.44英寸4980ppi微显示", "abstract": "我们提出一种名为'Isolated Pixel'的新型OLED像素结构，用于超精细像素阵列。该结构通过抑制像素间漏电流并引入自对准光导来改善光提取，从而提升色域和发光效率。具体工艺为：通过光刻和干法刻蚀将OLED和钝化层隔离，然后用SiN和低折射率材料的透明材料堆叠填充像素间空间。Isolated Pixel结构制造后未观察到光学和电学特性退化。原型面板（0.44英寸，4980ppi，DCI-P3 95%，最大亮度10,000cd/m²）展示了优越的画质——色彩再现性和发光效率均有提升。", "content": "Sony Semiconductor Solutions团队提出的Isolated Pixel结构解决了超高分辨率微显示中的关键问题：当像素尺寸缩小到微米级时，相邻像素间的电流泄漏和光学串扰严重劣化画质。传统方法依赖彩色滤光片（CF）方案，但存在光吸收导致的效率损失。Sony的解决方案是将每个OLED子像素通过光刻和干法刻蚀物理隔离，然后在间隙填充由SiN（高折射率）和低折射率材料组成的透明波导结构。这种自对准光导将波导出的光导向像素正上方，既提高了光提取效率，又消除了相邻像素间的颜色串扰。原型规格：0.44英寸对角线，4980ppi分辨率，DCI-P3色域覆盖率95%，最大亮度10,000cd/m²。", "techIntro": "OLED微显示是AR/VR/XR眼镜的核心显示元件，其核心挑战是在极小尺寸（<1英寸）内实现超高分辨率（>3000ppi）和高亮度（>5000cd/m²）。随像素尺寸缩小到几微米量级，相邻像素间的电流横向扩散和光学串扰成为主要画质劣化因素。传统CF（彩色滤光片）+WOLED方案虽然可以规避精细图案化难题，但彩色滤光片会吸收约70%的光，效率极低。RGB并排排列（side-by-side）通过FMM蒸镀是高端方案，但高分辨率下FMM对位精度和开口率成为瓶颈。Sony的Isolated Pixel方案采用光刻工艺实现亚微米级图案化精度，结合自对准光导结构在提高分辨率的同时保证了光效率。", "techTags": ["OLED微显示", "Isolated Pixel", "高分辨率", "光刻工艺", "Sony", "AR/VR", "光导"], "metrics": [{"name": "显示尺寸", "value": "0.44", "unit": "英寸", "note": ""}, {"name": "分辨率", "value": "4980", "unit": "ppi", "note": "每英寸像素数"}, {"name": "色域覆盖", "value": "95", "unit": "%", "note": "DCI-P3标准"}, {"name": "最大亮度", "value": "10000", "unit": "cd/m²", "note": ""}, {"name": "期刊卷期", "value": "Vol 34, Issue 5", "unit": "", "note": "2026年5月"}, {"name": "页码范围", "value": "247-253", "unit": "页", "note": ""}], "attachments": [{"name": "论文原文", "url": "https://sid.onlinelibrary.wiley.com/doi/10.1002/jsid.70076", "label": "JSID全文", "cached": false}], "source": "Journal of the SID", "url": "https://sid.onlinelibrary.wiley.com/doi/10.1002/jsid.70076", "image": "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=1200&q=80&auto=format&fit=crop", "imageCaption": "Sony OLED 微显示像素结构（示意）", "date": "2026-05-01"}, {"id": "paper-003", "title": "Fourier pixels for bidirectional light control", "authors": "Y.M. Glauser, S.J.W. Vonk, D.B. Seda, et al. (ETH Zurich)", "field": "面板显示 / 光学", "paperType": "期刊论文", "venue": "Nature, Volume 655, pp. 87-92, 2026", "oneLiner": "ETH Zurich开发双向傅里叶像素，在同一像素上实现光控制（显示）和光分析（传感）功能", "abstract": "我们开发了能够同时控制和分析光的双向像素。该像素采用波状雕刻表面结构，可以控制和分析光强、振荡相位和偏振。在光控制方向，像素将入射光转换为沿芯片表面传播的表面波，再在像素内另一位置将表面波散射回空间中出射——通过光波干涉可创建图案和图像。在光分析方向，应用干涉和傅里叶分析的逆过程来分析光。由于像素的表面轮廓可通过傅里叶分析确定，振幅、相位和偏振的控制与分析可以在单个像素上结合。研究团队下一步计划制造由多个傅里叶像素组成的矩阵，以实现更复杂的器件。", "content": "ETH Zurich团队提出的Fourier像素的核心创新在于利用波状雕刻表面结构（通过计算设计的表面轮廓）实现双向光场调控。在显示模式下，入射光被转换为表面传播波，然后在像素另一位置被重新散射为特定形状的出射波——通过波前干涉生成所需图案。在传感模式下，光波与参考波叠加产生干涉条纹，通过相机捕捉条纹模式反演出入射光的相位信息。同样方法可用于分析偏振态。Nature论文标志着像素概念从纯粹的发光源向交互式光界面转变。", "techIntro": "传统显示像素仅为单向光发射器件（发光或调制背光），相机像素则为单向光接收器件。Fourier像素的概念打破了这一界限：同一物理结构可以同时完成光调制（显示）和光分析（成像/传感）两个任务。其物理原理基于傅里叶光学——任何光场都可以分解为不同空间频率的平面波的叠加。通过设计像素表面的亚波长结构（超表面/衍射光学元件），可以选择性地操控不同空间频率分量的振幅和相位。ETH团队使用「波状雕刻表面」实现这一功能，属于计算光学与显示技术的交叉领域。", "techTags": ["Fourier像素", "双向光控制", "计算光学", "超表面", "ETH Zurich", "Nature"], "metrics": [{"name": "期刊", "value": "Nature", "unit": "", "note": ""}, {"name": "卷数", "value": "655", "unit": "", "note": ""}, {"name": "页码范围", "value": "87-92", "unit": "页", "note": ""}, {"name": "发表年份", "value": "2026", "unit": "", "note": ""}], "attachments": [{"name": "Nature原文", "url": "https://doi.org/10.1038/s41586-026-10681-7", "label": "Nature全文", "cached": false}], "source": "Nature", "url": "https://doi.org/10.1038/s41586-026-10681-7", "image": "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=1200&q=80&auto=format&fit=crop", "imageCaption": "傅里叶像素表面波结构（示意）", "date": "2026-06-01"}]}};
+  const SEMICON_DATA = {"2026-07-07": {"schema": "semicon-news-daily/v1", "date": "2026-07-07", "weekday": "周二", "summary": "IBM发布7Å晶体管架构（交错的纳米片，性能+50%/能效+70%），Research Bits Jul 6报道串联神经网络预测半导体特性、<3nm TiO₂铁电薄膜、双向傅里叶像素；东京大学实现1nm MoS₂纳米管用于GAA；宾夕法尼亚州立大学打造单片3D自供电器件；高NA EUV掩模经济学挑战路线图；GaN功率器件走向垂直结构。", "focus": "7Å级晶体管架构竞赛升温，原子级功能材料突破加速，先进封装与CPO走向量产准备", "news": [{"id": "semi-001", "title": "IBM发布7Å晶体管架构：交错式纳米片，性能+50%或能效+70%", "keywords": ["IBM", "7Å", "纳米片", "晶体管架构", "SRAM"], "tech": "GAA纳米片晶体管", "route": "先进制程架构", "routeStatus": "↑突破", "content": "IBM展示全新7Å晶体管架构，采用交错式纳米片（interleaved nanosheet）设计——晶体管像屋顶瓦片一样堆叠在精确的斜角上，从而在单位面积内塞入更多晶体管。性能较当前工艺提升50%，或能效提升高达70%。SRAM缩放改进40%，速度远远快于HBM，延迟更低。预计量产时间在2031年左右。据SemiEngineering报道。", "reason": "IBM的新架构路线图为后2nm时代提供了关键的技术路径参考", "source": "SemiEngineering / IBM", "url": "https://semiengineering.com/chip-industry-week-in-review-144/", "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&auto=format&fit=crop", "imageCaption": "GAA 晶体管结构示意", "date": "2026-06-26", "priority": "featured"}, {"id": "semi-002", "title": "Research Bits Jul 6：串联神经网络6个数量级加速半导体特性预测", "keywords": ["神经网络", "半导体特性", "IGZO", "TNN", "机器学习"], "tech": "AI+半导体表征", "route": "AI辅助半导体研究", "routeStatus": "↑突破", "content": "东京科学大学等机构开发串联神经网络（TNN）：第一级从晶体管I-V曲线估计材料参数（缺陷密度、陷阱态、迁移率等6个参数），第二级前向网络重建原始特性做物理一致性约束。在1000组a-IGZO数据集上训练后，单条I-V曲线推理<1ms即获全部参数。据称相比传统器件模拟（数小时至数天），加速超过六个数量级。[DOI: 10.1002/aisy.70437]", "reason": "AI驱动的半导体表征方法可能彻底改变材料参数提取效率", "source": "SemiEngineering / Advanced Intelligent Systems", "url": "https://semiengineering.com/research-bits-july-6/", "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80&auto=format&fit=crop", "imageCaption": "神经网络结构示意", "date": "2026-07-06", "priority": "featured"}, {"id": "semi-003", "title": "东京大学实现1nm MoS₂纳米管，有望用于超缩放GAA晶体管", "keywords": ["MoS₂", "纳米管", "1nm", "GAA", "二维材料"], "tech": "二维半导体材料", "route": "后硅器件材料", "routeStatus": "↑突破", "content": "东京大学成功制造出直径仅1nm的半导体二硫化钼（MoS₂）纳米管，有望用于超缩放的环绕栅极（GAA）晶体管沟道。MoS₂作为二维材料在原子级厚度下仍保持良好半导体特性，被认为是后硅时代的重要候选沟道材料。据SemiEngineering行业周报报道。", "reason": "1nm尺度沟道材料突破是后摩尔时代器件微缩的关键研究方向", "source": "SemiEngineering / 东京大学", "url": "https://semiengineering.com/chip-industry-week-in-review-144/", "image": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&q=80&auto=format&fit=crop", "imageCaption": "MoS₂ 纳米管结构示意", "date": "2026-06-26", "priority": "secondary"}, {"id": "semi-004", "title": "高NA EUV掩模经济学：成本上升迫使行业重新审视路线图", "keywords": ["High-NA EUV", "掩模", "光刻成本", "ASML"], "tech": "EUV光刻", "route": "High-NA EUV路线", "routeStatus": "↓受阻", "content": "SemiEngineering分析指出，高NA EUV光刻的掩模成本显著上升、新掩模材料要求更严格，叠加更紧的缺陷容忍度，正在迫使行业重新考虑High-NA EUV的部署节奏和路线图。掩模制造成本和供应链成熟度成为下一代光刻技术推广的主要障碍之一。", "reason": "High-NA EUV的经济性是制约先进制程推进的实际瓶颈", "source": "SemiEngineering", "url": "https://semiengineering.com/mask-economics-shape-high-na-euv-adoption/", "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80&auto=format&fit=crop", "imageCaption": "EUV 光刻机内部结构（示意）", "date": "2026-06-22", "priority": "secondary"}, {"id": "semi-005", "title": "GaN功率器件走向垂直结构：新设计克服制造挑战", "keywords": ["GaN", "垂直功率器件", "氮化镓", "功率半导体"], "tech": "GaN功率器件", "route": "GaN器件结构", "routeStatus": "↑突破", "content": "SemiEngineering报道垂直GaN功率器件的最新进展，新设计和工艺流程正在帮助克服垂直GaN结构的制造挑战。垂直GaN相比传统平面GaN可承受更高电压、拥有更好的热管理，在电动汽车和工业电源领域前景广阔。", "reason": "GaN从平面转向垂直结构是功率半导体技术演进的重要方向", "source": "SemiEngineering", "url": "https://semiengineering.com/gan-power-devices-go-vertical/", "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&q=80&auto=format&fit=crop", "imageCaption": "GaN 功率器件（示意）", "date": "2026-06-18", "priority": "secondary"}, {"id": "semi-006", "title": "宾夕法尼亚州立大学打造单片3D自供电器件：石墨烯传感器+MoS₂/WSe₂逻辑+硅光伏", "keywords": ["单片3D集成", "石墨烯", "MoS₂", "WSe₂", "自供电"], "tech": "3D集成 / 二维材料", "route": "单片3D集成", "routeStatus": "↑突破", "content": "宾夕法尼亚州立大学团队展示了单片3D集成芯片：堆叠石墨烯化学传感器层、MoS₂/WSe₂二维材料逻辑层、硅光伏能量收集层于同一芯片上，实现自供电运行。该设计为低功耗自主传感和边缘计算系统开辟了新道路。据SemiEngineering报道。", "reason": "单片3D集成是超越摩尔定律的重要技术路径", "source": "SemiEngineering", "url": "https://semiengineering.com/chip-industry-week-in-review-144/", "image": "https://images.unsplash.com/photo-1517077302505-9e2a91a9fa1e-e363dbe005cb?w=1200&q=80&auto=format&fit=crop", "imageCaption": "3D 集成芯片堆叠示意", "date": "2026-06-26", "priority": "secondary"}, {"id": "semi-007", "title": "TiO₂薄膜在<3nm厚度下呈现铁电性，ALD兼容硅基工艺", "keywords": ["TiO₂", "铁电", "ALD", "3nm", "铁电存储"], "tech": "铁电薄膜 / ALD", "route": "新型铁电材料", "routeStatus": "↑突破", "content": "UC Berkeley和SLAC团队将TiO₂薄膜厚度降至<3nm时意外发现其呈现铁电性——自发极化且可电场翻转，且在1nm（约2个单胞厚度）时仍保持稳定。团队使用ALD在<400°C低温下生长均匀薄膜，可在晶体硅和非晶碳基板上沉积，表明其与硅基工艺兼容。论文发表于Science 392, 280-284 (2026)。[DOI: 10.1126/science.aec9417]", "reason": "原子级铁电薄膜的发现为FeFET存储和3D集成开创新可能", "source": "SemiEngineering / Science", "url": "https://semiengineering.com/research-bits-july-6/", "image": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd-abf9dbad1b69?w=1200&q=80&auto=format&fit=crop", "imageCaption": "铁电薄膜晶格结构（示意）", "date": "2026-07-06", "priority": "flash"}, {"id": "semi-008", "title": "应用材料为DRAM推出外延系统，同时发布先进封装CMP/沉积/电子束检测系统", "keywords": ["应用材料", "DRAM", "外延", "CMP", "先进封装"], "tech": "半导体设备", "route": "DRAM设备", "routeStatus": "→稳定", "content": "应用材料（Applied Materials）为DRAM制造推出新型外延系统，同时为先进封装推出CMP、沉积和电子束检测系统。据SemiEngineering报道。", "reason": "设备商的布局反映DRAM和先进封装的技术升级方向", "source": "SemiEngineering", "url": "https://semiengineering.com/chip-industry-week-in-review-144/", "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&q=80&auto=format&fit=crop", "imageCaption": "半导体设备车间（示意）", "date": "2026-06-26", "priority": "flash"}, {"id": "semi-009", "title": "ETH Zurich开发双向傅里叶像素：同时实现光控制和光分析", "keywords": ["ETH Zurich", "双向像素", "傅里叶像素", "光调制", "显示"], "tech": "光学微结构", "route": "新型像素结构", "routeStatus": "↑突破", "content": "ETH Zurich研究人员开发出双向傅里叶像素，通过波状雕刻表面实现对光强、相位和偏振的控制与分析。正向用于成像/显示，逆向用于光分析。团队称该像素可在同一器件上实现相机和显示功能。论文发表于Nature 655, 87-92 (2026)。[DOI: 10.1038/s41586-026-10681-7]", "reason": "显示与传感合一的像素概念可能开启新型交互显示设备", "source": "SemiEngineering / Nature", "url": "https://semiengineering.com/research-bits-july-6/", "image": "https://images.unsplash.com/photo-1517077302505-9e2a91a9fa1e?w=1200&q=80&auto=format&fit=crop", "imageCaption": "傅里叶像素光学结构（示意）", "date": "2026-07-06", "priority": "flash"}, {"id": "semi-010", "title": "AlixLabs推出首款原子层刻蚀间距分割商用设备", "keywords": ["AlixLabs", "ALE", "间距分割", "图案密度"], "tech": "原子层刻蚀", "route": "图案密度技术", "routeStatus": "↑突破", "content": "AlixLabs推出首款商用设备，用于其原子层刻蚀间距分割（ALE Pitch Splitting）技术。该技术可在不退化为双重图案的情况下增加图形密度，为先进制程提供一种新的图案化方案。据SemiEngineering报道。", "reason": "新型图案化设备为先进制程提供EUV之外的互补方案", "source": "SemiEngineering", "url": "https://semiengineering.com/chip-industry-week-in-review-144/", "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1200&q=80&auto=format&fit=crop", "imageCaption": "原子层刻蚀设备（示意）", "date": "2026-06-26", "priority": "flash"}]}};
+  const HISTORY = [{"date": "2026-07-07", "channels": ["display", "ai", "paper", "semicon"], "weekday": "周二", "note": "周二"}];
+
+  // ========== STATE ==========
+  const state = {
+    channel: "display",    // L1: display | semicon | ai
+    subTab: "news",        // L2: news | paper | skills
+    date: "latest",
+  };
+
+  const $ = (sel) => document.querySelector(sel);
+  const $$ = (sel) => document.querySelectorAll(sel);
+
+  // ========== HELPERS ==========
+  function esc(s) {
+    if (s == null) return "";
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+  }
+
+  function chips(arr) {
+    if (!arr || !arr.length) return "";
+    return arr.map(t => `<span class="chip">${esc(t)}</span>`).join("");
+  }
+
+  function routeBadge(s) {
+    if (!s) return "";
+    let cls = "tag-route-stable", icon = "→";
+    if (s.includes("突破")) { cls = "tag-route-up"; icon = "↑"; }
+    else if (s.includes("受阻")) { cls = "tag-route-down"; icon = "↓"; }
+    return `<span class="sec-tag ${cls}">${icon} ${esc(s.replace(/^[↑→↓]/,"").trim())}</span>`;
+  }
+
+  // ========== DATA ACCESS ==========
+  function getData(channel, date) {
+    if (state.subTab === "paper") {
+      // 面板 + 论文→PAPER_DATA(display-paper-daily)
+      if (channel === "display") {
+        if (!PAPER_DATA || typeof PAPER_DATA !== "object") return null;
+        if (date === "latest") {
+          const keys = Object.keys(PAPER_DATA).sort().reverse();
+          return keys.length ? PAPER_DATA[keys[0]] : null;
+        }
+        return PAPER_DATA[date] || null;
+      }
+      // 半导体 + 论文→SEMICON_DATA(semicon-paper-daily混在semicon池)
+      const pool = SEMICON_DATA || {};
+      if (date === "latest") {
+        const keys = Object.keys(pool).sort().reverse();
+        return keys.length ? pool[keys[0]] : null;
+      }
+      return pool[date] || null;
+    }
+    let pool;
+    if (channel === "ai") pool = AI_DATA;
+    else if (channel === "semicon") pool = SEMICON_DATA || {};
+    else pool = DISPLAY_DATA;
+    if (!pool || typeof pool !== "object") return null;
+    if (date === "latest") {
+      const keys = Object.keys(pool).sort().reverse();
+      return keys.length ? pool[keys[0]] : null;
+    }
+    return pool[date] || null;
+  }
+
+  function getSubTabs(channel) {
+    if (channel === "ai") return [
+      { id: "news", label: "新闻速递" },
+      { id: "skills", label: "Skill 推荐" },
+    ];
+    return [
+      { id: "news", label: "新闻速递" },
+      { id: "paper", label: "论文研讨" },
+    ];
+  }
+
+  // ========== DATE PICKER ==========
+  function fillDateSelect() {
+    const sel = $("#dateSelect");
+    sel.innerHTML = "";
+    // Show dates where current channel has data
+    const ch = state.channel;
+    const pool = state.subTab === "paper"
+      ? (state.channel === "display" ? PAPER_DATA : SEMICON_DATA || {})
+      : ch === "ai" ? AI_DATA : ch === "semicon" ? (SEMICON_DATA || {}) : DISPLAY_DATA;
+    const dates = pool && typeof pool === "object" ? Object.keys(pool).sort().reverse() : [];
+    if (!dates.length && HISTORY) {
+      HISTORY.forEach(d => {
+        const opt = document.createElement("option");
+        opt.value = d.date;
+        opt.textContent = `${d.date} ${d.weekday || ""}`;
+        sel.appendChild(opt);
+      });
+      return;
+    }
+    dates.forEach(d => {
+      const opt = document.createElement("option");
+      opt.value = d;
+      opt.textContent = d;
+      sel.appendChild(opt);
+    });
+    if (dates.length) sel.value = dates[0];
+  }
+
+  function getDateLabel(date) {
+    const e = HISTORY ? HISTORY.find(h => h.date === date) : null;
+    return e ? `${date} ${e.weekday || ""}` : date;
+  }
+
+  // ========== RENDER — NEWS (featured / secondary / flash) ==========
+  function renderNews(data) {
+    if (!data) return `<div class="error">暂无数据</div>`;
+    const news = data.news || [];
+    if (!news.length) return `<div class="error">暂无新闻</div>`;
+
+    // Classify by priority (default secondary)
+    const featured = news.filter(n => n.priority === "featured").slice(0, 2);
+    const secondary = news.filter(n => n.priority === "secondary");
+    const flash = news.filter(n => n.priority === "flash");
+
+    // If no priorities set, treat first 2 as featured, next 5 as secondary, rest as flash
+    const hasPrioritySet = news.some(n => n.priority);
+    let fNews = featured, sNews = secondary, flNews = flash;
+    if (!hasPrioritySet) {
+      fNews = news.slice(0, 2);
+      sNews = news.slice(2, 7);
+      flNews = news.slice(7);
+    }
+
+    let html = "";
+
+    // ---- Hero / Summary ----
+    if (data.summary || data.highlights) {
+      html += `<div class="hero-section">`;
+      if (data.summary) {
+        // Summary as context line
+      }
+      if (data.highlights && data.highlights.length) {
+        html += `<div style="background:rgba(255,255,255,0.6);backdrop-filter:blur(12px);border-radius:var(--radius);padding:16px 20px;margin-bottom:24px;border:1px solid var(--border-glass);font-size:13px;color:var(--text-secondary);line-height:1.6">`;
+        html += `<span style="font-weight:700;color:var(--text)">💡 本期概述：</span> ${esc(data.summary || "")}`;
+        if (data.focus) html += `<br><span style="font-weight:700;color:var(--accent);font-size:12px">🎯 ${esc(data.focus)}</span>`;
+        html += `</div>`;
+      }
+      html += `</div>`;
+    }
+
+    // ---- Featured (hero cards) ----
+    if (fNews.length) {
+      html += `<div class="hero-section">`;
+      html += `<span class="section-label">📌 重点关注</span>`;
+      html += `<div class="featured-grid">`;
+      fNews.forEach(n => {
+        const img = n.image
+          ? `<img class="card-img" src="${esc(n.image)}" alt="${esc(n.title)}" loading="lazy" onerror="this.closest('.featured-card').classList.add('fc-tech');this.remove()" />`
+          : ``;
+        const tags = ` <span class="tag" style="background:rgba(255,255,255,0.2);color:#fff;font-size:10px">${esc(n.tech || n.route || n.category || "")}</span>`;
+        const cardClass = !img ? " featured-card fc-panel" : " featured-card";
+        html += `
+          <div class="${cardClass}">
+            ${img || ``}
+            <div class="card-overlay">
+              <div class="card-tags">${tags}${routeBadge(n.routeStatus)}</div>
+              <h2>${esc(n.title)}</h2>
+              <p class="card-summary">${esc(n.content || n.event || "")}</p>
+            </div>
+            ${n.url ? `<a class="featured-link" href="${esc(n.url)}" target="_blank" rel="noopener"></a>` : ""}
+          </div>`;
+      });
+      html += `</div></div>`;
+    }
+
+    // ---- Secondary (glassmorphism grid) ----
+    if (sNews.length) {
+      html += `<div class="secondary-section">`;
+      html += `<span class="section-label">📋 深度速读</span>`;
+      html += `<div class="secondary-grid">`;
+      sNews.forEach((n, i) => {
+        // No featured-wide anymore — keep 2-column grid (2-3 rows)
+        const isWide = false;
+        const img = n.image
+          ? `<img class="sec-img" src="${esc(n.image)}" alt="${esc(n.title)}" loading="lazy" onerror="this.remove()" />`
+          : ``;
+        const tags = n.tech ? `<span class="sec-tag">${esc(n.tech)}</span>` : "";
+        const routeT = routeBadge(n.routeStatus);
+        html += `
+          <div class="secondary-card${isWide ? " featured-wide" : ""}">
+            ${img || ""}
+            <div class="sec-body">
+              <div class="sec-tags">${tags}${routeT}</div>
+              <h3>${esc(n.title)}</h3>
+              <p class="sec-summary">${esc(n.content || n.event || n.reason || "")}</p>
+              <div class="sec-meta">
+                <span>📰 ${esc(n.source || "")}</span>
+                ${n.url ? `<a class="sec-link" href="${esc(n.url)}" target="_blank" rel="noopener">阅读 →</a>` : ""}
+              </div>
+            </div>
+          </div>`;
+      });
+      html += `</div></div>`;
+    }
+
+    // ---- Flash (compact list) ----
+    if (flNews.length) {
+      html += `<div class="flash-section">`;
+      html += `<span class="section-label">⚡ 快讯速览</span>`;
+      html += `<div class="flash-list">`;
+      flNews.forEach((n, i) => {
+        const tag = n.tech || n.route || n.category || "";
+        html += `
+          <div class="flash-item">
+            <span class="flash-index">${i + 1}</span>
+            <div class="flash-content">
+              <div class="flash-title">${esc(n.title)}</div>
+              <p class="flash-summary">${esc(n.content || n.event || n.reason || "")}</p>
+              <div class="flash-meta">
+                <span class="flash-source">📰 ${esc(n.source || n.date || "")}</span>
+                ${tag ? `<span class="flash-tag">${esc(tag)}</span>` : ""}
+              </div>
+            </div>
+            ${n.url ? `<a class="flash-link" href="${esc(n.url)}" target="_blank" rel="noopener">→</a>` : ""}
+          </div>`;
+      });
+      html += `</div></div>`;
+    }
+
+    return html;
+  }
+
+  // ========== RENDER — PAPER (deep read, one per page) ==========
+  function renderPaper(data) {
+    if (!data) return `<div class="error">暂无论文数据</div>`;
+    const papers = data.papers || [];
+    if (!papers.length) return `<div class="error">暂无论文</div>`;
+
+    let html = `<div class="paper-section">`;
+
+    // Summary header
+    if (data.summary || data.highlights) {
+      html += `<div style="background:rgba(255,255,255,0.6);backdrop-filter:blur(12px);border-radius:var(--radius);padding:16px 20px;margin-bottom:24px;border:1px solid var(--border-glass)">`;
+      html += `<span style="font-weight:700;color:var(--text);font-size:14px">📚 本期论文概述</span>`;
+      if (data.summary) html += `<p style="font-size:13px;color:var(--text-secondary);margin:6px 0 0;line-height:1.6">${esc(data.summary)}</p>`;
+      if (data.focus) html += `<p style="font-size:12px;color:var(--accent);margin:4px 0 0;font-weight:600">🎯 ${esc(data.focus)}</p>`;
+      html += `</div>`;
+    }
+
+    papers.forEach((p, idx) => {
+      if (idx > 0) html += `<div class="paper-divider"></div>`;
+
+      const img = p.image
+        ? `<img class="paper-header-img" src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy" onerror="this.remove()" />`
+        : `<div class="paper-header-fallback">📄</div>`;
+
+      const tags = [
+        p.paperType ? `<span class="paper-meta-tag type">${esc(p.paperType)}</span>` : "",
+        p.field ? `<span class="paper-meta-tag field">${esc(p.field)}</span>` : "",
+        p.venue ? `<span class="paper-meta-tag venue">${esc(p.venue)}</span>` : "",
+      ].filter(Boolean).join("");
+
+      const techTags = (p.techTags || p.keywords || []).filter(Boolean);
+      const tagCloud = techTags.length
+        ? `<div class="paper-tag-cloud">${techTags.map(t => `<span class="paper-tag">${esc(t)}</span>`).join("")}</div>`
+        : "";
+
+      const metrics = p.metrics || [];
+      const metricsHtml = metrics.length
+        ? `<div class="paper-metrics">${metrics.map(m => `
+          <div class="paper-metric">
+            <span class="paper-metric-name">${esc(m.name || "")}</span>
+            <span class="paper-metric-value">${esc(m.value || "")}${m.unit ? `<span class="paper-metric-unit">${esc(m.unit)}</span>` : ""}</span>
+            ${m.note ? `<div class="paper-metric-note">${esc(m.note)}</div>` : ""}
+          </div>`).join("")}</div>`
+        : "";
+
+      const attachments = (p.attachments || []).map(a => {
+        const isLocal = a.cached || a.url.startsWith("./");
+        return `<a class="attach-pill${isLocal ? " local" : ""}" href="${esc(a.url)}" target="${isLocal ? "_self" : "_blank"}" rel="noopener">${isLocal ? "⬇️" : "🔗"} ${esc(a.label || a.name || "PDF")}</a>`;
+      }).join("");
+
+      html += `
+        <article class="paper-card-full">
+          ${img}
+          <div class="paper-body">
+            <div class="paper-meta-tags">${tags}</div>
+            <h1 class="paper-title">${esc(p.title)}</h1>
+            ${p.authors ? `<div class="paper-authors">👥 ${esc(p.authors)}</div>` : ""}
+            ${p.oneLiner ? `<div class="paper-oneliner">💡 ${esc(p.oneLiner)}</div>` : ""}
+            ${tagCloud}
+            ${metricsHtml}
+
+            <div class="paper-section-block">
+              <span class="paper-section-label">📋 摘要</span>
+              <p>${esc(p.abstract || p.content || "")}</p>
+            </div>
+
+            <div class="paper-section-block">
+              <span class="paper-section-label">🔬 技术解读</span>
+              <p>${esc(p.content || p.techIntro || p.abstract || "")}</p>
+            </div>
+
+            ${p.techIntro ? `
+            <div class="paper-section-block">
+              <span class="paper-section-label">📖 背景知识</span>
+              <p>${esc(p.techIntro)}</p>
+            </div>` : ""}
+
+            ${attachments ? `<div class="paper-attachments">${attachments}</div>` : ""}
+
+            <div class="paper-footer">
+              <span class="paper-source">📚 ${esc(p.source || "")}</span>
+              <span>${esc(p.date || data.date || "")}</span>
+            </div>
+            ${p.url ? `<a class="paper-link" href="${esc(p.url)}" target="_blank" rel="noopener">查看原文 →</a>` : ""}
+          </div>
+        </article>`;
+    });
+
+    html += `</div>`;
+    return html;
+  }
+
+  // ========== RENDER — SKILLS (AI channel, 名词解释卡片网格) ==========
+  function renderSkills(data) {
+    if (!data || !data.skills || !data.skills.length) return `<div class="error">暂无 Skill 推荐</div>`;
+    const skills = data.skills;
+    const established = skills.filter(s => s.tier === "established").length;
+    const rising = skills.filter(s => s.tier === "rising").length;
+
+    let html = `<div class="skills-wrap">`;
+    // 概览标题条
+    html += `
+      <div class="skills-head">
+        <span class="section-label">🧩 每日 Skill 推荐</span>
+        <p class="skills-sub">每天精选 <strong>${established} 个老牌高星</strong> + <strong>${rising} 个上升迅猛</strong> 的 Agent Skill，一句话看懂它是做什么的。</p>
+      </div>`;
+
+    // 不等宽卡片网格：6 列，spans 决定每行 2-3 个且不等宽
+    const spans = [4, 2, 2, 2, 2, 3, 3];
+    html += `<div class="skill-grid">`;
+    skills.forEach((s, i) => {
+      const span = spans[i % spans.length];
+      const isRising = s.tier === "rising";
+      const badge = isRising
+        ? `<span class="sk-badge sk-rising">🔥 上升迅猛</span>`
+        : `<span class="sk-badge sk-estab">🏆 老牌高星</span>`;
+      const tags = (s.tags || []).map(t => `<span class="chip">${esc(t)}</span>`).join("");
+      const author = s.author ? `<span class="sk-fact"><span class="sk-fact-k">👤 作者</span><span class="sk-fact-v">${esc(s.author)}</span></span>` : "";
+      const repo = s.repo ? `<span class="sk-fact"><span class="sk-fact-k">📦 仓库</span><span class="sk-fact-v sk-mono">${esc(s.repo)}</span></span>` : "";
+      html += `
+        <article class="skill-card sk-span-${span}${isRising ? " sk-card-rising" : ""}">
+          <div class="sk-head">
+            <span class="sk-icon">${esc(s.icon || "🧩")}</span>
+            <div class="sk-head-main">
+              <h3 class="sk-name">${esc(s.name || "")}</h3>
+              ${badge}
+            </div>
+          </div>
+          <div class="sk-spec">
+            <span class="sk-fact sk-stars-fact">
+              <span class="sk-fact-k">⭐ Stars</span>
+              <span class="sk-fact-v sk-stars-v">${esc(s.stars || "—")}</span>
+            </span>
+            ${author}
+            ${repo}
+          </div>
+          <p class="sk-desc">${esc(s.desc || s.description || "")}</p>
+          <div class="sk-foot">
+            <div class="sk-tags">${tags}</div>
+            ${s.url ? `<a class="sk-link" href="${esc(s.url)}" target="_blank" rel="noopener">GitHub 查看 →</a>` : ""}
+          </div>
+        </article>`;
+    });
+    html += `</div></div>`;
+    return html;
+  }
+
+  // ========== MAIN RENDER ==========
+  function render() {
+    const data = getData(state.channel, state.date);
+    const $content = $("#content");
+    const $dateTag = $("#dateTag");
+    const $subTabs = $("#subTabs");
+
+    // Update date tag
+    $dateTag.textContent = data ? getDateLabel(data.date || state.date) : "";
+
+    // Update sub-tabs
+    const tabs = getSubTabs(state.channel);
+    if (state.subTab === "paper" && state.channel === "ai") state.subTab = "skills";
+    if (!tabs.find(t => t.id === state.subTab)) state.subTab = tabs[0].id;
+
+    $subTabs.innerHTML = tabs.map(t =>
+      `<button class="tab-l2${t.id === state.subTab ? " active" : ""}" data-subtab="${t.id}">${t.label}</button>`
+    ).join("");
+
+    // Bind sub-tab clicks
+    $subTabs.querySelectorAll(".tab-l2").forEach(btn => {
+      btn.onclick = () => {
+        state.subTab = btn.dataset.subtab;
+        fillDateSelect();
+        render();
+      };
+    });
+
+    // Render content
+    let html = "";
+    if (!data) {
+      const label = state.subTab === "paper" ? "论文" : state.channel === "display" ? "面板显示" : state.channel === "semicon" ? "半导体" : "AI";
+      html = `<div class="error">该日期暂无 ${label} 数据</div>`;
+    } else if (state.subTab === "paper") {
+      html = renderPaper(data);
+    } else if (state.subTab === "skills") {
+      html = renderSkills(data);
+    } else {
+      html = renderNews(data);
+    }
+    $content.innerHTML = html;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // ========== EVENT BINDINGS ==========
+  // Level-1 channel tabs
+  $("#channelTabs").addEventListener("click", (e) => {
+    const btn = e.target.closest("button.tab-l1");
+    if (!btn) return;
+    $$("#channelTabs .tab-l1").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    state.channel = btn.dataset.channel;
+    state.subTab = "news";
+    fillDateSelect();
+    render();
+  });
+
+  // Date select
+  $("#dateSelect").addEventListener("change", (e) => {
+    state.date = e.target.value;
+    render();
+  });
+
+  // ========== INIT ==========
+  fillDateSelect();
+  render();
+  </script>
+</body>
+</html>

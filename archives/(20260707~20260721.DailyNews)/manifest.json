@@ -1,0 +1,26 @@
+{
+  "window": "2026-07-07~2026-07-21",
+  "generated_at": "2026-07-07T17:01:54",
+  "channels": {
+    "ai": {
+      "days": 1,
+      "items": 10,
+      "skills": 5
+    },
+    "display": {
+      "days": 1,
+      "items": 12,
+      "skills": 0
+    },
+    "paper": {
+      "days": 1,
+      "items": 3,
+      "skills": 0
+    },
+    "semicon": {
+      "days": 1,
+      "items": 10,
+      "skills": 0
+    }
+  }
+}

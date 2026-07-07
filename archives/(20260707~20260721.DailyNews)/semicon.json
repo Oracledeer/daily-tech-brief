@@ -1,0 +1,228 @@
+{
+  "2026-07-07": {
+    "schema": "semicon-news-daily/v1",
+    "date": "2026-07-07",
+    "weekday": "周二",
+    "summary": "IBM发布7Å晶体管架构（交错的纳米片，性能+50%/能效+70%），Research Bits Jul 6报道串联神经网络预测半导体特性、<3nm TiO₂铁电薄膜、双向傅里叶像素；东京大学实现1nm MoS₂纳米管用于GAA；宾夕法尼亚州立大学打造单片3D自供电器件；高NA EUV掩模经济学挑战路线图；GaN功率器件走向垂直结构。",
+    "focus": "7Å级晶体管架构竞赛升温，原子级功能材料突破加速，先进封装与CPO走向量产准备",
+    "news": [
+      {
+        "id": "semi-001",
+        "title": "IBM发布7Å晶体管架构：交错式纳米片，性能+50%或能效+70%",
+        "keywords": [
+          "IBM",
+          "7Å",
+          "纳米片",
+          "晶体管架构",
+          "SRAM"
+        ],
+        "tech": "GAA纳米片晶体管",
+        "route": "先进制程架构",
+        "routeStatus": "↑突破",
+        "content": "IBM展示全新7Å晶体管架构，采用交错式纳米片（interleaved nanosheet）设计——晶体管像屋顶瓦片一样堆叠在精确的斜角上，从而在单位面积内塞入更多晶体管。性能较当前工艺提升50%，或能效提升高达70%。SRAM缩放改进40%，速度远远快于HBM，延迟更低。预计量产时间在2031年左右。据SemiEngineering报道。",
+        "reason": "IBM的新架构路线图为后2nm时代提供了关键的技术路径参考",
+        "source": "SemiEngineering / IBM",
+        "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "GAA 晶体管结构示意",
+        "date": "2026-06-26",
+        "priority": "featured"
+      },
+      {
+        "id": "semi-002",
+        "title": "Research Bits Jul 6：串联神经网络6个数量级加速半导体特性预测",
+        "keywords": [
+          "神经网络",
+          "半导体特性",
+          "IGZO",
+          "TNN",
+          "机器学习"
+        ],
+        "tech": "AI+半导体表征",
+        "route": "AI辅助半导体研究",
+        "routeStatus": "↑突破",
+        "content": "东京科学大学等机构开发串联神经网络（TNN）：第一级从晶体管I-V曲线估计材料参数（缺陷密度、陷阱态、迁移率等6个参数），第二级前向网络重建原始特性做物理一致性约束。在1000组a-IGZO数据集上训练后，单条I-V曲线推理<1ms即获全部参数。据称相比传统器件模拟（数小时至数天），加速超过六个数量级。[DOI: 10.1002/aisy.70437]",
+        "reason": "AI驱动的半导体表征方法可能彻底改变材料参数提取效率",
+        "source": "SemiEngineering / Advanced Intelligent Systems",
+        "url": "https://semiengineering.com/research-bits-july-6/",
+        "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "神经网络结构示意",
+        "date": "2026-07-06",
+        "priority": "featured"
+      },
+      {
+        "id": "semi-003",
+        "title": "东京大学实现1nm MoS₂纳米管，有望用于超缩放GAA晶体管",
+        "keywords": [
+          "MoS₂",
+          "纳米管",
+          "1nm",
+          "GAA",
+          "二维材料"
+        ],
+        "tech": "二维半导体材料",
+        "route": "后硅器件材料",
+        "routeStatus": "↑突破",
+        "content": "东京大学成功制造出直径仅1nm的半导体二硫化钼（MoS₂）纳米管，有望用于超缩放的环绕栅极（GAA）晶体管沟道。MoS₂作为二维材料在原子级厚度下仍保持良好半导体特性，被认为是后硅时代的重要候选沟道材料。据SemiEngineering行业周报报道。",
+        "reason": "1nm尺度沟道材料突破是后摩尔时代器件微缩的关键研究方向",
+        "source": "SemiEngineering / 东京大学",
+        "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
+        "image": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "MoS₂ 纳米管结构示意",
+        "date": "2026-06-26",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-004",
+        "title": "高NA EUV掩模经济学：成本上升迫使行业重新审视路线图",
+        "keywords": [
+          "High-NA EUV",
+          "掩模",
+          "光刻成本",
+          "ASML"
+        ],
+        "tech": "EUV光刻",
+        "route": "High-NA EUV路线",
+        "routeStatus": "↓受阻",
+        "content": "SemiEngineering分析指出，高NA EUV光刻的掩模成本显著上升、新掩模材料要求更严格，叠加更紧的缺陷容忍度，正在迫使行业重新考虑High-NA EUV的部署节奏和路线图。掩模制造成本和供应链成熟度成为下一代光刻技术推广的主要障碍之一。",
+        "reason": "High-NA EUV的经济性是制约先进制程推进的实际瓶颈",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/mask-economics-shape-high-na-euv-adoption/",
+        "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "EUV 光刻机内部结构（示意）",
+        "date": "2026-06-22",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-005",
+        "title": "GaN功率器件走向垂直结构：新设计克服制造挑战",
+        "keywords": [
+          "GaN",
+          "垂直功率器件",
+          "氮化镓",
+          "功率半导体"
+        ],
+        "tech": "GaN功率器件",
+        "route": "GaN器件结构",
+        "routeStatus": "↑突破",
+        "content": "SemiEngineering报道垂直GaN功率器件的最新进展，新设计和工艺流程正在帮助克服垂直GaN结构的制造挑战。垂直GaN相比传统平面GaN可承受更高电压、拥有更好的热管理，在电动汽车和工业电源领域前景广阔。",
+        "reason": "GaN从平面转向垂直结构是功率半导体技术演进的重要方向",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/gan-power-devices-go-vertical/",
+        "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "GaN 功率器件（示意）",
+        "date": "2026-06-18",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-006",
+        "title": "宾夕法尼亚州立大学打造单片3D自供电器件：石墨烯传感器+MoS₂/WSe₂逻辑+硅光伏",
+        "keywords": [
+          "单片3D集成",
+          "石墨烯",
+          "MoS₂",
+          "WSe₂",
+          "自供电"
+        ],
+        "tech": "3D集成 / 二维材料",
+        "route": "单片3D集成",
+        "routeStatus": "↑突破",
+        "content": "宾夕法尼亚州立大学团队展示了单片3D集成芯片：堆叠石墨烯化学传感器层、MoS₂/WSe₂二维材料逻辑层、硅光伏能量收集层于同一芯片上，实现自供电运行。该设计为低功耗自主传感和边缘计算系统开辟了新道路。据SemiEngineering报道。",
+        "reason": "单片3D集成是超越摩尔定律的重要技术路径",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
+        "image": "https://images.unsplash.com/photo-1517077302505-9e2a91a9fa1e-e363dbe005cb?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "3D 集成芯片堆叠示意",
+        "date": "2026-06-26",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-007",
+        "title": "TiO₂薄膜在<3nm厚度下呈现铁电性，ALD兼容硅基工艺",
+        "keywords": [
+          "TiO₂",
+          "铁电",
+          "ALD",
+          "3nm",
+          "铁电存储"
+        ],
+        "tech": "铁电薄膜 / ALD",
+        "route": "新型铁电材料",
+        "routeStatus": "↑突破",
+        "content": "UC Berkeley和SLAC团队将TiO₂薄膜厚度降至<3nm时意外发现其呈现铁电性——自发极化且可电场翻转，且在1nm（约2个单胞厚度）时仍保持稳定。团队使用ALD在<400°C低温下生长均匀薄膜，可在晶体硅和非晶碳基板上沉积，表明其与硅基工艺兼容。论文发表于Science 392, 280-284 (2026)。[DOI: 10.1126/science.aec9417]",
+        "reason": "原子级铁电薄膜的发现为FeFET存储和3D集成开创新可能",
+        "source": "SemiEngineering / Science",
+        "url": "https://semiengineering.com/research-bits-july-6/",
+        "image": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd-abf9dbad1b69?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "铁电薄膜晶格结构（示意）",
+        "date": "2026-07-06",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-008",
+        "title": "应用材料为DRAM推出外延系统，同时发布先进封装CMP/沉积/电子束检测系统",
+        "keywords": [
+          "应用材料",
+          "DRAM",
+          "外延",
+          "CMP",
+          "先进封装"
+        ],
+        "tech": "半导体设备",
+        "route": "DRAM设备",
+        "routeStatus": "→稳定",
+        "content": "应用材料（Applied Materials）为DRAM制造推出新型外延系统，同时为先进封装推出CMP、沉积和电子束检测系统。据SemiEngineering报道。",
+        "reason": "设备商的布局反映DRAM和先进封装的技术升级方向",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
+        "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "半导体设备车间（示意）",
+        "date": "2026-06-26",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-009",
+        "title": "ETH Zurich开发双向傅里叶像素：同时实现光控制和光分析",
+        "keywords": [
+          "ETH Zurich",
+          "双向像素",
+          "傅里叶像素",
+          "光调制",
+          "显示"
+        ],
+        "tech": "光学微结构",
+        "route": "新型像素结构",
+        "routeStatus": "↑突破",
+        "content": "ETH Zurich研究人员开发出双向傅里叶像素，通过波状雕刻表面实现对光强、相位和偏振的控制与分析。正向用于成像/显示，逆向用于光分析。团队称该像素可在同一器件上实现相机和显示功能。论文发表于Nature 655, 87-92 (2026)。[DOI: 10.1038/s41586-026-10681-7]",
+        "reason": "显示与传感合一的像素概念可能开启新型交互显示设备",
+        "source": "SemiEngineering / Nature",
+        "url": "https://semiengineering.com/research-bits-july-6/",
+        "image": "https://images.unsplash.com/photo-1517077302505-9e2a91a9fa1e?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "傅里叶像素光学结构（示意）",
+        "date": "2026-07-06",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-010",
+        "title": "AlixLabs推出首款原子层刻蚀间距分割商用设备",
+        "keywords": [
+          "AlixLabs",
+          "ALE",
+          "间距分割",
+          "图案密度"
+        ],
+        "tech": "原子层刻蚀",
+        "route": "图案密度技术",
+        "routeStatus": "↑突破",
+        "content": "AlixLabs推出首款商用设备，用于其原子层刻蚀间距分割（ALE Pitch Splitting）技术。该技术可在不退化为双重图案的情况下增加图形密度，为先进制程提供一种新的图案化方案。据SemiEngineering报道。",
+        "reason": "新型图案化设备为先进制程提供EUV之外的互补方案",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
+        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "原子层刻蚀设备（示意）",
+        "date": "2026-06-26",
+        "priority": "flash"
+      }
+    ]
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "2026-07-07": {
+    "schema": "ai-news-daily/v1",
+    "date": "2026-07-07",
+    "weekday": "周二",
+    "summary": "xAI正式更名为SpaceXAI并发布新Logo，同日SpaceX以约600亿美元全股票收购Cursor（Anysphere）；Anthropic以965亿美元估值完成H轮融资，Claude Code年化收入达25亿美元，美国商务部解除Claude Fable 5出口管制；OpenAI GPT-5.6三兄弟（Sol/Terra/Luna）低调内测，上下文扩展至150万token；DeepSeek V4正式版7月中旬发布；Kimi K3参数规模2.5万亿本月发布。",
+    "focus": "AI编程赛道成主战场（Claude Code 42-54%市场份额 × SpaceX 600亿收购Cursor），中美模型+出口管制博弈加剧",
+    "skills": [
+      {
+        "name": "Superpowers",
+        "repo": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "stars": "228,740",
+        "tier": "established",
+        "icon": "🦸",
+        "desc": "不只是技能集合，而是一整套围绕 Agent 开发的方法论框架——把编码智能体从「急于炫技的代码打字员」变成严谨规范的工程师。长期霸榜 Claude Skill 榜首。",
+        "tags": [
+          "方法论框架",
+          "全能",
+          "Claude Code"
+        ],
+        "author": "obra"
+      },
+      {
+        "name": "Anthropic Skills",
+        "repo": "anthropics/skills",
+        "url": "https://github.com/anthropics/skills",
+        "stars": "151,088",
+        "tier": "established",
+        "icon": "📘",
+        "desc": "Anthropic 官方公开的 Agent Skills 仓库，权威基准。想从零了解 Skill 长什么样、怎么写、怎么装，从这一个仓库入手就够了。",
+        "tags": [
+          "官方出品",
+          "权威基准",
+          "入门首选"
+        ],
+        "author": "anthropics"
+      },
+      {
+        "name": "女娲 Nuwa",
+        "repo": "alchaincyf/nuwa-skill",
+        "url": "https://github.com/alchaincyf/nuwa-skill",
+        "stars": "国产新锐",
+        "tier": "rising",
+        "icon": "🧬",
+        "desc": "蒸馏任何公开人物的思维方式——心智模型、决策启发式、表达 DNA，生成可直接运行的「视角 Skill」，让乔布斯、马斯克、芒格、费曼都给你打工。2026-04 发布，3 个月已蒸馏 14+ 人物。",
+        "tags": [
+          "思维蒸馏",
+          "国产原创",
+          "视角切换"
+        ],
+        "author": "alchaincyf"
+      },
+      {
+        "name": "taste-skill",
+        "repo": "Leonxlnx/taste-skill",
+        "url": "https://github.com/Leonxlnx/taste-skill",
+        "stars": "44,469",
+        "tier": "rising",
+        "icon": "🎯",
+        "desc": "专治 Agent 默认往「中位数、最保险」平庸答案靠拢的倾向。用显式的品味规则把智能体推向更有判断力的方向——啃的是框架不愿碰的硬骨头。",
+        "tags": [
+          "品味规则",
+          "反平庸",
+          "判断力"
+        ],
+        "author": "Leonxlnx"
+      },
+      {
+        "name": "last30days",
+        "repo": "mvanhorn/last30days-skill",
+        "url": "https://github.com/mvanhorn/last30days-skill",
+        "stars": "42,815",
+        "tier": "rising",
+        "icon": "📡",
+        "desc": "给 Agent 接上实时信息源——跨 Reddit、X、YouTube、Hacker News 和全网做「最近 30 天发生了什么」的趋势调研，弥补训练数据滞后于当下的盲区。",
+        "tags": [
+          "实时趋势",
+          "全网调研",
+          "补足时效"
+        ],
+        "author": "mvanhorn"
+      }
+    ],
+    "news": [
+      {
+        "id": "ai-001",
+        "title": "xAI更名SpaceXAI发布新Logo，同日SpaceX 600亿美元收购Cursor",
+        "event": "xAI正式更名为SpaceXAI，发布新品牌Logo。同时SpaceX宣布以约600亿美元全股票方式收购Anysphere（Cursor AI编辑器母公司）。Grok 4.5（1.5万亿参数V9基础模型）将整合Cursor的编程数据，Cursor工程师团队参与模型研发。Musk宣布2026年剩余时间每月发布一个新训练的模型。",
+        "highlight": "垂直整合：从模型层到AI编程工具入口全面控制",
+        "reason": "AI编程赛道格局被重新定义——Anthropic控制Claude Code（42-54%份额），SpaceX控制Cursor（最受欢迎的AI IDE），两强对峙",
+        "category": "AI编程 / 企业动态",
+        "source": "AI Release Tracker / iaipie / Techmeme",
+        "url": "https://iaipie.com/ai%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95%E6%B7%B1%E5%BA%A6%E7%9B%98%E7%82%B9%EF%BC%882026%E5%B9%B47%E6%9C%88%E7%AF%87%EF%BC%89%EF%BC%9Agpt-5-6%E5%86%85%E6%B5%8B%E3%80%81anthro/",
+        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "AI 编程场景",
+        "date": "2026-07-07",
+        "priority": "featured",
+        "skills": []
+      },
+      {
+        "id": "ai-002",
+        "title": "Anthropic估值965亿美元登顶全球AI第一，Claude Code年化收入25亿美元",
+        "event": "Anthropic以965亿美元估值完成650亿美元H轮融资，超越OpenAI成为全球估值最高的AI公司。Claude Code自发布不到一年年化收入达25亿美元（占总ARR 300亿美元的约8%）。公司从90亿美元ARR跃升至300亿美元仅用四个月。美国商务部解除对Claude Fable 5和Mythos 5的出口管制，7月1日起恢复全球访问。",
+        "highlight": "人类商业史上营收增速最快的AI公司，出口管制出现政策裂缝",
+        "reason": "Anthropic的IPO准备和估值飙升标志着AI产业进入资本退出通道",
+        "category": "企业动态 / 政策",
+        "source": "iaipie / Wikipedia-like sources",
+        "url": "https://iaipie.com/ai%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95%E6%B7%B1%E5%BA%A6%E7%9B%98%E7%82%B9%EF%BC%882026%E5%B9%B47%E6%9C%88%E7%AF%87%EF%BC%89%EF%BC%9Agpt-5-6%E5%86%85%E6%B5%8B%E3%80%81anthro/",
+        "image": "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "AI 投资与企业融资",
+        "date": "2026-07-01",
+        "priority": "featured",
+        "skills": [
+          1
+        ]
+      },
+      {
+        "id": "ai-003",
+        "title": "OpenAI GPT-5.6三兄弟低调内测：Sol/Terra/Luna，150万token上下文",
+        "event": "OpenAI于6月25-28日向20家合作伙伴发布GPT-5.6系列。旗舰版Sol在SVG/3D SVG生成击败Fable 5；Terra日用版面向日常任务；Luna经济版低门槛。核心升级：150万token上下文窗口、可变速度推理模式、增强Agentic自主多步任务规划。定价持平GPT-5.5。据早期测试者反馈，推理和理解能力超越GPT-5.5 Pro。公开上线预期7月内完成。OpenAI已秘密提交S-1，目标估值万亿美元级。",
+        "highlight": "上下文窗口飙至150万token + 能力大幅提升但价格不变",
+        "reason": "GPT-5.6发布节奏和上下文扩展趋势影响整个LLM行业定价和产品策略",
+        "category": "模型发布",
+        "source": "AI Release Tracker / iaipie",
+        "url": "https://aireleasetracker.com/model/openai/gpt-5.6-sol",
+        "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "OpenAI 模型发布",
+        "date": "2026-06-26",
+        "priority": "secondary",
+        "skills": [
+          4
+        ]
+      },
+      {
+        "id": "ai-004",
+        "title": "DeepSeek V4正式版7月中旬发布，峰谷定价引争议",
+        "event": "DeepSeek V4正式版计划7月中旬发布，核心参数：100万token上下文窗口，推理算力消耗仅为V3.2的约27%。Pro版旗舰定位，Flash版轻量低价。Agent功能、世界知识和推理能力在国内/开源模型中位列顶尖。争议点：高峰时段（9:00-12:00、14:00-18:00）API价格翻倍。V4-Flash高峰输入2元/百万token、输出4元/百万token。Reasonix持续走高，缓存命中率99.82%，编码成本降低80%。",
+        "highlight": "推理效率碾压 + 峰谷定价策略 - 中美AI定价模式的碰撞",
+        "reason": "DeepSeek V4是国内最强开源/商用模型之一，正式版上线和定价策略影响开发者生态",
+        "category": "模型发布",
+        "source": "iaipie / 社区报道",
+        "url": "https://iaipie.com/ai%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95%E6%B7%B1%E5%BA%A6%E7%9B%98%E7%82%B9%EF%BC%882026%E5%B9%B47%E6%9C%88%E7%AF%87%EF%BC%89%EF%BC%9Agpt-5-6%E5%86%85%E6%B5%8B%E3%80%81anthro/",
+        "image": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "DeepSeek 模型推理",
+        "date": "2026-07-01",
+        "priority": "secondary",
+        "skills": [
+          3
+        ]
+      },
+      {
+        "id": "ai-005",
+        "title": "6月全球AI回顾：ChatGPT市场份额首度跌破50%",
+        "event": "据'感应塔'数据分析公司6月16日发布的《2026年AI行业报告》，ChatGPT在全球AI助手市场份额首次跌破50%。全球多家企业密集发布新模型。中国稀宇科技（MiniMax）发布开源旗舰M3，智谱GLM-5.2在Code Arena盲测取得全球可用模型第一。美国商务部针对Anthropic两款模型发布出口管制指令引发加拿大和法国宣布加快AI自主建设。",
+        "highlight": "ChatGPT不再是'垄断者'，多极竞争格局正式形成",
+        "reason": "市场格局变化直接影响用户选择和企业AI策略",
+        "category": "产业趋势",
+        "source": "新华财经 / 经济参考报",
+        "url": "https://finance.sina.com.cn/jjxw/2026-07-06/doc-inifvkkf8831708.shtml",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "AI 产业格局",
+        "date": "2026-07-06",
+        "priority": "secondary",
+        "skills": []
+      },
+      {
+        "id": "ai-006",
+        "title": "微软Build 2026发布7款自研MAI模型，明确'Agent优先'战略",
+        "event": "微软在Build 2026大会发布7款自研MAI模型：MAI-Thinking-1推理模型、MAI-Code-1代码专用模型、Scout Agent和Solara Platform Agent开发平台、Phi-4系列多模态变体。微软明确'Agent优先'战略，降低对OpenAI模型的依赖。MAI-Code-1-Flash编码模型有助于节省开发者使用成本。据The Decoder/iaipie报道。",
+        "highlight": "微软从OpenAI的最大客户变成竞争对手",
+        "reason": "微软自研模型+Agent平台战略代表大型云厂商的AI垂直整合趋势",
+        "category": "企业动态",
+        "source": "iaipie / The Decoder",
+        "url": "https://iaipie.com/ai%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95%E6%B7%B1%E5%BA%A6%E7%9B%98%E7%82%B9%EF%BC%882026%E5%B9%B47%E6%9C%88%E7%AF%87%EF%BC%89%EF%BC%9Agpt-5-6%E5%86%85%E6%B5%8B%E3%80%81anthro/",
+        "image": "https://images.unsplash.com/photo-1633419461186-7d40a38105ec?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "微软 Build 大会",
+        "date": "2026-06-16",
+        "priority": "secondary",
+        "skills": []
+      },
+      {
+        "id": "ai-007",
+        "title": "月之暗面Kimi K3确认本月发布，参数规模2.5万亿",
+        "event": "月之暗面确认新一代大模型Kimi K3将于7月内发布。据内部人士透露参数规模高达2.5万亿，大幅超越DeepSeek V4 Pro。K2.7 Code已实现token消耗降低30%、性能提升31.5%。月之暗面完成20亿美元新一轮融资，估值超200亿美元。K2系列API已正式退役。",
+        "highlight": "2.5万亿参数——Kimi K3可能是2026年最大规模的单一模型",
+        "reason": "国产大模型参数竞赛持续升温",
+        "category": "模型发布",
+        "source": "站长之家",
+        "url": "https://www.chinaz.com/ainews/29318.shtml",
+        "image": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Kimi 模型",
+        "date": "2026-07-07",
+        "priority": "flash",
+        "skills": []
+      },
+      {
+        "id": "ai-008",
+        "title": "Cloudflare推出AI Bot精细控制：搜索/训练/Agent三类机器人分别管控",
+        "event": "Cloudflare向所有用户推出AI Bot精细管控功能，网站所有者可分别管理Search Bot（搜索爬虫）、Training Bot（训练爬虫）和Agent Bot（代理爬虫）的访问权限，而非一刀切屏蔽。自2026年9月15日起将默认屏蔽所有AI Bot。",
+        "highlight": "AI时代的'机器人管理'从粗放走向精细化",
+        "reason": "AI训练数据的访问控制正在成为标准化的网站基础设施",
+        "category": "工具/平台",
+        "source": "The Decoder",
+        "url": "https://www.llm-stats.com/ai-news",
+        "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "网络爬虫与安全",
+        "date": "2026-07-06",
+        "priority": "flash",
+        "skills": []
+      },
+      {
+        "id": "ai-009",
+        "title": "快手可灵AI 30亿美元外部融资落地，估值150亿美元",
+        "event": "快手公告旗下AI视频模型可灵AI完成30亿美元外部融资，投资者已同意注入约27.95亿美元（折合190.471亿元），腾讯、阿里云、百度参投，剩余份额仍向投资者开放。可灵AI独立估值约150亿美元。",
+        "highlight": "AI视频赛道估值标杆——可灵AI 150亿美元",
+        "reason": "AI视频生成赛道资本持续涌入",
+        "category": "企业动态",
+        "source": "财新网",
+        "url": "https://www.caixin.com/2026-07-03/102460178.html",
+        "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "AI 视频生成",
+        "date": "2026-07-03",
+        "priority": "flash",
+        "skills": []
+      },
+      {
+        "id": "ai-010",
+        "title": "Google Gemini 3.5 Pro再次延期至7月，Veo 3.1升级4K",
+        "event": "Google原计划6月发布的Gemini 3.5 Pro再次延期至7月。CEO Sundar Pichai此前公开承诺6月交付，工程团队需优化token消耗效率和稳定Agent基础平台。这是该模型第二次延期。同时Veo 3.1持续升级，现已支持4K分辨率和原生竖版视频输出。",
+        "highlight": "Gemini 3.5 Pro第二次跳票，社区耐心被考验",
+        "reason": "Google在LLM竞赛中面临追赶压力和交付节奏挑战",
+        "category": "模型发布",
+        "source": "iaipie",
+        "url": "https://iaipie.com/ai%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95%E6%B7%B1%E5%BA%A6%E7%9B%98%E7%82%B9%EF%BC%882026%E5%B9%B47%E6%9C%88%E7%AF%87%EF%BC%89%EF%BC%9Agpt-5-6%E5%86%85%E6%B5%8B%E3%80%81anthro/",
+        "image": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Google AI 视频",
+        "date": "2026-07-01",
+        "priority": "flash",
+        "skills": []
+      }
+    ]
+  }
+}

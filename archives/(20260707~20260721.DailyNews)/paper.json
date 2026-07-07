@@ -1,0 +1,206 @@
+{
+  "2026-07-07": {
+    "schema": "display-paper-daily/v1",
+    "date": "2026-07-07",
+    "weekday": "周二",
+    "summary": "本周三篇面板显示领域重要论文：京东方提出AI替代几何光学仿真模型（1000%速度提升，>99%精度），Sony推出Isolated Pixel新像素结构实现0.44英寸4980ppi微显示，ETH Zurich开发双向傅里叶像素实现光控制与分析合一。",
+    "focus": "AI深度融入显示设计流程、超高分辨率微显示结构创新、像素功能从单向发光走向双向光控",
+    "highlights": [
+      "AI替代传统光学仿真的工业级验证——1000倍加速意味着设计周期从天级缩至分钟级",
+      "Sony 4980ppi新像素结构采用光刻+干法刻蚀隔离像素，消除子像素间漏光",
+      "ETH Fourier像素将显示与传感合二为一，为下一代交互显示奠基"
+    ],
+    "papers": [
+      {
+        "id": "paper-001",
+        "title": "Enabling Next-Generation OLEDs: A Revolutionary AI-Driven Model for Geometric Optical Design",
+        "authors": "Bo Shi, Yinglong Huang, Jianji Fu, Yuanhao Tan, Yang Su, Zhiqing Li, Rong Zhang, Senbao Jiang, Xiuwen Shi, Xiaojun Tang, Kening Zheng, Guoqiang Tang, Haijun Qiu (BOE OLED Division R&D Center)",
+        "field": "面板显示",
+        "paperType": "期刊论文",
+        "venue": "Journal of the Society for Information Display, Vol 34, Issue 5, pp. 309-320, May 2026",
+        "oneLiner": "京东方提出AI替代传统几何光学仿真模型，实现>1000%速度提升同时保持>99%预测精度",
+        "abstract": "OLED面板设计严重依赖几何光学仿真来指导设计选择和预测光学行为。本研究提出一种变革性的AI模型作为传统几何光学仿真的替代（surrogate）。该模型在保持>99%预测精度的同时实现超过1000%的评估速度提升，从而能够近乎实时地进行性能评估。这一突破使得大规模设计空间的快速探索成为可能，大幅加速OLED技术创新。数据可从通信作者索取。",
+        "content": "本文核心贡献是训练了一个深度学习代理模型（surrogate model），用于替代传统的基于光线追踪的几何光学仿真。传统仿真每一次设计迭代可能需要数小时到数天，而AI模型可以在毫秒级输出结果。团队来自京东方OLED研发中心，验证了模型在多种OLED器件结构（包括顶发射、底发射、微腔结构）上的泛化能力。模型预测精度>99%意味着可直接用于设计空间的初筛和趋势判断，大幅缩短开发周期。这是SID JSID期刊2026年5月发表的工作。",
+        "techIntro": "OLED面板的光学设计通常涉及多层薄膜干涉效应的精确模拟，需要综合考虑有机发光层各层厚度、折射率分布、微腔效应、出光耦合等复杂因素。传统方法使用光线追踪或传输矩阵法求解麦克斯韦方程组，虽然精度高但计算量巨大，每次参数调整都需要重新计算。AI代理模型通过学习大量仿真数据的输入-输出映射关系，可以在不牺牲精度的情况下实现近乎即时的预测。这项工作的意义在于首次在工业级OLED设计中验证了AI代理模型的实用性。",
+        "techTags": [
+          "OLED光学设计",
+          "AI代理模型",
+          "几何光学仿真",
+          "深度学习",
+          "BOE",
+          "微腔效应"
+        ],
+        "metrics": [
+          {
+            "name": "模型评估速度提升",
+            "value": ">1000",
+            "unit": "%",
+            "note": "相比传统几何光学仿真"
+          },
+          {
+            "name": "预测精度",
+            "value": ">99",
+            "unit": "%",
+            "note": "AI模型 vs 传统仿真结果"
+          },
+          {
+            "name": "期刊卷期",
+            "value": "Vol 34, Issue 5",
+            "unit": "",
+            "note": "2026年5月"
+          },
+          {
+            "name": "页码范围",
+            "value": "309-320",
+            "unit": "页",
+            "note": ""
+          }
+        ],
+        "attachments": [
+          {
+            "name": "论文原文",
+            "url": "https://sid.onlinelibrary.wiley.com/doi/10.1002/jsid.70062",
+            "label": "JSID全文",
+            "cached": false
+          }
+        ],
+        "source": "Journal of the SID",
+        "url": "https://sid.onlinelibrary.wiley.com/doi/10.1002/jsid.70062",
+        "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485-e363dbe005cb?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "AI + OLED 光学设计示意",
+        "date": "2026-05-01"
+      },
+      {
+        "id": "paper-002",
+        "title": "A New Pixel Structure for High-Resolution OLED Microdisplays, Enhancing Efficiency and Color Gamut Using Patterned OLEDs and Aligned Light Guides",
+        "authors": "Masaya Ogura, Naoya Kasahara, Jun Yoshida, Naohiro Kadoguchi, Naoto Oda, Toshiaki Shiraiwa, Kosuke Homma, Takayoshi Kato, Tomoaki Sawabe, Kenichi Aoyagi (Sony Semiconductor Solutions)",
+        "field": "面板显示",
+        "paperType": "期刊论文",
+        "venue": "Journal of the Society for Information Display, Vol 34, Issue 5, pp. 247-253, May 2026",
+        "oneLiner": "Sony提出'Isolated Pixel'新结构，通过光刻+干法刻蚀隔离像素，实现0.44英寸4980ppi微显示",
+        "abstract": "我们提出一种名为'Isolated Pixel'的新型OLED像素结构，用于超精细像素阵列。该结构通过抑制像素间漏电流并引入自对准光导来改善光提取，从而提升色域和发光效率。具体工艺为：通过光刻和干法刻蚀将OLED和钝化层隔离，然后用SiN和低折射率材料的透明材料堆叠填充像素间空间。Isolated Pixel结构制造后未观察到光学和电学特性退化。原型面板（0.44英寸，4980ppi，DCI-P3 95%，最大亮度10,000cd/m²）展示了优越的画质——色彩再现性和发光效率均有提升。",
+        "content": "Sony Semiconductor Solutions团队提出的Isolated Pixel结构解决了超高分辨率微显示中的关键问题：当像素尺寸缩小到微米级时，相邻像素间的电流泄漏和光学串扰严重劣化画质。传统方法依赖彩色滤光片（CF）方案，但存在光吸收导致的效率损失。Sony的解决方案是将每个OLED子像素通过光刻和干法刻蚀物理隔离，然后在间隙填充由SiN（高折射率）和低折射率材料组成的透明波导结构。这种自对准光导将波导出的光导向像素正上方，既提高了光提取效率，又消除了相邻像素间的颜色串扰。原型规格：0.44英寸对角线，4980ppi分辨率，DCI-P3色域覆盖率95%，最大亮度10,000cd/m²。",
+        "techIntro": "OLED微显示是AR/VR/XR眼镜的核心显示元件，其核心挑战是在极小尺寸（<1英寸）内实现超高分辨率（>3000ppi）和高亮度（>5000cd/m²）。随像素尺寸缩小到几微米量级，相邻像素间的电流横向扩散和光学串扰成为主要画质劣化因素。传统CF（彩色滤光片）+WOLED方案虽然可以规避精细图案化难题，但彩色滤光片会吸收约70%的光，效率极低。RGB并排排列（side-by-side）通过FMM蒸镀是高端方案，但高分辨率下FMM对位精度和开口率成为瓶颈。Sony的Isolated Pixel方案采用光刻工艺实现亚微米级图案化精度，结合自对准光导结构在提高分辨率的同时保证了光效率。",
+        "techTags": [
+          "OLED微显示",
+          "Isolated Pixel",
+          "高分辨率",
+          "光刻工艺",
+          "Sony",
+          "AR/VR",
+          "光导"
+        ],
+        "metrics": [
+          {
+            "name": "显示尺寸",
+            "value": "0.44",
+            "unit": "英寸",
+            "note": ""
+          },
+          {
+            "name": "分辨率",
+            "value": "4980",
+            "unit": "ppi",
+            "note": "每英寸像素数"
+          },
+          {
+            "name": "色域覆盖",
+            "value": "95",
+            "unit": "%",
+            "note": "DCI-P3标准"
+          },
+          {
+            "name": "最大亮度",
+            "value": "10000",
+            "unit": "cd/m²",
+            "note": ""
+          },
+          {
+            "name": "期刊卷期",
+            "value": "Vol 34, Issue 5",
+            "unit": "",
+            "note": "2026年5月"
+          },
+          {
+            "name": "页码范围",
+            "value": "247-253",
+            "unit": "页",
+            "note": ""
+          }
+        ],
+        "attachments": [
+          {
+            "name": "论文原文",
+            "url": "https://sid.onlinelibrary.wiley.com/doi/10.1002/jsid.70076",
+            "label": "JSID全文",
+            "cached": false
+          }
+        ],
+        "source": "Journal of the SID",
+        "url": "https://sid.onlinelibrary.wiley.com/doi/10.1002/jsid.70076",
+        "image": "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Sony OLED 微显示像素结构（示意）",
+        "date": "2026-05-01"
+      },
+      {
+        "id": "paper-003",
+        "title": "Fourier pixels for bidirectional light control",
+        "authors": "Y.M. Glauser, S.J.W. Vonk, D.B. Seda, et al. (ETH Zurich)",
+        "field": "面板显示 / 光学",
+        "paperType": "期刊论文",
+        "venue": "Nature, Volume 655, pp. 87-92, 2026",
+        "oneLiner": "ETH Zurich开发双向傅里叶像素，在同一像素上实现光控制（显示）和光分析（传感）功能",
+        "abstract": "我们开发了能够同时控制和分析光的双向像素。该像素采用波状雕刻表面结构，可以控制和分析光强、振荡相位和偏振。在光控制方向，像素将入射光转换为沿芯片表面传播的表面波，再在像素内另一位置将表面波散射回空间中出射——通过光波干涉可创建图案和图像。在光分析方向，应用干涉和傅里叶分析的逆过程来分析光。由于像素的表面轮廓可通过傅里叶分析确定，振幅、相位和偏振的控制与分析可以在单个像素上结合。研究团队下一步计划制造由多个傅里叶像素组成的矩阵，以实现更复杂的器件。",
+        "content": "ETH Zurich团队提出的Fourier像素的核心创新在于利用波状雕刻表面结构（通过计算设计的表面轮廓）实现双向光场调控。在显示模式下，入射光被转换为表面传播波，然后在像素另一位置被重新散射为特定形状的出射波——通过波前干涉生成所需图案。在传感模式下，光波与参考波叠加产生干涉条纹，通过相机捕捉条纹模式反演出入射光的相位信息。同样方法可用于分析偏振态。Nature论文标志着像素概念从纯粹的发光源向交互式光界面转变。",
+        "techIntro": "传统显示像素仅为单向光发射器件（发光或调制背光），相机像素则为单向光接收器件。Fourier像素的概念打破了这一界限：同一物理结构可以同时完成光调制（显示）和光分析（成像/传感）两个任务。其物理原理基于傅里叶光学——任何光场都可以分解为不同空间频率的平面波的叠加。通过设计像素表面的亚波长结构（超表面/衍射光学元件），可以选择性地操控不同空间频率分量的振幅和相位。ETH团队使用「波状雕刻表面」实现这一功能，属于计算光学与显示技术的交叉领域。",
+        "techTags": [
+          "Fourier像素",
+          "双向光控制",
+          "计算光学",
+          "超表面",
+          "ETH Zurich",
+          "Nature"
+        ],
+        "metrics": [
+          {
+            "name": "期刊",
+            "value": "Nature",
+            "unit": "",
+            "note": ""
+          },
+          {
+            "name": "卷数",
+            "value": "655",
+            "unit": "",
+            "note": ""
+          },
+          {
+            "name": "页码范围",
+            "value": "87-92",
+            "unit": "页",
+            "note": ""
+          },
+          {
+            "name": "发表年份",
+            "value": "2026",
+            "unit": "",
+            "note": ""
+          }
+        ],
+        "attachments": [
+          {
+            "name": "Nature原文",
+            "url": "https://doi.org/10.1038/s41586-026-10681-7",
+            "label": "Nature全文",
+            "cached": false
+          }
+        ],
+        "source": "Nature",
+        "url": "https://doi.org/10.1038/s41586-026-10681-7",
+        "image": "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "傅里叶像素表面波结构（示意）",
+        "date": "2026-06-01"
+      }
+    ]
+  }
+}
