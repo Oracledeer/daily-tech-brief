@@ -255,8 +255,8 @@
       html += `<span class="section-label">深度速读</span>`;
       html += `<div class="secondary-grid">`;
       sNews.forEach((n, i) => {
-        // No featured-wide anymore — keep 2-column grid (2-3 rows)
-        const isWide = false;
+        // 首张大图跨整行（不等宽报纸式），其余两张一排
+        const isWide = (i === 0);
         const img = n.image
           ? `<img class="sec-img" src="${esc(n.image)}" alt="${esc(n.title)}" loading="lazy" onerror="this.remove()" />`
           : ``;

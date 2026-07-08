@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>每日科技简报 · Tech Briefing</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- GitHub link: repo -->
+</head>
+<body>
+
+  <!-- ===== HEADER: Liquid Glass Nav ===== -->
+  <header class="site-header">
+    <div class="layout-wide header-inner">
+      <div class="brand">
+        <div class="brand-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20v-6M9 20V9M14 20V4M19 20v-8"/></svg></div>
+        <div class="brand-text">
+          <h1>每日科技简报</h1>
+          <span class="brand-sub">Tech Briefing · 自动聚合</span>
+        </div>
+      </div>
+      <nav class="channel-tabs" id="channelTabs">
+        <button class="tab-l1 active" data-channel="display">面板显示</button>
+        <button class="tab-l1" data-channel="semicon">半导体技术</button>
+        <button class="tab-l1" data-channel="ai">AI 动态</button>
+      </nav>
+      <div class="header-right">
+        <a class="github-link" href="https://github.com/Oracledeer/daily-tech-brief" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <div class="layout-wide" id="app">
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="toolbar-left">
+          <div class="date-picker">
+            <label for="dateSelect">日期</label>
+            <select id="dateSelect"></select>
+            <span class="date-tag" id="dateTag"></span>
+          </div>
+          <div class="sub-tabs" id="subTabs"></div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <article id="content" class="content">
+        <div class="loading">正在加载…</div>
+      </article>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="layout-wide">
+      <p>每日科技简报 · 由 WorkBuddy 自动聚合更新 · 数据保留 14 天</p>
+      <div class="footer-links">
+        <a href="https://github.com/Oracledeer/daily-tech-brief" target="_blank" rel="noopener">GitHub</a>
+        <span>·</span>
+        <a href="#" onclick="window.location.reload()">刷新</a>
+        <span>·</span>
+        <span>面板显示 · 半导体技术 · AI 动态</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  // ========== DATA (injected by update_site.py) ==========
+  const AI_DATA = "__AI_DATA_PLACEHOLDER__";
+  const DISPLAY_DATA = "__DISPLAY_DATA_PLACEHOLDER__";
+  const PAPER_DATA = "__PAPER_DATA_PLACEHOLDER__";
+  const SEMICON_DATA = "__SEMICON_DATA_PLACEHOLDER__";
+  const HISTORY = __HISTORY_PLACEHOLDER__;
+
+  // ========== STATE ==========
+  const state = {
+    channel: "display",    // L1: display | semicon | ai
+    subTab: "news",        // L2: news | paper | skills
+    date: "latest",
+  };
+
+  const $ = (sel) => document.querySelector(sel);
+  const $$ = (sel) => document.querySelectorAll(sel);
+
+  // ========== HELPERS ==========
+  function esc(s) {
+    if (s == null) return "";
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+  }
+
+  function chips(arr) {
+    if (!arr || !arr.length) return "";
+    return arr.map(t => `<span class="chip">${esc(t)}</span>`).join("");
+  }
+
+  function routeBadge(s) {
+    if (!s) return "";
+    let cls = "tag-route-stable", icon = "→";
+    if (s.includes("突破")) { cls = "tag-route-up"; icon = "↑"; }
+    else if (s.includes("受阻")) { cls = "tag-route-down"; icon = "↓"; }
+    return `<span class="sec-tag ${cls}">${icon} ${esc(s.replace(/^[↑→↓]/,"").trim())}</span>`;
+  }
+
+  // ========== DATA ACCESS ==========
+  function getData(channel, date) {
+    if (state.subTab === "paper") {
+      // 面板 + 论文→PAPER_DATA(display-paper-daily)
+      if (channel === "display") {
+        if (!PAPER_DATA || typeof PAPER_DATA !== "object") return null;
+        if (date === "latest") {
+          const keys = Object.keys(PAPER_DATA).sort().reverse();
+          return keys.length ? PAPER_DATA[keys[0]] : null;
+        }
+        return PAPER_DATA[date] || null;
+      }
+      // 半导体 + 论文→SEMICON_DATA(semicon-paper-daily混在semicon池)
+      const pool = SEMICON_DATA || {};
+      if (date === "latest") {
+        const keys = Object.keys(pool).sort().reverse();
+        return keys.length ? pool[keys[0]] : null;
+      }
+      return pool[date] || null;
+    }
+    let pool;
+    if (channel === "ai") pool = AI_DATA;
+    else if (channel === "semicon") pool = SEMICON_DATA || {};
+    else pool = DISPLAY_DATA;
+    if (!pool || typeof pool !== "object") return null;
+    if (date === "latest") {
+      const keys = Object.keys(pool).sort().reverse();
+      return keys.length ? pool[keys[0]] : null;
+    }
+    return pool[date] || null;
+  }
+
+  function getSubTabs(channel) {
+    if (channel === "ai") return [
+      { id: "news", label: "新闻速递" },
+      { id: "skills", label: "Skill 推荐" },
+    ];
+    return [
+      { id: "news", label: "新闻速递" },
+      { id: "paper", label: "论文研讨" },
+    ];
+  }
+
+  // ========== DATE PICKER ==========
+  function fillDateSelect() {
+    const sel = $("#dateSelect");
+    sel.innerHTML = "";
+    // Show dates where current channel has data
+    const ch = state.channel;
+    const pool = state.subTab === "paper"
+      ? (state.channel === "display" ? PAPER_DATA : SEMICON_DATA || {})
+      : ch === "ai" ? AI_DATA : ch === "semicon" ? (SEMICON_DATA || {}) : DISPLAY_DATA;
+    const dates = pool && typeof pool === "object" ? Object.keys(pool).sort().reverse() : [];
+    if (!dates.length && HISTORY) {
+      HISTORY.forEach(d => {
+        const opt = document.createElement("option");
+        opt.value = d.date;
+        opt.textContent = `${d.date} ${d.weekday || ""}`;
+        sel.appendChild(opt);
+      });
+      return;
+    }
+    dates.forEach(d => {
+      const opt = document.createElement("option");
+      opt.value = d;
+      opt.textContent = d;
+      sel.appendChild(opt);
+    });
+    if (dates.length) sel.value = dates[0];
+  }
+
+  function getDateLabel(date) {
+    const e = HISTORY ? HISTORY.find(h => h.date === date) : null;
+    return e ? `${date} ${e.weekday || ""}` : date;
+  }
+
+  // ========== RENDER — NEWS (featured / secondary / flash) ==========
+  function renderNews(data) {
+    if (!data) return `<div class="error">暂无数据</div>`;
+    const news = data.news || [];
+    if (!news.length) return `<div class="error">暂无新闻</div>`;
+
+    // Classify by priority (default secondary)
+    const featured = news.filter(n => n.priority === "featured").slice(0, 2);
+    const secondary = news.filter(n => n.priority === "secondary");
+    const flash = news.filter(n => n.priority === "flash");
+
+    // If no priorities set, treat first 2 as featured, next 5 as secondary, rest as flash
+    const hasPrioritySet = news.some(n => n.priority);
+    let fNews = featured, sNews = secondary, flNews = flash;
+    if (!hasPrioritySet) {
+      fNews = news.slice(0, 2);
+      sNews = news.slice(2, 7);
+      flNews = news.slice(7);
+    }
+
+    let html = "";
+
+    // ---- Hero / Summary ----
+    if (data.summary || data.highlights) {
+      html += `<div class="hero-section">`;
+      if (data.summary) {
+        // Summary as context line
+      }
+      if (data.highlights && data.highlights.length) {
+        html += `<div class="overview-box">`;
+        html += `<span class="overview-title">本期概述</span>`;
+        html += `<p class="overview-text">${esc(data.summary || "")}</p>`;
+        if (data.focus) html += `<span class="overview-focus">${esc(data.focus)}</span>`;
+        html += `</div>`;
+      }
+      html += `</div>`;
+    }
+
+    // ---- Featured (hero cards) ----
+    if (fNews.length) {
+      html += `<div class="hero-section">`;
+      html += `<span class="section-label">重点关注</span>`;
+      html += `<div class="featured-grid">`;
+      fNews.forEach(n => {
+        const img = n.image
+          ? `<img class="card-img" src="${esc(n.image)}" alt="${esc(n.title)}" loading="lazy" onerror="this.closest('.featured-card').classList.add('fc-tech');this.remove()" />`
+          : ``;
+        const tags = ` <span class="tag" style="background:rgba(255,255,255,0.2);color:#fff;font-size:10px">${esc(n.tech || n.route || n.category || "")}</span>`;
+        const cardClass = !img ? " featured-card fc-panel" : " featured-card";
+        html += `
+          <div class="${cardClass}">
+            ${img || ``}
+            <div class="card-overlay">
+              <div class="card-tags">${tags}${routeBadge(n.routeStatus)}</div>
+              <h2>${esc(n.title)}</h2>
+              <p class="card-summary">${esc(n.content || n.event || "")}</p>
+            </div>
+            ${n.url ? `<a class="featured-link" href="${esc(n.url)}" target="_blank" rel="noopener"></a>` : ""}
+          </div>`;
+      });
+      html += `</div></div>`;
+    }
+
+    // ---- Secondary (glassmorphism grid) ----
+    if (sNews.length) {
+      html += `<div class="secondary-section">`;
+      html += `<span class="section-label">深度速读</span>`;
+      html += `<div class="secondary-grid">`;
+      sNews.forEach((n, i) => {
+        // 首张大图跨整行（不等宽报纸式），其余两张一排
+        const isWide = (i === 0);
+        const img = n.image
+          ? `<img class="sec-img" src="${esc(n.image)}" alt="${esc(n.title)}" loading="lazy" onerror="this.remove()" />`
+          : ``;
+        const tags = n.tech ? `<span class="sec-tag">${esc(n.tech)}</span>` : "";
+        const routeT = routeBadge(n.routeStatus);
+        html += `
+          <div class="secondary-card${isWide ? " featured-wide" : ""}">
+            ${img || ""}
+            <div class="sec-body">
+              <div class="sec-tags">${tags}${routeT}</div>
+              <h3>${esc(n.title)}</h3>
+              <p class="sec-summary">${esc(n.content || n.event || n.reason || "")}</p>
+              <div class="sec-meta">
+                <span>${esc(n.source || "")}</span>
+                ${n.url ? `<a class="sec-link" href="${esc(n.url)}" target="_blank" rel="noopener">阅读 →</a>` : ""}
+              </div>
+            </div>
+          </div>`;
+      });
+      html += `</div></div>`;
+    }
+
+    // ---- Flash (compact list) ----
+    if (flNews.length) {
+      html += `<div class="flash-section">`;
+      html += `<span class="section-label">快讯速览</span>`;
+      html += `<div class="flash-list">`;
+      flNews.forEach((n, i) => {
+        const tag = n.tech || n.route || n.category || "";
+        html += `
+          <div class="flash-item">
+            <span class="flash-index">${i + 1}</span>
+            <div class="flash-content">
+              <div class="flash-title">${esc(n.title)}</div>
+              <p class="flash-summary">${esc(n.content || n.event || n.reason || "")}</p>
+              <div class="flash-meta">
+                <span class="flash-source">${esc(n.source || n.date || "")}</span>
+                ${tag ? `<span class="flash-tag">${esc(tag)}</span>` : ""}
+              </div>
+            </div>
+            ${n.url ? `<a class="flash-link" href="${esc(n.url)}" target="_blank" rel="noopener">→</a>` : ""}
+          </div>`;
+      });
+      html += `</div></div>`;
+    }
+
+    return html;
+  }
+
+  // ========== RENDER — PAPER (deep read, one per page) ==========
+  function renderPaper(data) {
+    if (!data) return `<div class="error">暂无论文数据</div>`;
+    const papers = data.papers || [];
+    if (!papers.length) return `<div class="error">暂无论文</div>`;
+
+    let html = `<div class="paper-section">`;
+
+    // Summary header
+    if (data.summary || data.highlights) {
+      html += `<div class="overview-box">`;
+      html += `<span class="overview-title">本期论文概述</span>`;
+      if (data.summary) html += `<p class="overview-text">${esc(data.summary)}</p>`;
+      if (data.focus) html += `<span class="overview-focus">${esc(data.focus)}</span>`;
+      html += `</div>`;
+    }
+
+    papers.forEach((p, idx) => {
+      if (idx > 0) html += `<div class="paper-divider"></div>`;
+
+      const img = p.image
+        ? `<img class="paper-header-img" src="${esc(p.image)}" alt="${esc(p.title)}" loading="lazy" onerror="this.remove()" />`
+        : `<div class="paper-header-fallback"></div>`;
+
+      const tags = [
+        p.paperType ? `<span class="paper-meta-tag type">${esc(p.paperType)}</span>` : "",
+        p.field ? `<span class="paper-meta-tag field">${esc(p.field)}</span>` : "",
+        p.venue ? `<span class="paper-meta-tag venue">${esc(p.venue)}</span>` : "",
+      ].filter(Boolean).join("");
+
+      const techTags = (p.techTags || p.keywords || []).filter(Boolean);
+      const tagCloud = techTags.length
+        ? `<div class="paper-tag-cloud">${techTags.map(t => `<span class="paper-tag">${esc(t)}</span>`).join("")}</div>`
+        : "";
+
+      const metrics = p.metrics || [];
+      const metricsHtml = metrics.length
+        ? `<div class="paper-metrics">${metrics.map(m => `
+          <div class="paper-metric">
+            <span class="paper-metric-name">${esc(m.name || "")}</span>
+            <span class="paper-metric-value">${esc(m.value || "")}${m.unit ? `<span class="paper-metric-unit">${esc(m.unit)}</span>` : ""}</span>
+            ${m.note ? `<div class="paper-metric-note">${esc(m.note)}</div>` : ""}
+          </div>`).join("")}</div>`
+        : "";
+
+      const attachments = (p.attachments || []).map(a => {
+        const isLocal = a.cached || a.url.startsWith("./");
+        return `<a class="attach-pill${isLocal ? " local" : ""}" href="${esc(a.url)}" target="${isLocal ? "_self" : "_blank"}" rel="noopener">${esc(a.label || a.name || "PDF")}</a>`;
+      }).join("");
+
+      html += `
+        <article class="paper-card-full">
+          ${img}
+          <div class="paper-body">
+            <div class="paper-meta-tags">${tags}</div>
+            <h1 class="paper-title">${esc(p.title)}</h1>
+            ${p.authors ? `<div class="paper-authors">${esc(p.authors)}</div>` : ""}
+            ${p.oneLiner ? `<div class="paper-oneliner">${esc(p.oneLiner)}</div>` : ""}
+            ${tagCloud}
+            ${metricsHtml}
+
+            <div class="paper-section-block">
+              <span class="paper-section-label">摘要</span>
+              <p>${esc(p.abstract || p.content || "")}</p>
+            </div>
+
+            <div class="paper-section-block">
+              <span class="paper-section-label">技术解读</span>
+              <p>${esc(p.content || p.techIntro || p.abstract || "")}</p>
+            </div>
+
+            ${p.techIntro ? `
+            <div class="paper-section-block">
+              <span class="paper-section-label">背景知识</span>
+              <p>${esc(p.techIntro)}</p>
+            </div>` : ""}
+
+            ${attachments ? `<div class="paper-attachments">${attachments}</div>` : ""}
+
+            <div class="paper-footer">
+              <span class="paper-source">${esc(p.source || "")}</span>
+              <span>${esc(p.date || data.date || "")}</span>
+            </div>
+            ${p.url ? `<a class="paper-link" href="${esc(p.url)}" target="_blank" rel="noopener">查看原文 →</a>` : ""}
+          </div>
+        </article>`;
+    });
+
+    html += `</div>`;
+    return html;
+  }
+
+  // ========== RENDER — SKILLS (AI channel, 名词解释卡片网格) ==========
+  function renderSkills(data) {
+    if (!data || !data.skills || !data.skills.length) return `<div class="error">暂无 Skill 推荐</div>`;
+    const skills = data.skills;
+    const established = skills.filter(s => s.tier === "established").length;
+    const rising = skills.filter(s => s.tier === "rising").length;
+
+    let html = `<div class="skills-wrap">`;
+    // 概览标题条
+    html += `
+      <div class="skills-head">
+        <span class="section-label">每日 Skill 推荐</span>
+        <p class="skills-sub">每天精选 <strong>${established} 个老牌高星</strong> + <strong>${rising} 个上升迅猛</strong> 的 Agent Skill，一句话看懂它是做什么的。</p>
+      </div>`;
+
+    // 不等宽卡片网格：6 列，spans 决定每行 2-3 个且不等宽
+    const spans = [4, 2, 2, 2, 2, 3, 3];
+    html += `<div class="skill-grid">`;
+    skills.forEach((s, i) => {
+      const span = spans[i % spans.length];
+      const isRising = s.tier === "rising";
+      const badge = isRising
+        ? `<span class="sk-badge sk-rising">上升迅猛</span>`
+        : `<span class="sk-badge sk-estab">老牌高星</span>`;
+      const tags = (s.tags || []).map(t => `<span class="chip">${esc(t)}</span>`).join("");
+      const author = s.author ? `<span class="sk-fact"><span class="sk-fact-k">作者</span><span class="sk-fact-v">${esc(s.author)}</span></span>` : "";
+      const repo = s.repo ? `<span class="sk-fact"><span class="sk-fact-k">仓库</span><span class="sk-fact-v sk-mono">${esc(s.repo)}</span></span>` : "";
+      html += `
+        <article class="skill-card sk-span-${span}${isRising ? " sk-card-rising" : ""}">
+          <div class="sk-head">
+            <span class="sk-icon">${esc(s.name ? s.name.trim().charAt(0).toUpperCase() : "")}</span>
+            <div class="sk-head-main">
+              <h3 class="sk-name">${esc(s.name || "")}</h3>
+              ${badge}
+            </div>
+          </div>
+          <div class="sk-spec">
+            <span class="sk-fact sk-stars-fact">
+              <span class="sk-fact-k">Stars</span>
+              <span class="sk-fact-v sk-stars-v">${esc(s.stars || "—")}</span>
+            </span>
+            ${author}
+            ${repo}
+          </div>
+          <p class="sk-desc">${esc(s.desc || s.description || "")}</p>
+          <div class="sk-foot">
+            <div class="sk-tags">${tags}</div>
+            ${s.url ? `<a class="sk-link" href="${esc(s.url)}" target="_blank" rel="noopener">GitHub 查看 →</a>` : ""}
+          </div>
+        </article>`;
+    });
+    html += `</div></div>`;
+    return html;
+  }
+
+  // ========== MAIN RENDER ==========
+  function render() {
+    const data = getData(state.channel, state.date);
+    const $content = $("#content");
+    const $dateTag = $("#dateTag");
+    const $subTabs = $("#subTabs");
+
+    // Update date tag
+    $dateTag.textContent = data ? getDateLabel(data.date || state.date) : "";
+
+    // Update sub-tabs
+    const tabs = getSubTabs(state.channel);
+    if (state.subTab === "paper" && state.channel === "ai") state.subTab = "skills";
+    if (!tabs.find(t => t.id === state.subTab)) state.subTab = tabs[0].id;
+
+    $subTabs.innerHTML = tabs.map(t =>
+      `<button class="tab-l2${t.id === state.subTab ? " active" : ""}" data-subtab="${t.id}">${t.label}</button>`
+    ).join("");
+
+    // Bind sub-tab clicks
+    $subTabs.querySelectorAll(".tab-l2").forEach(btn => {
+      btn.onclick = () => {
+        state.subTab = btn.dataset.subtab;
+        fillDateSelect();
+        render();
+      };
+    });
+
+    // Render content
+    let html = "";
+    if (!data) {
+      const label = state.subTab === "paper" ? "论文" : state.channel === "display" ? "面板显示" : state.channel === "semicon" ? "半导体" : "AI";
+      html = `<div class="error">该日期暂无 ${label} 数据</div>`;
+    } else if (state.subTab === "paper") {
+      html = renderPaper(data);
+    } else if (state.subTab === "skills") {
+      html = renderSkills(data);
+    } else {
+      html = renderNews(data);
+    }
+    $content.innerHTML = html;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  // ========== EVENT BINDINGS ==========
+  // Level-1 channel tabs
+  $("#channelTabs").addEventListener("click", (e) => {
+    const btn = e.target.closest("button.tab-l1");
+    if (!btn) return;
+    $$("#channelTabs .tab-l1").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    state.channel = btn.dataset.channel;
+    state.subTab = "news";
+    fillDateSelect();
+    render();
+  });
+
+  // Date select
+  $("#dateSelect").addEventListener("change", (e) => {
+    state.date = e.target.value;
+    render();
+  });
+
+  // ========== INIT ==========
+  fillDateSelect();
+  render();
+
+  // ========== SCROLL REVEAL — Apple-style fade-up ==========
+  (function initScrollReveal() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // Stagger delay based on element index within viewport
+          requestAnimationFrame(() => {
+            entry.target.classList.add('visible');
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.01,
+      rootMargin: '0px 0px -20px 0px'
+    });
+
+    function revealContent() {
+      const sections = document.querySelectorAll(
+        '.hero-section, .secondary-section, .flash-section, .paper-section, .skills-wrap'
+      );
+      sections.forEach((el, idx) => {
+        if (!el.classList.contains('reveal')) {
+          el.classList.add('reveal');
+          if (idx % 3 === 1) el.classList.add('reveal-delay-1');
+          else if (idx % 3 === 2) el.classList.add('reveal-delay-2');
+          observer.observe(el);
+        }
+      });
+    }
+
+    // Initial + re-run on render
+    revealContent();
+
+    // Also observe after dynamic renders
+    const origRender = render;
+    // Re-observe whenever content changes
+    const watchContent = new MutationObserver(() => {
+      requestAnimationFrame(revealContent);
+    });
+    const app = document.getElementById('app');
+    if (app) watchContent.observe(app, { childList: true, subtree: true });
+  })();
+  </script>
+</body>
+</html>
