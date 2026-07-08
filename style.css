@@ -453,20 +453,7 @@ main {
   display: grid;
   grid-template-columns: 1.4fr 1fr;   /* 参考「重点关注」的不等宽比例：每行左宽右窄 */
   gap: 24px;
-}
-/* 奇数张时最后一张独占整行，并改为左右图文，避免右侧留空 */
-.secondary-card:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-}
-.secondary-card:last-child:nth-child(odd) .sec-img {
-  aspect-ratio: auto;
-  height: 100%;
-  min-height: 220px;
-}
-.secondary-card:last-child:nth-child(odd) .sec-body {
-  justify-content: center;
+  align-items: stretch;                /* 同行卡片等高，仅宽度不同 */
 }
 
 .secondary-card {
@@ -492,10 +479,11 @@ main {
   grid-template-columns: 1fr 1fr;
 }
 
-/* Image area — large, rounded top */
+/* Image area — fixed height so equal-width variation stays equal-height */
 .secondary-card .sec-img {
   width: 100%;
-  aspect-ratio: 3 / 2;
+  height: 220px;
+  aspect-ratio: auto;
   object-fit: cover;
   transition: transform 0.5s var(--ease-out);
 }
