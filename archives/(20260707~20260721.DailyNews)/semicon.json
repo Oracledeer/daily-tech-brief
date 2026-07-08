@@ -224,5 +224,190 @@
         "priority": "flash"
       }
     ]
+  },
+  "2026-07-08": {
+    "schema": "semicon-news-daily/v1",
+    "date": "2026-07-08",
+    "weekday": "周三",
+    "summary": "SemiEngineering连发两篇先进封装深度分析：多芯片现场测试方法论与高密度扇出型面板封装检测量测追赶；imec发布2026版路线图：CFET垂直堆叠是A7级（~0.7nm）关键转折点，0.3nm目标2038年；六大前沿工艺同步开启设备需求空间（GAA/CFET/3D堆叠/High-NA EUV/CoPoS/CPO）；AlixLabs原子层刻蚀间距分割商用设备新进展。",
+    "focus": "先进封装测试与量测挑战凸显，CFET路线图时间线清晰化，设备端多技术路线同步爆发",
+    "news": [
+      {
+        "id": "semi-001",
+        "title": "SemiEngineering：多芯片现场测试需建立于成熟方法论之上",
+        "keywords": [
+          "多芯片测试",
+          "3DIC",
+          "先进封装",
+          "UCIe",
+          "DFS"
+        ],
+        "tech": "先进封装/3DIC测试",
+        "route": "3DIC测试方法论",
+        "routeStatus": "→稳定",
+        "content": "SemiEngineering 7月7日发布深度分析指出，随着AI数据中心和汽车等关键任务领域广泛采用多芯片系统（2.5D/3D-IC），仅保证出厂时（Time Zero）正常工作已不足以确保器件全生命周期可靠性。文章提出'监控-测试-修复'三位一体策略：复用UCIe/PCIe高速接口可将测试带宽提升10-20倍；嵌入信号完整性监控器（SIM）实时生成眼图判断信号质量；硅生命周期管理（SLM）结合ML模型预测退化趋势和剩余寿命；物理感知芯片到芯片桥接测试可减少95%-99%的无效桥接模式。IEEE 1838标准允许芯片间无需PHY即可通信测试。Synopsys与台积电的联合案例展示了通过UCIe总线对隐藏芯片进行ATPG测试的完整流程。",
+        "reason": "多芯片系统的现场可靠性是先进封装产业化的关键瓶颈",
+        "source": "SemiEngineering / Laura Peters",
+        "url": "https://semiengineering.com/multi-die-testing-in-the-field-must-build-on-established-test-methodologies/",
+        "image": "https://images.unsplash.com/photo-1517077302505-9e2a91a9fa1e?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "3D-IC 多芯片堆叠（示意）",
+        "date": "2026-07-07",
+        "priority": "featured"
+      },
+      {
+        "id": "semi-002",
+        "title": "SemiEngineering：高密度扇出型面板级封装的检测量测技术追赶",
+        "keywords": [
+          "面板级封装",
+          "FOWLP",
+          "检测量测",
+          "RDL",
+          "翘曲"
+        ],
+        "tech": "先进封装/面板级封装",
+        "route": "FOPLP产业化",
+        "routeStatus": "→稳定",
+        "content": "SemiEngineering 7月7日发表高密度扇出型面板级封装（HDFO PLP）检测量测专题分析。核心挑战包括RDL线宽/线距从20μm缩至5μm（目标2μm）、凸点间距从20μm缩至5μm、RDL层数从3层增至9层。面板尺寸达600×600mm，材料CTE不匹配导致严重翘曲，高分辨率光学系统景深受限。一块600mm面板以1μm分辨率检测会产生约10¹²像素数据量。解决方案包括：引入X射线/红外检测内部通孔质量；自适应光刻——将芯片位移测量数据输入ML算法驱动逐芯片覆盖校正；Bruker等厂商开发可测2000μm厚膜的方案。KLA、Onto Innovation、Koh Young等正将晶圆级平台改造适配面板尺寸。",
+        "reason": "面板级封装是先进封装降本的关键路径，检测量测技术决定了量产可行性",
+        "source": "SemiEngineering / Anne Meixner",
+        "url": "https://semiengineering.com/inspection-and-metrology-catching-up-for-high-density-fan-out-panel-packaging/",
+        "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "面板级封装检测设备（示意）",
+        "date": "2026-07-07",
+        "priority": "featured"
+      },
+      {
+        "id": "semi-003",
+        "title": "imec 2026版路线图：CFET是A7级关键转折，0.3nm目标2038年",
+        "keywords": [
+          "imec",
+          "路线图",
+          "CFET",
+          "0.3nm",
+          "A7"
+        ],
+        "tech": "先进制程路线图",
+        "route": "CFET架构",
+        "routeStatus": "↑突破",
+        "content": "比利时微电子研究中心imec近期发布2026版半导体制程技术发展蓝图。关键转折点预计在A7级（约0.7nm/7Å），约2033年转向CFET架构——与当前FinFET/GAA将n型和p型晶体管并排放置不同，CFET将它们垂直堆叠，为微缩增加第三维度。A7的CPP仍维持42nm，但通过CFET可使标准单元高度大幅缩减。路线图指出行业有望在2038年实现0.3nm等级先进制程。该路线图由台积电、英特尔、三星等共同参与制定。",
+        "reason": "imec路线图是行业共识风向标，CFET时间线的明确对设备/材料/EDA投资有指导意义",
+        "source": "环球网科技 / imec",
+        "url": "https://tech.huanqiu.com/article/4SDQDssL5nC",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "半导体晶圆制造（示意）",
+        "date": "2026-07-02",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-004",
+        "title": "六大前沿工艺同步开启设备需求空间：GAA→CFET演进、CoPoS、CPO全面解析",
+        "keywords": [
+          "GAA",
+          "CFET",
+          "CoPoS",
+          "CPO",
+          "High-NA EUV",
+          "HBM"
+        ],
+        "tech": "半导体设备/工艺路线",
+        "route": "设备技术路线",
+        "routeStatus": "↑突破",
+        "content": "据行业深度分析报道，六大技术变革同步推动半导体设备需求：GAA向CFET演进要求新型沉积/刻蚀设备；3D NAND层数持续增加和HBM高密度堆叠催生混合键合需求；台积电推出CoPoS面板级封装开启新型封装设备赛道；High-NA EUV配套干法光刻胶技术落地要求光刻设备更新；HBM4内置冗余通道和混合键合互连对检测量测提出新要求；CPO硅光共封装开辟光电一体化新路径。设备厂商不再只是制造配套工具，而是直接决定先进工艺能否顺利量产落地。",
+        "reason": "多技术路线同步爆发意味着设备行业正经历结构性升级换代周期",
+        "source": "百家号 / 行业分析",
+        "url": "https://baijiahao.baidu.com/s?id=1869358415758832474&wfr=spider&for=pc",
+        "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "半导体设备自动化车间（示意）",
+        "date": "2026-06-30",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-005",
+        "title": "东京科学大学开发串联神经网络：6个数量级加速半导体特性提取",
+        "keywords": [
+          "串联神经网络",
+          "IGZO",
+          "器件表征",
+          "AI",
+          "参数提取"
+        ],
+        "tech": "AI+半导体表征",
+        "route": "AI辅助半导体研究",
+        "routeStatus": "↑突破",
+        "content": "东京科学大学（原东京工业大学）等机构开发串联神经网络（TNN），从晶体管I-V曲线自动估计6个关键材料参数（缺陷密度、陷阱态、迁移率等）。第一级网络从I-V反推参数，第二级前向网络重建原始特性做物理一致性约束。在1000组a-IGZO数据集上训练后，单条I-V曲线推理<1ms。据称相比传统器件模拟（数小时至数天）加速超过六个数量级。论文发表于Advanced Intelligent Systems [DOI: 10.1002/aisy.70437]。",
+        "reason": "AI高效表征方法可大幅加速显示器背板（IGZO/HMO）和新型半导体材料的研发迭代",
+        "source": "SemiEngineering / Advanced Intelligent Systems",
+        "url": "https://semiengineering.com/research-bits-july-6/",
+        "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "神经网络结构示意",
+        "date": "2026-07-06",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-006",
+        "title": "AlixLabs推出首款原子层刻蚀间距分割商用设备，补充EUV图案化方案",
+        "keywords": [
+          "AlixLabs",
+          "ALE",
+          "间距分割",
+          "图案化"
+        ],
+        "tech": "原子层刻蚀/图案化",
+        "route": "先进图案化技术",
+        "routeStatus": "↑突破",
+        "content": "AlixLabs推出首款商用原子层刻蚀间距分割（ALE Pitch Splitting）设备。该技术可在不退化为双重图案的情况下增加图形密度，为先进制程提供EUV之外的互补图案化方案。据SemiEngineering报道。",
+        "reason": "ALE间距分割可在不依赖EUV的情况下提升图形密度，对成熟制程和先进封装都有价值",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
+        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "原子层刻蚀设备（示意）",
+        "date": "2026-06-26",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-007",
+        "title": "应用材料为DRAM推新型外延系统，同时发布先进封装CMP/沉积/检测系统",
+        "keywords": [
+          "应用材料",
+          "Applied Materials",
+          "DRAM",
+          "外延",
+          "先进封装"
+        ],
+        "tech": "半导体设备",
+        "route": "DRAM工艺设备",
+        "routeStatus": "→稳定",
+        "content": "应用材料（Applied Materials）为DRAM制造推出新型外延系统，同时为先进封装推出CMP、沉积和电子束检测系统。据SemiEngineering报道，设备商的布局反映DRAM向更先进制程以及先进封装技术升级的明确方向。",
+        "reason": "应用材料的多线布局释放了DRAM工艺升级和先进封装扩产信号",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
+        "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "半导体设备车间（示意）",
+        "date": "2026-06-26",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-008",
+        "title": "TiO₂薄膜在<3nm厚度下呈现铁电性：ALD工艺兼容硅基集成",
+        "keywords": [
+          "TiO₂",
+          "铁电",
+          "ALD",
+          "FeFET",
+          "Science"
+        ],
+        "tech": "铁电薄膜/新型存储",
+        "route": "新型铁电材料",
+        "routeStatus": "↑突破",
+        "content": "UC Berkeley和SLAC团队发现TiO₂薄膜在厚度降至<3nm时意外呈现铁电性——自发极化且可电场翻转，在1nm（约2个单胞厚度）时仍保持稳定。团队使用ALD在<400°C低温下生长均匀薄膜，可在晶体硅和非晶碳基板上沉积，表明与硅基CMOS工艺兼容。论文发表于Science 392, 280-284 (2026) [DOI: 10.1126/science.aec9417]。",
+        "reason": "原子级铁电薄膜的发现为FeFET存储和3D FeRAM开创新材料可能",
+        "source": "SemiEngineering / Science",
+        "url": "https://semiengineering.com/research-bits-july-6/",
+        "image": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd-abf9dbad1b69?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "铁电薄膜晶格结构（示意）",
+        "date": "2026-07-06",
+        "priority": "flash"
+      }
+    ]
   }
 }

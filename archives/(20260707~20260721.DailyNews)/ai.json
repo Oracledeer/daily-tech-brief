@@ -240,5 +240,241 @@
         "skills": []
       }
     ]
+  },
+  "2026-07-08": {
+    "schema": "ai-news-daily/v1",
+    "date": "2026-07-08",
+    "weekday": "周三",
+    "summary": "Meta正式发布Muse Image自研AI图像生成模型（接入Instagram/WhatsApp），预览Muse Video；SpaceXAI与Cursor计划今日推出首款联合开发AI模型，双方合作提速；Anthropic Claude Cowork AI Agent上线移动端和网页端，并宣布租下曼哈顿16层大楼、纽约员工翻倍至1000人；腾讯混元Hy3模型正式发布；中国考虑对顶级AI模型实施出口管制；Aion-3.0系列模型发布；OpenAI首席未来学家Joshua Achiam离职。",
+    "focus": "AI图像生成赛道迎来Meta重磅玩家，SpaceXAI×Cursor联合模型重塑编程工具格局，AI Agent终端化趋势加速",
+    "skills": [
+      {
+        "name": "Matt Pocock Skills",
+        "repo": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "stars": "130,016",
+        "tier": "established",
+        "icon": "M",
+        "desc": "TypeScript知名开发者Matt Pocock分享的实战级Agent Skill配置——直接来自他的.claude目录，全是真实生产环境中跑通的配置。如果你想要一套'已经被验证过能用'的技能配置而不是从头开始写，这是最高效的起点。",
+        "tags": [
+          "实战配置",
+          "TypeScript",
+          "生产级"
+        ],
+        "author": "mattpocock"
+      },
+      {
+        "name": "Agent Skills",
+        "repo": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "stars": "60,265",
+        "tier": "established",
+        "icon": "A",
+        "desc": "Google Chrome团队Addy Osmani维护的生产级工程化技能集。偏实战而非理论——每一条skill都来自Chrome团队的真实开发流程。如果你想给coding agent上'工程化标准'，这是参考样本。",
+        "tags": [
+          "Google出品",
+          "工程化",
+          "生产级"
+        ],
+        "author": "addyosmani"
+      },
+      {
+        "name": "caveman",
+        "repo": "JuliusBrussee/caveman",
+        "url": "https://github.com/JuliusBrussee/caveman",
+        "stars": "81,000",
+        "tier": "rising",
+        "icon": "C",
+        "desc": "用'洞穴人'说话风格——极度精简的指令输出——砍掉Claude Code约65%的token消耗。不是玩笑，是真的有效。当Agent回复越长、你付得越多时，极简主义不只是风格选择，更是成本策略。GitHub月增3170星，周增/日增持续霸榜。",
+        "tags": [
+          "token节省",
+          "极简主义",
+          "成本优化"
+        ],
+        "author": "JuliusBrussee"
+      },
+      {
+        "name": "Agency Agents",
+        "repo": "msitarzewski/agency-agents",
+        "url": "https://github.com/msitarzewski/agency-agents",
+        "stars": "126,000",
+        "tier": "rising",
+        "icon": "N",
+        "desc": "定义'Agent即角色'的新范式——不只是把LLM包起来，而是为每个Agent赋予专业人格和流程化能力：从前端wizard到Reddit社区忍者，从whimsy injectors到reality checkers。单日新增3032星登顶GitHub日榜，月增5018星。",
+        "tags": [
+          "Agent框架",
+          "角色化",
+          "工作流自动化"
+        ],
+        "author": "msitarzewski"
+      },
+      {
+        "name": "Codex Plugin CC",
+        "repo": "openai/codex-plugin-cc",
+        "url": "https://github.com/openai/codex-plugin-cc",
+        "stars": "35,000+",
+        "tier": "rising",
+        "icon": "C",
+        "desc": "OpenAI官方为Claude Code开发的Codex CLI插件——将OpenAI的Codex Agent能力注入Claude Code生态。可以理解为'OpenAI + Anthropic跨平台合作'：在Claude Code里调用OpenAI的代码生成管线，思路清奇但实用。GitHub日榜常客。",
+        "tags": [
+          "OpenAI官方",
+          "跨平台",
+          "Codex"
+        ],
+        "author": "openai"
+      }
+    ],
+    "news": [
+      {
+        "id": "ai-001",
+        "title": "Meta正式发布Muse Image自研AI图像模型，预览Muse Video",
+        "event": "Meta于7月7日正式发布自研AI图像生成模型Muse Image，由Meta Superintelligence Labs（MSL）开发。Muse Image具有智能体式行为——生成前先制定构图方案、需事实信息时检索网页保证准确、可渲染清晰可读的文本和二维码。模型接入Meta AI、Instagram、WhatsApp，用户可通过Meta AI网站、Instagram Stories等免费使用。广告商也可使用。同时Meta预览Muse Video，面向创作者开放。Muse Image与此前发布的Muse Spark语言模型协同运行。",
+        "highlight": "Meta摆脱依赖外部模型，AI图像生成进入自研生态时代",
+        "reason": "Meta的AI图像模型覆盖月活数十亿的社交平台，对内容创作生态影响巨大",
+        "category": "模型发布 / 企业动态",
+        "source": "The Verge / 智通财经 / 腾讯新闻",
+        "url": "https://www.theverge.com/tech/962485/meta-muse-image-ai-model-instagram",
+        "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Meta AI 图像生成",
+        "date": "2026-07-07",
+        "priority": "featured",
+        "skills": []
+      },
+      {
+        "id": "ai-002",
+        "title": "SpaceXAI与Cursor计划今日推出首款联合开发AI模型",
+        "event": "据The Information 7月7日援引内部备忘录报道，SpaceXAI（原xAI）和Cursor（Anysphere）计划最早于7月8日（周三）推出首款联合开发的AI模型。两家公司此前曾推迟发布计划以进一步提升模型效率。该模型结合Grok 4.5（1.5万亿参数V9基础模型）和Cursor的编程数据和工程经验。这是继SpaceX以约600亿美元全股票收购Cursor后双方首次联合技术产出。此前Musk宣布2026年剩余时间每月发布一个新训练的模型。",
+        "highlight": "AI编程赛道最强联合——Grok+Cursor的垂直整合产品即将面世",
+        "reason": "该联合模型是SpaceXAI收购Cursor后的首个产品成果，直接影响AI编程工具市场格局",
+        "category": "AI编程 / 企业动态",
+        "source": "The Information / 财联社 / Reuters",
+        "url": "https://www.theinformation.com/briefings/exclusive-spacexai-plans-launch-new-model-cursor-soon-wednesday",
+        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "AI 编程与模型融合",
+        "date": "2026-07-08",
+        "priority": "featured",
+        "skills": []
+      },
+      {
+        "id": "ai-003",
+        "title": "Anthropic Claude Cowork AI Agent上线移动端和网页端",
+        "event": "Anthropic宣布Claude Cowork AI Agent现已在移动端和网页端可用。Cowork是Anthropic面向企业用户的AI协作者，可自主执行多步任务。同时Anthropic计划租下曼哈顿一栋16层大楼，今年内将纽约员工人数翻倍至1000人，进一步扩大在纽约的AI人才布局。据The Decoder和纽约时报7月7日报道。",
+        "highlight": "AI Agent从桌面走向移动，企业级AI协作场景拓展",
+        "reason": "Claude Cowork移动化意味着AI Agent开始在真实工作流中24小时在线",
+        "category": "产品更新 / 企业动态",
+        "source": "The Decoder / New York Times",
+        "url": "https://the-decoder.com/anthropics-claude-cowork-ai-agent-is-now-available-on-mobile-and-web/",
+        "image": "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Anthropic AI Agent 移动端",
+        "date": "2026-07-07",
+        "priority": "secondary",
+        "skills": []
+      },
+      {
+        "id": "ai-004",
+        "title": "腾讯正式发布混元Hy3大模型，免费版同步上线",
+        "event": "腾讯于7月6日正式发布新一代大模型混元Hy3，同时推出免费版Hy3 (free)。这是腾讯在大模型领域的又一重要迭代。据LM Market Cap追踪数据，Hy3在7月6日上线，至此腾讯在模型发布节奏上保持活跃。具体参数规模和技术细节尚未完全披露。",
+        "highlight": "腾讯大模型持续迭代，免费版降低开发者使用门槛",
+        "reason": "国内互联网巨头的大模型迭代节奏是观察AI竞争格局的重要指标",
+        "category": "模型发布",
+        "source": "LM Market Cap",
+        "url": "https://lmmarketcap.com/zh/model/hy3-free",
+        "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "腾讯 AI 模型",
+        "date": "2026-07-06",
+        "priority": "secondary",
+        "skills": []
+      },
+      {
+        "id": "ai-005",
+        "title": "中国考虑对顶级AI模型实施出口管制，欧洲陷两难",
+        "event": "据The Decoder 7月7日报道，中国政府正在考虑对顶级AI模型实施出口管制。与美国的AI芯片出口管制不同，中国的限制可能聚焦在模型权重和算法层面。这一动向使欧洲处于两难境地——美国限制芯片出口、中国限制模型出口，欧洲在AI供应链中面临双面挤压。此前美国商务部已对Anthropic的Claude Fable 5和Mythos 5实施出口管制后又部分解除。",
+        "highlight": "AI模型成为新的地缘政治筹码，监管格局从硬件层延伸到模型层",
+        "reason": "模型出口管制将直接影响全球AI开发者的模型可用性和技术路线选择",
+        "category": "政策 / 地缘政治",
+        "source": "The Decoder",
+        "url": "https://the-decoder.com/china-eyes-export-curbs-on-its-top-ai-models-and-europe-is-caught-in-the-middle/",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "全球 AI 监管地图",
+        "date": "2026-07-07",
+        "priority": "secondary",
+        "skills": []
+      },
+      {
+        "id": "ai-006",
+        "title": "Aion-3.0系列模型发布：Aion Labs推出新LLM",
+        "event": "Aion Labs于7月7日发布Aion-3.0和Aion-3.0-Mini两款大语言模型。这是该公司的重大版本更新，标志着AI初创公司在模型层面持续产出。据LM Market Cap追踪数据，Aion Labs在30天内有2个模型发布。具体技术细节尚未详细披露。",
+        "highlight": "AI新创公司在模型层持续产出，市场竞争持续升温",
+        "reason": "模型层的持续供给丰富了下游应用生态的选择空间",
+        "category": "模型发布",
+        "source": "LM Market Cap",
+        "url": "https://lmmarketcap.com/zh/model/aionlabs-aion-3-0",
+        "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "AI 模型发布",
+        "date": "2026-07-07",
+        "priority": "flash",
+        "skills": []
+      },
+      {
+        "id": "ai-007",
+        "title": "OpenAI首席未来学家Joshua Achiam离职，近9年老将告别",
+        "event": "据Wired 7月7日报道，OpenAI首席未来学家Joshua Achiam将于本月晚些时候离职，结束他在OpenAI近9年的职业生涯。Achiam专注于AI安全研究，并在Musk诉Altman案中出庭作证。他的离职是OpenAI近期一系列高层变动的最新一例。",
+        "highlight": "OpenAI核心安全研究团队的持续流失引发行业关注",
+        "reason": "核心安全团队的变动可能影响OpenAI长期的安全研究能力和公众信任",
+        "category": "企业动态",
+        "source": "Wired / Techmeme",
+        "url": "https://www.llm-stats.com/ai-news",
+        "image": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "OpenAI 总部",
+        "date": "2026-07-07",
+        "priority": "flash",
+        "skills": []
+      },
+      {
+        "id": "ai-008",
+        "title": "Rowboat：开源本地优先的Claude Desktop替代方案发布",
+        "event": "Rowboat Labs在GitHub上发布Rowboat——一款开源、本地优先的Claude Desktop替代工具。该工具登上Hacker News首页，核心卖点是数据完全本地化、无需联网依赖，同时兼容Claude Code的Skill体系。对于对数据隐私有严格要求的开发团队，Rowboat提供了桌面AI客户端的另一种选择。",
+        "highlight": "AI桌面工具出现开源本地化趋势，数据隐私成为差异化竞争力",
+        "reason": "开源AI客户端的涌现表明开发者对数据主权和本地化的需求正在增长",
+        "category": "工具/开源",
+        "source": "Hacker News / GitHub",
+        "url": "https://github.com/rowboatlabs/rowboat",
+        "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "开源 AI 桌面工具",
+        "date": "2026-07-07",
+        "priority": "flash",
+        "skills": []
+      },
+      {
+        "id": "ai-009",
+        "title": "Meta Muse Image隐私争议：Instagram公开账户需主动退出才能阻止AI使用内容",
+        "event": "随着Meta发布Muse Image，一项隐私政策引发争议：Instagram公开账户的用户需主动选择退出（opt-out）才能阻止其他用户利用其发布内容生成AI图像。Wired报道指出，这意味着Meta默认允许将用户公开内容用于AI图像生成。Meta声称该功能仅为'Muse模式'，不会用于模型训练。",
+        "highlight": "AI图像生成的隐私边界问题再引争议",
+        "reason": "AI训练数据和使用权限的边界是长期争议话题，影响用户信任和监管走向",
+        "category": "隐私/政策",
+        "source": "Wired / Techmeme",
+        "url": "https://www.llm-stats.com/ai-news",
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "AI 与数据隐私",
+        "date": "2026-07-07",
+        "priority": "flash",
+        "skills": []
+      },
+      {
+        "id": "ai-010",
+        "title": "Will Gemini 3.5 Pro成为Google的关键反击？Flash版已就绪，Pro版更多期待",
+        "event": "Towards AI 7月7日评论文章分析：Gemini 3.5 Flash已经发布，但业界真正等待的是Gemini 3.5 Pro。据报道Pro版可能带来显著能力提升，Sundar Pichai此前承诺6月交付但已第二次延期。文章认为如果Pro版能在推理、Agent和编码能力上对标GPT-5.6和Claude Sonnet 5，Google仍有机会重获竞争力。同时Google Veo 3.1已支持4K和竖版视频输出。",
+        "highlight": "Gemini 3.5 Pro是Google AI翻身的关键一役",
+        "reason": "Google在LLM竞赛中的表现直接影响云服务和搜索生态的AI基础",
+        "category": "模型发布",
+        "source": "Towards AI / The Decoder",
+        "url": "https://pub.towardsai.net/will-gemini-3-5-pro-be-googles-big-much-needed-comeback-b2f46af768c9",
+        "image": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Google AI",
+        "date": "2026-07-07",
+        "priority": "flash",
+        "skills": []
+      }
+    ]
   }
 }

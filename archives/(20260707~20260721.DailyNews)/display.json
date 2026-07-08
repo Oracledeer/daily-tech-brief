@@ -262,5 +262,163 @@
         "priority": "flash"
       }
     ]
+  },
+  "2026-07-08": {
+    "schema": "display-news-daily/v1",
+    "date": "2026-07-08",
+    "weekday": "周三",
+    "summary": "TrendForce发布7月面板价格预测：电视面板全线下跌（32吋↓$1至36美元，65吋↓$3至174美元），Q3显示器面板需求季减6.7%；AP Systems开发HMO背板PeALD系统和OCR喷墨打印设备；Summer Sprout OLED材料商科创板IPO融资6000万元；Jilin OLED Material Tech H1利润暴增500-600%；Meta发布Muse Image模型（与显示内容创作相关）。",
+    "focus": "电视面板7月价格承压转跌，OLED设备材料端持续活跃，AI生成内容与显示生态交叉",
+    "news": [
+      {
+        "id": "disp-001",
+        "title": "TrendForce：7月电视面板全线下跌，32吋↓$1至36美元、65吋↓$3至174美元",
+        "keywords": [
+          "面板价格",
+          "TrendForce",
+          "LCD电视",
+          "价格下跌"
+        ],
+        "tech": "LCD电视面板价格",
+        "route": "面板价格周期",
+        "routeStatus": "↓受阻",
+        "content": "TrendForce集邦咨询7月6日发布最新面板价格预测：7月电视面板价格全线转跌。32吋↓$1至36美元，43吋/50吋/55吋各↓$2（分别至64/104/124美元），65吋/75吋各↓$3（分别至174美元及对应价位）。原因方面，TrendForce指出7月进入传统淡季，年底旺季备货尚未启动，品牌客户成本压力高涨并持续要求降价。面板厂Q2曾积极稳价，但在需求走弱下支撑态度松动。显示器面板Q3需求预计季减6.7%，价格进入盘整期。笔电面板各尺寸预期持平。",
+        "reason": "面板报价是行业景气度风向标，7月全面转跌信号值得关注",
+        "source": "TrendForce集邦咨询",
+        "url": "https://www.trendforce.cn/industry-news/displays/20260707-6215.html",
+        "image": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "电视面板生产线（示意）",
+        "date": "2026-07-07",
+        "priority": "featured"
+      },
+      {
+        "id": "disp-002",
+        "title": "AP Systems开发下一代OLED设备：HMO背板PeALD系统+OCR喷墨打印机",
+        "keywords": [
+          "AP Systems",
+          "PeALD",
+          "HMO",
+          "OLED设备",
+          "喷墨打印"
+        ],
+        "tech": "OLED制造设备",
+        "route": "下一代OLED背板技术",
+        "routeStatus": "↑突破",
+        "content": "韩国设备商AP Systems宣布开发下一代OLED量产设备。第一个系统是等离子体原子层沉积（PeALD）系统，用于高迁移率金属氧化物（HMO）背板的沉积。HMO被业界视为下一代OLED背板的有力候选，相比传统IGZO可实现更高迁移率和更优电学性能。AP Systems还在开发用于光学透明粘接树脂（OCR）沉积的喷墨打印机——OCR目前主要用于OLED模组贴合，尚未被喷墨工艺替代，AP Systems希望其打印机可降低OLED模组制造成本。据OLED-Info 7月7日报道。",
+        "reason": "HMO背板和喷墨OCR都是OLED制造工艺的潜在突破方向",
+        "source": "OLED-Info / AP Systems",
+        "url": "https://www.oled-info.com/ap-systems-sees-demand-next-gen-oled-processes-develops-ald-systems-hmo",
+        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "OLED生产设备车间（示意）",
+        "date": "2026-07-07",
+        "priority": "featured"
+      },
+      {
+        "id": "disp-003",
+        "title": "Summer Sprout OLED材料商拟科创板IPO，融资6000万元加速研发",
+        "keywords": [
+          "Summer Sprout",
+          "OLED材料",
+          "IPO",
+          "科创板"
+        ],
+        "tech": "OLED材料",
+        "route": "OLED材料国产化",
+        "routeStatus": "→稳定",
+        "content": "中国OLED材料开发商和生产商Summer Sprout Technology已向上海证券交易所提交科创板IPO申请并获正式受理。公司计划发行4900万股，融资6亿元人民币（约8820万美元），资金将用于扩建OLED材料研发生产中心、新建北京总部及新研发中心。据OLED-Info 7月7日报道。",
+        "reason": "OLED材料国产化进程加速，资本市场对上游材料关注度提升",
+        "source": "OLED-Info / Summer Sprout",
+        "url": "https://www.oled-info.com/summer-sprout-plans-ipo-shanghai-stock-exchange-and-raise-88-million-accelerate",
+        "image": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "OLED材料研发（示意）",
+        "date": "2026-07-07",
+        "priority": "secondary"
+      },
+      {
+        "id": "disp-004",
+        "title": "Jilin OLED Material Tech H1业绩预告：利润暴增500-600%",
+        "keywords": [
+          "Jilin OLED Material",
+          "业绩预告",
+          "OLED材料",
+          "利润增长"
+        ],
+        "tech": "OLED材料供应链",
+        "route": "OLED材料景气度",
+        "routeStatus": "↑突破",
+        "content": "吉林OLED材料科技发布2026年上半年业绩预告：H1净利润预计1.6-1.9亿元（约2300-2800万美元），较2025年H1的2700万元暴增500-600%；扣非净利润预计1.05-1.25亿元。据OLED-Info 7月6日报道。",
+        "reason": "OLED材料厂商业绩高增反映下游OLED面板需求旺盛",
+        "source": "OLED-Info / Jilin OLED Material Tech",
+        "url": "https://www.oled-info.com/jilin-oled-material-tech-reports-sharp-increase-revenue-and-profit-first-half",
+        "image": "https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "OLED材料生产",
+        "date": "2026-07-06",
+        "priority": "secondary"
+      },
+      {
+        "id": "disp-005",
+        "title": "TrendForce：Q3显示器面板需求季减6.7%，价格进入盘整期",
+        "keywords": [
+          "显示器面板",
+          "需求下滑",
+          "TrendForce",
+          "价格盘整"
+        ],
+        "tech": "显示器面板价格",
+        "route": "面板价格周期",
+        "routeStatus": "↓受阻",
+        "content": "TrendForce在7月面板价格报告中同时指出，进入7月后显示器面板需求出现减弱迹象，客户提前备货需求告一段落，Q3显示器面板需求预计季减6.7%。在需求松动且电视面板价格转弱的情况下，支撑Q2显示器面板价格上涨的因素减弱。但由于面板厂仍面临较高成本压力，预计7月显示器面板价格全面持平，买卖双方处于博弈状态。",
+        "reason": "显示器面板从上涨进入盘整，预示下半年面板需求可能整体走弱",
+        "source": "TrendForce集邦咨询",
+        "url": "https://www.trendforce.cn/industry-news/displays/20260707-6215.html",
+        "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "显示器面板（示意）",
+        "date": "2026-07-07",
+        "priority": "secondary"
+      },
+      {
+        "id": "disp-006",
+        "title": "Meta发布自研AI图像生成模型Muse Image：智能体式设计+网页检索+精确排版",
+        "keywords": [
+          "Meta",
+          "Muse Image",
+          "AI图像生成",
+          "Instagram"
+        ],
+        "tech": "AI图像生成与显示内容",
+        "route": "AI x 显示生态",
+        "routeStatus": "↑突破",
+        "content": "Meta于7月7日正式发布自研AI图像生成模型Muse Image。不同于传统文生图模型直接文本映射像素，Muse Image具有智能体行为模式——生成前先制定构图方案，需要事实信息时检索网页保证准确性，并可在图像中渲染清晰可读的文本和二维码。Muse Image将接入Meta AI、Instagram、WhatsApp。同时Meta预览了Muse Video，面向创作者开放。该模型由Meta Superintelligence Labs（MSL）开发，是Meta摆脱依赖外部生成模型、建立自研AI生态的关键一步。",
+        "reason": "AI图像生成能力的下放直接影响显示内容创作生态和广告制作流程",
+        "source": "智通财经 / 腾讯新闻",
+        "url": "https://new.qq.com/rain/a/20260708A016BU00",
+        "image": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "AI 图像生成内容",
+        "date": "2026-07-07",
+        "priority": "flash"
+      },
+      {
+        "id": "disp-007",
+        "title": "LG C6 OLED电视部分尺寸搭载串联OLED面板，技术下放至中端",
+        "keywords": [
+          "LG",
+          "C6",
+          "串联OLED",
+          "Tandem OLED",
+          "WOLED"
+        ],
+        "tech": "串联OLED / WOLED",
+        "route": "OLED电视产品",
+        "routeStatus": "→稳定",
+        "content": "LG 2026款OLED电视C6系列已广泛上市，部分尺寸搭载了此前仅用于旗舰G系列的串联OLED（Tandem OLED）面板。串联OLED通过堆叠多层发光单元可在相同电流下获得更高亮度和更长寿命。据Omdia此前报告，LG显示的WOLED产能利用率在2026年有所回升。",
+        "reason": "串联OLED技术向中端下放，标志该技术成熟度提升和成本优化",
+        "source": "FlatpanelsHD",
+        "url": "https://www.flatpanelshd.com/news.php?subaction=showfull&id=1782898865",
+        "image": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "LG OLED TV 客厅（示意）",
+        "date": "2026-07-01",
+        "priority": "flash"
+      }
+    ]
   }
 }

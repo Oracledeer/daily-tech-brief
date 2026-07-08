@@ -336,7 +336,7 @@ main {
 .overview-text {
   font-size: 14px;
   color: var(--text-secondary);
-  line-height: 1.72;
+  line-height: 1.55;
   margin: 0;
 }
 .overview-focus {
@@ -451,8 +451,22 @@ main {
 
 .secondary-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: 1.4fr 1fr;   /* 参考「重点关注」的不等宽比例：每行左宽右窄 */
+  gap: 24px;
+}
+/* 奇数张时最后一张独占整行，并改为左右图文，避免右侧留空 */
+.secondary-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+}
+.secondary-card:last-child:nth-child(odd) .sec-img {
+  aspect-ratio: auto;
+  height: 100%;
+  min-height: 220px;
+}
+.secondary-card:last-child:nth-child(odd) .sec-body {
+  justify-content: center;
 }
 
 .secondary-card {
@@ -531,14 +545,14 @@ main {
   font-size: 17px;
   font-weight: 650;
   color: var(--text);
-  line-height: 1.38;
+  line-height: 1.28;
   letter-spacing: -0.01em;
 }
 .secondary-card .sec-summary {
   font-size: 14px;
   color: var(--text-secondary);
   margin: 0 0 16px;
-  line-height: 1.62;
+  line-height: 1.5;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -618,13 +632,13 @@ main {
   font-size: 14.5px;
   font-weight: 600;
   color: var(--text);
-  line-height: 1.42;
+  line-height: 1.32;
   margin-bottom: 3px;
 }
 .flash-summary {
   font-size: 13px;
   color: var(--text-secondary);
-  line-height: 1.55;
+  line-height: 1.45;
   margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
