@@ -451,10 +451,16 @@ main {
 
 .secondary-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr;   /* 参考「重点关注」的不等宽比例：每行左宽右窄 */
-  gap: 24px;
-  align-items: stretch;                /* 同行卡片等高，仅宽度不同 */
+  grid-template-columns: repeat(6, 1fr);   /* 6列 Bento 基础网格，卡片按 span 错落 */
+  gap: 20px;
 }
+/* 默认每张占 3 列（半宽），偶数张时自然两列等宽 */
+.secondary-card {
+  grid-column: span 3;
+}
+/* Bento span 变体 */
+.secondary-card.sec-span-2 { grid-column: span 2; }
+.secondary-card.sec-span-4 { grid-column: span 4; }
 
 .secondary-card {
   background: var(--bg-card);
@@ -473,13 +479,7 @@ main {
   box-shadow: var(--shadow-lg);
 }
 
-.secondary-card.featured-wide {
-  grid-column: span 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-/* Image area — fixed height so equal-width variation stays equal-height */
+/* Image area — fixed height so all spans share equal row height */
 .secondary-card .sec-img {
   width: 100%;
   height: 220px;
@@ -489,23 +489,12 @@ main {
 }
 .secondary-card:hover .sec-img { transform: scale(1.02); }
 
-.secondary-card.featured-wide .sec-img {
-  aspect-ratio: auto;
-  height: 100%;
-  min-height: 220px;
-}
-
 /* Content body — spacious */
 .secondary-card .sec-body {
   padding: 22px 24px 24px;
   flex: 1;
   display: flex;
   flex-direction: column;
-}
-.secondary-card.featured-wide .sec-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 /* Tags — ultra-minimal, no bright backgrounds */
@@ -1171,7 +1160,7 @@ main {
 @media (max-width: 900px) {
   .featured-grid { grid-template-columns: 1fr; gap: 18px; }
   .secondary-grid { grid-template-columns: 1fr; }
-  .secondary-card.featured-wide { grid-column: span 1; grid-template-columns: 1fr; }
+  .secondary-card, .secondary-card.sec-span-2, .secondary-card.sec-span-4 { grid-column: span 1; }
   .header-inner { flex-wrap: wrap; height: auto; padding: 12px 0; gap: 10px; }
   .site-header { height: auto; }
   main { padding-top: 120px; }

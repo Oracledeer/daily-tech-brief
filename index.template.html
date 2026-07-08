@@ -255,15 +255,22 @@
       html += `<span class="section-label">深度速读</span>`;
       html += `<div class="secondary-grid">`;
       sNews.forEach((n, i) => {
-        // 不等宽由 .secondary-grid 的 1.4fr 1fr 决定（每行左宽右窄），不再整行跨列
-        const isWide = false;
+        // Bento Grid：按总条数动态分配 span，视觉不等宽、有节奏感
+        const total = sNews.length;
+        let span = 3; // default = 半宽 (3/6)
+        if      (total <= 2) span = 3;
+        else if (total === 3) span = (i === 0) ? 4 : 2;           // [宽,窄,窄]
+        else if (total === 4) span = (i % 2 === 0) ? 4 : 2;       // [宽,窄,宽,窄]
+        else if (total === 5) span = (i === 0) ? 4 : 2;           // [宽,窄×4]
+        else    span = 2;                                         // ≥6条全部等分(2列)
+
         const img = n.image
           ? `<img class="sec-img" src="${esc(n.image)}" alt="${esc(n.title)}" loading="lazy" onerror="this.remove()" />`
           : ``;
         const tags = n.tech ? `<span class="sec-tag">${esc(n.tech)}</span>` : "";
         const routeT = routeBadge(n.routeStatus);
         html += `
-          <div class="secondary-card${isWide ? " featured-wide" : ""}">
+          <div class="secondary-card sec-span-${span}">
             ${img || ""}
             <div class="sec-body">
               <div class="sec-tags">${tags}${routeT}</div>
