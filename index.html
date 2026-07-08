@@ -110,6 +110,68 @@
     return `<span class="sec-tag ${cls}">${icon} ${esc(s.replace(/^[↑→↓]/,"").trim())}</span>`;
   }
 
+  // ========== SECONDARY SPAN — 收窄版 Bento（缩小宽窄差异，杜绝空列） ==========
+  // 6 列网格；卡片 span 仅取 2 / 3，最大宽窄比 1.5（原 4/2 = 2.0）
+  // 条数→排布：2→1+1, 3→一行三, 4→2+2, 5→2+3, 6→2+2+2, 7→2+3+2, 8→2+3+3
+  const SECONDARY_SPANS = {
+    1: [6],
+    2: [3, 3],
+    3: [2, 2, 2],
+    4: [3, 3, 3, 3],
+    5: [3, 3, 2, 2, 2],        // 2+3
+    6: [3, 3, 3, 3, 3, 3],     // 2+2+2
+    7: [3, 3, 2, 2, 2, 3, 3],  // 2+3+2
+    8: [3, 3, 2, 2, 2, 2, 2, 2], // 2+3+3
+  };
+  function buildSecondarySpans(n) {
+    if (SECONDARY_SPANS[n]) return SECONDARY_SPANS[n];
+    // n > 8：统一 3 列（span 2）；若 n%3===1 则末张占满整行避免空列
+    const arr = new Array(n).fill(2);
+    if (n % 3 === 1) arr[n - 1] = 6;
+    return arr;
+  }
+
+  // ========== SKILL 矢量图标（与相关领域对应，非首字母） ==========
+  const SKILL_ICONS = {
+    robot: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3.2"/><path d="M12 8V4"/><path d="M9.5 2h5"/><circle cx="9" cy="14" r="1.3"/><circle cx="15" cy="14" r="1.3"/><path d="M9 18h6"/></svg>',
+    code: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 8l-4 4 4 4"/><path d="M15 8l4 4-4 4"/></svg>',
+    brain: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5a2.8 2.8 0 0 0-2.8 2.8 2.8 2.8 0 0 0-1.9 4.9 2.8 2.8 0 0 0 2.4 4.3 2.8 2.8 0 0 0 4.6 0 2.8 2.8 0 0 0 4.6-1.4 2.8 2.8 0 0 0-1.9-5 2.8 2.8 0 0 0-2.8-2.8z"/><path d="M12 5.5v12.6"/></svg>',
+    cube: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 3v18M4 7.5l8 4.5 8-4.5"/></svg>',
+    network: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.1"/><circle cx="18" cy="6" r="2.1"/><circle cx="12" cy="18" r="2.1"/><path d="M7.6 7.6l3.4 8M16.4 7.6l-3.4 8M8 6h8"/></svg>',
+    sparkles: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.7 4.3L18 9l-4.3 1.7L12 15l-1.7-4.3L6 9l4.3-1.7z"/><path d="M18 13.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>',
+    terminal: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2.2"/><path d="M7 9l3 3-3 3M13 15h4"/></svg>',
+    book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v15H6a2 2 0 0 0-2 2z"/><path d="M4 19a2 2 0 0 1 2-2h13"/></svg>',
+    shield: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.4-3 7.8-7 10-4-2.2-7-5.6-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>',
+    wand: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4l.9 2.1L18 7l-2.1.9L15 10l-.9-2.1L12 7l2.1-.9z"/><path d="M4 20l9-9"/></svg>',
+    bolt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L5 13h5l-1 9 8-11h-5z"/></svg>',
+    chat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-4 3z"/><path d="M8 9h8M8 12h5"/></svg>',
+  };
+  const SKILL_ICON_MAP = [
+    { icon: "robot", kw: ["agent", "autonom", "agentic", "gpt"] },
+    { icon: "code", kw: ["code", "coding", "program", "deploy", "dev", "github", "repo", "skill"] },
+    { icon: "brain", kw: ["reason", "think", "plan", "brain", "logic", "superpower", "research"] },
+    { icon: "cube", kw: ["3d", "model", "asset", "design", "ui", "figma", "image", "video"] },
+    { icon: "network", kw: ["mcp", "connect", "tool", "integrat", "api", "plugin", "bridge"] },
+    { icon: "sparkles", kw: ["new", "rising", "trend", "novel", "nuwa", "女娲", "emerg"] },
+    { icon: "terminal", kw: ["cli", "terminal", "shell", "command", "bash", "script"] },
+    { icon: "book", kw: ["doc", "reference", "knowledge", "wiki", "guide", "learn", "tutor", "paper"] },
+    { icon: "shield", kw: ["security", "secure", "guard", "safe", "audit", "privacy", "review"] },
+    { icon: "wand", kw: ["automation", "workflow", "auto", "builder", "orchestrat"] },
+    { icon: "bolt", kw: ["fast", "speed", "perf", "quick", "rapid", "cache"] },
+    { icon: "chat", kw: ["chat", "voice", "assistant", "convers", "speak", "memory"] },
+  ];
+  function pickSkillIcon(s) {
+    const text = ((s.name || "") + " " + (s.tags || []).join(" ")).toLowerCase();
+    for (const m of SKILL_ICON_MAP) {
+      if (m.kw.some(k => text.includes(k))) return m.icon;
+    }
+    return "robot";
+  }
+  function skillIconSvg(s) {
+    const key = pickSkillIcon(s);
+    return SKILL_ICONS[key] || SKILL_ICONS.robot;
+  }
+
   // ========== DATA ACCESS ==========
   function getData(channel, date) {
     if (state.subTab === "paper") {
@@ -255,21 +317,9 @@
       html += `<span class="section-label">深度速读</span>`;
       html += `<div class="secondary-grid">`;
       sNews.forEach((n, i) => {
-        // Bento Grid 交替排布：奇数行左宽右窄，偶数行右宽左窄
-        // 每行 2 张：span(4) + span(2)，行与行交替方向
-        const rowIdx = Math.floor(i / 2);       // 第几行
-        const colInRow = i % 2;                // 行内第几张（0=左, 1=右）
-        const isEvenRow = (rowIdx % 2 === 0);   // 偶数行（第1/3/5…行）
-        let span;
-        if (isEvenRow) {
-          // 偶数行：左宽(4) 右窄(2)
-          span = (colInRow === 0) ? 4 : 2;
-        } else {
-          // 奇数行：左窄(2) 右宽(4)
-          span = (colInRow === 0) ? 2 : 4;
-        }
-        // 奇数张最后一张独占整行
-        if (i === sNews.length - 1 && sNews.length % 2 === 1) span = 6;
+        // 收窄版 Bento：缩小宽窄差异，杜绝空列
+        // 条数→排布：4→2+2, 5→2+3, 6→2+2+2（6 列网格，span 取 2/3，最大宽窄比 1.5）
+        const span = buildSecondarySpans(sNews.length)[i] || 3;
 
         const img = n.image
           ? `<img class="sec-img" src="${esc(n.image)}" alt="${esc(n.title)}" loading="lazy" onerror="this.remove()" />`
@@ -442,7 +492,7 @@
       html += `
         <article class="skill-card sk-span-${span}${isRising ? " sk-card-rising" : ""}">
           <div class="sk-head">
-            <span class="sk-icon">${esc(s.name ? s.name.trim().charAt(0).toUpperCase() : "")}</span>
+            <span class="sk-icon">${skillIconSvg(s)}</span>
             <div class="sk-head-main">
               <h3 class="sk-name">${esc(s.name || "")}</h3>
               ${badge}
