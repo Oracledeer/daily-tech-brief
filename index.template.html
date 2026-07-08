@@ -255,8 +255,8 @@
       html += `<span class="section-label">深度速读</span>`;
       html += `<div class="secondary-grid">`;
       sNews.forEach((n, i) => {
-        // 首张大图跨整行（不等宽报纸式），其余两张一排
-        const isWide = (i === 0);
+        // 不等宽由 .secondary-grid 的 1.4fr 1fr 决定（每行左宽右窄），不再整行跨列
+        const isWide = false;
         const img = n.image
           ? `<img class="sec-img" src="${esc(n.image)}" alt="${esc(n.title)}" loading="lazy" onerror="this.remove()" />`
           : ``;
