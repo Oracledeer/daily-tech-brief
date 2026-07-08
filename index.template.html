@@ -255,14 +255,21 @@
       html += `<span class="section-label">深度速读</span>`;
       html += `<div class="secondary-grid">`;
       sNews.forEach((n, i) => {
-        // Bento Grid：按总条数动态分配 span，视觉不等宽、有节奏感
-        const total = sNews.length;
-        let span = 3; // default = 半宽 (3/6)
-        if      (total <= 2) span = 3;
-        else if (total === 3) span = (i === 0) ? 4 : 2;           // [宽,窄,窄]
-        else if (total === 4) span = (i % 2 === 0) ? 4 : 2;       // [宽,窄,宽,窄]
-        else if (total === 5) span = (i === 0) ? 4 : 2;           // [宽,窄×4]
-        else    span = 2;                                         // ≥6条全部等分(2列)
+        // Bento Grid 交替排布：奇数行左宽右窄，偶数行右宽左窄
+        // 每行 2 张：span(4) + span(2)，行与行交替方向
+        const rowIdx = Math.floor(i / 2);       // 第几行
+        const colInRow = i % 2;                // 行内第几张（0=左, 1=右）
+        const isEvenRow = (rowIdx % 2 === 0);   // 偶数行（第1/3/5…行）
+        let span;
+        if (isEvenRow) {
+          // 偶数行：左宽(4) 右窄(2)
+          span = (colInRow === 0) ? 4 : 2;
+        } else {
+          // 奇数行：左窄(2) 右宽(4)
+          span = (colInRow === 0) ? 2 : 4;
+        }
+        // 奇数张最后一张独占整行
+        if (i === sNews.length - 1 && sNews.length % 2 === 1) span = 6;
 
         const img = n.image
           ? `<img class="sec-img" src="${esc(n.image)}" alt="${esc(n.title)}" loading="lazy" onerror="this.remove()" />`
