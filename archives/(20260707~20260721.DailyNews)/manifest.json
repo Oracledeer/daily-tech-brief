@@ -1,25 +1,25 @@
 {
   "window": "2026-07-07~2026-07-21",
-  "generated_at": "2026-07-08T08:13:47",
+  "generated_at": "2026-07-09T08:15:22",
   "channels": {
     "ai": {
-      "days": 2,
-      "items": 20,
-      "skills": 10
+      "days": 3,
+      "items": 51,
+      "skills": 15
     },
     "display": {
-      "days": 2,
-      "items": 19,
+      "days": 3,
+      "items": 52,
       "skills": 0
     },
     "paper": {
-      "days": 1,
-      "items": 3,
+      "days": 2,
+      "items": 5,
       "skills": 0
     },
     "semicon": {
-      "days": 2,
-      "items": 18,
+      "days": 3,
+      "items": 38,
       "skills": 0
     }
   }

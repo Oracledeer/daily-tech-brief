@@ -3,8 +3,8 @@
     "schema": "semicon-news-daily/v1",
     "date": "2026-07-07",
     "weekday": "周二",
-    "summary": "IBM发布7Å晶体管架构（交错的纳米片，性能+50%/能效+70%），Research Bits Jul 6报道串联神经网络预测半导体特性、<3nm TiO₂铁电薄膜、双向傅里叶像素；东京大学实现1nm MoS₂纳米管用于GAA；宾夕法尼亚州立大学打造单片3D自供电器件；高NA EUV掩模经济学挑战路线图；GaN功率器件走向垂直结构。",
-    "focus": "7Å级晶体管架构竞赛升温，原子级功能材料突破加速，先进封装与CPO走向量产准备",
+    "summary": "IBM 7Å交错纳米片、东京大学1nm MoS₂管、High-NA EUV掩模经济学、垂直GaN、PennState单片3D自供电、TiO₂原子级铁电、AlixLabs ALE间距分割。新增：ASML推进Hyper-NA EUV路线图，Cadence发布全自主Agentic AI设计工程师，三星ISSCC 2026展示4F²垂直沟道DRAM，VLSI盘点STT-MRAM/FeRAM/ReRAM/PCM，BSPDN（PowerVia已出货/Super Power Rail年内跟进），CPO共封装光学五大趋势，Argonne×Intel部署12量子位硅自旋处理器。 当日另含 2 篇半导体器件技术论文研讨。",
+    "focus": "7Å级与原子级器件突破、AI驱动EDA与表征、背面供电与CPO走向落地、硅基量子位进展",
     "news": [
       {
         "id": "semi-001",
@@ -23,7 +23,7 @@
         "reason": "IBM的新架构路线图为后2nm时代提供了关键的技术路径参考",
         "source": "SemiEngineering / IBM",
         "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "GAA 晶体管结构示意",
         "date": "2026-06-26",
         "priority": "featured"
@@ -45,7 +45,7 @@
         "reason": "AI驱动的半导体表征方法可能彻底改变材料参数提取效率",
         "source": "SemiEngineering / Advanced Intelligent Systems",
         "url": "https://semiengineering.com/research-bits-july-6/",
-        "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "神经网络结构示意",
         "date": "2026-07-06",
         "priority": "featured"
@@ -67,7 +67,7 @@
         "reason": "1nm尺度沟道材料突破是后摩尔时代器件微缩的关键研究方向",
         "source": "SemiEngineering / 东京大学",
         "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
-        "image": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1510525009512-ad7fc13eefab?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "MoS₂ 纳米管结构示意",
         "date": "2026-06-26",
         "priority": "secondary"
@@ -88,7 +88,7 @@
         "reason": "High-NA EUV的经济性是制约先进制程推进的实际瓶颈",
         "source": "SemiEngineering",
         "url": "https://semiengineering.com/mask-economics-shape-high-na-euv-adoption/",
-        "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "EUV 光刻机内部结构（示意）",
         "date": "2026-06-22",
         "priority": "secondary"
@@ -109,7 +109,7 @@
         "reason": "GaN从平面转向垂直结构是功率半导体技术演进的重要方向",
         "source": "SemiEngineering",
         "url": "https://semiengineering.com/gan-power-devices-go-vertical/",
-        "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "GaN 功率器件（示意）",
         "date": "2026-06-18",
         "priority": "secondary"
@@ -131,7 +131,7 @@
         "reason": "单片3D集成是超越摩尔定律的重要技术路径",
         "source": "SemiEngineering",
         "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
-        "image": "https://images.unsplash.com/photo-1517077302505-9e2a91a9fa1e-e363dbe005cb?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "3D 集成芯片堆叠示意",
         "date": "2026-06-26",
         "priority": "secondary"
@@ -153,7 +153,7 @@
         "reason": "原子级铁电薄膜的发现为FeFET存储和3D集成开创新可能",
         "source": "SemiEngineering / Science",
         "url": "https://semiengineering.com/research-bits-july-6/",
-        "image": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd-abf9dbad1b69?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "铁电薄膜晶格结构（示意）",
         "date": "2026-07-06",
         "priority": "flash"
@@ -175,7 +175,7 @@
         "reason": "设备商的布局反映DRAM和先进封装的技术升级方向",
         "source": "SemiEngineering",
         "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
-        "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "半导体设备车间（示意）",
         "date": "2026-06-26",
         "priority": "flash"
@@ -197,7 +197,7 @@
         "reason": "显示与传感合一的像素概念可能开启新型交互显示设备",
         "source": "SemiEngineering / Nature",
         "url": "https://semiengineering.com/research-bits-july-6/",
-        "image": "https://images.unsplash.com/photo-1517077302505-9e2a91a9fa1e?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1510525009512-ad7fc13eefab?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "傅里叶像素光学结构（示意）",
         "date": "2026-07-06",
         "priority": "flash"
@@ -218,10 +218,250 @@
         "reason": "新型图案化设备为先进制程提供EUV之外的互补方案",
         "source": "SemiEngineering",
         "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
-        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "原子层刻蚀设备（示意）",
         "date": "2026-06-26",
         "priority": "flash"
+      },
+      {
+        "id": "semi-011",
+        "title": "ASML推进Hyper-NA EUV路线图，为AI芯片时代储备0.7NA以上光刻",
+        "keywords": [
+          "ASML",
+          "Hyper-NA EUV",
+          "光刻路线图",
+          "0.7 NA"
+        ],
+        "tech": "EUV光刻",
+        "route": "High-NA/Hyper-NA EUV路线",
+        "routeStatus": "→稳定",
+        "content": "据Digital Citizen（6月18日）报道，ASML正为AI芯片时代准备High-NA与Hyper-NA EUV的下一阶段。High-NA（0.55 NA）系统已接近量产导入，Hyper-NA（0.7 NA以上）被纳入更远期路线图，以应对2nm以下节点的单次曝光分辨率需求。干法光刻胶与配套光学系统的成熟度是关键。",
+        "reason": "Hyper-NA EUV的预研决定了2030年代先进制程的光刻天花板，提前布局反映AI算力对制程的刚性需求。",
+        "source": "Digital Citizen / ASML",
+        "url": "https://www.digitalcitizen.life/asml-is-preparing-high-na-and-hyper-na-euv-for-the-ai-chip-era/",
+        "image": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "EUV 光刻机（示意）",
+        "date": "2026-06-18",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-012",
+        "title": "Cadence在Computex 2026发布全自主Agentic AI设计工程师，EDA迈向L5",
+        "keywords": [
+          "Cadence",
+          "Agentic EDA",
+          "AI设计",
+          "Computex 2026",
+          "ChipStack"
+        ],
+        "tech": "EDA / AI辅助设计",
+        "route": "设计工具",
+        "routeStatus": "↑突破",
+        "content": "Cadence在Computex 2026（6月1日）发布业界首个全自主虚拟Agentic AI设计工程师，将ChipStack AI Super Agent推进至Level-5自主级别，可自动完成从规格到封装的芯片设计迭代。Synopsys同期也在GTC Taipei加速其Agentic EDA布局，两大EDA厂竞争白热化。",
+        "reason": "Agentic EDA将设计生产力从'人驱动工具'转向'AI自主迭代'，有望显著缩短先进芯片上市周期。",
+        "source": "Cadence / Futurum Group",
+        "url": "https://www.cadence.com/en_US/home/company/newsroom/press-releases/pr/2026/cadence-unveils-industrys-first-fully-autonomous-virtual.html",
+        "image": "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "EDA 设计流程（示意）",
+        "date": "2026-06-01",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-013",
+        "title": "三星ISSCC 2026展示16Gb 4F²垂直沟道DRAM，3D存储路线再确认",
+        "keywords": [
+          "三星",
+          "4F²",
+          "垂直沟道DRAM",
+          "ISSCC 2026",
+          "3D DRAM"
+        ],
+        "tech": "3D DRAM",
+        "route": "存储技术",
+        "routeStatus": "↑突破",
+        "content": "据SemiWiki报道，三星在ISSCC 2026展示了基于4F²垂直沟道晶体管（VG）的16Gb DRAM原型，验证了垂直沟道结构在10nm以下DRAM制程的可行性。该路线与3D堆叠DRAM并列，成为突破1c nm之后密度瓶颈的两大技术方向。",
+        "reason": "垂直沟道DRAM是三星对抗传统缩放极限的核心路线，ISSCC原型验证增强了3D存储量产预期。",
+        "source": "SemiWiki / ISSCC 2026",
+        "url": "https://semiwiki.com/forum/threads/isscc-2026-samsung-electronics-demonstrated-a-16gb-dram.24808/",
+        "date": "2026-03-23",
+        "priority": "flash",
+        "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200&q=80&auto=format&fit=crop"
+      },
+      {
+        "id": "semi-014",
+        "title": "2026 VLSI盘点四大新兴非易失存储：STT-MRAM/FeRAM/ReRAM/PCM对比",
+        "keywords": [
+          "新型存储",
+          "STT-MRAM",
+          "FeRAM",
+          "ReRAM",
+          "VLSI 2026"
+        ],
+        "tech": "新型非易失存储",
+        "route": "新型存储",
+        "routeStatus": "→稳定",
+        "content": "电子工程专辑（7月1日）盘点2026年最具前景的四种新兴非易失存储：STT-MRAM、FeRAM、ReRAM与PCM/SOM，对比其底层原理、量产参数与优缺点。铁电存储因与CMOS后端兼容、写入速度快，被视为嵌入式eNVM的有力候选。",
+        "reason": "新型存储的成熟将推动存算一体与嵌入式系统的能效跃升，VLSI年度盘点提供产业基准。",
+        "source": "电子工程专辑 / VLSI 2026",
+        "url": "https://www.eet-china.com/mp/a506530.html",
+        "date": "2026-07-01",
+        "priority": "flash",
+        "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1200&q=80&auto=format&fit=crop"
+      },
+      {
+        "id": "semi-015",
+        "title": "背面供电网络2026：Intel PowerVia已出货，TSMC Super Power Rail年内跟进",
+        "keywords": [
+          "BSPDN",
+          "PowerVia",
+          "Super Power Rail",
+          "背面供电",
+          "Intel 18A"
+        ],
+        "tech": "背面供电网络",
+        "route": "供电技术",
+        "routeStatus": "↑突破",
+        "content": "BSPDN专题分析指出，背面供电网络（BSPDN）已随Intel PowerVia在18A节点量产出货，台积电Super Power Rail将于N2P、三星BSPDN将于SF2节点年内跟进。该技术将电源布线移至晶圆背面，释放正面布线并降低IR压降与热阻。",
+        "reason": "背面供电是后FinFET时代提升密度与能效的关键使能技术，三大厂同年的落地节奏值得关注。",
+        "source": "Internet Pros / Intel, TSMC",
+        "url": "https://internet-pros.com/blog/backside-power-delivery-bspdn-powervia-2026/",
+        "date": "2026-06-20",
+        "priority": "flash",
+        "image": "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=1200&q=80&auto=format&fit=crop"
+      },
+      {
+        "id": "semi-016",
+        "title": "2026年CPO共封装光学五大趋势：光引擎贴近交换ASIC成AI互联主流",
+        "keywords": [
+          "CPO",
+          "共封装光学",
+          "硅光",
+          "AI互联",
+          "光引擎"
+        ],
+        "tech": "硅光共封装",
+        "route": "光互连",
+        "routeStatus": "→稳定",
+        "content": "西门子半导体封装博客（2月5日）总结2026年CPO五大趋势：为应对AI的能耗需求，共封装光学将光引擎直接贴近交换ASIC、加速器与chiplet，缩短电通道、降低功耗与延迟。1.6T光模块需求与台积电COUPE等方案的成熟推动CPO从概念验证走向规模落地。",
+        "reason": "CPO是突破AI集群电互连功耗墙的核心路径，2026年被视为规模化落地元年。",
+        "source": "Siemens / 半导体封装",
+        "url": "https://blogs.sw.siemens.com/semiconductor-packaging/2026/02/05/five-key-trends-of-co-packaged-optics-cpo-in-2026/",
+        "date": "2026-02-05",
+        "priority": "flash",
+        "image": "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=1200&q=80&auto=format&fit=crop"
+      },
+      {
+        "id": "semi-017",
+        "title": "Argonne与Intel部署12量子位硅自旋量子处理器，推进硅基量子 scalable",
+        "keywords": [
+          "量子计算",
+          "硅自旋量子位",
+          "Intel",
+          "Argonne",
+          "量子器件"
+        ],
+        "tech": "硅基量子位",
+        "route": "量子器件",
+        "routeStatus": "→稳定",
+        "content": "据阿贡国家实验室（1月6日）报道，Argonne与Intel合作部署基于硅量子点的12量子位处理器，并配套Horse Ridge低温控制器实现高保真度可编程控制。硅自旋量子位可借助成熟CMOS工艺实现可扩展制造，是大规模量子计算的有力路线。",
+        "reason": "硅自旋量子位复用传统半导体产线，是量子计算走向可扩展制造的现实路径之一。",
+        "source": "Argonne National Laboratory / Intel",
+        "url": "https://www.anl.gov/article/argonne-launches-silicon-quantum-processor-collaboration-with-intel",
+        "date": "2026-01-06",
+        "priority": "flash",
+        "image": "https://images.unsplash.com/photo-1505765050516-f72dcac9c60e?w=1200&q=80&auto=format&fit=crop"
+      }
+    ],
+    "papers": [
+      {
+        "id": "semi-paper-003",
+        "title": "Vertical gallium nitride MOSFETs: Advanced architectures, challenges and prospects",
+        "authors": "ScienceDirect (Solid-State Electronics)",
+        "field": "半导体",
+        "paperType": "期刊论文",
+        "venue": "Solid-State Electronics",
+        "oneLiner": "系统梳理垂直沟道 GaN MOSFET 的先进架构，突破平面器件电流密度与耐压瓶颈。",
+        "abstract": "垂直氮化镓（GaN）MOSFET 凭借其优异的材料特性成为功率器件的变革性方案。本文综述了垂直 GaN MOSFET 的先进架构、关键工艺挑战与未来前景。",
+        "content": "横向 GaN HEMT 在大电流应用中受限于散热与面积，垂直 GaN MOSFET 通过垂直导电路径显著提升电流处理能力并改善热分布。文章讨论了沟槽栅、电流孔径（CAVET）等结构及其可靠性与工艺难点。",
+        "techIntro": "GaN 作为宽禁带半导体，具备高击穿场强与高电子迁移率。垂直结构可将高压与高电流解耦，是车规与工业电源向更高功率密度演进的核心方向。",
+        "techTags": [
+          "GaN",
+          "垂直 MOSFET",
+          "功率器件",
+          "宽禁带"
+        ],
+        "metrics": [
+          {
+            "name": "架构",
+            "value": "垂直沟道",
+            "unit": "",
+            "note": "突破平面限制"
+          },
+          {
+            "name": "材料",
+            "value": "GaN",
+            "unit": "",
+            "note": "宽禁带"
+          }
+        ],
+        "attachments": [
+          {
+            "name": "论文原文",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0167931725001078",
+            "label": "ScienceDirect",
+            "cached": false
+          }
+        ],
+        "source": "ScienceDirect",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0167931725001078",
+        "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "垂直 GaN MOSFET 结构",
+        "date": "2026-07-07"
+      },
+      {
+        "id": "semi-paper-004",
+        "title": "M2S-HEMT: An E-Mode p-GaN Gate Power Transistor Decoupling Threshold Voltage and ON-Resistance",
+        "authors": "崔家玮、付星源等，北京大学集成电路学院",
+        "field": "半导体",
+        "paperType": "期刊论文",
+        "venue": "北京大学集成电路学院",
+        "oneLiner": "多到单沟道 HEMT（M2S-HEMT）解耦阈值电压与导通电阻，提升常关型 p-GaN 功率器件设计自由度。",
+        "abstract": "该工作以 Multi-to-Single Channel HEMT (M2S-HEMT) 为题，提出一种增强型（E-Mode）p-GaN 栅功率晶体管结构，将阈值电压与导通电阻解耦，改善器件权衡。",
+        "content": "传统 p-GaN 栅 HEMT 中阈值电压与导通电阻高度耦合，难以独立优化。M2S-HEMT 通过多沟道到单沟道的特殊设计，在保持常关特性的同时降低 Ron，为高性能 GaN 功率器件提供新思路。",
+        "techIntro": "p-GaN 栅结构是当前主流的常关型 GaN 功率器件方案，但其 Vth 与 Ron 的耦合限制了性能上限。解耦二者是产业界长期追求的设计目标。",
+        "techTags": [
+          "GaN",
+          "p-GaN HEMT",
+          "功率晶体管",
+          "阈值电压解耦"
+        ],
+        "metrics": [
+          {
+            "name": "器件类型",
+            "value": "E-mode p-GaN",
+            "unit": "",
+            "note": "常关型"
+          },
+          {
+            "name": "创新点",
+            "value": "Vth-Ron 解耦",
+            "unit": "",
+            "note": "M2S 结构"
+          }
+        ],
+        "attachments": [
+          {
+            "name": "论文原文",
+            "url": "https://ic.pku.edu.cn/kxyj/kydt/3540925f79e44703baf9eb9f94e4834f.htm",
+            "label": "北大集成电路学院",
+            "cached": false
+          }
+        ],
+        "source": "北京大学集成电路学院",
+        "url": "https://ic.pku.edu.cn/kxyj/kydt/3540925f79e44703baf9eb9f94e4834f.htm",
+        "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "M2S-HEMT 器件结构",
+        "date": "2026-07-07"
       }
     ]
   },
@@ -229,8 +469,8 @@
     "schema": "semicon-news-daily/v1",
     "date": "2026-07-08",
     "weekday": "周三",
-    "summary": "SemiEngineering连发两篇先进封装深度分析：多芯片现场测试方法论与高密度扇出型面板封装检测量测追赶；imec发布2026版路线图：CFET垂直堆叠是A7级（~0.7nm）关键转折点，0.3nm目标2038年；六大前沿工艺同步开启设备需求空间（GAA/CFET/3D堆叠/High-NA EUV/CoPoS/CPO）；AlixLabs原子层刻蚀间距分割商用设备新进展。",
-    "focus": "先进封装测试与量测挑战凸显，CFET路线图时间线清晰化，设备端多技术路线同步爆发",
+    "summary": "SemiEngineering连发两篇先进封装深度分析：多芯片现场测试方法论与高密度扇出型面板封装检测量测追赶；imec发布2026版路线图：CFET垂直堆叠是A7级（~0.7nm）关键转折点，0.3nm目标2038年。新增：AI时代chiplet设计缺失『可观测性』层、验证方法学难追上AI芯片节奏、如何构建数十亿个混合键合凸点、CPO测试面临数据中心产能陡增；7/3产业周评显示三星2600亿建厂、2026年DRAM设备支出首破500亿美元，高通发布HBC近内存计算架构，Dynex推出450A GaN半桥模块，SK海力士与三星围绕HBM4就绪度与1c DRAM缩放展开竞赛；技术论文盘点聚焦Processing-using-DRAM干扰风险与原子级等离子体加工。 当日另含 2 篇半导体器件技术论文研讨。",
+    "focus": "先进封装测试与量测、chiplet可观测性与混合键合、CPO光互连测试、AI驱动EDA验证、存内/近内存计算架构、宽禁带功率模块",
     "news": [
       {
         "id": "semi-001",
@@ -249,7 +489,7 @@
         "reason": "多芯片系统的现场可靠性是先进封装产业化的关键瓶颈",
         "source": "SemiEngineering / Laura Peters",
         "url": "https://semiengineering.com/multi-die-testing-in-the-field-must-build-on-established-test-methodologies/",
-        "image": "https://images.unsplash.com/photo-1517077302505-9e2a91a9fa1e?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "3D-IC 多芯片堆叠（示意）",
         "date": "2026-07-07",
         "priority": "featured"
@@ -271,7 +511,7 @@
         "reason": "面板级封装是先进封装降本的关键路径，检测量测技术决定了量产可行性",
         "source": "SemiEngineering / Anne Meixner",
         "url": "https://semiengineering.com/inspection-and-metrology-catching-up-for-high-density-fan-out-panel-packaging/",
-        "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "面板级封装检测设备（示意）",
         "date": "2026-07-07",
         "priority": "featured"
@@ -293,7 +533,7 @@
         "reason": "imec路线图是行业共识风向标，CFET时间线的明确对设备/材料/EDA投资有指导意义",
         "source": "环球网科技 / imec",
         "url": "https://tech.huanqiu.com/article/4SDQDssL5nC",
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "半导体晶圆制造（示意）",
         "date": "2026-07-02",
         "priority": "secondary"
@@ -316,97 +556,580 @@
         "reason": "多技术路线同步爆发意味着设备行业正经历结构性升级换代周期",
         "source": "百家号 / 行业分析",
         "url": "https://baijiahao.baidu.com/s?id=1869358415758832474&wfr=spider&for=pc",
-        "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "半导体设备自动化车间（示意）",
         "date": "2026-06-30",
         "priority": "secondary"
       },
       {
         "id": "semi-005",
-        "title": "东京科学大学开发串联神经网络：6个数量级加速半导体特性提取",
+        "title": "SemiEngineering：AI 时代 chiplet 设计缺失『可观测性』关键层",
         "keywords": [
-          "串联神经网络",
-          "IGZO",
-          "器件表征",
-          "AI",
-          "参数提取"
+          "可观测性",
+          "chiplet",
+          "遥测",
+          "片上监视器",
+          "SLM"
         ],
-        "tech": "AI+半导体表征",
-        "route": "AI辅助半导体研究",
-        "routeStatus": "↑突破",
-        "content": "东京科学大学（原东京工业大学）等机构开发串联神经网络（TNN），从晶体管I-V曲线自动估计6个关键材料参数（缺陷密度、陷阱态、迁移率等）。第一级网络从I-V反推参数，第二级前向网络重建原始特性做物理一致性约束。在1000组a-IGZO数据集上训练后，单条I-V曲线推理<1ms。据称相比传统器件模拟（数小时至数天）加速超过六个数量级。论文发表于Advanced Intelligent Systems [DOI: 10.1002/aisy.70437]。",
-        "reason": "AI高效表征方法可大幅加速显示器背板（IGZO/HMO）和新型半导体材料的研发迭代",
-        "source": "SemiEngineering / Advanced Intelligent Systems",
-        "url": "https://semiengineering.com/research-bits-july-6/",
-        "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80&auto=format&fit=crop",
-        "imageCaption": "神经网络结构示意",
-        "date": "2026-07-06",
+        "tech": "Chiplet 可观测性 / 遥测",
+        "route": "先进封装 / Chiplet",
+        "routeStatus": "→稳定",
+        "content": "SemiEngineering 7月1日刊文指出，在AI时代的多die与chiplet架构中，可观测性尚未作为一等公民内建到系统，跨封装边界难以统一关联流量、延迟、拥塞与故障行为。文章主张构建对齐通信fabric的遥测平面，并借助片上监视器（on-die monitors）、近传感器数据缩减与可编程采集扩展系统级可见性。文中还讨论硅生命周期管理（SLM）实现自修复硅与核心收割，并呼吁通过标准化遥测模式与可观测性契约支撑多厂商chiplet生态。",
+        "reason": "chiplet跨die的可观测性缺失是异构集成可靠性的核心短板，直接影响AI芯片的调试与现场运维。",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/observability-is-a-missing-layer-in-ai-era-chiplet-design/",
+        "image": "https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Chiplet 异构集成（示意）",
+        "date": "2026-07-01",
         "priority": "secondary"
       },
       {
         "id": "semi-006",
-        "title": "AlixLabs推出首款原子层刻蚀间距分割商用设备，补充EUV图案化方案",
+        "title": "SemiEngineering：验证方法学难追上 AI 芯片设计节奏",
         "keywords": [
-          "AlixLabs",
-          "ALE",
-          "间距分割",
-          "图案化"
+          "EDA",
+          "验证",
+          "Agentic AI",
+          "覆盖率",
+          "芯片设计"
         ],
-        "tech": "原子层刻蚀/图案化",
-        "route": "先进图案化技术",
-        "routeStatus": "↑突破",
-        "content": "AlixLabs推出首款商用原子层刻蚀间距分割（ALE Pitch Splitting）设备。该技术可在不退化为双重图案的情况下增加图形密度，为先进制程提供EUV之外的互补图案化方案。据SemiEngineering报道。",
-        "reason": "ALE间距分割可在不依赖EUV的情况下提升图形密度，对成熟制程和先进封装都有价值",
+        "tech": "EDA 验证 / Agentic AI",
+        "route": "设计工具 / 验证",
+        "routeStatus": "→稳定",
+        "content": "SemiEngineering 6月25日报道，AI能力以破纪录速度涌现，但半导体验证方法学缺乏成熟部署范式，企业被迫自行摸索。Synopsys、Cadence、Siemens EDA 等指出，早期客户经验显示 agentic 工作流可将150人验证团队产出提升至相当于400人以上；但资深工程师仍须把关质量，AI不应替代其对正确性的判断。文章认为受益者横跨资深与初级工程师两端，但如何可靠部署仍无定论。",
+        "reason": "验证是芯片tape-out前最耗时的环节，AI agent能否真正提升覆盖率闭环而非牺牲质量，决定先进SoC上市节奏。",
         "source": "SemiEngineering",
-        "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
-        "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=1200&q=80&auto=format&fit=crop",
-        "imageCaption": "原子层刻蚀设备（示意）",
-        "date": "2026-06-26",
-        "priority": "flash"
+        "url": "https://semiengineering.com/verification-methodologies-struggle-to-keep-up-with-ai/",
+        "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "EDA 验证流程（示意）",
+        "date": "2026-06-25",
+        "priority": "secondary"
       },
       {
         "id": "semi-007",
-        "title": "应用材料为DRAM推新型外延系统，同时发布先进封装CMP/沉积/检测系统",
+        "title": "SemiEngineering：如何构建数十亿个混合键合互连凸点",
         "keywords": [
-          "应用材料",
-          "Applied Materials",
-          "DRAM",
-          "外延",
+          "混合键合",
+          "Hybrid Bonding",
+          "铜对铜",
+          "BiST",
           "先进封装"
         ],
-        "tech": "半导体设备",
-        "route": "DRAM工艺设备",
-        "routeStatus": "→稳定",
-        "content": "应用材料（Applied Materials）为DRAM制造推出新型外延系统，同时为先进封装推出CMP、沉积和电子束检测系统。据SemiEngineering报道，设备商的布局反映DRAM向更先进制程以及先进封装技术升级的明确方向。",
-        "reason": "应用材料的多线布局释放了DRAM工艺升级和先进封装扩产信号",
+        "tech": "混合键合 / Hybrid Bonding",
+        "route": "先进封装",
+        "routeStatus": "↑突破",
+        "content": "SemiEngineering 6月18日刊文解析混合键合（hybrid bonding）技术：以1µm间距实现无凸点铜对铜连接，理论可将300mm晶圆以200nm焊盘间距键合出数万亿连接。文章指出成功要求表面粗糙度通常小于0.5nm、CMP铜凹陷控制在3–5nm，且逐垫光学检测已不再可行，须依赖内置自测试（BiST）。Synopsys 3DIO IP 将互连分组为每16通道的小型可重复集群并含冗余与修复能力，以吸收制造缺陷。",
+        "reason": "混合键合是HBM4/3DIC实现极高I/O密度的关键工艺，其均匀性与测试挑战直接决定先进封装良率。",
         "source": "SemiEngineering",
-        "url": "https://semiengineering.com/chip-industry-week-in-review-144/",
-        "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&q=80&auto=format&fit=crop",
-        "imageCaption": "半导体设备车间（示意）",
-        "date": "2026-06-26",
-        "priority": "flash"
+        "url": "https://semiengineering.com/how-to-build-billions-of-bumps/",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "混合键合互连（示意）",
+        "date": "2026-06-18",
+        "priority": "secondary"
       },
       {
         "id": "semi-008",
-        "title": "TiO₂薄膜在<3nm厚度下呈现铁电性：ALD工艺兼容硅基集成",
+        "title": "SemiEngineering：共封装光学(CPO)测试面临数据中心产能陡增",
         "keywords": [
-          "TiO₂",
-          "铁电",
-          "ALD",
-          "FeFET",
-          "Science"
+          "CPO",
+          "共封装光学",
+          "硅光",
+          "激光源",
+          "光互连"
         ],
-        "tech": "铁电薄膜/新型存储",
-        "route": "新型铁电材料",
-        "routeStatus": "↑突破",
-        "content": "UC Berkeley和SLAC团队发现TiO₂薄膜在厚度降至<3nm时意外呈现铁电性——自发极化且可电场翻转，在1nm（约2个单胞厚度）时仍保持稳定。团队使用ALD在<400°C低温下生长均匀薄膜，可在晶体硅和非晶碳基板上沉积，表明与硅基CMOS工艺兼容。论文发表于Science 392, 280-284 (2026) [DOI: 10.1126/science.aec9417]。",
-        "reason": "原子级铁电薄膜的发现为FeFET存储和3D FeRAM开创新材料可能",
-        "source": "SemiEngineering / Science",
-        "url": "https://semiengineering.com/research-bits-july-6/",
-        "image": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd-abf9dbad1b69?w=1200&q=80&auto=format&fit=crop",
-        "imageCaption": "铁电薄膜晶格结构（示意）",
-        "date": "2026-07-06",
+        "tech": "共封装光学 / CPO 测试",
+        "route": "光互连",
+        "routeStatus": "→稳定",
+        "content": "SemiEngineering 6月9日报道，AI数据中心需求推动CPO年产能需从百万级扩至数千万级，但各CPO设计独有且定制测试单元昂贵，制造测试压力巨大。单个光学引擎需4–8个激光源激励，含16–32个引擎的模块共需64–128个激光源；转向CWDM/DWDM多波长复用将进一步推高光源数。CPO良率为电性规格与光学规格乘积，但ATE、光学引擎与OSA数据格式割裂，单一器件完整画像追溯常需数周。",
+        "reason": "CPO从概念验证走向规模落地的最大瓶颈在测试与量测，光源数量与数据孤岛问题不解决将阻碍年产能向亿级扩展。",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/co-packaged-optics-testing-faces-steep-data-center-ramp/",
+        "image": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "共封装光学引擎（示意）",
+        "date": "2026-06-09",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-009",
+        "title": "SemiEngineering 7/3 产业周评：三星2600亿建厂、DRAM设备支出破500亿",
+        "keywords": [
+          "三星",
+          "HBM",
+          "DRAM设备",
+          "300mm",
+          "3D NAND"
+        ],
+        "tech": "存储设备投资 / 晶圆厂",
+        "route": "存储技术 / 产能",
+        "routeStatus": "→稳定",
+        "content": "SemiEngineering 7月3日产业周评汇总：三星拟投资2600亿美元在光州新建半导体晶圆厂、360亿美元在天安与温阳建设HBM晶圆厂；SEMI报告预计2026年全球300mm存储设备投资首破500亿美元（同比+29%），其中DRAM设备支出约370亿美元、3D NAND约140亿美元。同期英飞凌提前数月落成德累斯顿57亿美元Smart Power Fab，东芝推出U-MOS11-H 80V功率MOSFET，铠侠与Sandisk量产第10代3D闪存。",
+        "reason": "存储设备投资创新高反映HBM与AI存储需求拉动，HBM产能与3D NAND世代竞赛是产业景气度的关键信号。",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/chip-industry-week-in-review-145/",
+        "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "半导体晶圆厂（示意）",
+        "date": "2026-07-03",
         "priority": "flash"
+      },
+      {
+        "id": "semi-010",
+        "title": "SemiEngineering 技术论文盘点(6/30)：Processing-using-DRAM 干扰与原子级等离子体",
+        "keywords": [
+          "Processing-using-DRAM",
+          "存内计算",
+          "原子级等离子体",
+          "氧化镓",
+          "技术论文"
+        ],
+        "tech": "Processing-using-DRAM / 原子级等离子体",
+        "route": "新型存储 / 器件工艺",
+        "routeStatus": "↑突破",
+        "content": "SemiEngineering 6月30日技术论文盘点收录多项新研究：东京大学等《PuDGhost》首次在真实DRAM芯片上实验分析Processing-using-DRAM的计算结果损坏与干扰风险；名古屋大学等推进原子级受控等离子体加工；布法罗大学等分析Si掺杂氧化镓的缺陷驱动相变不稳定性；米兰理工与意法半导体提出事件驱动强化学习用于半导体产线长周期控制。",
+        "reason": "Processing-using-DRAM等存内计算路线在真实芯片上的可靠性被首次量化，是存算一体走向实用的关键警示与依据。",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/chip-industry-technical-paper-roundup-june-30/",
+        "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "存内计算架构（示意）",
+        "date": "2026-06-30",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-011",
+        "title": "SemiEngineering：Agentic AI 正在改写数据中心架构与 chiplet 设计",
+        "keywords": [
+          "Agentic AI",
+          "异构SoC",
+          "chiplet",
+          "3D-IC",
+          "数据中心"
+        ],
+        "tech": "Agentic AI / 异构SoC",
+        "route": "Chiplet / 架构",
+        "routeStatus": "→稳定",
+        "content": "SemiEngineering 6月11日分析，独立GPU正被将CPU、GPU、NPU组合的异构SoC与chiplet取代，以消去内存瓶颈、降低延迟；Agentic AI因需复杂编排与推理循环而无法仅靠GPU，标志架构回归紧耦合异构集成（如Intel Panther Lake、Nvidia Vera Rubin）。文章指出Agentic AI SoC的功能与性能验证必须结合大规模仿真与原型，并关注3D-IC堆叠内存中的功耗与热完整性，硬件级安全与监控成为关键设计要求。",
+        "reason": "AI工作负载正反向定义芯片架构，chiplet异构集成与3D-IC的验证/热/安全挑战随之升级。",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/agentic-ai-is-changing-data-center-architectures/",
+        "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "异构 SoC 架构（示意）",
+        "date": "2026-06-11",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-012",
+        "title": "SemiEngineering：PCIe 在 AI 浪潮下仍受益于互连协议演进",
+        "keywords": [
+          "PCIe",
+          "CXL",
+          "互连",
+          "内存池化",
+          "AI集群"
+        ],
+        "tech": "PCIe / CXL 互连",
+        "route": "互连",
+        "routeStatus": "→稳定",
+        "content": "SemiEngineering 6月10日探讨PCIe在AI时代的角色：尽管光学与chiplet互连兴起，PCIe凭借向后兼容与生态成熟度仍受益于协议演进，CXL等扩展在内存池化与异构连接中持续渗透。文章分析AI集群对高带宽低延迟互连的需求如何推动PCIe速率与分层拓扑升级。",
+        "reason": "互连协议是AI系统带宽与延迟的底层约束，PCIe/CXL的演进节奏影响chiplet与加速器协同效率。",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/pcie-benefits-from-ai-despite-scaling-protocols/",
+        "image": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "高速互连（示意）",
+        "date": "2026-06-10",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-013",
+        "title": "SemiEngineering：AI 模型变革缺陷检测却难规模化的根因",
+        "keywords": [
+          "AI缺陷检测",
+          "ADC",
+          "CNN",
+          "良率",
+          "数据孤岛"
+        ],
+        "tech": "AI 缺陷检测 / ADC",
+        "route": "制造 / 检测",
+        "routeStatus": "→稳定",
+        "content": "SemiEngineering 6月9日报道，基于CNN的深度学习方法可自动学习复杂缺陷特征，用于自动缺陷分类（ADC），在晶圆边缘与partial die等区域泛化更好，并结合混合键合场景检测残留钨CMP缺陷。但PDF Solutions估计超70%的AI项目在试点后停滞，主因是数据碎片化、遗留工厂系统、专家带宽不足及缺乏企业级AI运维模型；MES/ERP元数据未对齐会导致横向数据联通失败。",
+        "reason": "AI缺陷检测的价值已在试点验证，但工厂级数据孤岛是规模化落地的主要障碍，关乎先进制程良率学习速度。",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/ai-models-transform-defect-inspection-and-review-but-can-fail-to-scale/",
+        "image": "https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "晶圆缺陷检测（示意）",
+        "date": "2026-06-09",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-014",
+        "title": "SemiEngineering：设计能『自我解释』的芯片",
+        "keywords": [
+          "可解释芯片",
+          "片上监测",
+          "遥测",
+          "形式化方法",
+          "自修复"
+        ],
+        "tech": "片上监测 / 可解释性",
+        "route": "设计工具 / 监测",
+        "routeStatus": "→稳定",
+        "content": "SemiEngineering 6月17日探讨『可解释芯片（chips that can explain themselves）』设计趋势：通过在芯片内嵌监控与数据模型，使系统能自述运行状态、定位异常根因，而非仅报告『发生了什么』。该方向与健康度遥测、形式化方法验证结合，支撑AI时代复杂SoC的现场可观测性与自修复。",
+        "reason": "随着芯片复杂度飙升，内建可解释性是从被动调试转向主动健康管理的必然，呼应chiplet可观测性议题。",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/designing-chips-that-can-explain-themselves/",
+        "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "片上健康监测（示意）",
+        "date": "2026-06-17",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-015",
+        "title": "SemiEngineering：AI 数据中心与汽车产业在器件层面趋同",
+        "keywords": [
+          "AI数据中心",
+          "汽车",
+          "功率半导体",
+          "宽禁带",
+          "功能安全"
+        ],
+        "tech": "跨域器件协同",
+        "route": "应用驱动",
+        "routeStatus": "→稳定",
+        "content": "SemiEngineering 7月2日指出，AI数据中心与汽车产业在功率、传感与可靠性需求上正趋同于相同器件创新议题：高算力下的功率半导体、宽禁带器件与功能安全成为共性挑战。两领域共享对高效电源转换、热管理与长寿命可靠性的诉求，推动功率与模拟芯片技术跨域复用。",
+        "reason": "跨域需求趋同将加速宽禁带功率器件与高可靠模拟技术的产业化，是器件厂商的重要市场信号。",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/ai-data-centers-and-auto-industry-converge-on-same-issues/",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "功率与汽车电子（示意）",
+        "date": "2026-07-02",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-016",
+        "title": "高通发布 HBC 近内存计算架构：每瓦带宽是 HBM 的 6 倍",
+        "keywords": [
+          "高通",
+          "HBC",
+          "近内存计算",
+          "TSV",
+          "存储墙"
+        ],
+        "tech": "近内存计算 / HBC",
+        "route": "存储架构",
+        "routeStatus": "↑突破",
+        "content": "据快科技/腾讯新闻6月25日报道，高通在2026投资者日公布高带宽计算（HBC）架构，将专用近内存加速器堆叠在LPDDR存储堆栈下方，通过TSV硅通孔实现3D堆叠。该技术旨在突破AI『存储墙』，将计算单元直接置于DRAM底层；高通称在完整加速器级别可实现6倍于HBM的每瓦带宽与200倍于SRAM的每瓦容量。",
+        "reason": "近内存计算是缓解AI存储墙的重要架构路线，HBC将计算贴近DRAM有望重塑AI加速器能效范式。",
+        "source": "快科技 / 腾讯新闻",
+        "url": "https://news.qq.com/rain/a/20260625A07FQ700",
+        "image": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "近内存计算堆叠（示意）",
+        "date": "2026-06-25",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-017",
+        "title": "Dynex 发布 450A/650V GaN 半桥功率模块，面向快充与工业",
+        "keywords": [
+          "Dynex",
+          "GaN",
+          "功率模块",
+          "半桥",
+          "宽禁带"
+        ],
+        "tech": "GaN 功率模块",
+        "route": "宽禁带半导体",
+        "routeStatus": "↑突破",
+        "content": "据Ralf's GaN & SiC News（7月2日），Dynex Semiconductor宣布开发450A、650V GaN半桥功率模块，主打超快开关性能、高效率与紧凑集成，面向电动车快充、工业电源等大功率场景。该模块体现GaN从单器件向功率模块级封装演进，推动宽禁带器件在更高功率段落地。",
+        "reason": "GaN功率模块化是宽禁带器件从消费级快充走向工业/车规高功率应用的关键一步。",
+        "source": "LinkedIn / Ralf's GaN & SiC News",
+        "url": "https://www.linkedin.com/pulse/ralfs-gan-sic-news-july-2-2026-ralf-higgelke-k67me/",
+        "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "GaN 功率模块（示意）",
+        "date": "2026-07-02",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-018",
+        "title": "CPO/XPO 领衔，AI 数据中心网络迈向 1.6T",
+        "keywords": [
+          "CPO",
+          "XPO",
+          "1.6T",
+          "硅光",
+          "光互连"
+        ],
+        "tech": "共封装光学 / 1.6T 光互连",
+        "route": "光互连",
+        "routeStatus": "→稳定",
+        "content": "据ICC讯（6月25日）基于OFC 2026讨论分析，AI集群对高速光连接的迫切需求推动CPO、XPO、Open CPX、OCI及6.4T OBO等新兴技术升温，AI数据中心网络迈向1.6T。文章强调光学供应链与规模化制造能力在AI时代的关键作用，硅光与光电协同封装成为突破电互连功耗墙的核心路径。",
+        "reason": "1.6T光互连与CPO生态成熟是AI集群扩展的底层支撑，供应链量产能力决定落地节奏。",
+        "source": "ICC 讯 / 光纤在线",
+        "url": "http://www.iccsz.com/site/cn/News/2026/06/25/20260625020953308554.htm",
+        "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "光互连模块（示意）",
+        "date": "2026-06-25",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-019",
+        "title": "SK 海力士与三星 HBM4 就绪度及 1c DRAM 缩放竞赛",
+        "keywords": [
+          "SK海力士",
+          "三星",
+          "HBM4",
+          "1c DRAM",
+          "混合键合"
+        ],
+        "tech": "HBM4 / 1c DRAM",
+        "route": "存储技术",
+        "routeStatus": "→稳定",
+        "content": "据Silicon Analysts（7月2日）分析，SK海力士目标将1c DRAM产量提升约8倍，三星则推进约50%的HBM产能扩张，两者对AI内存需求走向下注不同。文章评估两家在HBM4认证节奏、1c DRAM缩放与混合键合导入上的就绪度差异，反映存储厂商在AI内存世代切换中的战略分化。",
+        "reason": "HBM4认证与1c DRAM缩放节奏决定AI内存供给格局，两大存储厂的产能赌注影响2026–2027供给平衡。",
+        "source": "Silicon Analysts",
+        "url": "https://siliconanalysts.com/analysis/sk-hynix-samsung-2026-memory-capex-hbm4-qualification-race",
+        "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "HBM 存储堆栈（示意）",
+        "date": "2026-07-02",
+        "priority": "flash"
+      }
+    ],
+    "papers": [
+      {
+        "id": "semi-paper-005",
+        "title": "Silicon carbide MOSFETs: A critical review of applications, evolution and future trajectories",
+        "authors": "ScienceDirect (Results in Engineering)",
+        "field": "半导体",
+        "paperType": "综述",
+        "venue": "Results in Engineering",
+        "oneLiner": "全面评述 SiC MOSFET 的技术演进、现状与未来，涵盖高温与高可靠应用场景。",
+        "abstract": "本文系统分析碳化硅（SiC）MOSFET 的技术演进、当前最先进水平与未来轨迹，探讨其在高温、高功率等严苛环境中的应用优势。",
+        "content": "SiC MOSFET 凭借宽禁带特性，在高温、高击穿电压场景下显著优于硅基器件。综述梳理了从平面到沟槽栅的代际演进、可靠性挑战（如栅氧退化）及在新能源汽车、光伏与储能中的规模化应用。",
+        "techIntro": "SiC 与 GaN 并列为两大宽禁带半导体。SiC 聚焦中高压功率场景，其高导热与高耐压使之成为电动化与能源革命的关键使能材料。",
+        "techTags": [
+          "SiC",
+          "MOSFET",
+          "功率器件",
+          "宽禁带",
+          "可靠性"
+        ],
+        "metrics": [
+          {
+            "name": "材料",
+            "value": "4H-SiC",
+            "unit": "",
+            "note": "宽禁带"
+          },
+          {
+            "name": "范围",
+            "value": "全代际",
+            "unit": "",
+            "note": "平面/沟槽"
+          }
+        ],
+        "attachments": [
+          {
+            "name": "论文原文",
+            "url": "https://www.sciencedirect.com/science/article/pii/S277301232500055X",
+            "label": "ScienceDirect",
+            "cached": false
+          }
+        ],
+        "source": "ScienceDirect",
+        "url": "https://www.sciencedirect.com/science/article/pii/S277301232500055X",
+        "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "SiC 功率器件应用",
+        "date": "2026-07-08"
+      },
+      {
+        "id": "semi-paper-006",
+        "title": "3D Integrated Process and Hybrid Bonding of High Bandwidth Memory",
+        "authors": "Springer (Electronic Materials Letters)",
+        "field": "半导体",
+        "paperType": "期刊论文",
+        "venue": "Electronic Materials Letters",
+        "oneLiner": "面向高带宽存储的 3D 集成工艺与混合键合，提升集成密度与热管理。",
+        "abstract": "混合键合通过金属与绝缘体直接键合显著提升集成密度与热管理，是高性能半导体器件的关键技术。本文报道面向高带宽存储（HBM）的 3D 集成工艺与混合键合方案。",
+        "content": "随着 AI 算力对带宽需求激增，HBM 通过 TSV 与混合键合实现多层堆叠。本文探讨 Cu/聚合物混合键合的工艺窗口、对准精度与界面可靠性，并指出其在高密度 3DIC 中的核心地位。",
+        "techIntro": "混合键合（hybrid bonding）以纳米级 Cu-Cu 与介质-介质直接连接替代传统微凸点，极大缩短互连间距，是 CoWoS、HBM 等先进封装的基石。",
+        "techTags": [
+          "混合键合",
+          "HBM",
+          "3DIC",
+          "先进封装",
+          "高带宽存储"
+        ],
+        "metrics": [
+          {
+            "name": "键合方式",
+            "value": "Cu/介质混合",
+            "unit": "",
+            "note": "直接金属-绝缘体键合"
+          },
+          {
+            "name": "目标",
+            "value": "HBM 堆叠",
+            "unit": "",
+            "note": "提升带宽密度"
+          }
+        ],
+        "attachments": [
+          {
+            "name": "论文原文",
+            "url": "https://link.springer.com/article/10.1007/s13391-025-00557-9",
+            "label": "Springer",
+            "cached": false
+          }
+        ],
+        "source": "Springer",
+        "url": "https://link.springer.com/article/10.1007/s13391-025-00557-9",
+        "image": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "混合键合 3D 集成示意",
+        "date": "2026-07-08"
+      }
+    ]
+  },
+  "2026-07-09": {
+    "schema": "semicon-paper-daily/v1",
+    "date": "2026-07-09",
+    "weekday": "周四",
+    "summary": "7月9日两篇半导体器件设计论文：NVIDIA Research提出HORIZON，首次将芯片硬件设计视为仓库级代码演化的自演化Agent框架，在Verilog功能验证Pass@1达88.9%、比GPT-5.5高9.4个百分点；ETH Zurich联合lowRISC和博洛尼亚大学推出Croc开源RISC-V SoC平台，从RTL到硅的端到端芯片设计教学流程，基于130nm开源PDK。",
+    "focus": "AI Agent驱动的硬件设计自动化、开源RISC-V芯片设计教育",
+    "highlights": [
+      "HORIZON将Verilog功能验证Pass@1提升至88.9%，超越GPT-5.5约9.4个百分点",
+      "Croc开源SoC平台可让学生在130nm节点从RTL设计走到流片，直接回应芯片人才短缺挑战"
+    ],
+    "papers": [
+      {
+        "id": "semi-paper-001",
+        "title": "Agentic Hardware Design as Repository-Level Code Evolution",
+        "authors": "NVIDIA Research（完整作者列表见arXiv: 2606.28279）",
+        "field": "半导体",
+        "paperType": "预印本",
+        "venue": "arXiv preprint, arXiv:2606.28279 [cs.AR], June 2026",
+        "oneLiner": "NVIDIA提出HORIZON——首个将硬件设计视为仓库级代码演化的自演化Agent框架",
+        "abstract": "We present HORIZON, a self-evolving agent framework that treats hardware design as repository-level code evolution. HORIZON enables LLM agents to autonomously analyze existing hardware designs, identify optimization opportunities, generate modifications, and perform iterative regression testing. On the Verilog function verification benchmark, HORIZON achieves a Pass@1 of 88.9%, outperforming GPT-5.5 by 9.4 percentage points. The framework represents a paradigm shift from human-in-the-loop hardware design toward agent-driven autonomous hardware development.",
+        "content": "HORIZON的核心创新在于将硬件设计（RTL代码仓库）类比为软件代码仓库，允许Agent在仓库层面进行跨模块的分析、修改和验证。传统硬件设计流程中，工程师手工编写RTL，每次修改后需要手动运行仿真和形式验证。HORIZON的Agent自主完成：① 仓库级代码理解——分析模块层级结构、接口依赖和数据流；② 优化机会识别——基于PPA（功耗/性能/面积）目标和已知设计模式；③ 代码生成与修改——在保持功能正确的前提下重构或优化RTL；④ 自动回归测试——调用仿真器和形式验证工具验证修改的正确性。在Verilog功能验证基准测试中，HORIZON的Pass@1达到88.9%，比GPT-5.5（79.5%）高9.4个百分点，比基线Agent方法提升约15个百分点。该工作由NVIDIA Research完成，标志着AI Agent从辅助性的验证和调试延伸到全流程硬件设计自动化。",
+        "techIntro": "Agentic EDA（电子设计自动化）是2026年兴起的新方向，利用LLM Agent的推理和工具调用能力来辅助甚至替代部分芯片设计流程。与传统的EDA工具不同，Agent不是执行固定的算法流程，而是在设计空间中自主探索、决策和迭代。HORIZON是第一篇将硬件设计视为仓库级代码演化的论文，借鉴了软件工程中\"仓库级代码演化\"的概念——把整个硬件代码库看作一个可演化的实体，Agent在其中进行优化和重构。这一方向与芯片设计行业面临的\"设计生产力鸿沟\"（design productivity gap）直接相关——晶圆厂提供的晶体管密度每代增长约40%，但设计团队的设计效率每代仅增长约20%。",
+        "techTags": [
+          "Agentic EDA",
+          "HORIZON",
+          "硬件设计自动化",
+          "RTL",
+          "AI驱动设计",
+          "NVIDIA",
+          "arXiv"
+        ],
+        "metrics": [
+          {
+            "name": "Verilog功能验证Pass@1",
+            "value": "88.9",
+            "unit": "%",
+            "note": "比GPT-5.5高9.4个百分点"
+          },
+          {
+            "name": "基线Agent对比",
+            "value": "~15",
+            "unit": "百分点",
+            "note": "相比基线Agent方法提升"
+          },
+          {
+            "name": "设计层级",
+            "value": "仓库级",
+            "unit": "",
+            "note": "跨模块分析+修改+回归"
+          },
+          {
+            "name": "验证方式",
+            "value": "仿真+形式验证",
+            "unit": "",
+            "note": "自动回归测试"
+          }
+        ],
+        "attachments": [
+          {
+            "name": "论文预印本",
+            "url": "https://arxiv.org/abs/2606.28279",
+            "label": "arXiv 全文",
+            "cached": false
+          },
+          {
+            "name": "SemiEngineering报道",
+            "url": "https://semiengineering.com/a-self-evolving-agent-framework-that-treats-hardware-design-as-repository-level-code-evolution-nvidia-research/",
+            "label": "SemiEngineering",
+            "cached": false
+          }
+        ],
+        "source": "arXiv / NVIDIA Research",
+        "url": "https://arxiv.org/abs/2606.28279",
+        "image": "https://images.unsplash.com/photo-1517077304055-b38f0b7b2d63?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "HORIZON Agentic 硬件设计架构（示意）",
+        "date": "2026-06-27"
+      },
+      {
+        "id": "semi-paper-002",
+        "title": "Croc: Training the Next Generation Chip Designers on Domain-Specific End-to-End Open Source Silicon",
+        "authors": "ETH Zurich, lowRISC CIC, University of Bologna（完整作者列表见arXiv: 2606.25673）",
+        "field": "半导体",
+        "paperType": "预印本",
+        "venue": "arXiv preprint, arXiv:2606.25673 [cs.AR], June 2026",
+        "oneLiner": "ETH Zurich推出Croc开源RISC-V SoC平台，从RTL到硅的端到端芯片设计教学流程",
+        "abstract": "We present an end-to-end open-source domain-specific SoC design and fabrication flow built around Croc, a highly customizable RISC-V platform. Croc is assembled from open-source SystemVerilog IP blocks, integrates a 130 nm open-source PDK, and provides a complete teaching flow that takes students from architecture and RTL through physical design to tapeout. The platform enables students to gain hands-on experience across the full chip design stack, addressing the critical shortage of skilled chip designers.",
+        "content": "Croc平台围绕一个高度可定制的RISC-V处理器核心构建，使用开源SystemVerilog IP模块，并集成基于130nm开源PDK（工艺设计套件）的物理设计流程。教学流程覆盖：① 架构设计与性能评估——学生可在RISC-V指令集架构上进行领域专用加速器设计；② RTL设计与仿真——基于开源IP进行SystemVerilog RTL编码和功能验证；③ 逻辑综合与物理设计——使用开源EDA工具将RTL综合到网表，再经过布局布线到GDSII；④ 流片——最终将设计送交制造。该平台已在ETH Zurich的VLSI课程中实际使用，学生可在一学期内完成从架构设计到物理设计的完整芯片开发流程。Croc直接回应全球芯片人才短缺问题——通过提供零成本的端到端开源教学平台，使任何高校甚至个人都能获得芯片设计的完整实践经验。",
+        "techIntro": "芯片设计人才短缺是制约半导体产业增长的结构性问题。传统的芯片设计教育面临高门槛：商业EDA工具许可费用昂贵（数十万美元/年）、PDK通常需要与晶圆厂签署NDA、制造流片成本高昂（小批量和多项目晶圆（MPW）约数万至数十万美元）。Croc的突破在于：使用开源RISC-V核心（免除IP许可费）、使用开源SkyWater 130nm PDK（免除NDA）、使用开源EDA工具（OpenROAD等）、教学流程完全开源可复制。这使任何高校或个人都能以零成本获得完整的芯片设计经验。130nm虽然对先进制程（5nm/3nm）来说较老，但它足以教授全部核心概念：RTL设计、综合、时序分析、布局布线、DRC/LVS等。",
+        "techTags": [
+          "RISC-V",
+          "开源芯片",
+          "芯片设计教育",
+          "SoC",
+          "Croc",
+          "ETH Zurich",
+          "OpenROAD",
+          "SkyWater 130nm"
+        ],
+        "metrics": [
+          {
+            "name": "工艺节点",
+            "value": "130",
+            "unit": "nm",
+            "note": "SkyWater开源PDK"
+          },
+          {
+            "name": "教学覆盖",
+            "value": "RTL→GDSII",
+            "unit": "",
+            "note": "端到端全流程"
+          },
+          {
+            "name": "平台架构",
+            "value": "RISC-V",
+            "unit": "",
+            "note": "高度可定制SoC"
+          },
+          {
+            "name": "工具链",
+            "value": "全开源",
+            "unit": "",
+            "note": "免除商业EDA许可费用"
+          }
+        ],
+        "attachments": [
+          {
+            "name": "论文预印本",
+            "url": "https://arxiv.org/abs/2606.25673",
+            "label": "arXiv 全文",
+            "cached": false
+          },
+          {
+            "name": "SemiEngineering报道",
+            "url": "https://semiengineering.com/open-source-risc-v-platform-trains-chip-designers-from-rtl-to-silicon-eth-z-lowrisc-u-of-bologna/",
+            "label": "SemiEngineering",
+            "cached": false
+          }
+        ],
+        "source": "arXiv / ETH Zurich",
+        "url": "https://arxiv.org/abs/2606.25673",
+        "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Croc 开源 RISC-V SoC 教学平台（示意）",
+        "date": "2026-06-24"
       }
     ]
   }

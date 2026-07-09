@@ -3,7 +3,7 @@
     "schema": "display-paper-daily/v1",
     "date": "2026-07-07",
     "weekday": "周二",
-    "summary": "本周三篇面板显示领域重要论文：京东方提出AI替代几何光学仿真模型（1000%速度提升，>99%精度），Sony推出Isolated Pixel新像素结构实现0.44英寸4980ppi微显示，ETH Zurich开发双向傅里叶像素实现光控制与分析合一。",
+    "summary": "7月7日三篇面板显示领域重要论文：京东方提出AI替代几何光学仿真模型（1000%速度提升，>99%精度），Sony推出Isolated Pixel新像素结构实现0.44英寸4980ppi微显示，ETH Zurich开发双向傅里叶像素实现光控制与分析合一。",
     "focus": "AI深度融入显示设计流程、超高分辨率微显示结构创新、像素功能从单向发光走向双向光控",
     "highlights": [
       "AI替代传统光学仿真的工业级验证——1000倍加速意味着设计周期从天级缩至分钟级",
@@ -66,7 +66,7 @@
         ],
         "source": "Journal of the SID",
         "url": "https://sid.onlinelibrary.wiley.com/doi/10.1002/jsid.70062",
-        "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485-e363dbe005cb?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "AI + OLED 光学设计示意",
         "date": "2026-05-01"
       },
@@ -138,7 +138,7 @@
         ],
         "source": "Journal of the SID",
         "url": "https://sid.onlinelibrary.wiley.com/doi/10.1002/jsid.70076",
-        "image": "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "Sony OLED 微显示像素结构（示意）",
         "date": "2026-05-01"
       },
@@ -197,9 +197,156 @@
         ],
         "source": "Nature",
         "url": "https://doi.org/10.1038/s41586-026-10681-7",
-        "image": "https://images.unsplash.com/photo-1564466809058-bf4114d55352?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "傅里叶像素表面波结构（示意）",
         "date": "2026-06-01"
+      }
+    ]
+  },
+  "2026-07-08": {
+    "schema": "display-paper-daily/v1",
+    "date": "2026-07-08",
+    "weekday": "周三",
+    "summary": "7月8日两篇半导体器件论文：Nature Electronics 报道单片三维集成异构电子系统（石墨烯传感 + 2D CMOS 计算 + 硅光伏，纯环境光自供能，层间间距 50 nm）；arXiv 预印本通过基于物理的全能带 GaN HEMT 仿真给出 LO 声子寿命上限 ≲40 fs，揭示热声子瓶颈对饱和电流与峰值跨导的显著退化。",
+    "focus": "三维异构集成（2D 材料 + 硅）、GaN 功率/射频器件中的非平衡声子物理",
+    "highlights": [
+      "M3D 集成将传感、计算、供能三层合一，层间间距缩至 50 nm，仅靠环境光即可运行",
+      "GaN HEMT 热 LO 声子瓶颈使饱和电流与峰值跨导分别下降约 30% 与 60%，LO 声子寿命须 ≲40 fs"
+    ],
+    "papers": [
+      {
+        "id": "paper-001",
+        "title": "Monolithic three-dimensional integration of heterogeneous electronics for self-powered sensing and processing",
+        "authors": "Subir Ghosh, Pranavram Venkatram, Harikrishnan Ravichandran, Rishikesh T. Nair, Yongwen Sun, Lei Ding, Chen Chen, Joan M. Redwing, Yang Yang, Saptarshi Das（通讯作者，宾夕法尼亚州立大学）",
+        "field": "半导体",
+        "paperType": "期刊论文",
+        "venue": "Nature Electronics, 2026 (published 23 June 2026)",
+        "oneLiner": "单片三维集成异构电子：石墨烯化学传感 + 2D CMOS 计算 + 硅光伏，全靠环境光自供能",
+        "abstract": "该研究报道一种单片三维集成电路（M3D IC）：顶层堆叠石墨烯晶体管用于低功耗化学传感，中间层由 n 型单层二硫化钼（MoS₂）与 p 型双层二硒化钨（WSe₂）构成互补逻辑电路用于低功耗计算，底层为片上硅光伏模块用于收集环境光。整个系统仅依靠环境光运行，可区分不同化学溶液并生成对应数字代码，实现完全自持的感测与处理；同时展示了层间密集数据与功率通孔集成，并将层间分离缩小至 50 nm。",
+        "content": "论文的核心是将三类异构功能层在单片工艺下垂直堆叠：底层的体硅光伏（Si PVM）把环境光转为电能，中间的 2D 材料（MoS₂ nFET / WSe₂ pFET）互补 CMOS 完成信号处理，顶层的石墨烯晶体管作为化学传感器。系统无需外部电池即可对溶液种类进行识别并输出数字编码，标志着「感–算–能」一体化的近零功耗边缘节点。关键工艺突破是层间通孔与 50 nm 的极小层间距——相比传统 3D 集成（层间距常为数百纳米到微米级）大幅缩短互连，降低寄生。2D CMOS 比较器 endurance 达 10⁸ 次，且制备后 13 个月特性几乎无漂移，晶圆级测试 100 个 MoS₂ 与 100 个 WSe₂ FET 显示良好均匀性。",
+        "techIntro": "单片三维集成（Monolithic 3D, M3D）是在同一衬底上逐层制造、层间由高密度通孔互连的集成路线，相比通过键合（bonding）实现的 3D 封装，互连密度与延迟更优。难点在于上层工艺温度不能破坏下层器件——因此高温的单晶硅 CMOS 难以直接用于上层，而二维材料（TMDs，如 MoS₂、WSe₂）和石墨烯可低温转移/生长，成为上层晶体管的理想选择。将传感（石墨烯）、计算（2D CMOS）、供能（硅光伏）异构功能垂直集成，是面向物联网/边缘 AI 的「自供能智能像素」前沿方向。本工作由宾夕法尼亚州立大学 Saptarshi Das 团队完成，是该方向的代表性进展。",
+        "techTags": [
+          "单片三维集成",
+          "M3D",
+          "二维材料",
+          "MoS2",
+          "WSe2",
+          "石墨烯",
+          "自供能",
+          "Nature Electronics"
+        ],
+        "metrics": [
+          {
+            "name": "层间分离",
+            "value": "50",
+            "unit": "nm",
+            "note": "层间通孔集成"
+          },
+          {
+            "name": "硅光伏开路电压 (Voc)",
+            "value": "3.62",
+            "unit": "V",
+            "note": "制备 2D CMOS 前 Isc 2.5 μA"
+          },
+          {
+            "name": "比较器耐久",
+            "value": "1E8",
+            "unit": "次",
+            "note": "2D CMOS，阈值漂移小"
+          },
+          {
+            "name": "晶圆级测试器件数",
+            "value": "100+100",
+            "unit": "个",
+            "note": "MoS2 与 WSe2 FET 各 100"
+          },
+          {
+            "name": "系统稳定性",
+            "value": "13",
+            "unit": "个月",
+            "note": "制备后特性重叠、漂移极小"
+          }
+        ],
+        "attachments": [
+          {
+            "name": "论文原文",
+            "url": "https://www.nature.com/articles/s41928-026-01624-1",
+            "label": "Nature Electronics 全文",
+            "cached": false
+          }
+        ],
+        "source": "Nature Electronics",
+        "url": "https://www.nature.com/articles/s41928-026-01624-1",
+        "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "单片三维异构集成电子（示意）",
+        "date": "2026-06-23"
+      },
+      {
+        "id": "paper-002",
+        "title": "Physics-based Full-band GaN High-Electron-Mobility Transistor Simulation Suggests Upper Bound of LO Phonon Lifetime",
+        "authors": "Ankan Ghosh Dastider, Matt Grupen, Ashwin Tunga, Shaloo Rakheja（通讯作者，University of Illinois Urbana-Champaign）",
+        "field": "半导体",
+        "paperType": "期刊论文",
+        "venue": "arXiv preprint, arXiv:2512.06226 [physics.app-ph], 2026",
+        "oneLiner": "基于物理的全能带 GaN HEMT 仿真给出 LO 声子寿命上限 ≲40 fs，揭示热声子瓶颈",
+        "abstract": "本研究通过基于物理的全能带 GaN 高电子迁移率晶体管（HEMT）仿真表明：为复现实测 I–V 特性，LO（纵光学）声子寿命必须 ≲ 40 fs，这与无栅 GaN 异质结构中观察到的超快衰减一致。即便在此短寿命下，热 LO 声子瓶颈仍使饱和电流与峰值跨导分别降低约 30% 与 60%；若寿命超过数十飞秒，则出现明显热声子瓶颈并与实验不符，说明块体 GaN 的长寿命在 HEMT 中并不现实。",
+        "content": "论文建立了包含电子–LO 声子非平衡耦合的全能带（full-band）GaN HEMT 物理模型，栅长 0.1 μm、Al₀.₃₂Ga₀.₆₈N 势垒层 25 nm（栅下凹蚀后剩 13 nm）、LO 声子能量 92 meV。通过扫描 LO 声子寿命拟合实测 I–V，得到基准值 τ_LO = 30 fs（上限 ≲ 40 fs）；文献实验测得异质结构寿命为 30±15 fs 或 ≤ 50 fs，而块体 GaN 可达约 1 ps。在 τ_LO=30 fs 下，若将寿命降至 1 fs，漏极电流增加约 30%；完全忽略 LO 声子加热电流提升最高 50%，峰值跨导（g_m）在无 LO 加热时增加约 30%、全部声子加热消除时增加近 60%。结论指出：即便 LO 声子超快衰减，饱和电流与峰值跨导仍被热声子瓶颈降解约 30% 与 60%。温度分布上，V_GS=1 V、V_DS=10 V 时晶格约 390 K，而电子温度峰值达 2800 K，高场下 LO 声子温度超 1800 K。",
+        "techIntro": "氮化镓高电子迁移率晶体管（GaN HEMT）是 5G/6G 射频功放与快充、车载电源等功率电子的核心器件，其二维电子气（2DEG）在栅下高场区载流子速度极快。当沟道电子被电场强烈加热时，会通过发射纵光学（LO）声子冷却；但若 LO 声子被加热后未能及时衰减（即「热声子瓶颈」），就会反过来抑制电子能量耗散，降低饱和电流与跨导。块体 GaN 中 LO 声子寿命可达 ~1 ps，但在异质结构（如 AlGaN/GaN）中因界面与掺杂影响会大幅缩短。该工作用自洽的全能带输运模型量化了这一现象，对 GaN 器件紧凑模型和可靠性设计有直接指导意义。",
+        "techTags": [
+          "GaN",
+          "HEMT",
+          "热声子瓶颈",
+          "LO 声子",
+          "功率器件",
+          "射频器件",
+          "器件仿真",
+          "arXiv"
+        ],
+        "metrics": [
+          {
+            "name": "LO 声子寿命上限",
+            "value": "≲40",
+            "unit": "fs",
+            "note": "基准 τ_LO = 30 fs"
+          },
+          {
+            "name": "饱和电流退化",
+            "value": "~30",
+            "unit": "%",
+            "note": "热 LO 声子瓶颈所致"
+          },
+          {
+            "name": "峰值跨导退化",
+            "value": "~60",
+            "unit": "%",
+            "note": "热 LO 声子瓶颈所致"
+          },
+          {
+            "name": "电子温度峰值",
+            "value": "2800",
+            "unit": "K",
+            "note": "V_GS=1 V, V_DS=10 V"
+          },
+          {
+            "name": "栅长",
+            "value": "0.1",
+            "unit": "μm",
+            "note": "仿真器件"
+          }
+        ],
+        "attachments": [
+          {
+            "name": "论文预印本",
+            "url": "https://arxiv.org/abs/2512.06226",
+            "label": "arXiv 预印本",
+            "cached": false
+          }
+        ],
+        "source": "arXiv",
+        "url": "https://arxiv.org/abs/2512.06226",
+        "image": "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "GaN HEMT 器件与热声子效应（示意）",
+        "date": "2026-01-09"
       }
     ]
   }
