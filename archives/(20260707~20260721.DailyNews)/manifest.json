@@ -1,6 +1,6 @@
 {
   "window": "2026-07-07~2026-07-21",
-  "generated_at": "2026-07-09T08:19:48",
+  "generated_at": "2026-07-09T08:22:17",
   "channels": {
     "ai": {
       "days": 3,
@@ -19,7 +19,7 @@
     },
     "semicon": {
       "days": 3,
-      "items": 38,
+      "items": 52,
       "skills": 0
     }
   }

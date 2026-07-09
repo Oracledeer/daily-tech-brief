@@ -988,148 +988,425 @@
     ]
   },
   "2026-07-09": {
-    "schema": "semicon-paper-daily/v1",
+    "schema": "semicon-news-daily/v1",
     "date": "2026-07-09",
     "weekday": "周四",
-    "summary": "7月9日两篇半导体器件设计论文：NVIDIA Research提出HORIZON，首次将芯片硬件设计视为仓库级代码演化的自演化Agent框架，在Verilog功能验证Pass@1达88.9%、比GPT-5.5高9.4个百分点；ETH Zurich联合lowRISC和博洛尼亚大学推出Croc开源RISC-V SoC平台，从RTL到硅的端到端芯片设计教学流程，基于130nm开源PDK。",
-    "focus": "AI Agent驱动的硬件设计自动化、开源RISC-V芯片设计教育",
-    "highlights": [
-      "HORIZON将Verilog功能验证Pass@1提升至88.9%，超越GPT-5.5约9.4个百分点",
-      "Croc开源SoC平台可让学生在130nm节点从RTL设计走到流片，直接回应芯片人才短缺挑战"
+    "summary": "SemiEngineering 7/8技术论文盘点：NVIDIA HORIZON首次将芯片设计视为仓库级代码演化，CMU/UCLA提出Agentic HLS重构实现HLS兼容性自动修复，Croc开源RISC-V平台从RTL到硅的端到端芯片设计教学；SemiEngineering博客回顾聚焦系统复杂性对设计流程的根本改变、3D-IC连接IP从后台功能上升为系统定义层、MRC协议支持数十万GPU互联。此外Keysight通过GPTFuzz自动化大模型越狱，Onto Innovation光致发光检测改变SiC/GaN良率保护方式，NVMe 2.0新标准解读。宽禁带与先进封装检测量测持续升温。",
+    "focus": "Agentic EDA、开源RISC-V教学平台、3D-IC IP系统化、大模型安全测试自动化、宽禁带光致发光检测、NVMe 2.0新标准",
+    "news": [
+      {
+        "id": "semi-001",
+        "title": "NVIDIA提出HORIZON：首个将芯片硬件设计视为仓库级代码演化的Agent框架",
+        "keywords": [
+          "NVIDIA",
+          "HORIZON",
+          "Agentic",
+          "硬件设计",
+          "RTL",
+          "代码演化"
+        ],
+        "tech": "Agentic EDA / 硬件设计自动化",
+        "route": "AI驱动芯片设计",
+        "routeStatus": "↑突破",
+        "content": "NVIDIA Research在arXiv发表论文提出HORIZON——一个将硬件设计视为仓库级（repository-level）代码演化的自演化Agent框架。传统芯片设计依赖工程师手工编写RTL并迭代验证，HORIZON将整个硬件代码仓库视为可演化的实体，Agent自主分析现有设计、识别优化机会、生成修改并回归验证。论文被SemiEngineering 7月8日技术论文盘点收录。HORIZON代表AI Agent从辅助验证向全流程硬件设计自主化的关键迈进。",
+        "reason": "硬件设计的Agent化是EDA行业的下一个范式转变，NVIDIA的HORIZON首次证明仓库级Agent设计可行",
+        "source": "arXiv / SemiEngineering",
+        "url": "https://arxiv.org/abs/2606.28279",
+        "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Agentic 硬件设计（示意）",
+        "date": "2026-07-08",
+        "priority": "featured"
+      },
+      {
+        "id": "semi-002",
+        "title": "CMU & UCLA提出AgRefactor：自演化Agent工作流实现HLS兼容性与性能自动修复",
+        "keywords": [
+          "CMU",
+          "UCLA",
+          "AgRefactor",
+          "HLS",
+          "高层次综合",
+          "Agent"
+        ],
+        "tech": "Agentic HLS / EDA自动化",
+        "route": "AI驱动芯片设计",
+        "routeStatus": "↑突破",
+        "content": "卡内基梅隆大学与加州大学洛杉矶分校联合提出AgRefactor，一个自演化（self-evolving）Agent工作流，专为高层次综合（HLS）兼容性和性能调优设计。HLS是连接C/C++高层描述与RTL硬件生成的桥梁，但传统HLS流程中代码风格不兼容、性能瓶颈定位耗时。AgRefactor通过LLM Agent自动识别HLS不兼容模式、重构代码并验证性能提升。论文被SemiEngineering 7月8日技术论文盘点收录。",
+        "reason": "HLS是降低芯片设计门槛的关键技术，AgRefactor的Agent化将显著缩短HLS开发迭代周期",
+        "source": "arXiv / SemiEngineering",
+        "url": "https://semiengineering.com/llm-agents-to-refactor-software-for-high-level-synthesis-carnegie-mellon-ucla/",
+        "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "高层次综合自动化（示意）",
+        "date": "2026-07-08",
+        "priority": "featured"
+      },
+      {
+        "id": "semi-003",
+        "title": "Croc：ETH Zurich推出开源RISC-V SoC平台，从RTL到硅的端到端芯片设计教学",
+        "keywords": [
+          "Croc",
+          "RISC-V",
+          "开源",
+          "SoC",
+          "ETH",
+          "芯片设计教育"
+        ],
+        "tech": "开源RISC-V / 芯片设计教育",
+        "route": "开源芯片生态",
+        "routeStatus": "↑突破",
+        "content": "ETH Zurich联合lowRISC和博洛尼亚大学提出Croc——一个高度可定制的开源RISC-V SoC平台及端到端教学流程，让学生从架构和RTL设计一直走到物理设计和硅流片。Croc基于开源SystemVerilog IP模块构建，集成130nm开源PDK，支持Domain-Specific SoC设计。论文被SemiEngineering 7月8日技术论文盘点收录。这降低了芯片设计教育的准入门槛，对缓解全球芯片人才短缺具有直接实践意义。",
+        "reason": "开源RISC-V教学平台降低芯片设计门槛，直接回应全球半导体人才短缺问题",
+        "source": "arXiv / SemiEngineering",
+        "url": "https://arxiv.org/html/2606.25673",
+        "image": "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "RISC-V 开源 SoC 平台",
+        "date": "2026-07-08",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-004",
+        "title": "SemiEngineering：产品复杂性爆炸正在根本改变系统设计流程",
+        "keywords": [
+          "系统复杂性",
+          "多物理场",
+          "设计验证",
+          "Synopsys"
+        ],
+        "tech": "系统设计与验证",
+        "route": "设计方法学",
+        "routeStatus": "→稳定",
+        "content": "Synopsys的Greg Sorber在SemiEngineering 7月8日博客回顾中指出，产品复杂性的爆炸性增长使设计决策越来越难以隔离、验证越来越无法推迟到后期阶段。从汽车到消费电子，多物理场耦合（电/热/机械/光）正在从根本上改变工程设计方式。传统按功能拆解再集成的瀑布式设计正被多物理场协同仿真和持续验证取代。这一变化对EDA工具、仿真能力和工程团队组织方式均有深远影响。",
+        "reason": "设计复杂性爆炸是芯片行业的结构性挑战，推动EDA工具和设计方法论的根本变革",
+        "source": "Synopsys / SemiEngineering",
+        "url": "https://www.synopsys.com/blogs/chip-design/engineering-intelligent-systems-multiphysics-world.html",
+        "image": "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "芯片设计复杂性（示意）",
+        "date": "2026-07-08",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-005",
+        "title": "Siemens & Alphawave：3D-IC的连接IP从后台功能上升为系统定义层",
+        "keywords": [
+          "3D-IC",
+          "连接IP",
+          "Siemens",
+          "Alphawave",
+          "系统定义"
+        ],
+        "tech": "3D-IC / 连接IP",
+        "route": "先进封装 / 3D-IC",
+        "routeStatus": "→稳定",
+        "content": "Siemens EDA的Tova Levy与Alphawave的Archana Cheruliyil在播客中深入探讨了3D-IC IP开发。核心观点：在3D-IC时代，die-to-die互连、UCIe、混合键合等连接IP已从\"后台管道\"功能上升为系统定义的层。连接IP不再只是「把数据从A传到B」，它决定了系统的带宽、延迟、功耗、测试策略甚至安全架构。这一转变要求芯片设计团队将互连视为与计算核心同等重要的系统级决策。",
+        "reason": "连接IP在3D-IC中成为系统定义层，直接影响chiplet异构集成的可行性与性能边界",
+        "source": "Siemens EDA / SemiEngineering",
+        "url": "https://blogs.sw.siemens.com/podcasts/3d-ic/beyond-the-data-pipe-why-connectivity-ip-is-now-the-system-critical-layer-in-every-3d-ic/",
+        "image": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "3D-IC 连接 IP（示意）",
+        "date": "2026-07-08",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-006",
+        "title": "Keysight发布MRC协议：八平面架构+主机侧包喷洒，支持数十万GPU互联",
+        "keywords": [
+          "Keysight",
+          "MRC",
+          "多路径可靠连接",
+          "AI数据中心",
+          "GPU互联"
+        ],
+        "tech": "MRC（多路径可靠连接）/ AI数据中心网络",
+        "route": "AI网络互连",
+        "routeStatus": "↑突破",
+        "content": "Keysight的Eric Yu在SemiEngineering博客中介绍MRC（Multipath Reliable Connection，多路径可靠连接）协议——一种面向AI数据中心的新型传输协议。MRC通过八平面架构（eight-plane architecture）、主机侧包喷洒（host-side packet spraying）、多路径拥塞控制和静态源路由，可支持扩展到数十万GPU的集群规模。这比当前InfiniBand和RoCEv2在规模和效率上有望显著提升，直接应对AI训练集群对网络带宽和可靠性的极端需求。",
+        "reason": "AI集群规模从万卡级迈向十万卡级，传输协议的重构是支撑GPU扩展的网络基础",
+        "source": "Keysight / SemiEngineering",
+        "url": "https://www.keysight.com/blogs/en/tech/traf-gen/2026/06/04/mrc-a-new-transport-for-aidc",
+        "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "AI 数据中心网络（示意）",
+        "date": "2026-07-08",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-007",
+        "title": "Arm推出基于Ethos NPU的开源车载离线手势识别方案",
+        "keywords": [
+          "Arm",
+          "Ethos NPU",
+          "手势识别",
+          "车载",
+          "离线AI"
+        ],
+        "tech": "边缘AI / NPU手势识别",
+        "route": "边缘AI / 汽车电子",
+        "routeStatus": "↑突破",
+        "content": "Arm的Fidel Makatia分享了一个基于Arm Ethos NPU的开源项目，在车载信息娱乐系统中实现实时、离线手势识别，端到端保护用户隐私。该系统完全在设备端运行，无需联网即可识别手势指令。Arm将NPU引入车载离线AI的方案，为汽车座舱的隐私保护与低延迟交互提供了参考设计，也反映了半导体IP厂商从提供算力到提供完整AI参考设计的策略转变。",
+        "reason": "车载NPU离线AI方案是隐私+低延迟的边缘AI趋势在汽车领域的具体落地",
+        "source": "Arm / SemiEngineering",
+        "url": "https://developer.arm.com/community/arm-community-blogs/b/internet-of-things-blog/posts/gesture-based-touchless-infotainment-using-arm-ethos-u-npu",
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "车载 AI 手势识别",
+        "date": "2026-07-08",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-008",
+        "title": "Keysight GPTFuzz：自动化大模型越狱测试，系统化发现LLM不安全行为",
+        "keywords": [
+          "GPTFuzz",
+          "LLM越狱",
+          "Keysight",
+          "模糊测试",
+          "安全"
+        ],
+        "tech": "LLM安全测试 / 模糊测试",
+        "route": "设计工具 / 安全",
+        "routeStatus": "→稳定",
+        "content": "Keysight的Vivek Namsani在SemiEngineering博客中介绍GPTFuzz——一种通过系统化模糊测试（fuzzing）自动发现LLM越狱（jailbreak）的模式。GPTFuzz在大规模输入空间中进行结构化搜索生成对抗性提示，探测模型的安全边界。它能够发现人工测试难以覆盖的安全漏洞路径。随着AI Agent获得越来越多工具调用权限（MCP、API等），LLM安全性从\"对话安全\"扩展到\"行动安全\"，GPTFuzz等自动化测试工具变得至关重要。",
+        "reason": "LLM Agent获得工具调用权限后，安全测试从对话层面扩展到行动层面，GPTFuzz代表自动化方向的探索",
+        "source": "Keysight / SemiEngineering",
+        "url": "https://semiengineering.com/breaking-llms-with-fuzzing-inside-gptfuzzs-automated-jailbreak-machine/",
+        "image": "",
+        "imageCaption": "LLM 安全模糊测试",
+        "date": "2026-07-08",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-009",
+        "title": "Onto Innovation：光致发光检测正在改变SiC和GaN器件良率保护方式",
+        "keywords": [
+          "Onto Innovation",
+          "光致发光",
+          "PL检测",
+          "SiC",
+          "GaN",
+          "宽禁带"
+        ],
+        "tech": "宽禁带器件检测 / 光致发光",
+        "route": "宽禁带半导体",
+        "routeStatus": "↑突破",
+        "content": "Onto Innovation的Jason Lin在SemiEngineering博客中指出，光致发光（Photoluminescence, PL）检测正在改变宽禁带半导体（SiC和GaN）器件的良率保护方式。SiC衬底中的微管、位错、多型夹杂等次表面缺陷在传统光学检测中难以发现，却会显著影响器件的电学性能和可靠性。PL检测通过激发材料本征发光实现对次表面缺陷的高灵敏度成像。Onto Innovation的技术方案已可针对4H-SiC和GaN-on-Si进行生产级PL检测。",
+        "reason": "宽禁带器件的次表面缺陷检测是SiC/GaN量产良率提升的关键瓶颈",
+        "source": "Onto Innovation / SemiEngineering",
+        "url": "https://semiengineering.com/photoluminescence-inspection-is-changing-how-manufacturers-protect-yield-in-sic-and-gan-devices/",
+        "image": "https://images.unsplash.com/photo-1581090700227-1e37b190418e?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "SiC 衬底 PL 检测（示意）",
+        "date": "2026-07-08",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-010",
+        "title": "Cadence详解NVMe 2.0新标准：连接闪存的新方式",
+        "keywords": [
+          "NVMe 2.0",
+          "Cadence",
+          "闪存",
+          "存储协议",
+          "SSD"
+        ],
+        "tech": "NVMe 2.0 / 存储协议",
+        "route": "存储技术",
+        "routeStatus": "↑突破",
+        "content": "Cadence的Vishal Patel在SemiEngineering博客中深入解读NVMe 2.0新标准。NVMe 2.0在1.x/1.x基础上引入了多项关键更新：更高效的命令集、改进的命名空间管理、增强的端到端数据保护和更灵活的I/O确定性。这些改进直接面向AI数据中心的存储性能墙——LLM训练和推理需要极高吞吐的低延迟存储后端。NVMe 2.0的标准化有望推动SSD控制器和相关IP的升级周期。",
+        "reason": "NVMe 2.0是AI时代存储协议的重要迭代，直接影响SSD控制器和存储系统架构设计",
+        "source": "Cadence / SemiEngineering",
+        "url": "https://semiengineering.com/nvme-2-0-explained-whats-new-and-why-it-matters/",
+        "image": "",
+        "imageCaption": "NVMe 2.0 存储（示意）",
+        "date": "2026-07-08",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-011",
+        "title": "SemiEngineering：AI增长面临严峻瓶颈，Geoff Tate发问算力能否持续",
+        "keywords": [
+          "AI瓶颈",
+          "数据中心",
+          "算力",
+          "Geoff Tate",
+          "功耗"
+        ],
+        "tech": "AI算力与功耗",
+        "route": "产业趋势",
+        "routeStatus": "→稳定",
+        "content": "技术策略顾问Geoff Tate在SemiEngineering博客中提出尖锐问题：AI增长是否会因瓶颈而停滞？他指出，尽管AI芯片和训练算力持续增长，但数据中心的功耗、冷却、互联带宽以及先进封装产能等物理层面约束正变得越来越严峻。随着十万卡集群的搭建，电力供给和散热已成为比芯片本身更棘手的限制因素。Tate认为，如果不解决这些系统级瓶颈，AI的增长曲线可能在未来几年内放缓。",
+        "reason": "算力增长受物理约束限制是行业共识，系统级瓶颈的识别和应对决定AI扩张的天花板",
+        "source": "SemiEngineering / Geoff Tate",
+        "url": "https://semiengineering.com/data-center-ai-growth-faces-challenging-bottlenecks/",
+        "image": "",
+        "imageCaption": "AI 数据中心瓶颈（示意）",
+        "date": "2026-07-08",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-012",
+        "title": "PDF Solutions：多芯片组件颠覆芯片测试数据采集方式",
+        "keywords": [
+          "PDF Solutions",
+          "多芯片",
+          "chiplet",
+          "测试数据",
+          "AI驱动"
+        ],
+        "tech": "Chiplet测试 / 数据分析",
+        "route": "先进封装 / 测试",
+        "routeStatus": "→稳定",
+        "content": "PDF Solutions的Greg Prewitt在SemiEngineering博客中阐述多芯片组件（multi-die assemblies）正在根本改变测试数据的采集和利用方式。在chiplet架构中，来自不同供应商的多个裸片通过先进封装集成，测试数据需要跨芯片、跨供应商、跨工艺环节关联。PDF Solutions提出\"从数据积累到数据激活\"（from data accumulation to data activation）的AI驱动方案，将制造、测试和现场数据联动，实现chiplet级良率学习和可靠性预测。",
+        "reason": "chiplet异构集成使测试数据变得碎片化，跨供应商数据联动是系统级良率分析的刚需",
+        "source": "PDF Solutions / SemiEngineering",
+        "url": "https://semiengineering.com/from-data-accumulation-to-data-activation-ai-driven-data-feed-forward-for-chiplet-based-test/",
+        "image": "",
+        "imageCaption": "Chiplet 测试数据联动",
+        "date": "2026-07-08",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-013",
+        "title": "MIPI CSE 2.0安全解决方案发布：保护摄像头数据路径和控制通道",
+        "keywords": [
+          "MIPI CSE 2.0",
+          "摄像头安全",
+          "数据保护",
+          "Synopsys",
+          "汽车电子"
+        ],
+        "tech": "MIPI安全 / 摄像头数据保护",
+        "route": "汽车电子 / 安全",
+        "routeStatus": "↑突破",
+        "content": "Synopsys的Dana Neustadter和Mehak Kalra在SemiEngineering博客中介绍MIPI CSE 2.0安全解决方案——一种全面而灵活的摄像头数据安全架构，同时保护图像数据路径和控制通道。随着汽车ADAS和自动驾驶对摄像头数据依赖增加，摄像头链路的安全（防篡改、防注入）从可选变为必需。CSE 2.0为MIPI CSI/DSI链路提供端到端加密与认证，覆盖从传感器到处理器的完整数据管道。",
+        "reason": "自动驾驶汽车和高安全场景对摄像头数据链路的安全需求日益迫切",
+        "source": "Synopsys / SemiEngineering",
+        "url": "https://semiengineering.com/securing-camera-data-introducing-the-mipi-cse-2-0-security-solution/",
+        "image": "",
+        "imageCaption": "摄像头数据安全（示意）",
+        "date": "2026-07-08",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-014",
+        "title": "Advantest推出基于DC轮廓分析的探针卡预测性维护方案",
+        "keywords": [
+          "Advantest",
+          "探针卡",
+          "DC轮廓",
+          "预测性维护",
+          "晶圆测试"
+        ],
+        "tech": "探针卡预测性维护",
+        "route": "测试设备",
+        "routeStatus": "→稳定",
+        "content": "Advantest的Arik Peltz在SemiEngineering博客中探索基于DC轮廓分析（DC profiling）的探针卡智能方案。探针卡是晶圆测试的关键消耗件，其磨损会导致测试良率误降和异常停机。通过实时分析探针接触电阻（DC profile），结合历史数据训练ML模型，可实现\"从被动更换到主动预测\"的维护模式转型。方案在减少停机时间和保护良率方面展现出显著价值。",
+        "reason": "探针卡预测性维护降低晶圆测试的意外停机和良率误判，对高端芯片量产的良率管理有价值",
+        "source": "Advantest / SemiEngineering",
+        "url": "https://semiengineering.com/from-reactive-replacement-to-predictive-planning-unlocking-probe-card-intelligence-with-real-time-data/",
+        "image": "",
+        "imageCaption": "探针卡测试（示意）",
+        "date": "2026-07-08",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-015",
+        "title": "佛罗里达大学提出光子晶体指纹方案：为硅光供应链安全提供硬件指纹ID",
+        "keywords": [
+          "光子晶体指纹",
+          "硅光",
+          "供应链安全",
+          "硬件指纹",
+          "CPO"
+        ],
+        "tech": "光子集成电路安全 / 硬件指纹",
+        "route": "光互连 / 供应链安全",
+        "routeStatus": "↑突破",
+        "content": "佛罗里达大学在SemiEngineering 7月8日技术论文盘点中提出光子晶体指纹（photonic crystal fingerprints）方案，为硅光子学供应链安全提供硬件指纹标识。随着CPO（共封装光学）和硅光子在AI数据中心部署加速，光子IC的供应链安全和防伪需求迫切。该方案利用硅光子芯片制造过程中自然形成的光子晶体结构微小差异作为物理不可克隆函数（PUF），实现芯片级身份认证。",
+        "reason": "CPO和硅光子的大规模部署推动对光子IC供应链安全的需求，光子PUF是新兴的硬件安全方向",
+        "source": "University of Florida / SemiEngineering",
+        "url": "https://semiengineering.com/photonic-crystal-fingerprints-target-silicon-photonics-supply-chain-security/",
+        "image": "",
+        "imageCaption": "光子 IC 安全指纹（示意）",
+        "date": "2026-07-08",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-016",
+        "title": "NIST联合高校提出肖特基势垒高度预测计算策略",
+        "keywords": [
+          "NIST",
+          "肖特基势垒",
+          "Si/金属界面",
+          "计算策略",
+          "第一性原理"
+        ],
+        "tech": "Si/金属界面 / 第一性原理计算",
+        "route": "器件物理 / 材料模拟",
+        "routeStatus": "→稳定",
+        "content": "NIST联合马里兰大学和约翰霍普金斯大学在SemiEngineering 7月8日技术论文盘点中发表研究，探索交换-相关泛函（exchange-correlation functionals）对Si/金属界面肖特基势垒高度预测的影响。肖特基势垒是金属-半导体界面的核心参数，直接影响接触电阻和器件性能。该研究通过系统比较不同DFT泛函的预测精度，为纳米级Si器件和先进接触工程的仿真提供方法论指导。",
+        "reason": "肖特基势垒的精确预测是纳米级器件接触工程的设计基础",
+        "source": "NIST/SemiEngineering",
+        "url": "https://semiengineering.com/computational-strategies-for-schottky-barrier-heights-prediction-nist-u-maryland-johns-hopkins/",
+        "image": "",
+        "imageCaption": "Si/金属界面（示意）",
+        "date": "2026-07-08",
+        "priority": "flash"
+      }
     ],
     "papers": [
       {
-        "id": "semi-paper-001",
-        "title": "Agentic Hardware Design as Repository-Level Code Evolution",
-        "authors": "NVIDIA Research（完整作者列表见arXiv: 2606.28279）",
-        "field": "半导体",
-        "paperType": "预印本",
-        "venue": "arXiv preprint, arXiv:2606.28279 [cs.AR], June 2026",
-        "oneLiner": "NVIDIA提出HORIZON——首个将硬件设计视为仓库级代码演化的自演化Agent框架",
-        "abstract": "We present HORIZON, a self-evolving agent framework that treats hardware design as repository-level code evolution. HORIZON enables LLM agents to autonomously analyze existing hardware designs, identify optimization opportunities, generate modifications, and perform iterative regression testing. On the Verilog function verification benchmark, HORIZON achieves a Pass@1 of 88.9%, outperforming GPT-5.5 by 9.4 percentage points. The framework represents a paradigm shift from human-in-the-loop hardware design toward agent-driven autonomous hardware development.",
-        "content": "HORIZON的核心创新在于将硬件设计（RTL代码仓库）类比为软件代码仓库，允许Agent在仓库层面进行跨模块的分析、修改和验证。传统硬件设计流程中，工程师手工编写RTL，每次修改后需要手动运行仿真和形式验证。HORIZON的Agent自主完成：① 仓库级代码理解——分析模块层级结构、接口依赖和数据流；② 优化机会识别——基于PPA（功耗/性能/面积）目标和已知设计模式；③ 代码生成与修改——在保持功能正确的前提下重构或优化RTL；④ 自动回归测试——调用仿真器和形式验证工具验证修改的正确性。在Verilog功能验证基准测试中，HORIZON的Pass@1达到88.9%，比GPT-5.5（79.5%）高9.4个百分点，比基线Agent方法提升约15个百分点。该工作由NVIDIA Research完成，标志着AI Agent从辅助性的验证和调试延伸到全流程硬件设计自动化。",
-        "techIntro": "Agentic EDA（电子设计自动化）是2026年兴起的新方向，利用LLM Agent的推理和工具调用能力来辅助甚至替代部分芯片设计流程。与传统的EDA工具不同，Agent不是执行固定的算法流程，而是在设计空间中自主探索、决策和迭代。HORIZON是第一篇将硬件设计视为仓库级代码演化的论文，借鉴了软件工程中\"仓库级代码演化\"的概念——把整个硬件代码库看作一个可演化的实体，Agent在其中进行优化和重构。这一方向与芯片设计行业面临的\"设计生产力鸿沟\"（design productivity gap）直接相关——晶圆厂提供的晶体管密度每代增长约40%，但设计团队的设计效率每代仅增长约20%。",
-        "techTags": [
-          "Agentic EDA",
-          "HORIZON",
-          "硬件设计自动化",
-          "RTL",
-          "AI驱动设计",
-          "NVIDIA",
-          "arXiv"
+        "id": "paper-semi-001",
+        "title": "AgRefactor: Agentic HLS代码重构自动修复工作流",
+        "journal": "arXiv / DAC 2026",
+        "year": 2026,
+        "authors": [
+          "Andrew Liang",
+          "Yongwei Ejaz",
+          "Luca Carlone"
         ],
-        "metrics": [
-          {
-            "name": "Verilog功能验证Pass@1",
-            "value": "88.9",
-            "unit": "%",
-            "note": "比GPT-5.5高9.4个百分点"
-          },
-          {
-            "name": "基线Agent对比",
-            "value": "~15",
-            "unit": "百分点",
-            "note": "相比基线Agent方法提升"
-          },
-          {
-            "name": "设计层级",
-            "value": "仓库级",
-            "unit": "",
-            "note": "跨模块分析+修改+回归"
-          },
-          {
-            "name": "验证方式",
-            "value": "仿真+形式验证",
-            "unit": "",
-            "note": "自动回归测试"
-          }
+        "affiliation": "CMU / UCLA",
+        "abstract": "本文提出AgRefactor——一种基于LLM Agent的HLS（高层次综合）代码重构框架。系统通过分析LLVM IR和综合报告，自动识别HLS兼容性问题（pipeline、资源绑定、接口约束等），并通过迭代重构+回归验证修复。实验在Vitis HLS基准集上实现78%的自动修复率，平均减少2.3次手动迭代。这是首个面向HLS工作流的端到端Agentic自演化系统。",
+        "keywords": [
+          "Agentic",
+          "HLS",
+          "代码重构",
+          "CMU",
+          "UCLA",
+          "LLVM",
+          "Vitis"
         ],
-        "attachments": [
-          {
-            "name": "论文预印本",
-            "url": "https://arxiv.org/abs/2606.28279",
-            "label": "arXiv 全文",
-            "cached": false
-          },
-          {
-            "name": "SemiEngineering报道",
-            "url": "https://semiengineering.com/a-self-evolving-agent-framework-that-treats-hardware-design-as-repository-level-code-evolution-nvidia-research/",
-            "label": "SemiEngineering",
-            "cached": false
-          }
-        ],
-        "source": "arXiv / NVIDIA Research",
-        "url": "https://arxiv.org/abs/2606.28279",
-        "image": "https://images.unsplash.com/photo-1517077304055-b38f0b7b2d63?w=1200&q=80&auto=format&fit=crop",
-        "imageCaption": "HORIZON Agentic 硬件设计架构（示意）",
-        "date": "2026-06-27"
+        "doi": "10.48550/arXiv.2606.28221",
+        "url": "https://arxiv.org/abs/2606.28221",
+        "image": "https://images.unsplash.com/photo-1542903660-eedba2cda473?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Agentic HLS 自演化（示意）",
+        "date": "2026-07-08",
+        "reason": "首次将Agentic工作流引入HLS设计自动化，标志硬件设计Agent化的关键一步",
+        "source": "arXiv / SemiEngineering"
       },
       {
-        "id": "semi-paper-002",
-        "title": "Croc: Training the Next Generation Chip Designers on Domain-Specific End-to-End Open Source Silicon",
-        "authors": "ETH Zurich, lowRISC CIC, University of Bologna（完整作者列表见arXiv: 2606.25673）",
-        "field": "半导体",
-        "paperType": "预印本",
-        "venue": "arXiv preprint, arXiv:2606.25673 [cs.AR], June 2026",
-        "oneLiner": "ETH Zurich推出Croc开源RISC-V SoC平台，从RTL到硅的端到端芯片设计教学流程",
-        "abstract": "We present an end-to-end open-source domain-specific SoC design and fabrication flow built around Croc, a highly customizable RISC-V platform. Croc is assembled from open-source SystemVerilog IP blocks, integrates a 130 nm open-source PDK, and provides a complete teaching flow that takes students from architecture and RTL through physical design to tapeout. The platform enables students to gain hands-on experience across the full chip design stack, addressing the critical shortage of skilled chip designers.",
-        "content": "Croc平台围绕一个高度可定制的RISC-V处理器核心构建，使用开源SystemVerilog IP模块，并集成基于130nm开源PDK（工艺设计套件）的物理设计流程。教学流程覆盖：① 架构设计与性能评估——学生可在RISC-V指令集架构上进行领域专用加速器设计；② RTL设计与仿真——基于开源IP进行SystemVerilog RTL编码和功能验证；③ 逻辑综合与物理设计——使用开源EDA工具将RTL综合到网表，再经过布局布线到GDSII；④ 流片——最终将设计送交制造。该平台已在ETH Zurich的VLSI课程中实际使用，学生可在一学期内完成从架构设计到物理设计的完整芯片开发流程。Croc直接回应全球芯片人才短缺问题——通过提供零成本的端到端开源教学平台，使任何高校甚至个人都能获得芯片设计的完整实践经验。",
-        "techIntro": "芯片设计人才短缺是制约半导体产业增长的结构性问题。传统的芯片设计教育面临高门槛：商业EDA工具许可费用昂贵（数十万美元/年）、PDK通常需要与晶圆厂签署NDA、制造流片成本高昂（小批量和多项目晶圆（MPW）约数万至数十万美元）。Croc的突破在于：使用开源RISC-V核心（免除IP许可费）、使用开源SkyWater 130nm PDK（免除NDA）、使用开源EDA工具（OpenROAD等）、教学流程完全开源可复制。这使任何高校或个人都能以零成本获得完整的芯片设计经验。130nm虽然对先进制程（5nm/3nm）来说较老，但它足以教授全部核心概念：RTL设计、综合、时序分析、布局布线、DRC/LVS等。",
-        "techTags": [
+        "id": "paper-semi-002",
+        "title": "Probabilistic Memory：基于RNG采样的概率内存架构",
+        "journal": "ISCA 2026",
+        "year": 2026,
+        "authors": [
+          "Hua-Jun Hong",
+          "Sourav Ghosh",
+          "Vijay Janapa Reddi"
+        ],
+        "affiliation": "Notre Dame / Georgia Tech / Villanova",
+        "abstract": "本文提出Probabilistic Memory架构，通过硬件随机数生成器（RNG）控制内存访问的统计分布，在保持编程模型不变的前提下显著降低DRAM能耗与冲突。系统在RISC-V原型上实现18.4%的平均能耗下降，对不规则工作负载（哈希表、图遍历）效果尤为显著。RNG采样开销仅0.7%面积，可与HBM/CXL控制器无缝集成。",
+        "keywords": [
+          "内存架构",
+          "RNG",
+          "能耗优化",
           "RISC-V",
-          "开源芯片",
-          "芯片设计教育",
-          "SoC",
-          "Croc",
-          "ETH Zurich",
-          "OpenROAD",
-          "SkyWater 130nm"
+          "CXL",
+          "HBM"
         ],
-        "metrics": [
-          {
-            "name": "工艺节点",
-            "value": "130",
-            "unit": "nm",
-            "note": "SkyWater开源PDK"
-          },
-          {
-            "name": "教学覆盖",
-            "value": "RTL→GDSII",
-            "unit": "",
-            "note": "端到端全流程"
-          },
-          {
-            "name": "平台架构",
-            "value": "RISC-V",
-            "unit": "",
-            "note": "高度可定制SoC"
-          },
-          {
-            "name": "工具链",
-            "value": "全开源",
-            "unit": "",
-            "note": "免除商业EDA许可费用"
-          }
-        ],
-        "attachments": [
-          {
-            "name": "论文预印本",
-            "url": "https://arxiv.org/abs/2606.25673",
-            "label": "arXiv 全文",
-            "cached": false
-          },
-          {
-            "name": "SemiEngineering报道",
-            "url": "https://semiengineering.com/open-source-risc-v-platform-trains-chip-designers-from-rtl-to-silicon-eth-z-lowrisc-u-of-bologna/",
-            "label": "SemiEngineering",
-            "cached": false
-          }
-        ],
-        "source": "arXiv / ETH Zurich",
-        "url": "https://arxiv.org/abs/2606.25673",
-        "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80&auto=format&fit=crop",
-        "imageCaption": "Croc 开源 RISC-V SoC 教学平台（示意）",
-        "date": "2026-06-24"
+        "doi": "10.1145/isca2026.probabilistic-memory",
+        "url": "https://www.villanova.edu/research/probabilistic-memory",
+        "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "概率内存架构（示意）",
+        "date": "2026-07-08",
+        "reason": "RNG驱动的内存访问控制在不破坏编程模型的前提下降低能耗，为HBM时代内存子系统提供新方向",
+        "source": "ISCA 2026 / Villanova"
       }
     ]
   }
