@@ -349,5 +349,151 @@
         "date": "2026-01-09"
       }
     ]
+  },
+  "2026-07-09": {
+    "schema": "display-paper-daily/v1",
+    "date": "2026-07-09",
+    "weekday": "周四",
+    "summary": "7月9日两篇半导体器件设计论文：NVIDIA Research提出HORIZON，首次将芯片硬件设计视为仓库级代码演化的自演化Agent框架，在Verilog功能验证Pass@1达88.9%、比GPT-5.5高9.4个百分点；ETH Zurich联合lowRISC和博洛尼亚大学推出Croc开源RISC-V SoC平台，从RTL到硅的端到端芯片设计教学流程，基于130nm开源PDK。",
+    "focus": "AI Agent驱动的硬件设计自动化、开源RISC-V芯片设计教育",
+    "highlights": [
+      "HORIZON将Verilog功能验证Pass@1提升至88.9%，超越GPT-5.5约9.4个百分点",
+      "Croc开源SoC平台可让学生在130nm节点从RTL设计走到流片，直接回应芯片人才短缺挑战"
+    ],
+    "papers": [
+      {
+        "id": "semi-paper-001",
+        "title": "Agentic Hardware Design as Repository-Level Code Evolution",
+        "authors": "NVIDIA Research（完整作者列表见arXiv: 2606.28279）",
+        "field": "半导体",
+        "paperType": "预印本",
+        "venue": "arXiv preprint, arXiv:2606.28279 [cs.AR], June 2026",
+        "oneLiner": "NVIDIA提出HORIZON——首个将硬件设计视为仓库级代码演化的自演化Agent框架",
+        "abstract": "We present HORIZON, a self-evolving agent framework that treats hardware design as repository-level code evolution. HORIZON enables LLM agents to autonomously analyze existing hardware designs, identify optimization opportunities, generate modifications, and perform iterative regression testing. On the Verilog function verification benchmark, HORIZON achieves a Pass@1 of 88.9%, outperforming GPT-5.5 by 9.4 percentage points. The framework represents a paradigm shift from human-in-the-loop hardware design toward agent-driven autonomous hardware development.",
+        "content": "HORIZON的核心创新在于将硬件设计（RTL代码仓库）类比为软件代码仓库，允许Agent在仓库层面进行跨模块的分析、修改和验证。传统硬件设计流程中，工程师手工编写RTL，每次修改后需要手动运行仿真和形式验证。HORIZON的Agent自主完成：① 仓库级代码理解——分析模块层级结构、接口依赖和数据流；② 优化机会识别——基于PPA（功耗/性能/面积）目标和已知设计模式；③ 代码生成与修改——在保持功能正确的前提下重构或优化RTL；④ 自动回归测试——调用仿真器和形式验证工具验证修改的正确性。在Verilog功能验证基准测试中，HORIZON的Pass@1达到88.9%，比GPT-5.5（79.5%）高9.4个百分点，比基线Agent方法提升约15个百分点。该工作由NVIDIA Research完成，标志着AI Agent从辅助性的验证和调试延伸到全流程硬件设计自动化。",
+        "techIntro": "Agentic EDA（电子设计自动化）是2026年兴起的新方向，利用LLM Agent的推理和工具调用能力来辅助甚至替代部分芯片设计流程。与传统的EDA工具不同，Agent不是执行固定的算法流程，而是在设计空间中自主探索、决策和迭代。HORIZON是第一篇将硬件设计视为仓库级代码演化的论文，借鉴了软件工程中\"仓库级代码演化\"的概念——把整个硬件代码库看作一个可演化的实体，Agent在其中进行优化和重构。这一方向与芯片设计行业面临的\"设计生产力鸿沟\"（design productivity gap）直接相关——晶圆厂提供的晶体管密度每代增长约40%，但设计团队的设计效率每代仅增长约20%。",
+        "techTags": [
+          "Agentic EDA",
+          "HORIZON",
+          "硬件设计自动化",
+          "RTL",
+          "AI驱动设计",
+          "NVIDIA",
+          "arXiv"
+        ],
+        "metrics": [
+          {
+            "name": "Verilog功能验证Pass@1",
+            "value": "88.9",
+            "unit": "%",
+            "note": "比GPT-5.5高9.4个百分点"
+          },
+          {
+            "name": "基线Agent对比",
+            "value": "~15",
+            "unit": "百分点",
+            "note": "相比基线Agent方法提升"
+          },
+          {
+            "name": "设计层级",
+            "value": "仓库级",
+            "unit": "",
+            "note": "跨模块分析+修改+回归"
+          },
+          {
+            "name": "验证方式",
+            "value": "仿真+形式验证",
+            "unit": "",
+            "note": "自动回归测试"
+          }
+        ],
+        "attachments": [
+          {
+            "name": "论文预印本",
+            "url": "https://arxiv.org/abs/2606.28279",
+            "label": "arXiv 全文",
+            "cached": false
+          },
+          {
+            "name": "SemiEngineering报道",
+            "url": "https://semiengineering.com/a-self-evolving-agent-framework-that-treats-hardware-design-as-repository-level-code-evolution-nvidia-research/",
+            "label": "SemiEngineering",
+            "cached": false
+          }
+        ],
+        "source": "arXiv / NVIDIA Research",
+        "url": "https://arxiv.org/abs/2606.28279",
+        "image": "https://images.unsplash.com/photo-1517077304055-b38f0b7b2d63?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "HORIZON Agentic 硬件设计架构（示意）",
+        "date": "2026-06-27"
+      },
+      {
+        "id": "semi-paper-002",
+        "title": "Croc: Training the Next Generation Chip Designers on Domain-Specific End-to-End Open Source Silicon",
+        "authors": "ETH Zurich, lowRISC CIC, University of Bologna（完整作者列表见arXiv: 2606.25673）",
+        "field": "半导体",
+        "paperType": "预印本",
+        "venue": "arXiv preprint, arXiv:2606.25673 [cs.AR], June 2026",
+        "oneLiner": "ETH Zurich推出Croc开源RISC-V SoC平台，从RTL到硅的端到端芯片设计教学流程",
+        "abstract": "We present an end-to-end open-source domain-specific SoC design and fabrication flow built around Croc, a highly customizable RISC-V platform. Croc is assembled from open-source SystemVerilog IP blocks, integrates a 130 nm open-source PDK, and provides a complete teaching flow that takes students from architecture and RTL through physical design to tapeout. The platform enables students to gain hands-on experience across the full chip design stack, addressing the critical shortage of skilled chip designers.",
+        "content": "Croc平台围绕一个高度可定制的RISC-V处理器核心构建，使用开源SystemVerilog IP模块，并集成基于130nm开源PDK（工艺设计套件）的物理设计流程。教学流程覆盖：① 架构设计与性能评估——学生可在RISC-V指令集架构上进行领域专用加速器设计；② RTL设计与仿真——基于开源IP进行SystemVerilog RTL编码和功能验证；③ 逻辑综合与物理设计——使用开源EDA工具将RTL综合到网表，再经过布局布线到GDSII；④ 流片——最终将设计送交制造。该平台已在ETH Zurich的VLSI课程中实际使用，学生可在一学期内完成从架构设计到物理设计的完整芯片开发流程。Croc直接回应全球芯片人才短缺问题——通过提供零成本的端到端开源教学平台，使任何高校甚至个人都能获得芯片设计的完整实践经验。",
+        "techIntro": "芯片设计人才短缺是制约半导体产业增长的结构性问题。传统的芯片设计教育面临高门槛：商业EDA工具许可费用昂贵（数十万美元/年）、PDK通常需要与晶圆厂签署NDA、制造流片成本高昂（小批量和多项目晶圆（MPW）约数万至数十万美元）。Croc的突破在于：使用开源RISC-V核心（免除IP许可费）、使用开源SkyWater 130nm PDK（免除NDA）、使用开源EDA工具（OpenROAD等）、教学流程完全开源可复制。这使任何高校或个人都能以零成本获得完整的芯片设计经验。130nm虽然对先进制程（5nm/3nm）来说较老，但它足以教授全部核心概念：RTL设计、综合、时序分析、布局布线、DRC/LVS等。",
+        "techTags": [
+          "RISC-V",
+          "开源芯片",
+          "芯片设计教育",
+          "SoC",
+          "Croc",
+          "ETH Zurich",
+          "OpenROAD",
+          "SkyWater 130nm"
+        ],
+        "metrics": [
+          {
+            "name": "工艺节点",
+            "value": "130",
+            "unit": "nm",
+            "note": "SkyWater开源PDK"
+          },
+          {
+            "name": "教学覆盖",
+            "value": "RTL→GDSII",
+            "unit": "",
+            "note": "端到端全流程"
+          },
+          {
+            "name": "平台架构",
+            "value": "RISC-V",
+            "unit": "",
+            "note": "高度可定制SoC"
+          },
+          {
+            "name": "工具链",
+            "value": "全开源",
+            "unit": "",
+            "note": "免除商业EDA许可费用"
+          }
+        ],
+        "attachments": [
+          {
+            "name": "论文预印本",
+            "url": "https://arxiv.org/abs/2606.25673",
+            "label": "arXiv 全文",
+            "cached": false
+          },
+          {
+            "name": "SemiEngineering报道",
+            "url": "https://semiengineering.com/open-source-risc-v-platform-trains-chip-designers-from-rtl-to-silicon-eth-z-lowrisc-u-of-bologna/",
+            "label": "SemiEngineering",
+            "cached": false
+          }
+        ],
+        "source": "arXiv / ETH Zurich",
+        "url": "https://arxiv.org/abs/2606.25673",
+        "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Croc 开源 RISC-V SoC 教学平台（示意）",
+        "date": "2026-06-24"
+      }
+    ]
   }
 }

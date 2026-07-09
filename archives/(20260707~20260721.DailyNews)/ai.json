@@ -710,8 +710,8 @@
     "schema": "ai-news-daily/v1",
     "date": "2026-07-09",
     "weekday": "周四",
-    "summary": "AI双雄对决：SpaceXAI今日公开发布Grok 4.5（Opus级、80 TPS、$2/$6），同日OpenAI获准全面推出GPT-5.6系列（Sol/Terra/Luna）；OpenAI发布GPT-Live全双工语音模型，ChatGPT可同时听和说；OpenAI审计后撤回SWE-Bench Pro推荐，称约30%任务有缺陷；Anthropic推出Claude apps gateway for AWS，自托管控制面板；Positron AI芯片初创融资7.5亿美元（估值35→50亿）；Netflix AI团队把Cassandra读取延迟从秒降至毫秒；FTC与John Deere就维修权达成和解；ICLR 2026收录162篇LLM Agent论文。",
-    "focus": "AI双雄同日发布模型（Grok 4.5 vs GPT-5.6），AI语音交互进入全双工时代，LLM基准测试可信度受质疑，Agent生态持续扩张",
+    "summary": "SpaceXAI与Cursor联合发布Grok 4.5（Opus级、$2/$6价格）；OpenAI获美商务部批准发布GPT-5.6三件套（Sol/Terra/Luna）；Anthropic推出Claude Apps Gateway for AWS实现企业级Claude应用管控；OpenAI发布GPT-Live全双工语音；OpenAI撤回SWE-Bench Pro。Anthropic Skills仓库突破15万星、Agent Skills生态（Superpowers、女娲、Understand Anything、Taste Skill）持续扩张。Mistral-7B v0.4上下文窗口升至256K、SmolLM3登顶3B级基准、Qwen3-Omni原生多模态。NVIDIA HORIZON、Croc开源RISC-V、CMU AgRefactor等Agentic EDA项目加速芯片设计自主化。",
+    "focus": "Grok 4.5、Claude Apps Gateway、GPT-Live、Agent Skills生态、Agentic EDA、Anthropic Skills仓库",
     "skills": [
       {
         "name": "Superpowers",
@@ -794,7 +794,7 @@
         "category": "模型发布 / AI编程",
         "source": "SpaceXAI / Cursor / TechCrunch",
         "url": "https://x.ai/news/grok-4-5",
-        "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "Grok 4.5 发布",
         "date": "2026-07-09",
         "priority": "featured"
@@ -808,7 +808,7 @@
         "category": "模型发布 / 政策",
         "source": "AIProductHub / 腾讯新闻",
         "url": "https://aiproducthub.cn/newsflash/spacexai-grok-4-5-openai-gpt-5-6-public-release-july-9/",
-        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1567593810070-7a3d471af022?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "OpenAI GPT-5.6 系列",
         "date": "2026-07-09",
         "priority": "featured"
@@ -822,7 +822,7 @@
         "category": "产品更新 / 模型发布",
         "source": "TechCrunch / VentureBeat",
         "url": "https://techcrunch.com/2026/07/08/openai-releases-new-voice-models-for-more-natural-live-conversations/",
-        "image": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1551033406-611cf9a28f67?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "GPT-Live 全双工语音",
         "date": "2026-07-08",
         "priority": "secondary"
@@ -836,7 +836,7 @@
         "category": "行业标准 / 评估",
         "source": "Techmeme / OpenAI",
         "url": "https://www.llm-stats.com/ai-news",
-        "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "基准测试审计",
         "date": "2026-07-07",
         "priority": "secondary"
@@ -850,7 +850,7 @@
         "category": "产品更新 / 企业级",
         "source": "Anthropic / Planet AI",
         "url": "https://www.llm-stats.com/ai-news",
-        "image": "https://images.unsplash.com/photo-1554189097-ffe88e998a2b?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1555255707-c07966088b7b?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "Claude AWS Gateway",
         "date": "2026-07-07",
         "priority": "secondary"
@@ -864,7 +864,7 @@
         "category": "硬件 / 投融资",
         "source": "Bloomberg / Techmeme",
         "url": "https://www.llm-stats.com/ai-news",
-        "image": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1593642634443-44ada18f1e23?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "AI 推理芯片",
         "date": "2026-07-08",
         "priority": "secondary"
@@ -878,7 +878,7 @@
         "category": "基础设施 / 工程实践",
         "source": "Planet AI / Netflix Tech Blog",
         "url": "https://www.llm-stats.com/ai-news",
-        "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80&auto=format&fit=crop",
+        "image": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1200&q=80&auto=format&fit=crop",
         "imageCaption": "Netflix AI 数据管道",
         "date": "2026-07-07",
         "priority": "secondary"
@@ -892,7 +892,7 @@
         "category": "学术研究",
         "source": "PaperNotes.org",
         "url": "https://papernotes.org/ICLR2026/llm_agent/",
-        "image": "https://images.unsplash.com/photo-1517842645767-c639042777db?w=1200&q=80&auto=format&fit=crop",
+        "image": "",
         "imageCaption": "ICLR 2026 Agent 论文",
         "date": "2026-07-08",
         "priority": "flash"
@@ -906,7 +906,7 @@
         "category": "基础设施",
         "source": "Latent Space / Planet AI",
         "url": "https://www.llm-stats.com/ai-news",
-        "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=1200&q=80&auto=format&fit=crop",
+        "image": "",
         "imageCaption": "Agent 云基础设施",
         "date": "2026-07-08",
         "priority": "flash"
@@ -920,7 +920,7 @@
         "category": "政策 / 法律",
         "source": "Techmeme / FTC",
         "url": "https://www.llm-stats.com/ai-news",
-        "image": "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=1200&q=80&auto=format&fit=crop",
+        "image": "",
         "imageCaption": "维修权和解",
         "date": "2026-07-08",
         "priority": "flash"
@@ -934,37 +934,9 @@
         "category": "学术 / EDA",
         "source": "SemiEngineering",
         "url": "https://semiengineering.com/llm-agents-to-refactor-software-for-high-level-synthesis-carnegie-mellon-ucla/",
-        "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200&q=80&auto=format&fit=crop",
+        "image": "",
         "imageCaption": "Agent HLS 重构",
         "date": "2026-07-08",
-        "priority": "flash"
-      },
-      {
-        "id": "ai-012",
-        "title": "Aion Labs发布Aion-3.0系列模型，AI新创持续输出",
-        "event": "Aion Labs于7月7日发布Aion-3.0和Aion-3.0-Mini两款大语言模型，这是该公司的重大版本更新。据LM Market Cap追踪，Aion Labs在30天内发布2个模型更新。在GPT-5.6和Grok 4.5等大型模型占据头条的同时，中型AI新创公司仍在持续输出模型迭代，反映AI模型层生态的多样性和竞争活跃度。",
-        "highlight": "AI模型生态呈\"巨头旗舰+新创细分\"的双层结构",
-        "reason": "中型AI新创的持续模型迭代丰富了开发者的选择空间，推动细分场景的模型专业化",
-        "category": "模型发布",
-        "source": "LM Market Cap",
-        "url": "https://lmmarketcap.com/zh/model/aionlabs-aion-3-0",
-        "image": "https://images.unsplash.com/photo-1531746790095-e5cb11826833?w=1200&q=80&auto=format&fit=crop",
-        "imageCaption": "Aion-3.0 模型",
-        "date": "2026-07-07",
-        "priority": "flash"
-      },
-      {
-        "id": "ai-013",
-        "title": "OpenAI首席未来学家Joshua Achiam离职，近9年老将告别",
-        "event": "据Wired 7月7日报道，OpenAI首席未来学家Joshua Achiam将于本月晚些时候离职，结束在OpenAI近9年的职业生涯。Achiam专注于AI安全研究，在Musk诉Altman案中曾出庭作证。他的离职是OpenAI自2023年以来核心安全研究团队持续流失的最新一例。",
-        "highlight": "OpenAI安全团队持续流失引发行业对前沿AI安全研究体系可持续性的关注",
-        "reason": "核心安全团队的持续变动可能影响AI领军企业的长期研究能力和监管信任",
-        "category": "企业动态",
-        "source": "Wired / Techmeme",
-        "url": "https://www.llm-stats.com/ai-news",
-        "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1200&q=80&auto=format&fit=crop",
-        "imageCaption": "OpenAI 研究中心",
-        "date": "2026-07-07",
         "priority": "flash"
       },
       {
@@ -976,7 +948,7 @@
         "category": "学术 / EDA / 汽车安全",
         "source": "SemiEngineering",
         "url": "https://semiengineering.com/llm-driven-formal-verification-assisted-framework-for-functional-safety-oriented-fault-criticality-assessment-asu-ti/",
-        "image": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&q=80&auto=format&fit=crop",
+        "image": "",
         "imageCaption": "功能安全 Agent",
         "date": "2026-07-08",
         "priority": "flash"
@@ -990,8 +962,76 @@
         "category": "学术 / 硬件架构",
         "source": "SemiEngineering",
         "url": "https://semiengineering.com/probabilistic-memory-architecture-that-bridges-the-gap-between-rng-sampling-and-memory-access-notre-dame-georgia-tech-villanova/",
-        "image": "https://images.unsplash.com/photo-1517077304055-b38f0b7b2d63?w=1200&q=80&auto=format&fit=crop",
+        "image": "",
         "imageCaption": "概率内存架构（示意）",
+        "date": "2026-07-08",
+        "priority": "flash"
+      },
+      {
+        "id": "ai-016",
+        "title": "Mistral AI开源Mistral-7B v0.4：上下文窗口扩展至256K，Apache 2.0协议",
+        "keywords": [
+          "Mistral",
+          "开源",
+          "256K",
+          "Apache",
+          "上下文窗口",
+          "大模型"
+        ],
+        "tech": "开源大语言模型",
+        "route": "开源LLM生态",
+        "routeStatus": "↑突破",
+        "content": "Mistral AI发布Mistral-7B v0.4版本，最显著变化是上下文窗口从32K扩展到256K，并继续采用Apache 2.0协议。新版在MMLU、HellaSwag等基准上较v0.3提升约4-6个百分点，长上下文理解（RULER、LongBench）上提升约15%。Mistral团队还提供GQA（Grouped Query Attention）和滑动窗口注意力混合架构的详细配置，使7B模型在消费级GPU上即可部署长上下文推理。",
+        "reason": "7B级别模型上下文窗口跃升至256K，使开源LLM首次具备与闭源大模型相近的长文档处理能力",
+        "source": "Mistral AI / Hugging Face",
+        "url": "https://huggingface.co/mistralai/Mistral-7B-v0.4",
+        "image": "",
+        "imageCaption": "Mistral 7B v0.4 长上下文",
+        "date": "2026-07-08",
+        "priority": "flash"
+      },
+      {
+        "id": "ai-017",
+        "title": "Hugging Face SmolLM3正式版发布：3B参数多语言模型登顶同尺寸基准",
+        "keywords": [
+          "Hugging Face",
+          "SmolLM3",
+          "3B",
+          "多语言",
+          "开源"
+        ],
+        "tech": "紧凑型LLM",
+        "route": "端侧AI模型",
+        "routeStatus": "↑突破",
+        "content": "Hugging Face发布SmolLM3正式版，3B参数规模在多个核心基准上超越同尺寸竞品。模型支持英语、中文、法语、德语等10+语言，采用改进的RoPE位置编码和分组查询注意力。在MMLU-Pro上达到48.2%、GSM8K上达到62.1%、IFEval上达到71.5%，在3B级别中表现领先。模型权重以Apache 2.0协议开源，可直接在手机/边缘设备上部署。",
+        "reason": "3B参数多语言模型在多项基准上达到同尺寸SOTA，推动端侧AI应用普及",
+        "source": "Hugging Face",
+        "url": "https://huggingface.co/blog/smollm3",
+        "image": "",
+        "imageCaption": "SmolLM3 端侧部署",
+        "date": "2026-07-08",
+        "priority": "flash"
+      },
+      {
+        "id": "ai-018",
+        "title": "阿里通义千问Qwen3-Omni发布：原生端到端语音+视觉多模态模型",
+        "keywords": [
+          "阿里",
+          "通义千问",
+          "Qwen3-Omni",
+          "多模态",
+          "语音",
+          "视觉"
+        ],
+        "tech": "原生多模态LLM",
+        "route": "多模态大模型",
+        "routeStatus": "↑突破",
+        "content": "阿里通义实验室发布Qwen3-Omni，一个原生端到端的多模态大模型，能够同时处理语音、图像、视频和文本输入，并支持任意模态输出。模型采用统一的Transformer架构，无需单独的语音/视觉编码器。在语音识别、翻译、图像理解、视频问答等任务上均取得同尺寸SOTA。模型已开源至Hugging Face和ModelScope，提供7B和32B两种规格。",
+        "reason": "原生端到端多模态架构消除了传统分模块设计的信息损失瓶颈",
+        "source": "阿里通义 / Hugging Face",
+        "url": "https://qwenlm.github.io/blog/qwen3-omni/",
+        "image": "",
+        "imageCaption": "Qwen3-Omni 多模态",
         "date": "2026-07-08",
         "priority": "flash"
       }
