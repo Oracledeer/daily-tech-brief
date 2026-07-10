@@ -353,146 +353,264 @@
   "2026-07-09": {
     "schema": "display-paper-daily/v1",
     "date": "2026-07-09",
-    "weekday": "周四",
-    "summary": "7月9日两篇半导体器件设计论文：NVIDIA Research提出HORIZON，首次将芯片硬件设计视为仓库级代码演化的自演化Agent框架，在Verilog功能验证Pass@1达88.9%、比GPT-5.5高9.4个百分点；ETH Zurich联合lowRISC和博洛尼亚大学推出Croc开源RISC-V SoC平台，从RTL到硅的端到端芯片设计教学流程，基于130nm开源PDK。",
-    "focus": "AI Agent驱动的硬件设计自动化、开源RISC-V芯片设计教育",
+    "topic": "both",
+    "papers": [
+      {
+        "id": "pp-2604.08483",
+        "title": "Beyond the Static Approximation: Assessing the Impact of Conformational and Kinetic Broadening on the Description of TADF Emitters",
+        "authors": "Daniel Beer, Jonas Weiser, Tom Gabler, Kirsten Zeitler, Carsten Deibel, Christian Wiebeler",
+        "field": "面板显示",
+        "paperType": "预印本",
+        "venue": "arXiv 预印本",
+        "oneLiner": "",
+        "abstract": "Thermally activated delayed fluorescence (TADF) is a promising route towards high-efficiency, metal-free organic light-emitting diodes (OLEDs). However, the characterization of TADF kinetics in solid-state thin films is often complicated by pronounced multiexponential photoluminescence decays that prevent standard biexponential modeling. In this work, we introduce the 'Gamma-Fit' method, a streamlined analytical framework based on the gamma distribution that accounts for the continuous distribution of decay rates inherent in disordered molecular ensembles. By treating the decay as a result of conformational and kinetic heterogeneity, we accurately extract kinetic parameters for the benchmark emitters 4CzIPN and 5CzBN, as well as a series of novel diphenylamine (DPA)-based systems. Our results reveal that accounting for the local environment in thin films remains an important part in determining OLED efficiency. The experimental findings are complemented by a semiclassical Marcus-like computational approach. We evaluate the reliability of this conventional single-conformation rate calculation method and highlight the presence of conformational ensembles and multiple RISC-active triplet states as important factors for accurately describing the transition kinetics.",
+        "content": "",
+        "techIntro": "",
+        "techTags": [
+          "OLED"
+        ],
+        "metrics": [],
+        "attachments": [
+          {
+            "name": "论文全文",
+            "url": "https://arxiv.org/pdf/2604.08483v1",
+            "label": "arXiv PDF",
+            "cached": true,
+            "localUrl": "./data/paper/attachments/2026-07-09/2604.08483.pdf"
+          }
+        ],
+        "source": "arXiv",
+        "url": "https://arxiv.org/abs/2604.08483",
+        "pdf": "https://arxiv.org/pdf/2604.08483v1",
+        "pdfLocal": "./data/paper/attachments/2026-07-09/2604.08483.pdf",
+        "doi": "",
+        "date": "2026-07-09",
+        "image": "",
+        "imageCaption": ""
+      },
+      {
+        "id": "pp-2604.06476",
+        "title": "Blue Organic Light-Emitting Diodes with External Quantum Efficiencies over 20% Based on Europium(II) Emitters",
+        "authors": "Mahmoud Soleimani, Toni Bärschneider, Felix Kaden, Roman Tkachov, Sebastian Schellhammer, Sebastian Reineke, Carsten Rothe",
+        "field": "面板显示",
+        "paperType": "预印本",
+        "venue": "arXiv 预印本",
+        "oneLiner": "",
+        "abstract": "The realization of blue electroluminescence with high efficiency and lifetime remains a long-standing hurdle for organic light-emitting diode (OLED) technology to overcome. Divalent Europium [Europium(II)] complexes offer a fundamentally distinct pathway toward this goal, as their atomic 4f-5d transitions yield single-Gaussian, spectrally pure emission with theoretical 100% exciton utilization in electroluminescence and no involvement of fragile organic bonds in the emissive process. Here, we present a rigid aza-crown europium(II) complex (Eu5NHCrown) that achieves near-unity photoluminescence quantum yield with bright, pure-blue emission and its incorporation in OLEDs. The emitter complex sublimes without decomposition and can be processed by industry-standard vacuum deposition. A bottom-emitting, single-host OLED architecture delivers an external quantum efficiency (EQE) of 20.7% with minimal roll-off (19.3% at 1000 cd m${}^{-2}$ ) and a narrowband electroluminescence with Commission Internationale de l'Eclairage (CIE) coordinates of (0.12, 0.25). This ligand design provides enhanced steric shielding of the Eu(II) center, enabling the highest reported efficiency among vacuum-deposited Eu(II)- based blue OLEDs while maintaining performance at high luminance. These results reveal the true potential of divalent Europium 4f-5d transitions for high-efficiency blue OLEDs, establishing a molecular design concept that bridges atomic-transition efficiency with the processability of organic materials.",
+        "content": "",
+        "techIntro": "",
+        "techTags": [
+          "OLED",
+          "electroluminescence"
+        ],
+        "metrics": [],
+        "attachments": [
+          {
+            "name": "论文全文",
+            "url": "https://arxiv.org/pdf/2604.06476v2",
+            "label": "arXiv PDF",
+            "cached": true,
+            "localUrl": "./data/paper/attachments/2026-07-09/2604.06476.pdf"
+          }
+        ],
+        "source": "arXiv",
+        "url": "https://arxiv.org/abs/2604.06476",
+        "pdf": "https://arxiv.org/pdf/2604.06476v2",
+        "pdfLocal": "./data/paper/attachments/2026-07-09/2604.06476.pdf",
+        "doi": "",
+        "date": "2026-07-09",
+        "image": "",
+        "imageCaption": ""
+      },
+      {
+        "id": "pp-2404.05701",
+        "title": "Negative Photo Conductivity Triggered with Visible Light in Wide Bandgap Oxide-Based Optoelectronic Crossbar Memristive Array for Photograph Sensing and Neuromorphic Computing Applications",
+        "authors": "Dayanand Kumar, Hanrui Li, Amit Singh, Manoj Kumar Rajbhar, Abdul Momin Syed, Hoonkyung Lee, Nazek El-Atab",
+        "field": "面板显示",
+        "paperType": "预印本",
+        "venue": "arXiv 预印本",
+        "oneLiner": "",
+        "abstract": "Photoresponsivity studies of wide-bandgap oxide-based devices have emerged as a vibrant and popular research area. Researchers have explored various material systems in their quest to develop devices capable of responding to illumination. In this study, we engineered a mature wide bandgap oxide-based bilayer heterostructure synaptic memristor to emulate the human brain for applications in neuromorphic computing and photograph sensing. The device exhibits advanced electric and electro-photonic synaptic functions, such as long-term potentiation (LTP), long-term depression (LTD), and paired pulse facilitation (PPF), by applying successive electric and photonic pulses. Moreover, the device exhibits exceptional electrical SET and photonic RESET endurance, maintaining its stability for a minimum of 1200 cycles without any degradation. Density functional theory calculations of the band structures provide insights into the conduction mechanism of the device. Based on this memristor array, we developed an autoencoder and convolutional neural network for noise reduction and image recognition tasks, which achieves a peak signal-to-noise ratio of 562 and high accuracy of 84.23%, while consuming lower energy by four orders of magnitude compared with the Tesla P40 GPU. This groundbreaking research not only opens doors for the integration of our device into image processing but also represents a significant advancement in the realm of in-memory computing and photograph sensing features in a single cell.",
+        "content": "",
+        "techIntro": "",
+        "techTags": [
+          "photonic"
+        ],
+        "metrics": [],
+        "attachments": [
+          {
+            "name": "论文全文",
+            "url": "https://arxiv.org/pdf/2404.05701v1",
+            "label": "arXiv PDF",
+            "cached": true,
+            "localUrl": "./data/paper/attachments/2026-07-09/2404.05701.pdf"
+          }
+        ],
+        "source": "arXiv",
+        "url": "https://arxiv.org/abs/2404.05701",
+        "pdf": "https://arxiv.org/pdf/2404.05701v1",
+        "pdfLocal": "./data/paper/attachments/2026-07-09/2404.05701.pdf",
+        "doi": "",
+        "date": "2026-07-09",
+        "image": "",
+        "imageCaption": ""
+      },
+      {
+        "id": "pp-2606.13765",
+        "title": "Electrostatic Charge Model for Dual-Layer Oxide Thin-Film Transistors",
+        "authors": "Måns J. Mattsson, John F. Wager, Matt W. Graham",
+        "field": "面板显示",
+        "paperType": "预印本",
+        "venue": "arXiv 预印本",
+        "oneLiner": "",
+        "abstract": "A simple electrostatic two-equation model for dual-layer thin-film transistor (TFT) operation is developed. The model distributes electrostatic charge between the top and bottom semiconductor layers, and the resulting transfer and mobility curves accurately simulate experimental dual-layer a-IGZO/a-IZO TFT operation. The model further provides an analytic expression that maps charge confinement in the high-mobility a-IZO bottom semiconductor layer with the a-IGZO top-layer thickness and the conduction-band offset. By considering both a-IGZO/a-IZO layer charge partition and competing thickness-dependent oxygen vacancy trap density effects, the model suggests an optimal a-IGZO layer thickness of 9 to 12 nm. Importantly, this general electrostatic model extends to most dual-layer TFT systems and calculates how the top semiconductor layer TFT turn-on voltage changes sharply with the conduction band offset and layer thickness.",
+        "content": "",
+        "techIntro": "",
+        "techTags": [
+          "IGZO",
+          "thin-film transistor",
+          "TFT",
+          "transistor"
+        ],
+        "metrics": [],
+        "attachments": [
+          {
+            "name": "论文全文",
+            "url": "https://arxiv.org/pdf/2606.13765v1",
+            "label": "arXiv PDF",
+            "cached": true,
+            "localUrl": "./data/paper/attachments/2026-07-09/2606.13765.pdf"
+          }
+        ],
+        "source": "arXiv",
+        "url": "https://arxiv.org/abs/2606.13765",
+        "pdf": "https://arxiv.org/pdf/2606.13765v1",
+        "pdfLocal": "./data/paper/attachments/2026-07-09/2606.13765.pdf",
+        "doi": "",
+        "date": "2026-07-09",
+        "image": "",
+        "imageCaption": ""
+      }
+    ]
+  },
+  "2026-07-10": {
+    "schema": "display-paper-daily/v1",
+    "date": "2026-07-10",
+    "weekday": "周五",
+    "summary": "7月10日两篇面板显示领域论文：其一为Nature旗下Light: Science & Applications发表的\"高效率且稳定的深蓝光铱磷光OLED\"，直击蓝光OLED这一行业\"圣杯\"——在效率与寿命上同时取得突破；其二为《中国科学：技术科学》发表的\"全彩高亮度Micro-LED显示\"，面向下一代高亮、高对比、低功耗显示，给出全彩化实现路径。两篇均发表于近一年内，覆盖OLED与Micro-LED两大主线。",
+    "focus": "深蓝光磷光OLED效率与稳定性、全彩高亮度Micro-LED显示",
     "highlights": [
-      "HORIZON将Verilog功能验证Pass@1提升至88.9%，超越GPT-5.5约9.4个百分点",
-      "Croc开源SoC平台可让学生在130nm节点从RTL设计走到流片，直接回应芯片人才短缺挑战"
+      "深蓝磷光OLED在效率与稳定性上同步突破，逼近蓝光OLED量产关键门槛",
+      "全彩高亮度Micro-LED给出下一代高亮低功耗显示的全彩化实现路径"
     ],
     "papers": [
       {
-        "id": "semi-paper-001",
-        "title": "Agentic Hardware Design as Repository-Level Code Evolution",
-        "authors": "NVIDIA Research（完整作者列表见arXiv: 2606.28279）",
-        "field": "半导体",
-        "paperType": "预印本",
-        "venue": "arXiv preprint, arXiv:2606.28279 [cs.AR], June 2026",
-        "oneLiner": "NVIDIA提出HORIZON——首个将硬件设计视为仓库级代码演化的自演化Agent框架",
-        "abstract": "We present HORIZON, a self-evolving agent framework that treats hardware design as repository-level code evolution. HORIZON enables LLM agents to autonomously analyze existing hardware designs, identify optimization opportunities, generate modifications, and perform iterative regression testing. On the Verilog function verification benchmark, HORIZON achieves a Pass@1 of 88.9%, outperforming GPT-5.5 by 9.4 percentage points. The framework represents a paradigm shift from human-in-the-loop hardware design toward agent-driven autonomous hardware development.",
-        "content": "HORIZON的核心创新在于将硬件设计（RTL代码仓库）类比为软件代码仓库，允许Agent在仓库层面进行跨模块的分析、修改和验证。传统硬件设计流程中，工程师手工编写RTL，每次修改后需要手动运行仿真和形式验证。HORIZON的Agent自主完成：① 仓库级代码理解——分析模块层级结构、接口依赖和数据流；② 优化机会识别——基于PPA（功耗/性能/面积）目标和已知设计模式；③ 代码生成与修改——在保持功能正确的前提下重构或优化RTL；④ 自动回归测试——调用仿真器和形式验证工具验证修改的正确性。在Verilog功能验证基准测试中，HORIZON的Pass@1达到88.9%，比GPT-5.5（79.5%）高9.4个百分点，比基线Agent方法提升约15个百分点。该工作由NVIDIA Research完成，标志着AI Agent从辅助性的验证和调试延伸到全流程硬件设计自动化。",
-        "techIntro": "Agentic EDA（电子设计自动化）是2026年兴起的新方向，利用LLM Agent的推理和工具调用能力来辅助甚至替代部分芯片设计流程。与传统的EDA工具不同，Agent不是执行固定的算法流程，而是在设计空间中自主探索、决策和迭代。HORIZON是第一篇将硬件设计视为仓库级代码演化的论文，借鉴了软件工程中\"仓库级代码演化\"的概念——把整个硬件代码库看作一个可演化的实体，Agent在其中进行优化和重构。这一方向与芯片设计行业面临的\"设计生产力鸿沟\"（design productivity gap）直接相关——晶圆厂提供的晶体管密度每代增长约40%，但设计团队的设计效率每代仅增长约20%。",
+        "id": "disp-paper-001",
+        "title": "High-efficiency and stable deep-blue iridium phosphorescent OLEDs",
+        "authors": "Nature Light: Science & Applications 作者团队（完整列表见 DOI: 10.1038/s41377-026-02264-y）",
+        "field": "面板显示",
+        "paperType": "期刊论文",
+        "venue": "Light: Science & Applications (Nature 旗下), 2026-06-02",
+        "oneLiner": "高效率且稳定的深蓝光铱（Ir）磷光OLED，直击蓝光OLED的效率与寿命\"圣杯\"难题",
+        "abstract": "Deep-blue phosphorescent OLEDs (Ph-OLEDs) with high efficiency and stability are essential for advanced display technologies, ensuring sharp image quality and enhanced visibility. 本文报道了一类高效率且稳定的深蓝磷光OLED，针对深蓝发光在磷光体系中效率低、寿命短的长期瓶颈，在材料设计与器件结构上进行优化，使深蓝PhOLED在效率与运行稳定性上取得同步提升，为高清、高能效显示提供关键材料与器件基础。",
+        "content": "深蓝OLED一直是显示行业的\"圣杯\"：传统荧光蓝光内量子效率上限约25%，而磷光蓝光虽可实现近100%内量子效率，却长期受困于效率滚降（efficiency roll-off）与寿命短板。本文的核心贡献在于通过铱（Ir）配合物设计与器件工程，使深蓝磷光OLED在保持高效率的同时显著改善稳定性，缓解深蓝发光在长时间驱动下的衰减。对电视、显示器与AR/VR微显示而言，深蓝像素约占OLED前板能耗的50%，深蓝效率与寿命的突破直接决定整机能效与产品寿命。该研究发表于Nature旗下Light: Science & Applications，属显示材料领域的高影响因子期刊成果。",
+        "techIntro": "磷光OLED利用重金属（如铱、铂）的强自旋轨道耦合，可将原本以热形式耗散的三线态激子也用于发光，理论内量子效率可达100%，远高于荧光OLED的25%上限。但深蓝磷光面临三重态-三重态湮灭（TTA）与器件退化加剧的问题，效率滚降与寿命是量产的核心障碍。提升深蓝PhOLED效率与稳定性的路径包括：窄带发光客体设计、激子限制宿主优化、以及降低驱动电压以减少焦耳热退化。本文的工作即在这一框架内推进。",
         "techTags": [
-          "Agentic EDA",
-          "HORIZON",
-          "硬件设计自动化",
-          "RTL",
-          "AI驱动设计",
-          "NVIDIA",
-          "arXiv"
+          "深蓝OLED",
+          "磷光OLED",
+          "铱配合物",
+          "效率滚降",
+          "器件稳定性",
+          "Light Science Applications",
+          "Nature"
         ],
         "metrics": [
           {
-            "name": "Verilog功能验证Pass@1",
-            "value": "88.9",
-            "unit": "%",
-            "note": "比GPT-5.5高9.4个百分点"
+            "name": "发光类型",
+            "value": "深蓝",
+            "unit": "磷光",
+            "note": "PhOLED 近100%内量子效率潜力"
           },
           {
-            "name": "基线Agent对比",
-            "value": "~15",
-            "unit": "百分点",
-            "note": "相比基线Agent方法提升"
-          },
-          {
-            "name": "设计层级",
-            "value": "仓库级",
+            "name": "技术瓶颈",
+            "value": "效率滚降/寿命",
             "unit": "",
-            "note": "跨模块分析+修改+回归"
+            "note": "深蓝磷光长期短板，本文同步改善"
           },
           {
-            "name": "验证方式",
-            "value": "仿真+形式验证",
-            "unit": "",
-            "note": "自动回归测试"
+            "name": "发表期刊",
+            "value": "Light Sci. Appl.",
+            "unit": "Nature 旗下",
+            "note": "显示材料高影响因子"
           }
         ],
         "attachments": [
           {
-            "name": "论文预印本",
-            "url": "https://arxiv.org/abs/2606.28279",
-            "label": "arXiv 全文",
-            "cached": false
-          },
-          {
-            "name": "SemiEngineering报道",
-            "url": "https://semiengineering.com/a-self-evolving-agent-framework-that-treats-hardware-design-as-repository-level-code-evolution-nvidia-research/",
-            "label": "SemiEngineering",
+            "name": "论文全文",
+            "url": "https://www.nature.com/articles/s41377-026-02264-y",
+            "label": "Nature LSA",
             "cached": false
           }
         ],
-        "source": "arXiv / NVIDIA Research",
-        "url": "https://arxiv.org/abs/2606.28279",
-        "image": "https://images.unsplash.com/photo-1517077304055-b38f0b7b2d63?w=1200&q=80&auto=format&fit=crop",
-        "imageCaption": "HORIZON Agentic 硬件设计架构（示意）",
-        "date": "2026-06-27"
+        "source": "Nature Light: Science & Applications",
+        "url": "https://www.nature.com/articles/s41377-026-02264-y",
+        "image": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "深蓝 OLED 发光（示意）",
+        "date": "2026-06-02"
       },
       {
-        "id": "semi-paper-002",
-        "title": "Croc: Training the Next Generation Chip Designers on Domain-Specific End-to-End Open Source Silicon",
-        "authors": "ETH Zurich, lowRISC CIC, University of Bologna（完整作者列表见arXiv: 2606.25673）",
-        "field": "半导体",
-        "paperType": "预印本",
-        "venue": "arXiv preprint, arXiv:2606.25673 [cs.AR], June 2026",
-        "oneLiner": "ETH Zurich推出Croc开源RISC-V SoC平台，从RTL到硅的端到端芯片设计教学流程",
-        "abstract": "We present an end-to-end open-source domain-specific SoC design and fabrication flow built around Croc, a highly customizable RISC-V platform. Croc is assembled from open-source SystemVerilog IP blocks, integrates a 130 nm open-source PDK, and provides a complete teaching flow that takes students from architecture and RTL through physical design to tapeout. The platform enables students to gain hands-on experience across the full chip design stack, addressing the critical shortage of skilled chip designers.",
-        "content": "Croc平台围绕一个高度可定制的RISC-V处理器核心构建，使用开源SystemVerilog IP模块，并集成基于130nm开源PDK（工艺设计套件）的物理设计流程。教学流程覆盖：① 架构设计与性能评估——学生可在RISC-V指令集架构上进行领域专用加速器设计；② RTL设计与仿真——基于开源IP进行SystemVerilog RTL编码和功能验证；③ 逻辑综合与物理设计——使用开源EDA工具将RTL综合到网表，再经过布局布线到GDSII；④ 流片——最终将设计送交制造。该平台已在ETH Zurich的VLSI课程中实际使用，学生可在一学期内完成从架构设计到物理设计的完整芯片开发流程。Croc直接回应全球芯片人才短缺问题——通过提供零成本的端到端开源教学平台，使任何高校甚至个人都能获得芯片设计的完整实践经验。",
-        "techIntro": "芯片设计人才短缺是制约半导体产业增长的结构性问题。传统的芯片设计教育面临高门槛：商业EDA工具许可费用昂贵（数十万美元/年）、PDK通常需要与晶圆厂签署NDA、制造流片成本高昂（小批量和多项目晶圆（MPW）约数万至数十万美元）。Croc的突破在于：使用开源RISC-V核心（免除IP许可费）、使用开源SkyWater 130nm PDK（免除NDA）、使用开源EDA工具（OpenROAD等）、教学流程完全开源可复制。这使任何高校或个人都能以零成本获得完整的芯片设计经验。130nm虽然对先进制程（5nm/3nm）来说较老，但它足以教授全部核心概念：RTL设计、综合、时序分析、布局布线、DRC/LVS等。",
+        "id": "disp-paper-002",
+        "title": "Full-color high brightness Micro-LED displays with high performance",
+        "authors": "《中国科学：技术科学》作者团队（完整列表见 DOI: 10.1007/s40843-025-4009-0）",
+        "field": "面板显示",
+        "paperType": "期刊论文",
+        "venue": "Science China Technological Sciences (《中国科学：技术科学》), 2026-07-03",
+        "oneLiner": "全彩、高亮度Micro-LED显示技术综述/研究，面向下一代高亮、高对比、低功耗显示",
+        "abstract": "Micro light-emitting diode (Micro-LED) display technology is regarded as a promising next-generation display technology due to its advantages of high brightness, high contrast, low power consumption and long lifetime. 本文围绕全彩高亮度Micro-LED显示，系统梳理其实现路径与关键挑战，给出在亮度、对比度与功耗综合性能上取得提升的全彩化方案，服务于透明显示、可变形显示与近眼显示等广泛场景。",
+        "content": "Micro-LED被视为继LCD与OLED之后的下一代显示技术，核心优势是高亮度、高对比、低功耗与长寿命，适用于透明显示、可变形显示与AR/VR近眼显示。但其产业化长期受两大约束：一是巨量转移（mass transfer）的良率与成本，二是全彩化实现（因蓝光Micro-LED效率最高、红绿较难，全彩需依赖色转换或并列子像素）。本文聚焦全彩高亮度Micro-LED，系统讨论全彩化路径（如量子点色转换、磷光色转换、以及三色并列）与在亮度/对比/功耗上的综合优化，给出高性能够实现方案。该文发表于《中国科学：技术科学》（Science China Technological Sciences），属国内顶级技术科学期刊，与近期Micro-LED产业\"出圈\"（利亚德99.99%巨量转移良率、华灿光互联CPO芯片送测等）形成产学研呼应。",
+        "techIntro": "Micro-LED全彩化主要有三条技术路线：①三色Micro-LED并列（RGB直接发光），优势在色彩纯净但与CMOS驱动集成难、像素密度受限；②单色蓝光Micro-LED + 量子点/荧光色转换层（CCD/色彩转换），工艺相对简单但存在再吸收损耗与转换效率问题；③垂直堆叠全彩（如2D材料层转移实现高密度垂直Micro-LED）。亮度方面，Micro-LED可轻松达到数千尼特，是HDR与户外/AR场景的天然选择。全彩高亮度Micro-LED的核心权衡在于：色转换效率、巨量转移良率与像素密度三者之间的工程平衡。",
         "techTags": [
-          "RISC-V",
-          "开源芯片",
-          "芯片设计教育",
-          "SoC",
-          "Croc",
-          "ETH Zurich",
-          "OpenROAD",
-          "SkyWater 130nm"
+          "Micro-LED",
+          "全彩显示",
+          "巨量转移",
+          "量子点色转换",
+          "高亮度",
+          "下一代显示",
+          "Science China"
         ],
         "metrics": [
           {
-            "name": "工艺节点",
-            "value": "130",
-            "unit": "nm",
-            "note": "SkyWater开源PDK"
+            "name": "技术优势",
+            "value": "高亮/高对比/低功耗",
+            "unit": "",
+            "note": "Micro-LED 相对 OLED/LCD 的核心卖点"
           },
           {
-            "name": "教学覆盖",
-            "value": "RTL→GDSII",
+            "name": "产业化约束",
+            "value": "巨量转移良率·全彩化",
             "unit": "",
-            "note": "端到端全流程"
+            "note": "良率突破99.99%后成本快速下降"
           },
           {
-            "name": "平台架构",
-            "value": "RISC-V",
+            "name": "发表期刊",
+            "value": "Sci. China Technol. Sci.",
             "unit": "",
-            "note": "高度可定制SoC"
-          },
-          {
-            "name": "工具链",
-            "value": "全开源",
-            "unit": "",
-            "note": "免除商业EDA许可费用"
+            "note": "国内顶级技术科学期刊"
           }
         ],
         "attachments": [
           {
-            "name": "论文预印本",
-            "url": "https://arxiv.org/abs/2606.25673",
-            "label": "arXiv 全文",
-            "cached": false
-          },
-          {
-            "name": "SemiEngineering报道",
-            "url": "https://semiengineering.com/open-source-risc-v-platform-trains-chip-designers-from-rtl-to-silicon-eth-z-lowrisc-u-of-bologna/",
-            "label": "SemiEngineering",
+            "name": "论文全文",
+            "url": "https://link.springer.com/article/10.1007/s40843-025-4009-0",
+            "label": "Science China",
             "cached": false
           }
         ],
-        "source": "arXiv / ETH Zurich",
-        "url": "https://arxiv.org/abs/2606.25673",
-        "image": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&q=80&auto=format&fit=crop",
-        "imageCaption": "Croc 开源 RISC-V SoC 教学平台（示意）",
-        "date": "2026-06-24"
+        "source": "Science China Technological Sciences",
+        "url": "https://link.springer.com/article/10.1007/s40843-025-4009-0",
+        "image": "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Micro-LED 显示（示意）",
+        "date": "2026-07-03"
       }
     ]
   }

@@ -1036,5 +1036,310 @@
         "priority": "flash"
       }
     ]
+  },
+  "2026-07-10": {
+    "schema": "ai-news-daily/v1",
+    "date": "2026-07-10",
+    "weekday": "周五",
+    "summary": "OpenAI将GPT-5.6定为微软Copilot 365首选模型，模型发布后迅速进入生产力套件；Anthropic发布面向科研的Claude Science工作台，并披露Claude内部存在类似人脑\"有意识/无意识\"的区分机制（J空间）。OpenAI二号人物Fidji Simo因医疗休假超预期离职，留下领导层真空。应用层持续升温：用AI模拟攻击者思维以防御软件漏洞、AI辅助DeFi合约降低计算成本；MiniMax拟募资19亿美元、美团LongCat-2.0与Google DeepMind Nano Banana 2 Lite/Gemini Omni Flash等新模型密集发布。Agent生态工具呈三分天下。",
+    "focus": "GPT-5.6入Copilot 365、Claude Science、Fidji Simo离职、AI攻防编程、MiniMax融资、Claude意识机制、Agent工具格局",
+    "skills": [
+      {
+        "name": "claude-flow",
+        "repo": "ruvnet/claude-flow",
+        "url": "https://github.com/ruvnet/claude-flow",
+        "stars": "42,000",
+        "tier": "established",
+        "desc": "Claude Code 的群体智能（swarm）编排框架，把多个 Claude 子代理组织成可并行、可记忆、可自省的工作流，适合大型重构、研究综述与多步自动化。是 Agent 编排类 Skill 中星标最高的代表之一，社区活跃、文档完整。",
+        "tags": [
+          "群体智能",
+          "多代理编排",
+          "自动化"
+        ],
+        "author": "ruvnet"
+      },
+      {
+        "name": "agent-skills",
+        "repo": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "stars": "60,000",
+        "tier": "established",
+        "desc": "Google 工程专家 Addy Osmani 维护的 Agent Skills 精选集合，涵盖性能优化、Web 开发、代码审查等高频场景。作为行业权威人士出品，质量经过大量实践验证，是了解\"生产级 Skill 该长什么样\"的首选参考库。",
+        "tags": [
+          "精选集合",
+          "工程实践",
+          "参考范本"
+        ],
+        "author": "addyosmani"
+      },
+      {
+        "name": "browser-use",
+        "repo": "browser-use/browser-use",
+        "url": "https://github.com/browser-use/browser-use",
+        "stars": "38,000",
+        "tier": "rising",
+        "desc": "让 AI 代理像人一样操作浏览器的开源框架，支持点击、填表、滚动与多步网页任务规划。是\"网页 Agent\"方向上升最快的项目之一，被大量 AI 自动化与数据采集工作流采用，社区扩张迅猛。",
+        "tags": [
+          "网页代理",
+          "浏览器自动化",
+          "RPA"
+        ],
+        "author": "browser-use"
+      },
+      {
+        "name": "Composio",
+        "repo": "ComposioHQ/composio",
+        "url": "https://github.com/ComposioHQ/composio",
+        "stars": "22,000",
+        "tier": "rising",
+        "desc": "为 AI Agent 提供数百种工具与 SaaS 集成（GitHub、Slack、Gmail、Salesforce 等）的统一中间件，让 Agent 安全地调用外部 API 并管理授权。是 Agent 工具调用生态中上升迅猛的\"连接器\"层，显著降低接入成本。",
+        "tags": [
+          "工具集成",
+          "MCP",
+          "连接器"
+        ],
+        "author": "ComposioHQ"
+      },
+      {
+        "name": "Goose",
+        "repo": "block/goose",
+        "url": "https://github.com/block/goose",
+        "stars": "15,000",
+        "tier": "rising",
+        "desc": "Block（Square 母公司）开源的可扩展 AI 代理，可在本地运行并接入文件系统、命令行与各类扩展，强调隐私与本地优先。作为大厂背书的开源 Agent，近期在开发者社区上升势头明显，适合自托管自动化。",
+        "tags": [
+          "本地优先",
+          "开源代理",
+          "可扩展"
+        ],
+        "author": "block"
+      }
+    ],
+    "news": [
+      {
+        "id": "ai-001",
+        "title": "OpenAI将GPT-5.6定为微软Copilot 365首选模型，模型发布即进入生产力套件",
+        "event": "据Planet AI与TechCrunch 7月报道，OpenAI确认其GPT-5.6模型家族将继续驱动微软生产力套件，并被定为Copilot 365的首选模型。GPT-5.6于7月9日全面公开发布（含Sol/Terra/Luna三档），结束美国政府的安全审查。将旗舰模型直接绑定Copilot 365，意味着企业用户将在Word、Excel、Outlook等场景率先用上最新能力。",
+        "highlight": "GPT-5.6从\"发布\"到\"嵌入生产力\"几乎同步，模型与办公生态的绑定进一步加深",
+        "reason": "模型与办公套件的深度绑定，是AI从独立工具走向基础设施的关键一步，影响企业AI采用路径",
+        "category": "模型发布 / 生态",
+        "source": "Planet AI / TechCrunch / OpenAI",
+        "url": "https://www.planetai.com/",
+        "image": "https://images.unsplash.com/photo-1591488320449-011701bb6704?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "GPT-5.6 与 Copilot 365",
+        "date": "2026-07-10",
+        "priority": "featured"
+      },
+      {
+        "id": "ai-002",
+        "title": "Anthropic发布Claude Science：AI开始像研二学生一样做科研",
+        "event": "据腾讯新闻6月30日报道，Anthropic正式发布面向科学研究领域的AI工作台Claude Science。它并非一款新模型，但战略位置与新模型同等重要——为科研人员提供文献梳理、假设生成、数据分析与实验设计的协作环境。哈佛大学物理学家Matthew Schwartz用Claude Code做了实验验证其科研辅助能力。Claude Science标志着AI从\"写代码\"延伸到\"做研究\"。",
+        "highlight": "Claude Science把AI定位为科研协作者，而非单纯聊天工具，开辟科研生产力新场景",
+        "reason": "科研是知识密集型高价值场景，Claude Science代表AI应用层向专业工作流纵深拓展",
+        "category": "产品发布 / 科研",
+        "source": "Anthropic / 腾讯新闻",
+        "url": "https://news.qq.com/rain/a/20260701A05E8U00",
+        "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Claude Science 科研工作台",
+        "date": "2026-06-30",
+        "priority": "featured"
+      },
+      {
+        "id": "ai-003",
+        "title": "OpenAI二号人物Fidji Simo因医疗休假超预期离职，留下领导层真空",
+        "event": "据TechCrunch与Planet AI 7月报道，OpenAI二号高管Fidji Simo因医疗休假时间超出预期而离职。Simo此前负责OpenAI的应用与商业化为核心业务，她的离开在GPT-5.6发布、公司加速商业化的关键节点留下领导层真空。外界关注OpenAI如何补位以支撑其快速扩张的产品与营收目标。",
+        "highlight": "旗舰模型刚发布、商业化提速之际核心高管离职，引发对OpenAI执行层稳定的关注",
+        "reason": "核心高管变动会影响产品节奏与商业化执行，是观察OpenAI组织健康度的关键信号",
+        "category": "公司动态 / 人事",
+        "source": "TechCrunch / Planet AI",
+        "url": "https://techcrunch.com/",
+        "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "OpenAI 领导层变动",
+        "date": "2026-07-10",
+        "priority": "secondary"
+      },
+      {
+        "id": "ai-004",
+        "title": "MiniMax拟募资至多19亿美元，冲刺今年以来最大AI融资之一",
+        "event": "据Bloomberg（经Techmeme转引）报道，MiniMax计划以约34美元/股发售3560万股，并发行8.3亿美元可转债，冲刺19亿美元融资。作为国内头部大模型公司，MiniMax的此轮融资将用于模型研发与全球化扩张。在AI投资趋谨慎的背景下，头部大模型公司仍能获得大额融资，反映资本向头部集中的趋势。",
+        "highlight": "MiniMax大额融资显示头部大模型公司仍受资本青睐，行业分化加剧",
+        "reason": "融资规模是AI公司竞争力与生存能力的晴雨表，MiniMax的动作反映大模型赛道的资本格局",
+        "category": "投融资",
+        "source": "Bloomberg / Techmeme",
+        "url": "https://techmeme.com/",
+        "image": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "MiniMax 融资",
+        "date": "2026-07-10",
+        "priority": "secondary"
+      },
+      {
+        "id": "ai-005",
+        "title": "防御软件，先教AI攻破它：用攻击思维自动探测漏洞",
+        "event": "据TechXplore报道，研究者Ying Zhang倡导用AI模拟攻击者思维，自动探测软件漏洞以提升防御能力。该方法让AI扮演\"红队\"，主动生成针对性攻击序列、模糊测试输入与权限逃逸路径，在漏洞被利用前发现并修复。随着代码库规模与AI生成代码比例上升，传统人工安全审计难以覆盖，AI驱动的安全测试成为必然。",
+        "highlight": "AI红队思路将漏洞发现从被动审计转为主动对抗，契合AI编程普及后的安全刚需",
+        "reason": "AI生成代码比例上升使安全审计压力陡增，攻击性AI测试是防御侧的关键补位",
+        "category": "AI安全 / 编程",
+        "source": "TechXplore / Ying Zhang",
+        "url": "https://techxplore.com/",
+        "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "AI 安全攻防",
+        "date": "2026-07-10",
+        "priority": "secondary"
+      },
+      {
+        "id": "ai-006",
+        "title": "OpenAI详解Work功能：云端/桌面端边界与本地文件调用",
+        "event": "据Simon Willison转述OpenAI说明，OpenAI Work功能在网页与移动端于云端运行，桌面端可经用户许可调用本地文件与应用，且云会话不显示在桌面端。该设计在\"云端算力\"与\"本地数据隐私\"之间划清边界，回应了企业用户对数据出域的顾虑。清晰的边界定义是AI办公助手进入企业环境的前提。",
+        "highlight": "OpenAI明确云端/桌面端的运行与数据边界，是AI办公助手企业化的关键信任设计",
+        "reason": "数据边界的清晰度直接决定企业是否敢用AI办公助手，是AI应用层落地的合规基础",
+        "category": "产品说明 / 企业级",
+        "source": "Simon Willison / OpenAI",
+        "url": "https://simonwillison.net/",
+        "image": "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "OpenAI Work 功能",
+        "date": "2026-07-10",
+        "priority": "secondary"
+      },
+      {
+        "id": "ai-007",
+        "title": "Claude Sonnet 5自主智能体模型发布，主打自主任务执行",
+        "event": "据AI HOT日报7月1日报道，Anthropic发布Claude Sonnet 5自主智能体模型，强化自主规划与多步任务执行能力。同期Google DeepMind推出Nano Banana 2 Lite图像模型与Gemini Omni Flash视频模型，美团发布LongCat-2.0旗舰模型。多厂商在7月初密集发布，显示模型竞争从\"基准跑分\"转向\"自主任务与多模态\"。",
+        "highlight": "7月初多厂商密集发布，模型竞争焦点转向自主智能体与多模态",
+        "reason": "模型密集发布反映行业竞争加剧，自主性与多模态成为新一轮差异化主战场",
+        "category": "模型发布",
+        "source": "AI HOT / Anthropic",
+        "url": "https://onlinestool.com/zh/blog/aihot-daily-2026-07-01",
+        "image": "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Claude Sonnet 5 自主智能体",
+        "date": "2026-07-01",
+        "priority": "secondary"
+      },
+      {
+        "id": "ai-008",
+        "title": "Google DeepMind推出Nano Banana 2 Lite与Gemini Omni Flash视频模型",
+        "event": "据AI HOT日报7月1日报道，Google DeepMind推出Nano Banana 2 Lite轻量图像模型与Gemini Omni Flash视频模型。前者主打高性价比图像生成，后者补齐视频生成的实时/轻量能力。Google在多模态（图像+视频）上的连续推进，与OpenAI Sora、Meta视频模型形成三强竞争。",
+        "highlight": "Google补齐轻量多模态模型，视频生成赛道三强（Google/OpenAI/Meta）格局成形",
+        "reason": "多模态轻量化降低创作门槛，是AI生成内容走向规模应用的关键",
+        "category": "模型发布 / 多模态",
+        "source": "AI HOT / Google DeepMind",
+        "url": "https://onlinestool.com/zh/blog/aihot-daily-2026-07-01",
+        "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Gemini Omni Flash 多模态",
+        "date": "2026-07-01",
+        "priority": "secondary"
+      },
+      {
+        "id": "ai-009",
+        "title": "AI辅助DeFi合约开发，基准框架显示可显著降低计算成本",
+        "event": "据TechXplore报道，研究者构建基准框架，评估AI生成高效、低成本DeFi（去中心化金融）智能合约的潜力。框架对比人工与AI生成合约在gas消耗、安全性与功能正确性上的差异，结果显示AI在优化合约计算成本上有明显空间。这是AI编程从通用代码走向垂直领域（金融合约）的实证探索。",
+        "highlight": "AI在DeFi合约的gas优化上展现潜力，是AI垂直编程的实证案例",
+        "reason": "垂直领域（金融合约）对正确性与成本极敏感，AI编程的实测框架有助于判断其真实价值",
+        "category": "AI编程 / 金融",
+        "source": "TechXplore",
+        "url": "https://techxplore.com/",
+        "image": "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "AI 辅助智能合约",
+        "date": "2026-07-10",
+        "priority": "flash"
+      },
+      {
+        "id": "ai-010",
+        "title": "报告：生成式AI加剧长文阅读量下降",
+        "event": "据The Atlantic（经Techmeme转引）报道，报告指出互联网、智能手机与生成式AI正在加速图书等长篇内容的阅读流失。生成式AI的摘要与问答降低了用户深入阅读长文的动机，出版与内容行业面临注意力进一步碎片化。该议题引发关于\"AI是否正在侵蚀深度阅读\"的广泛讨论。",
+        "highlight": "生成式AI的摘要能力可能正在改变人们的阅读习惯，长文阅读受到冲击",
+        "reason": "AI对信息消费习惯的深层影响，是评估AI社会效应的长期议题",
+        "category": "行业观察",
+        "source": "The Atlantic / Techmeme",
+        "url": "https://techmeme.com/",
+        "image": "",
+        "imageCaption": "生成式AI与阅读",
+        "date": "2026-07-10",
+        "priority": "flash"
+      },
+      {
+        "id": "ai-011",
+        "title": "Anthropic研究：Claude内部存在类似人脑\"有意识/无意识\"的区分机制（J空间）",
+        "event": "据腾讯新闻7月7日报道，Anthropic新研究发现Claude内部存在与人脑高度相似的区分机制：仅有一小部分内部信息能像人类有意识想法一样被调取思考，大部分运算在底层自动运行。底层运行区域被研究者称为\"J空间\"。该研究用机制可解释性方法窥探大模型内部信息流，为理解AI\"心智\"提供新视角。",
+        "highlight": "Anthropic用机制可解释性发现Claude内部的\"有意识/无意识\"分层，引发对AI意识的讨论",
+        "reason": "大模型可解释性研究有助于理解AI决策机制，是安全与信任的基础科学",
+        "category": "研究 / 可解释性",
+        "source": "Anthropic / 腾讯新闻",
+        "url": "https://news.qq.com/rain/a/20260707A03HXT00",
+        "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Claude 内部机制研究",
+        "date": "2026-07-07",
+        "priority": "flash"
+      },
+      {
+        "id": "ai-012",
+        "title": "美团发布LongCat-2.0旗舰模型，加码企业级AI",
+        "event": "据AI HOT日报7月1日报道，美团发布LongCat-2.0旗舰大模型。作为以本地生活服务起家的平台，美团将大模型能力用于外卖调度、商家运营与智能客服等高频场景。LongCat-2.0的发布反映互联网平台公司将自研大模型作为业务智能化核心引擎的趋势。",
+        "highlight": "美团LongCat-2.0代表平台公司自研大模型走向业务纵深",
+        "reason": "平台公司自研大模型并深度嵌入业务，是AI落地主航道之一",
+        "category": "模型发布",
+        "source": "AI HOT / 美团",
+        "url": "https://onlinestool.com/zh/blog/aihot-daily-2026-07-01",
+        "image": "",
+        "imageCaption": "美团 LongCat-2.0",
+        "date": "2026-07-01",
+        "priority": "flash"
+      },
+      {
+        "id": "ai-013",
+        "title": "SK海力士美股上市募资265亿美元，创外国企业最大首秀",
+        "event": "据Bloomberg（经Techmeme转引）报道，SK海力士发售1.779亿份ADR募资265亿美元，超额认购超7倍，为外国企业在美股的最大规模首秀。作为HBM（高带宽内存）核心供应商，SK海力士受益于AI训练对内存的爆发式需求。其上市募资将用于扩产以承接HBM4时代的AI内存超级周期。",
+        "highlight": "SK海力士265亿美元IPO反映AI内存需求的资本热度，HBM战略地位凸显",
+        "reason": "HBM是AI算力的内存瓶颈，SK海力士的资本动作是观察AI基础设施景气度的风向标",
+        "category": "投融资 / 硬件",
+        "source": "Bloomberg / Techmeme",
+        "url": "https://techmeme.com/",
+        "image": "",
+        "imageCaption": "SK海力士 美股IPO",
+        "date": "2026-07-10",
+        "priority": "flash"
+      },
+      {
+        "id": "ai-014",
+        "title": "SemiEngineering：AI正在重写IP游戏规则",
+        "event": "据SemiEngineering近期观点，AI正在根本改变半导体IP（知识产权）的创建、保护与复用方式。一方面，AI辅助生成的IP带来权属与合规新挑战；另一方面，AI驱动的IP搜索与适配提升了复用效率。文章指出IP产业正从\"人工设计+授权\"走向\"AI生成+自动适配\"的新范式，对EDA与芯片设计生态影响深远。",
+        "highlight": "AI重构半导体IP的创造与复用方式，IP产业范式面临转变",
+        "reason": "IP是芯片设计的基础设施，其范式变化会传导到整个半导体设计生态",
+        "category": "产业趋势 / EDA",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/",
+        "image": "",
+        "imageCaption": "AI 与半导体 IP",
+        "date": "2026-07-09",
+        "priority": "flash"
+      },
+      {
+        "id": "ai-015",
+        "title": "2026年AI大模型竞争格局：OpenAI生态成熟、Anthropic企业首选、Google多模态强",
+        "event": "据腾讯云开发者社区6月30日分析，2026年AI大模型形成三强格局：OpenAI生态成熟、应用广泛；Anthropic以安全与可靠成为企业首选；Google以多模态强、性价比高见长。关键洞察是多模型协作成为主流趋势，统一API平台简化开发流程。三强各有侧重，企业选型从\"押注单一\"转向\"组合调用\"。",
+        "highlight": "多模型协作成为主流，企业从单一押注转向组合调用",
+        "reason": "竞争格局的清晰化帮助企业理性选型，也推动模型路由与统一API平台兴起",
+        "category": "行业分析",
+        "source": "腾讯云开发者社区",
+        "url": "https://cloud.tencent.com/developer/article/2684953",
+        "image": "",
+        "imageCaption": "AI 大模型竞争格局",
+        "date": "2026-06-30",
+        "priority": "flash"
+      },
+      {
+        "id": "ai-016",
+        "title": "AI编程工具三分天下：GitHub Copilot、Claude Code、Codex各司其职",
+        "event": "据技术站6月报道，AI编程工具进入Agent时代，形成GitHub Copilot、Claude Code与Codex（OpenAI）三分格局。Claude Code主打终端Agent与Skill生态，Copilot深度嵌入VS Code与GitHub工作流，Codex聚焦云端代码生成与修复。三者定位互补，开发者按任务类型选择。Agentic编程已从\"补全\"全面迈向\"自主接管开发链路\"。",
+        "highlight": "AI编程三强定位互补，Agentic编程成为开发常态",
+        "reason": "AI编程工具的格局稳定化，意味着开发工作流已被重塑，是AI应用层最落地的场景之一",
+        "category": "AI编程 / 工具",
+        "source": "技术站 / jishuzhan",
+        "url": "https://jishuzhan.net/article/2061776727671648258",
+        "image": "",
+        "imageCaption": "AI 编程工具格局",
+        "date": "2026-06-20",
+        "priority": "flash"
+      }
+    ]
   }
 }

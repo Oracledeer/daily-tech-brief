@@ -1408,6 +1408,539 @@
         "reason": "RNG驱动的内存访问控制在不破坏编程模型的前提下降低能耗，为HBM时代内存子系统提供新方向",
         "source": "ISCA 2026 / Villanova"
       }
+    ],
+    "tests": [
+      {
+        "id": "test-10.1038/s41467-022-35651-1",
+        "cacheKey": "10.1038/s41467-022-35651-1",
+        "title": "Electrical spectroscopy of defect states and their hybridization in monolayer MoS2",
+        "authors": "Yanfei Zhao, Mukesh Tripathi, Kristiāns Čerņevičs, Ahmet Avşar, Hyun Goo Ji, Juan Francisco Gonzalez Marin, Cheol-Yeon Cheon, Zhenyu Wang",
+        "venue": "Nature Communications",
+        "venueType": "期刊",
+        "year": "2023",
+        "doi": "10.1038/s41467-022-35651-1",
+        "url": "https://doi.org/10.1038/s41467-022-35651-1",
+        "pdf": "https://www.nature.com/articles/s41467-022-35651-1.pdf",
+        "abstract": "Defects in solids are unavoidable and can create complex electronic states that can significantly influence the electrical and optical properties of semiconductors. With the rapid progress in the integration of 2D semiconductors in practical devices, it is imperative to understand and characterize the influence of defects in this class of materials. Here, we examine the electrical response of defect filling and emission using deep level transient spectroscopy (DLTS) and reveal defect states and their hybridization in a monolayer MOCVD-grown material deposited on CMOS-compatible substrates. Supported by aberration-corrected STEM imaging and theoretical calculations, we find that neighboring sulfur vacancy pairs introduce additional shallow trap states via hybridization of individual vacancy levels. Even though such vacancy pairs only represent ~10% of the total defect concentration, they can have a substantial influence on the off currents and switching slopes of field-effect transistors based on 2D semiconductors. Our technique, which can quantify the energy states of different defects and their interactions, allows rapid and nondestructive electrical characterization of defect states important for the defect engineering of 2D semiconductors.",
+        "keywords": [
+          "DLTS深能级瞬态谱",
+          "电学表征",
+          "二维半导体缺陷",
+          "硫空位"
+        ],
+        "date": "2023-01-03",
+        "source": "OpenAlex",
+        "cnTitle": "单层 MoS₂ 缺陷态及其杂化的电学能谱表征",
+        "method": "深能级瞬态谱（DLTS）电学表征——对 MOCVD 生长、沉积于 CMOS 兼容衬底上的单层 MoS₂，通过缺陷填充与发射的电学响应定量提取缺陷能级，并用球差校正 STEM 成像与理论计算交叉验证。",
+        "innovation": "首次在单层二维半导体中揭示相邻硫空位对通过能级杂化产生额外的浅陷阱态；此类空位对虽仅占总缺陷约 10%，却显著劣化二维场效应晶体管的关态电流与开关斜率。",
+        "principle": "DLTS 施加电压脉冲填充缺陷、再监测缺陷发射引起的电容/电流瞬态随温度的变化，从时间常数-温度关系反演缺陷能级深度与俘获截面，实现无损、可量化的缺陷能级谱分析。",
+        "scenario": "适用于二维半导体（MoS₂ 等）器件的缺陷工程与量产前质量筛选、2D 场效应晶体管关态电流与亚阈摆幅退化诊断、CMOS 兼容二维材料的缺陷溯源。",
+        "metrics": [
+          {
+            "name": "诊断对象",
+            "value": "单层 MoS₂ 缺陷能级（硫空位对）"
+          },
+          {
+            "name": "关键发现",
+            "value": "空位对占比≈10%，主导关态电流劣化"
+          },
+          {
+            "name": "特征",
+            "value": "无损·可量化·CMOS 兼容"
+          }
+        ]
+      },
+      {
+        "id": "test-arxiv-2606.12625",
+        "cacheKey": "arxiv:2606.12625",
+        "title": "Lock-In Infrared Thermography: Phase Analysis for Rapid, Wide-Range Thermal Conductivity Measurements",
+        "authors": "Ethan A. Scott, Jeffrey L. Braun, Jessica Reyes, Bruce Bolliger, Terrence Soares, John T. Gaskins, Marko J. Tadjer, Patrick E. Hopkins",
+        "venue": "arXiv 预印本",
+        "venueType": "预印本",
+        "year": "2026",
+        "doi": "arXiv:2606.12625",
+        "url": "https://arxiv.org/abs/2606.12625",
+        "pdf": "https://arxiv.org/pdf/2606.12625v1",
+        "abstract": "We report on a phase-based lock-in thermography approach, combined with a multilayered thermal model (often employed in thermoreflectance analysis), to measure the thermal conductivity of bulk materials and layered structures. The spatial distribution of the material's thermal phase is monitored with an infrared camera, which is locked into the frequency of a modulated laser used to heat the material. This phase distribution is then fit with a thermal model, in which properties such as thermal conductivity are extracted as fit parameters. This approach enables non-contact, front-side measurements, which are insensitive to surface roughness. The technique does not strictly require the application of a transducer layer, but we highlight the practical benefits of applying a removable adhesive layer to serve as a near-surface absorber. We demonstrate the efficacy of the method by measuring materials with thermal conductivities that span over three orders of magnitude (approximately 1 W/m/K to > 2000 W/m/K).",
+        "keywords": [
+          "锁相热成像",
+          "非接触测量",
+          "热导率",
+          "热表征",
+          "红外"
+        ],
+        "date": "2026-06-10",
+        "source": "arXiv",
+        "cnTitle": "锁相红外热成像的相位分析法：面向宽量程热导率的快速测量",
+        "method": "锁相红外热成像（LIT）——用调制激光周期性加热样品，红外相机以加热频率同步采集表面温度场的幅值与相位分布，结合多层热模型反演热导率。",
+        "innovation": "提出基于相位的锁相热成像方法，相较传统幅值法更抗环境噪声，可在宽量程内快速测量体材料与层状结构的热导率，并具备高空间分辨率。",
+        "principle": "热波在材料中的传播相位对热导率敏感。将红外相机锁相于调制激光频率，得到温度场的相位分布，再用多层热模型拟合，即可反演出热导率；相位法对表面发射率起伏不敏感，适合薄层与界面。",
+        "scenario": "适用于宽禁带器件、芯片与功率模块的非接触热表征、界面热阻与热失效定位，以及先进封装热设计的验证。",
+        "metrics": [
+          {
+            "name": "测量对象",
+            "value": "体材料/层状结构热导率"
+          },
+          {
+            "name": "特征",
+            "value": "非接触·宽量程·高空间分辨率"
+          }
+        ]
+      }
+    ]
+  },
+  "2026-07-10": {
+    "schema": "semicon-news-daily/v1",
+    "date": "2026-07-10",
+    "weekday": "周五",
+    "summary": "SemiEngineering 7月7日两篇先进封装深度：高密度扇出面板级封装的检测与量测正追赶翘曲与细RDL间距挑战，多芯片现场测试必须建立在成熟测试方法之上。IBM展示亚纳米级（约0.7nm节点）芯片，背面供电网络（BSPDN）显著提升密度；台积电2026路线图A13/A12/N2U三箭齐发；ASML High-NA EUV加速量产、1000瓦EUV光源有望2030年前将晶圆产能提升50%。Chiplet架构成为封装未来，AI驱动混合键合良率优化；UCIe 3.0为chiplet集成设新标杆；硅光子与CPO重塑AI数据中心。存储侧SK海力士1c DRAM产能8倍扩产、三星HBM产能+50%备战HBM4；量子纠错Google/Quantinuum跨过阈值、微软/Quantinuum在Nature验证800倍提升。",
+    "focus": "高密度扇出面板级封装检测、多芯片现场测试、IBM亚纳米芯片/BSPDN、台积电A13路线图、ASML High-NA EUV、Chiplet/UCIe/CPO、HBM4备战、量子纠错阈值",
+    "news": [
+      {
+        "id": "semi-001",
+        "title": "SemiEngineering：高密度扇出面板级封装的检测与量测正追赶翘曲与细RDL挑战",
+        "keywords": [
+          "高密度扇出",
+          "面板级封装",
+          "检测",
+          "量测",
+          "RDL",
+          "翘曲"
+        ],
+        "tech": "高密度扇出面板级封装（FOPLP）",
+        "route": "先进封装 / 检测量测",
+        "routeStatus": "→稳定",
+        "content": "SemiEngineering 7月7日报道，随着高密度扇出面板级封装（FOPLP）走向更大面积基板，光学检测与量测方法必须应对日益严重的翘曲、更细的RDL（重分布层）间距与走线尺寸。面板级封装相比晶圆级可显著提升单个面板的裸片数量、降低单位成本，但大面积带来的翘曲使套刻与检测精度下降，细RDL则挑战光学分辨与缺陷识别。文章指出检测量测设备正快速迭代以匹配这一趋势。",
+        "reason": "面板级封装的成本优势依赖大面积，但翘曲与细RDL给检测量测带来新瓶颈，是FOPLP规模化的关键工程挑战",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/inspection-and-metrology-catching-up-for-high-density-fan-out-panel-packaging/",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "先进封装检测量测（示意）",
+        "date": "2026-07-07",
+        "priority": "featured"
+      },
+      {
+        "id": "semi-002",
+        "title": "SemiEngineering：多芯片现场测试必须建立在成熟测试方法之上",
+        "keywords": [
+          "多芯片",
+          "chiplet",
+          "现场测试",
+          "测试方法",
+          "可靠性",
+          "先进封装"
+        ],
+        "tech": "多芯片（multi-die）现场测试",
+        "route": "先进封装 / 测试",
+        "routeStatus": "→稳定",
+        "content": "SemiEngineering 7月7日报道，多芯片（multi-die）组件的现场测试必须建立在成熟的测试方法之上。文章核心观点：出厂时完好不再保证器件在整个生命周期中的可靠性——chiplet集成的异质裸片在系统运行、热循环与老化下会出现现场级退化。因此测试策略需从出厂测试延伸到现场健康监测，复用已验证的应力测试、内建自测试（BIST）与老化模型。",
+        "reason": "chiplet集成使可靠性责任从单芯片扩展到系统级现场，测试方法论必须从出厂前延伸到全生命周期",
+        "source": "SemiEngineering",
+        "url": "https://semiengineering.com/multi-die-testing-in-the-field-must-build-on-established-test-methodologies/",
+        "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "多芯片测试（示意）",
+        "date": "2026-07-07",
+        "priority": "featured"
+      },
+      {
+        "id": "semi-003",
+        "title": "IBM展示亚纳米级（约0.7nm节点）芯片，背面供电网络显著提密度",
+        "keywords": [
+          "IBM",
+          "亚纳米",
+          "0.7nm",
+          "背面供电",
+          "BSPDN",
+          "芯片密度"
+        ],
+        "tech": "亚纳米级芯片 / 背面供电网络（BSPDN）",
+        "route": "先进制程",
+        "routeStatus": "↑突破",
+        "content": "据AI Park 6月26日报道，IBM发布亚纳米级（约0.7nm节点）芯片研究，采用分离式背面供电网络（BSPDN，Backside Power Distribution Network）设计，将供电从晶圆正面移至背面，显著减少IR压降与布线拥塞，从而提升芯片密度。0.7nm节点的晶体管尺寸已逼近数个原子直径，传统正面供电的布线瓶颈凸显，BSPDN成为延续微缩的关键路径之一。",
+        "reason": "背面供电网络是1nm以下节点延续微缩的核心技术，IBM的亚纳米演示标志BSPDN从概念走向工程实现",
+        "source": "IBM / AI Park",
+        "url": "https://www.aipark.tech/2026/06/26/ibm-%e5%8f%91%e5%b8%83%e4%ba%9a%e7%ba%b3%e7%b1%b3%e7%ba%a7%e8%8a%af%e7%89%87/",
+        "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "亚纳米芯片（示意）",
+        "date": "2026-06-26",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-004",
+        "title": "台积电2026技术路线图深度解读：A13/A12/N2U三箭齐发",
+        "keywords": [
+          "台积电",
+          "TSMC",
+          "A13",
+          "A12",
+          "N2U",
+          "技术路线图",
+          "北美论坛"
+        ],
+        "tech": "TSMC 2026路线图（A13/A12/N2U）",
+        "route": "先进制程",
+        "routeStatus": "↑突破",
+        "content": "据技术博客5月19日解读，台积电在2026北美技术论坛上披露三箭头路线图：A13、A12与N2U（N2的升级版）同步推进。外界普遍认为这三个信号——更先进的逻辑节点、改良版N2以及面向特定场景的优化节点——共同指向AI与高性能计算对多样化制程的需求。A13承接N2之后的性能/能效提升，N2U则在N2基础上针对成本与密度做优化，反映先进制程从单一领跑转向多节点并行。",
+        "reason": "台积电从单一节点节奏转向A13/A12/N2U多节点并行，反映AI算力对制程多样性的需求升级",
+        "source": "TSMC / 技术博客",
+        "url": "https://xiejiayun.github.io/post/tsmc-2026-roadmap-a13-beyond/",
+        "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "先进制程路线图（示意）",
+        "date": "2026-05-19",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-005",
+        "title": "ASML公布EUV最新路线图：High-NA技术加速量产",
+        "keywords": [
+          "ASML",
+          "EUV",
+          "High-NA",
+          "路线图",
+          "量产",
+          "光刻"
+        ],
+        "tech": "High-NA EUV光刻",
+        "route": "半导体设备",
+        "routeStatus": "↑突破",
+        "content": "据集微网4月17日报道，ASML在2026年第一季度财报会议上披露EUV设备最新路线图，涵盖低数值孔径（Low NA）与高数值孔径（High NA）两大方向。CEO Christophe Fouquet表示High NA EUV的量产爬坡顺利，四个主要模块（光源DG、Unicom、晶圆台、掩模版处理与光学系统）集成进展良好。High NA EUV将数值孔径从0.33提升至0.55，支持2nm及以下节点的更高分辨率图案化。",
+        "reason": "High-NA EUV量产爬坡直接决定2nm以下节点的图案化能力，是先进制程的装备基石",
+        "source": "ASML / 集微网",
+        "url": "https://www.ictrade.cn/news/article-details/2518501",
+        "image": "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "EUV 光刻（示意）",
+        "date": "2026-04-17",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-006",
+        "title": "Chiplet架构成为封装未来，AI驱动混合键合良率实时优化",
+        "keywords": [
+          "Chiplet",
+          "混合键合",
+          "先进封装",
+          "AI",
+          "良率",
+          "异构集成"
+        ],
+        "tech": "Chiplet / 混合键合（hybrid bonding）",
+        "route": "先进封装",
+        "routeStatus": "→稳定",
+        "content": "据Electronics Weekly 5月13日报道，Chiplet架构正成为电子封装的未来方向。文章指出，AI与机器学习越来越多地被用于分析量测数据、预测缺陷形成并实时优化工艺参数，推动混合键合（hybrid bonding）更接近高良率量产。混合键合以铜-铜直接键合实现亚微米级互连间距，是3D-IC与chiplet异构集成的核心工艺，但其界面缺陷对良率极度敏感，AI辅助量测成为良率爬坡的关键。",
+        "reason": "混合键合是chiplet异构集成的工艺核心，AI驱动量测将决定其能否跨过量产良率门槛",
+        "source": "Electronics Weekly",
+        "url": "https://www.electronicsweekly.com/news/chiplet-architecture-is-the-future-of-electronics-packaging-2026-05/",
+        "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Chiplet 异构集成（示意）",
+        "date": "2026-05-13",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-007",
+        "title": "硅光子与共封装光学（CPO）重塑2026年AI数据中心",
+        "keywords": [
+          "硅光子",
+          "CPO",
+          "共封装光学",
+          "AI数据中心",
+          "带宽墙",
+          "光互连"
+        ],
+        "tech": "硅光子 / 共封装光学（CPO）",
+        "route": "光互连",
+        "routeStatus": "↑突破",
+        "content": "据行业分析5月25日报道，硅光子与共封装光学（CPO）正在重塑2026年的AI数据中心。在AI训练的带宽墙与功耗墙双重压力下，用光替代铜做芯片/交换机间通信（光互连）在2026年大规模商用，而光学计算则仍处早期。CPO将光引擎与交换芯片共封装，以高密度、高能效突破算力互联瓶颈。台积电COUPE等硅光子平台加速落地，标志光互连从可插拔模块走向片上集成。",
+        "reason": "CPO是突破AI集群互联带宽与功耗瓶颈的关键，2026年大规模商用将重塑数据中心互连架构",
+        "source": "行业分析 / 硅光子",
+        "url": "https://iotdigitaltwinplm.com/silicon-photonics-co-packaged-optics-datacenter-2026/",
+        "image": "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "硅光子互连（示意）",
+        "date": "2026-05-25",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-008",
+        "title": "UCIe 3.0为chiplet集成设定新标杆，生态持续扩张",
+        "keywords": [
+          "UCIe",
+          "UCIe 3.0",
+          "chiplet",
+          "互连标准",
+          "带宽密度",
+          "生态系统"
+        ],
+        "tech": "UCIe 3.0 chiplet互连标准",
+        "route": "互连标准",
+        "routeStatus": "↑突破",
+        "content": "据UCIe联盟3月5日Chiplet Summit报道，UCIe 3.0通过提升带宽密度、效率与系统级协调能力，为可靠且可扩展的chiplet集成设定新基准。UCIe作为开放chiplet互连标准，目标是让不同厂商的裸片能像片上互连一样通信。3.0在带宽密度与能效上的提升，降低了异构chiplet组合的集成门槛，推动从定制互连向标准互连迁移的生态扩张。",
+        "reason": "UCIe 3.0提升带宽密度与能效，是chiplet从碎片化定制走向标准化生态的关键一步",
+        "source": "UCIe联盟 / Chiplet Summit",
+        "url": "https://www.uciexpress.org/post/chiplet-summit-2026-ucie-momentum-across-a-growing-ecosystem",
+        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "Chiplet 互连标准（示意）",
+        "date": "2026-03-05",
+        "priority": "secondary"
+      },
+      {
+        "id": "semi-009",
+        "title": "HBM4备战：SK海力士1c DRAM产能瞄准8倍扩产，三星HBM产能+50%",
+        "keywords": [
+          "HBM4",
+          "SK海力士",
+          "三星",
+          "1c DRAM",
+          "产能扩张",
+          "AI内存"
+        ],
+        "tech": "HBM4 / 1c DRAM",
+        "route": "存储 / AI内存",
+        "routeStatus": "↑突破",
+        "content": "据SiliconAnalysts 7月2日分析，SK海力士目标将1c DRAM产量提升至约8倍规模扩产，三星则追求约50%的HBM产能扩张——两家对AI内存需求下一站的判断截然不同。2026年下半年HBM4样品出货在即，谁控制HBM产能，谁就控制AI算力供应链的定价权。HBM4在带宽、堆叠层数（8→12层）与逻辑基片设计上较HBM3E进一步跃升，成为下一代AI加速器的标配。",
+        "reason": "SK海力士与三星对HBM4产能的差异化下注，决定AI内存超级周期的供给格局",
+        "source": "SiliconAnalysts / SK Hynix / Samsung",
+        "url": "https://siliconanalysts.com/analysis/sk-hynix-samsung-2026-memory-capex-hbm4-qualification-race",
+        "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "HBM 内存堆叠（示意）",
+        "date": "2026-07-02",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-010",
+        "title": "量子纠错突破：Google与Quantinuum研究跨过纠错阈值",
+        "keywords": [
+          "量子纠错",
+          "Google",
+          "Quantinuum",
+          "阈值",
+          "逻辑比特",
+          "量子计算"
+        ],
+        "tech": "量子纠错（QEC）阈值",
+        "route": "量子器件",
+        "routeStatus": "↑突破",
+        "content": "据Sudonull 6月22日报道，Google与Quantinuum的研究团队达到量子纠错阈值，使逻辑比特具备可扩展至实用计算的条件。量子纠错通过将一个逻辑比特的信息编码到多个物理比特上并持续运行诊断，抑制物理比特的退相干与错误。跨过阈值意味着增加物理比特能降低逻辑错误率，是容错量子计算的前提。",
+        "reason": "跨过量子纠错阈值是实用化容错量子计算的关键里程碑，决定量子器件能否真正扩展",
+        "source": "Google / Quantinuum / Sudonull",
+        "url": "https://sudonull.com/breakthrough-in-quantum-error-correction-google-and-quantinuum",
+        "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "量子计算（示意）",
+        "date": "2026-06-22",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-011",
+        "title": "微软与Quantinuum在Nature验证量子纠错800倍提升",
+        "keywords": [
+          "微软",
+          "Quantinuum",
+          "Nature",
+          "量子纠错",
+          "800倍",
+          "逻辑比特"
+        ],
+        "tech": "量子纠错验证（Nature）",
+        "route": "量子器件",
+        "routeStatus": "↑突破",
+        "content": "据TechTimes 6月13日报道，微软与Quantinuum在Nature发表研究，验证量子纠错取得约800倍的逻辑比特错误率改善。通过将信息编码到更多物理比特并优化诊断协议，团队展示了逻辑错误率随物理比特增加而指数下降，远超阈值要求。该结果为容错量子计算的实用化提供了经同行评审的强证据。",
+        "reason": "经Nature同行评审的800倍QEC提升，为容错量子计算的工程可行性提供了权威背书",
+        "source": "Microsoft / Quantinuum / Nature",
+        "url": "https://www.techtimes.com/articles/318329/20260613/quantum-error-correction-validated-nature-microsoft-quantinuum-log-800-fold-improvement.htm",
+        "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "量子纠错研究（示意）",
+        "date": "2026-06-13",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-012",
+        "title": "Nature：实时低延迟量子纠错演示成功",
+        "keywords": [
+          "Nature",
+          "实时量子纠错",
+          "低延迟",
+          "容错",
+          "逻辑比特",
+          "实验"
+        ],
+        "tech": "实时低延迟量子纠错",
+        "route": "量子器件",
+        "routeStatus": "↑突破",
+        "content": "据Nature 6月1日报道，研究团队演示了实时、低延迟的量子纠错。量子纠错对实用量子计算机至关重要，随着量子计算机迈向通用容错逻辑比特，纠错必须在硬件时间尺度内实时运行。该演示表明纠错解码可在量子比特退相干前完成，使逻辑比特在持续运行中被保护，是走向实用容错量子计算的关键工程验证。",
+        "reason": "实时低延迟QEC演示证明纠错可在硬件时间尺度内运行，是容错量子计算从理论走向系统的关键",
+        "source": "Nature",
+        "url": "https://www.nature.com/articles/s41467-026-73331-6",
+        "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80&auto=format&fit=crop",
+        "imageCaption": "实时量子纠错（示意）",
+        "date": "2026-06-01",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-013",
+        "title": "ASML突破1000瓦EUV光源技术，2030年前晶圆产能有望+50%",
+        "keywords": [
+          "ASML",
+          "EUV",
+          "1000瓦",
+          "光源",
+          "晶圆产能",
+          "成本"
+        ],
+        "tech": "1000瓦EUV光源",
+        "route": "半导体设备",
+        "routeStatus": "↑突破",
+        "content": "据unwire.pro 2月26日报道，ASML宣布1000瓦EUV光源研发取得重大突破，预计2030年前将晶圆产能提升约50%并降低约三分之一成本。更高的光源功率可直接提升EUV扫描机的吞吐量与单位时间产能，摊薄单晶圆成本，对TSMC、Intel等晶圆厂的先进制程经济性影响显著。该突破与High-NA EUV路线图协同，共同支撑2nm以下节点的成本曲线。",
+        "reason": "1000瓦EUV光源提升吞吐与降本是先进制程经济性的关键杠杆，影响全球晶圆厂成本结构",
+        "source": "ASML / unwire.pro",
+        "url": "https://unwire.pro/2026/02/26/asml-euv-1000w-breakthrough-ai-chip-cost-2030/news/",
+        "image": "",
+        "imageCaption": "EUV 光源（示意）",
+        "date": "2026-02-26",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-014",
+        "title": "Chiplets过去、现在与未来：先进封装正在重塑硅",
+        "keywords": [
+          "Chiplet",
+          "先进封装",
+          "异构集成",
+          "互连",
+          "硅"
+        ],
+        "tech": "Chiplet与先进封装",
+        "route": "先进封装",
+        "routeStatus": "→稳定",
+        "content": "据EEWorld 6月30日报道，Chiplet架构正从概念走向主流。文章回顾了chiplet从早期多芯片模块到如今异构集成标准的演进，并指出无论是定制还是行业标准的互连接口，都日益成为chiplet架构的核心，使通信特性接近片上互连。随着UCIe等标准成熟，chiplet正把\"从头设计单芯片\"的范式转变为\"组合已验证裸片\"的范式。",
+        "reason": "chiplet范式从单芯片设计转向裸片组合，是半导体设计方法论的结构性转变",
+        "source": "EEWorld",
+        "url": "https://www.eeworldonline.com/chiplets-past-present-and-future-how-advanced-packaging-is-shaping-silicon/",
+        "image": "",
+        "imageCaption": "Chiplet 封装演进（示意）",
+        "date": "2026-06-30",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-015",
+        "title": "宽禁带渗透率提升：SiC/GaN在充电模块将效率从94%推至97%以上",
+        "keywords": [
+          "SiC",
+          "GaN",
+          "宽禁带",
+          "充电模块",
+          "效率",
+          "渗透率"
+        ],
+        "tech": "SiC/GaN功率半导体",
+        "route": "宽禁带半导体",
+        "routeStatus": "↑突破",
+        "content": "据行业分析（约7月初）报道，2026年以碳化硅（SiC）和氮化镓（GaN）为代表的宽禁带半导体在充电模块中的渗透率持续提升。SiC MOSFET与GaN HEMT凭借更高开关频率与更低导通电阻，可将充电模块转换效率从94%提升至97%以上，同时缩小磁性元件体积。不过宽禁带器件仍处产能爬坡阶段，国产化率相对较低，进口依赖待解。",
+        "reason": "SiC/GaN在充电模块的效率跃升是宽禁带器件从高端走向规模应用的直接证据，但国产化仍是短板",
+        "source": "行业分析 / 宽禁带",
+        "url": "https://www.gdmxkz.com/xingye/9032.html",
+        "image": "",
+        "imageCaption": "宽禁带功率器件（示意）",
+        "date": "2026-07-06",
+        "priority": "flash"
+      },
+      {
+        "id": "semi-016",
+        "title": "台积电技术论坛提出AI芯片\"三层蛋糕\"理论与硅光子路线图",
+        "keywords": [
+          "台积电",
+          "AI芯片",
+          "三层蛋糕",
+          "硅光子",
+          "路线图",
+          "技术论坛"
+        ],
+        "tech": "AI芯片架构 / 硅光子路线图",
+        "route": "设计方法学",
+        "routeStatus": "↑突破",
+        "content": "据行业深度观察（5月15日）报道，2026年5月14日台积电技术论坛提出AI芯片的\"三层蛋糕\"理论（算力、互连、系统整合的分层优化）与硅光子路线图。同一天三星宣布2nm GAA量产计划提前。台积电的\"三层蛋糕\"强调单靠制程微缩已不足以支撑AI算力增长，必须在互连与系统层面协同优化，硅光子路线图正是互连层的关键落子。",
+        "reason": "台积电\"三层蛋糕\"理论标志AI芯片优化从单点制程转向制程+互连+系统的分层协同",
+        "source": "台积电 / 行业观察",
+        "url": "https://zhuanlan.zhihu.com/p/2038569091733135868",
+        "image": "",
+        "imageCaption": "AI 芯片分层架构（示意）",
+        "date": "2026-05-15",
+        "priority": "flash"
+      }
+    ],
+    "tests": [
+      {
+        "id": "test-arxiv-2606.24227",
+        "cacheKey": "arxiv:2606.24227",
+        "title": "Nonradiative Multiphonon Model of Deep-Level Transient Spectroscopy: Beyond Henry-Lang Model",
+        "authors": "Menglin Huang, Shanshan Wang, Junjie Zhou, Xinjing Guo, Shiyou Chen",
+        "venue": "arXiv 预印本",
+        "venueType": "预印本",
+        "year": "2026",
+        "doi": "arXiv:2606.24227",
+        "url": "https://arxiv.org/abs/2606.24227",
+        "pdf": "https://arxiv.org/pdf/2606.24227v1",
+        "abstract": "Deep-level transient spectroscopy (DLTS) is a key experimental method for defect characterization, yet its analysis remains controversial, and the two widely used models developed by Henry and Lang are conflicting. We show that the Henry-Lang model is valid only under the Condon approximation, as well as high-temperature and strong electron-phonon coupling approximations, which cause incorrect temperature dependence of carrier emission and capture. Here we develop a rigorous nonradiative multiphonon (NMP) model, and demonstrate that the temperature dependence is governed predominantly by effective phonons with large phonon wavefunction overlap and high thermal occupation. The effective phonons are strongly correlated with lattice relaxation.The neglect of this correlation in existing DLTS models introduces substantial errors when they are used to fit DLTS-measured emission rates. Our comparison for 21 different defects in 12 semiconductors, including Si, SiC and Ga$_2$O$_3$, shows that the Henry-Lang model gives a completely different temperature dependence of carrier capture cross section from that obtained using the rigorous NMP model, with errors reaching up to six orders of magnitude at room temperature. Our study highlights the necessity of revisiting previous DLTS analysis studies using the rigorous NMP model.",
+        "keywords": [
+          "深能级瞬态谱",
+          "缺陷表征",
+          "器件可靠性",
+          "SiC",
+          "GaN",
+          "电荷俘获"
+        ],
+        "date": "2026-06-23",
+        "source": "arXiv",
+        "cnTitle": "深能级瞬态谱的非辐射多声子模型：超越 Henry-Lang 框架",
+        "method": "深能级瞬态谱（DLTS）——在温度扫描下对半导体器件的电容瞬态做锁相相关积分，提取特定发射时间常数对应的峰，反演深能级缺陷的激活能与俘获截面。",
+        "innovation": "提出超越经典 Henry-Lang 近似的非辐射多声子（NMP）统一模型，纳入声子耦合与位形坐标效应，更准确描述深能级缺陷的电子俘获与发射动力学。",
+        "principle": "深能级缺陷在禁带中充放电时伴随晶格弛豫；载流子发射速率随温度呈指数变化。DLTS 通过对电容瞬态的率窗相关测量，将不同缺陷的发射时间分离为离散峰，峰位对应激活能、峰幅对应缺陷浓度。",
+        "scenario": "适用于 SiC / GaN 等宽禁带功率器件的栅氧与缓冲层深能级缺陷诊断、器件可靠性与早期失效分析，以及工艺良率优化中的缺陷溯源。",
+        "metrics": [
+          {
+            "name": "诊断对象",
+            "value": "深能级缺陷（激活能/俘获截面）"
+          },
+          {
+            "name": "适用材料",
+            "value": "SiC·GaN·Si 器件"
+          }
+        ]
+      },
+      {
+        "id": "test-arxiv-2110.00208",
+        "cacheKey": "arxiv:2110.00208",
+        "title": "In-Circuit Differential-Mode Impedance Extraction at the AC Input of a Motor Drive System",
+        "authors": "Arjuna Weerasinghe, Zhenyu Zhao, Fei Fan, Pengfei Tu, Kye Yak See",
+        "venue": "arXiv 预印本",
+        "venueType": "预印本",
+        "year": "2021",
+        "doi": "arXiv:2110.00208",
+        "url": "https://arxiv.org/abs/2110.00208",
+        "pdf": "https://arxiv.org/pdf/2110.00208v1",
+        "abstract": "The in-circuit differential-mode (DM) impedance at the AC input of a motor drive system (MDS) serves as a key parameter to evaluate and estimate the DM electromagnetic interference (EMI) noise caused by the switching of power semiconductor devices in the MDS. This paper discusses a single-probe setup (SPS) with frequency-domain measurement to extract the in-circuit DM impedance of an MDS under its different operating modes. The advantages of the SPS are its non-contact measurement and simple structure.",
+        "keywords": [
+          "差模阻抗",
+          "电磁干扰",
+          "功率半导体",
+          "非接触测量",
+          "频域提取"
+        ],
+        "date": "2021-10-01",
+        "source": "arXiv",
+        "cnTitle": "电机驱动系统交流输入端差模阻抗的单探头频域提取方法",
+        "method": "单探头设置（SPS）频域测量法——在电机驱动系统不同工作模式下，对交流输入端的差模（DM）阻抗做频域提取，用于评估功率半导体开关引发的DM电磁干扰（EMI）噪声。",
+        "innovation": "提出单探头设置（SPS），结构简易且具备非接触测量优势，可在系统在线工作模式下提取电路差模阻抗，免去传统双探头或离线测量的繁琐。",
+        "principle": "功率半导体器件的开关动作在交流输入端产生差模EMI噪声，其强度与电路差模阻抗直接相关；通过频域测量该阻抗可反推EMI噪声水平，为输入滤波器设计提供依据。",
+        "scenario": "适用于电机驱动、电源等功率电子系统中功率半导体开关EMI的在线评估、差模噪声诊断与输入滤波器优化。",
+        "metrics": [
+          {
+            "name": "测量对象",
+            "value": "交流输入端差模阻抗"
+          },
+          {
+            "name": "方法特征",
+            "value": "单探头·非接触·频域"
+          }
+        ]
+      }
     ]
   }
 }
